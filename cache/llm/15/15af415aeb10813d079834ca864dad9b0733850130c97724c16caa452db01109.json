@@ -1,0 +1,46 @@
+{
+ "purpose": "agent:demo_2_rawabi_expired_vat",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.58,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSwgcKEAgTGAI4AUIIdGhpbmtpbmcSDLW1Fig9fAV0SOT79xoMGBtrKUp34YXXF/1aIjDwxHMP5PunygKpRSJoHqtY56/5P2Jjq6bCHC4ymoQUlFP29Kn6W8D9p1agL3hAiWYq3waa6joXHaM6cqWKkwtnBU8ABbMLZdJBZzLk2utaU9awTaAo4O1jDrI6FkM9yQqzIuXJszgH1ZTe4d4CQVuwVzlIsDIJYiq90QRdqltK17n6n+n9OfX8wTirGCq8R3fuzZrs8zRwMHwiBiiUak4voyCrqYr2OoJyCOu6zTR7hV4LuSms2q5RVqEZ8lHsExpL+LO8JjnH0gdVwhAaNAyW8mUAi1ruR8tDNl4s2X5G4qgIMMfZOjNp2sdz46YxOH6kuz5Sxpi4gLaljMnihuHxJJixJPEQ12U44d/P5URnBUvFx/g82dx8JDW5q5F5CXpUGs7rwOl+V+KHLkqejMX8orYRPrmqFKDoLFvY0edyqeEr7M8+l9udqjQyNglB2e/7KDxC3MPW73Ou/6+DGO7W6Uro0YQ9zcRy6yv5N03t4qHztsAOc5HsqyRoi9Hv3jFraSqlHVzj8SAuuZ3qame3kXXWBlX9Cwk3ZtNTylXlCaXL6zufVoIZodI7o2VqyH8q9Xa+hhf86IVYDiJ8O5LNzlLwslywBmqlECwJuSks/4wFOAPDJGBq8GmKjYAb1dvm+ga1f5Ci/z3nMc669m+Sa7kohrHemqaDTMBGFgds4Ex/Ju69Ca7Pb/eOGmGY/92P+cWJ683Iip4VkalD5dxOyUzdnJ0ZwcNWeY+kAGrzZpMVk50XZFEvuPYesHZhAt7rxQKwUjTw9w6OnrEttCn+4VJ8JbkbHsyx0HeC5q/NUEnpxUxtzPBOxt0h15PD3+uHfi4bRt126LmfhzvxZsmxyZamrDwLXhi6A8r3SmEjtMW5+9DOPUwc2ZKo+pIgBnF+dsrIaIGEczElri5tZePFveudxZTmENUs6ESzgHKj0vqD92/eVWEkx4kiuq4IcawKxhSrOxQ0EJfkbiHxFg31kMdGRR9Qlv0lTd6JFqSpTwWN0KxeaznQDhduWWg5/A/1jngQ7DJS8nf4/DCZ2TE3/xj+s7WdLHXP775gEMy5IGDaN1S/LJ0fDDpffVx7zztH5GRuJOmwNQP673ckbEgpAOP/Zt5h6wLZINLyH7bZ7zLr2tMwm8tDheBMqgzhDcDWdsXM77d4wTCdLuB8t6cPhefWNtlSAtbS0H9IJ5oJJgmPLaami7H/eROQ3iryy1DClhgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_017Ai6cUCddak6jVBwaVMrqp",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_2_rawabi_expired_vat",
+     "kind": "welcome",
+     "subject": "Welcome - Rawabi Logistics Company is registered",
+     "body": "Dear Khalid, thank you for the renewed VAT certificate. All documents are now verified and Rawabi Logistics Company is registered as a supplier. Welcome aboard.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_015V4Mz61Xztd4fmi8ze5GgL",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_2_rawabi_expired_vat",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4583,
+   "output_tokens": 414
+  }
+ }
+}
