@@ -89,8 +89,11 @@ Stability runs (`NO_CACHE=1`) deliberately bypass the cache, so they need a key.
 
 ```bash
 .venv/bin/uvicorn app.main:app --port 8000        # open http://localhost:8000
-.venv/bin/python -m scripts.demo_play             # plays the 5 scenes with pauses
 ```
+
+The start page explains the project; **Start the guided demo** opens the dashboard with a step-by-step panel
+that plays each scene and explains it. `scripts/demo_play.py` plays the same scenes without clicking.
+A plain-English guide to the whole project is in `docs/EXPLAINED.html`.
 
 The simulator buttons post a demo case's `.eml` to the same handler a real inbox would use.
 

@@ -17,6 +17,18 @@ button{font:inherit;font-size:13px;font-weight:500;padding:8px 12px;min-height:3
 button.primary{background:var(--teal);border-color:var(--teal);color:#fff}
 button.danger{color:#991B1B}
 button:disabled{opacity:.5;cursor:default}
+.guide{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;margin:20px 32px 0;padding:20px 24px;border-radius:12px;background:#fff;border:1px solid #99F6E4;box-shadow:inset 4px 0 0 var(--teal)}
+.guide-text{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.guide-step{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.guide h2{margin:0;font-size:20px;font-weight:600}
+.guide p{margin:0;font-size:15px;line-height:1.55;color:#374151;max-width:62em}
+.guide-watch{font-size:14px!important;color:var(--muted)!important}
+.guide-actions{display:flex;gap:10px;flex-wrap:wrap}
+button.big{font-size:15px;padding:12px 22px;min-height:46px}
+button:focus-visible{outline:3px solid #FCD34D;outline-offset:2px}
+.manual{margin:12px 32px 0}
+.manual summary{cursor:pointer;font-size:13px;color:var(--muted);padding:4px 0}
+.manual .sim{border:1px solid var(--line);border-radius:10px;margin-top:8px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;padding:24px 32px 8px}
 .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
 .card .k{font-size:13px;color:var(--muted)}.card .v{font-size:28px;font-weight:600}
@@ -56,21 +68,37 @@ pre.mail{white-space:pre-wrap;font-family:inherit;font-size:13px;background:#F9F
     <span style="font-size:12px;color:#A7B4BE">Procurement · Demo data</span></div>
   </div>
   <div style="display:flex;gap:12px;flex-wrap:wrap">
+    <a class="pill" href="/" style="text-decoration:none">← About this demo</a>
     <span class="pill" id="today">Today: …</span>
     <span class="pill"><span class="dot" id="busy"></span>Agent running · watching onboarding@buyer-company.sa</span>
   </div>
 </header>
 
+<section class="guide" id="guide" aria-label="Guided demo">
+  <div class="guide-text">
+    <span class="guide-step" id="g-step">Guided demo</span>
+    <h2 id="g-title">Loading…</h2>
+    <p id="g-body"></p>
+    <p class="guide-watch" id="g-watch" hidden></p>
+  </div>
+  <div class="guide-actions">
+    <button class="primary big" id="g-next" onclick="guideNext()">Next</button>
+    <button id="g-restart" onclick="guideRestart()">Start over</button>
+  </div>
+</section>
+
+<details class="manual"><summary>Manual controls</summary>
 <div class="sim" aria-label="Simulator">
-  <span>Simulator</span>
+  <span>Run a scene yourself (keep this order):</span>
   <button onclick="post('/api/simulate/1')">1 · Al Noor applies</button>
   <button onclick="post('/api/simulate/2')">2 · Rawabi applies</button>
   <button onclick="post('/api/simulate/2/reply')">2b · Rawabi replies</button>
   <button onclick="post('/api/simulate/3')">3 · Gulf Steel applies</button>
   <button onclick="post('/api/simulate/4')">4 · “Al Noor” bank change</button>
   <button onclick="post('/api/clock',{date:'2027-09-30'})">5 · Fast-forward 11 months</button>
-  <button class="danger" onclick="if(confirm('Clear all demo data?'))post('/api/reset').then(()=>{selected=null;events=[];refresh()})">Reset</button>
+  <button class="danger" onclick="post('/api/reset').then(()=>{selected=null;events=[];setStep(0)})">Reset</button>
 </div>
+</details>
 
 <section class="cards" aria-label="Summary">
   <div class="card"><span class="k">Suppliers this week</span><span class="v" id="c-all">0</span></div>
@@ -155,7 +183,7 @@ function render() {
     const [cls, txt] = caseBadge(c);
     return `<li class="${c.id === selected ? 'sel' : ''}" onclick="selected='${c.id}';render()">
       <span class="name">${esc(companyName(c))}</span><span class="badge ${cls}">${esc(txt)}</span></li>`;
-  }).join('') : '<li class="empty">No cases yet. Use the simulator above.</li>';
+  }).join('') : '<li class="empty">No suppliers yet. Press the green button in the guided demo above.</li>';
 
   document.getElementById('vendors').innerHTML = S.vendors.length ? S.vendors.map(v => {
     const cls = v.status === 'active' ? 'b-green' : v.status === 'at_risk' ? 'b-amber' : 'b-red';
@@ -199,7 +227,7 @@ function renderCenter() {
         <button class="danger" onclick="decide(${card.id},'reject')">${bc ? 'Reject change' : 'Reject supplier'}</button>
       </div></section>`;
   }
-  if (!c) { el.innerHTML = html || '<section class="panel"><div class="empty">Pick a supplier, or run a scene from the simulator.</div></section>'; return; }
+  if (!c) { el.innerHTML = html || '<section class="panel"><div class="empty">Pick a supplier on the left, or press the green button above to continue the demo.</div></section>'; return; }
 
   const chk = lastChecks(c.id), fails = chk ? [...(chk.risk_failures||[]), ...(chk.fixable_failures||[])] : [];
   const docs = c.documents.filter(d => d.extraction);
@@ -229,12 +257,16 @@ function renderCenter() {
     request_fix: 'Emailed the supplier for the documents above. When the reply arrives, the agent re-checks only what changed.',
     escalate: 'Stopped and asked a human. The supplier was not contacted about the problem.',
     freeze: 'Change frozen and payments held until someone calls the number on file.'}[c.outcome.decision] || 'Working…';
+  const decided = {rejected: 'You rejected this after checking. Nothing was changed, and payments continue as before.',
+    approved: 'You approved this after checking. The record was updated by a person, not by the agent.',
+    asked_supplier: 'You asked the supplier to explain. The case waits for their reply.'}[c.status];
+  const nextText = decided || next;
   html += `<section class="panel" aria-label="Documents">
     <div class="phead"><div style="display:flex;flex-direction:column;gap:2px"><h2 style="font-size:17px">${esc(companyName(c))}</h2>
     <span style="font-size:13px;color:var(--muted)">${esc(c.sender_email)} · ${c.documents.length} document(s) received</span></div>
     <span class="badge ${cls}">${esc(txt)}</span></div>
     ${docs.length || missing ? `<div style="overflow-x:auto"><table style="min-width:520px"><thead><tr><th>Document</th><th>What the agent read</th><th>Check</th></tr></thead><tbody>${rows}${missing}</tbody></table></div>` : ''}
-    <div class="next"><strong style="color:#111827">Next step:</strong> ${next}</div>
+    <div class="next"><strong style="color:#111827">${decided ? 'Outcome' : 'Next step'}:</strong> ${nextText}</div>
     ${sent ? `<div style="padding:14px 20px;border-top:1px solid var(--line)"><div style="font-size:12px;color:var(--muted);margin-bottom:6px">Email the agent wrote · ${esc(sent.subject)}</div><pre class="mail">${esc(sent.body)}</pre></div>` : ''}
   </section>`;
   el.innerHTML = html;
@@ -287,6 +319,88 @@ function renderLog() {
 
 async function decide(id, action) { await post(`/api/decisions/${id}`, {action}); }
 
+// ---------------------------------------------------------------- guided demo
+const STEPS = [
+  {title: 'Welcome. Nothing has happened yet.',
+   body: 'This is the inbox an onboarding team watches. Press “Next” and the first supplier email arrives. The agent takes it from there.',
+   next: 'Send the first email', run: () => post('/api/reset')},
+  {title: 'Scene 1 · Al Noor Trading applies',
+   body: 'Al Noor sent 4 documents, one of them in Arabic only. Watch the right-hand panel: the agent reads each PDF, checks the registration with the Wathq registry and VAT with ZATCA, compares the names across documents, then creates the vendor.',
+   watch: 'Look for: “Ran … checks → all clear” on the right, and the welcome email it wrote.',
+   next: 'Next supplier', run: () => post('/api/simulate/1'), select: 'demo_1_al_noor_clean'},
+  {title: 'Scene 2 · Rawabi Logistics: VAT certificate expired',
+   body: 'A routine problem the supplier can fix. The agent does not bother a human: it emails Rawabi asking for exactly the expired document and says when it expired.',
+   watch: 'Look for: the amber “Expired” row, and the email it wrote in the middle panel.',
+   next: 'Rawabi replies', run: () => post('/api/simulate/2'), select: 'demo_2_rawabi_expired_vat'},
+  {title: 'Scene 2 · Rawabi replies with the renewed certificate',
+   body: 'Two days later the reply arrives. The agent reads only the new document, re-runs the checks, and finishes the onboarding.',
+   watch: 'Look for: Rawabi turning green, “Onboarded · no human needed”.',
+   next: 'Next supplier', run: () => post('/api/simulate/2/reply'), select: 'demo_2_rawabi_expired_vat'},
+  {title: 'Scene 3 · Gulf Steel: the bank account belongs to someone else',
+   body: 'The bank letter is in the name of a different company. Paying another company is a classic fraud pattern, so the agent stops, does not email the supplier, and puts the decision in front of you with the evidence.',
+   watch: 'Look for: the red “Needs your decision” card.',
+   next: 'Next email', run: () => post('/api/simulate/3'), select: 'demo_3_gulf_steel_bank_mismatch'},
+  {title: 'Scene 4 · A fake email asks to change Al Noor’s bank',
+   body: 'Someone writing from alnoor-trading.co (the real domain is alnoor-trading.com.sa) asks to send Al Noor’s payments to a new bank. The agent freezes the change, holds payments, lists the red flags and asks you to call Al Noor on the number already on file.',
+   watch: 'Look for: “sender domain mismatch” and “bank differs from file” on the red card.',
+   next: 'Call Al Noor and reject', run: () => post('/api/simulate/4'), select: 'demo_4_al_noor_bank_change'},
+  {title: 'You called Al Noor. They never asked for a change.',
+   body: 'As the manager, you rejected the change. Al Noor’s payments are released and their bank details stay as they were. The agent never changes bank details by itself; only a person can, after a phone call.',
+   next: 'Jump 11 months ahead',
+   run: async () => { const c = S.open_cards.find(c => c.case_id === 'demo_4_al_noor_bank_change'); if (c) await post(`/api/decisions/${c.id}`, {action: 'reject', note: 'called number on file; supplier did not request this'}); },
+   select: 'demo_4_al_noor_bank_change'},
+  {title: 'Scene 5 · Eleven months later',
+   body: 'The demo clock jumps to 30 Sep 2027. Al Noor’s registration expires in 20 days, so the agent emails them for the renewal and marks them “at risk”. Rawabi’s GOSI certificate has already lapsed, so their payments go on hold until they send a new one.',
+   watch: 'Look for: the “Vendors on file” list on the left.',
+   next: 'Finish', run: () => post('/api/clock', {date: '2027-09-30'})},
+  {title: 'That’s the whole story.',
+   body: 'Five suppliers, one person involved twice, and only for fraud risk. Click any supplier on the left to see what the agent read and why it decided what it did.',
+   next: null},
+];
+let step = 0, guideBusy = false;
+try { step = Math.min(parseInt(sessionStorage.getItem('guideStep') || '0', 10) || 0, STEPS.length - 1); } catch {}
+
+function setStep(n) {
+  step = n;
+  try { sessionStorage.setItem('guideStep', String(n)); } catch {}
+  renderGuide();
+}
+function renderGuide() {
+  // The text shown describes what just happened (step - 1's result) once a step has run.
+  const shown = STEPS[step];
+  document.getElementById('g-step').textContent = step === 0 ? 'Guided demo' : `Step ${step} of ${STEPS.length - 1}`;
+  document.getElementById('g-title').textContent = shown.title;
+  document.getElementById('g-body').textContent = shown.body;
+  const w = document.getElementById('g-watch'); w.hidden = !shown.watch; w.textContent = shown.watch || '';
+  const btn = document.getElementById('g-next');
+  btn.hidden = !shown.next && step !== 0;
+  btn.textContent = guideBusy ? 'The agent is working…' : (step === 0 ? 'Start: send the first email' : (STEPS[step].next || ''));
+  btn.disabled = guideBusy;
+}
+async function guideNext() {
+  if (guideBusy) return;
+  // Run the action of the step we are on, then move to the next card, which explains it.
+  const nextIdx = step === 0 ? 1 : step + 1;
+  const toRun = step === 0 ? [STEPS[0], STEPS[1]] : [STEPS[nextIdx]];
+  guideBusy = true; renderGuide();
+  for (const st of toRun) { if (st && st.run) await st.run(); }
+  const target = STEPS[nextIdx];
+  if (target && target.select) selected = target.select;
+  setStep(nextIdx);
+  await waitQuiet();
+  guideBusy = false; renderGuide(); refresh();
+}
+async function guideRestart() { selected = null; events = []; guideBusy = false; await post('/api/reset'); setStep(0); refresh(); }
+function waitQuiet() {
+  // The agent is done when no new events have arrived for 2.5 s.
+  return new Promise(res => {
+    let last = events.length, quiet = 0;
+    const t = setInterval(() => {
+      if (events.length !== last) { last = events.length; quiet = 0; } else if ((quiet += 500) >= 2500) { clearInterval(t); res(); }
+    }, 500);
+  });
+}
+
 async function refresh() { S = await (await fetch('/api/state')).json(); render(); }
 function scheduleRefresh() { clearTimeout(refreshTimer); refreshTimer = setTimeout(refresh, 250); }
 
@@ -297,7 +411,7 @@ async function boot() {
   let idle;
   es.onmessage = m => {
     const e = JSON.parse(m.data);
-    if (events.length && e.id <= events[events.length-1].id) return;
+    if (events.some(x => x.id === e.id && x.ts === e.ts)) return;
     events.push(e);
     const busy = document.getElementById('busy'); busy.classList.add('busy');
     clearTimeout(idle); idle = setTimeout(() => busy.classList.remove('busy'), 2500);
@@ -305,6 +419,7 @@ async function boot() {
     scheduleRefresh();
   };
 }
+renderGuide();
 boot();
 </script>
 </body></html>

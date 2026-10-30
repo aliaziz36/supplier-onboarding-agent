@@ -80,7 +80,12 @@ def _reply(case_dir: Path, n: int = 1):
 # --------------------------------------------------------------------------- pages and state
 
 @app.get("/")
-def index():
+def welcome():
+    return FileResponse(ROOT / "web" / "welcome.html")
+
+
+@app.get("/dashboard")
+def dashboard():
     return FileResponse(ROOT / "web" / "index.html")
 
 
@@ -135,6 +140,9 @@ async def stream():
         last = 0
         while True:
             with rlock:
+                top = db.row(rconn, "SELECT COALESCE(MAX(id), 0) AS m FROM events")["m"]
+                if top < last:          # the demo was reset and ids restarted
+                    last = 0
                 rows = db.rows(rconn, "SELECT * FROM events WHERE id > ? ORDER BY id", last)
             for r in rows:
                 last = r["id"]
