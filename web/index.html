@@ -498,8 +498,9 @@ async function decide(id, action) { await post(`/api/decisions/${id}`, {action})
 
 // ---------------------------------------------------------------- guided demo
 const STEPS = [
-  {title: 'Welcome. This is the procurement team’s inbox.',
-   body: 'Suppliers who want to sell to the company email their documents here. The agent reads every email and decides what to do. Press the green button and the first supplier email arrives.',
+  {title: 'This is a procurement team’s inbox, run by the agent',
+   body: 'Normally a person opens every supplier’s PDFs, checks each company on the Wathq and ZATCA websites, and emails back and forth about expired documents: 18.8 days per supplier on average. And one fake email asking to change a supplier’s bank account can send payments to a fraudster. Here, the agent does that work and only calls you for possible fraud.',
+   watch: 'Press the green button and the first supplier email arrives.',
    next: 'Send the first email', run: () => post('/api/reset')},
   {title: 'Al Noor Trading applies, and the agent finishes the job alone',
    body: 'Al Noor emailed 4 documents, two of them in Arabic. The agent read each one, checked the company with the Wathq and ZATCA registries, made sure the names and numbers match across documents, then approved Al Noor and sent a welcome email.',
@@ -547,7 +548,7 @@ function renderGuide() {
   const w = document.getElementById('g-watch'); w.hidden = !shown.watch; w.textContent = shown.watch ? '👀 ' + shown.watch : '';
   const btn = document.getElementById('g-next');
   btn.hidden = !shown.next;
-  btn.textContent = guideBusy ? 'Please wait…' : (shown.next || '') + ' →';
+  btn.textContent = guideBusy ? 'Please wait…' : (step === 0 ? 'Start: send the first email' : (shown.next || '')) + ' →';
   btn.disabled = guideBusy;
   document.getElementById('g-working').innerHTML = guideBusy ? `<span class="dot busy"></span>${esc(workingText())}` : '';
 }
