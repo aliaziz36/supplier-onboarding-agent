@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051598386": {
+        "name": "شركة تهامة للخدمات الكهربائية",
+        "name_en": "Tihama Electrical Services Co.",
+        "status": "active",
+        "issue_date": "2025-07-16",
+        "expiry_date": "2028-09-25",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "375650889957903": {
+        "registered": true,
+        "name": "شركة تهامة للخدمات الكهربائية",
+        "name_en": "Tihama Electrical Services Co.",
+        "crNumber": "2051598386"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010341768": {
+        "name": "شركة الصفوة للخدمات الكهربائية",
+        "name_en": "Al Safwa Electrical Services Company",
+        "status": "active",
+        "issue_date": "2025-11-29",
+        "expiry_date": "2027-11-15",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "348787065247063": {
+        "registered": true,
+        "name": "شركة الصفوة للخدمات الكهربائية",
+        "name_en": "Al Safwa Electrical Services Company",
+        "crNumber": "1010341768"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

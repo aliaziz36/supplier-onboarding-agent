@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030608454": {
+        "name": "مؤسسة المنار للخدمات اللوجستية",
+        "name_en": "Al Manar Logistics Est.",
+        "status": "active",
+        "issue_date": "2025-12-16",
+        "expiry_date": "2028-03-01",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "386688874127963": {
+        "registered": true,
+        "name": "مؤسسة المنار للخدمات اللوجستية",
+        "name_en": "Al Manar Logistics Est.",
+        "crNumber": "4030608454"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

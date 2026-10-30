@@ -1,0 +1,87 @@
+{
+  "case_id": "dev_014_clean",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "scanned",
+    "hijri",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051393185",
+      "expiry_date": null,
+      "iban": "SA1355573982051828751907",
+      "account_name": "Al Hilal Catering Est."
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Hilal Catering Est.",
+      "company_name_ar": "مؤسسة الهلال للإعاشة",
+      "cr_number": "2051393185",
+      "expiry_date": "2028-02-04"
+    },
+    "scan_4918.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Hilal Catering Est.",
+      "company_name_ar": null,
+      "cr_number": "2051393185",
+      "expiry_date": "2027-07-20",
+      "vat_number": "321056540966653"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "hijri",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Hilal Catering Est.",
+      "company_name_ar": "مؤسسة الهلال للإعاشة",
+      "cr_number": "2051393185",
+      "expiry_date": "2027-02-09"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Hilal Catering Est.",
+    "company_name_ar": "مؤسسة الهلال للإعاشة",
+    "cr_number": "2051393185",
+    "vat_number": "321056540966653",
+    "iban": "SA1355573982051828751907",
+    "account_name": "Al Hilal Catering Est.",
+    "expiry": {
+      "commercial_registration": "2027-02-09",
+      "vat_certificate": "2027-07-20",
+      "gosi_certificate": "2028-02-04"
+    }
+  }
+}

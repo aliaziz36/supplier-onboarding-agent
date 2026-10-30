@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650862331": {
+        "name": "شركة اليمامة لحلول تقنية المعلومات",
+        "name_en": "Al Yamamah IT Solutions Co.",
+        "status": "active",
+        "issue_date": "2025-10-15",
+        "expiry_date": "2028-03-31",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "392981473057593": {
+        "registered": true,
+        "name": "شركة اليمامة لحلول تقنية المعلومات",
+        "name_en": "Al Yamamah IT Solutions Co.",
+        "crNumber": "4650862331"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

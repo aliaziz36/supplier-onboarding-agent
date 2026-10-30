@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650552583": {
+        "name": "شركة الصفوة للخدمات اللوجستية",
+        "name_en": "Al Safwa Logistics LLC",
+        "status": "active",
+        "issue_date": "2025-04-18",
+        "expiry_date": "2027-08-21",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "359333448549073": {
+        "registered": true,
+        "name": "شركة الصفوة للخدمات اللوجستية",
+        "name_en": "Al Safwa Logistics LLC",
+        "crNumber": "4650552583"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

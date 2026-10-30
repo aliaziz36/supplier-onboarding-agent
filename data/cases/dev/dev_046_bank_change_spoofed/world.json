@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050875727": {
+        "name": "شركة المنار للمستلزمات الطبية",
+        "name_en": "Al Manar Medical Supplies Co.",
+        "status": "active",
+        "issue_date": "2025-05-20",
+        "expiry_date": "2027-10-05",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "327235189952663": {
+        "registered": true,
+        "name": "شركة المنار للمستلزمات الطبية",
+        "name_en": "Al Manar Medical Supplies Co.",
+        "crNumber": "2050875727"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050875727",
+    "name": "Al Manar Medical Supplies Co.",
+    "name_ar": "شركة المنار للمستلزمات الطبية",
+    "cr_number": "2050875727",
+    "vat_number": "327235189952663",
+    "iban": "SA9455439075147670647825",
+    "bank_code": "55",
+    "account_name": "Al Manar Medical Supplies Co.",
+    "email": "faisal@almanar-medical.com.sa",
+    "email_domain": "almanar-medical.com.sa",
+    "phone": "+966536115278",
+    "documents": {
+      "commercial_registration": "2027-10-05",
+      "vat_certificate": "2027-11-06",
+      "gosi_certificate": "2028-04-04"
+    }
+  }
+}

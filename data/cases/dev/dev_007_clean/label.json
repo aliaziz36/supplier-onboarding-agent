@@ -1,0 +1,89 @@
+{
+  "case_id": "dev_007_clean",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Trading LLC",
+      "company_name_ar": "شركة الجزيرة للتجارة",
+      "cr_number": "4650665991",
+      "expiry_date": "2027-10-17",
+      "vat_number": "373406264219053"
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Trading LLC",
+      "company_name_ar": "شركة الجزيرة للتجارة",
+      "cr_number": "4650665991",
+      "expiry_date": "2027-11-14"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650665991",
+      "expiry_date": null,
+      "iban": "SA5755684274727804819615",
+      "account_name": "Al Jazeera Trading LLC"
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Trading LLC",
+      "company_name_ar": "شركة الجزيرة للتجارة",
+      "cr_number": "4650665991",
+      "expiry_date": "2028-09-29"
+    },
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Jazeera Trading LLC",
+    "company_name_ar": "شركة الجزيرة للتجارة",
+    "cr_number": "4650665991",
+    "vat_number": "373406264219053",
+    "iban": "SA5755684274727804819615",
+    "account_name": "Al Jazeera Trading LLC",
+    "expiry": {
+      "commercial_registration": "2027-11-14",
+      "vat_certificate": "2027-10-17",
+      "gosi_certificate": "2028-09-29"
+    }
+  }
+}

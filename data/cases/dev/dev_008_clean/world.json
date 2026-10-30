@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030275463": {
+        "name": "شركة عسير للمستلزمات الطبية",
+        "name_en": "Asir Medical Supplies Company",
+        "status": "active",
+        "issue_date": "2026-04-21",
+        "expiry_date": "2028-02-27",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "313411365712003": {
+        "registered": true,
+        "name": "شركة عسير للمستلزمات الطبية",
+        "name_en": "Asir Medical Supplies Company",
+        "crNumber": "4030275463"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

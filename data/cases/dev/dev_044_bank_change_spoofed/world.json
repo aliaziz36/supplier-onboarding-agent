@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2051704775": {
+        "name": "شركة التميز للخدمات اللوجستية",
+        "name_en": "Al Tamayuz Logistics Co.",
+        "status": "active",
+        "issue_date": "2025-12-21",
+        "expiry_date": "2027-09-26",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "323783883263573": {
+        "registered": true,
+        "name": "شركة التميز للخدمات اللوجستية",
+        "name_en": "Al Tamayuz Logistics Co.",
+        "crNumber": "2051704775"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2051704775",
+    "name": "Al Tamayuz Logistics Co.",
+    "name_ar": "شركة التميز للخدمات اللوجستية",
+    "cr_number": "2051704775",
+    "vat_number": "323783883263573",
+    "iban": "SA9245031510365677799750",
+    "bank_code": "45",
+    "account_name": "Al Tamayuz Logistics Co.",
+    "email": "nora@altamayuz-logistics.com.sa",
+    "email_domain": "altamayuz-logistics.com.sa",
+    "phone": "+966542816351",
+    "documents": {
+      "commercial_registration": "2027-09-26",
+      "vat_certificate": "2027-11-22",
+      "gosi_certificate": "2027-05-11"
+    }
+  }
+}

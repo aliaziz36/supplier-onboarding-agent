@@ -1,0 +1,87 @@
+{
+  "case_id": "dev_037_bank_name_mismatch",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Riyadah Cleaning Services Company",
+      "company_name_ar": "شركة الريادة لخدمات النظافة",
+      "cr_number": "1010833214",
+      "expiry_date": "2028-04-03"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010833214",
+      "expiry_date": null,
+      "iban": "SA9180421329636872917331",
+      "account_name": "Rawabi Trading Est."
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Riyadah Cleaning Services Company",
+      "company_name_ar": "شركة الريادة لخدمات النظافة",
+      "cr_number": "1010833214",
+      "expiry_date": "2028-01-25",
+      "vat_number": "380054304221293"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Riyadah Cleaning Services Company",
+      "company_name_ar": "شركة الريادة لخدمات النظافة",
+      "cr_number": "1010833214",
+      "expiry_date": "2028-04-12"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Rawabi Trading Est.' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Al Riyadah Cleaning Services Company",
+    "company_name_ar": "شركة الريادة لخدمات النظافة",
+    "cr_number": "1010833214",
+    "vat_number": "380054304221293",
+    "iban": "SA9180421329636872917331",
+    "account_name": "Rawabi Trading Est.",
+    "expiry": {
+      "commercial_registration": "2028-04-03",
+      "vat_certificate": "2028-01-25",
+      "gosi_certificate": "2028-04-12"
+    }
+  }
+}

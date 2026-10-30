@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050268331": {
+        "name": "مؤسسة الصفوة لحلول تقنية المعلومات",
+        "name_en": "Al Safwa IT Solutions Est.",
+        "status": "active",
+        "issue_date": "2026-03-04",
+        "expiry_date": "2027-03-25",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "331463740656763": {
+        "registered": true,
+        "name": "مؤسسة الصفوة لحلول تقنية المعلومات",
+        "name_en": "Al Safwa IT Solutions Est.",
+        "crNumber": "2050268331"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050268331",
+    "name": "Al Safwa IT Solutions Est.",
+    "name_ar": "مؤسسة الصفوة لحلول تقنية المعلومات",
+    "cr_number": "2050268331",
+    "vat_number": "331463740656763",
+    "iban": "SA1745043225849976455437",
+    "bank_code": "45",
+    "account_name": "Al Safwa IT Solutions Est.",
+    "email": "omar@alsafwa-it.com.sa",
+    "email_domain": "alsafwa-it.com.sa",
+    "phone": "+966550931235",
+    "documents": {
+      "commercial_registration": "2027-03-25",
+      "vat_certificate": "2028-02-13",
+      "gosi_certificate": "2026-11-27"
+    }
+  }
+}

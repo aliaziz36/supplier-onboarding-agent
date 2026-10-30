@@ -1,0 +1,89 @@
+{
+  "case_id": "dev_021_expired",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "scanned",
+    "arabic",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_3331.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة درة لتصنيع الحديد",
+      "cr_number": "2051222194",
+      "expiry_date": "2027-11-28"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Durrah Steel Fabrication Company",
+      "company_name_ar": "شركة درة لتصنيع الحديد",
+      "cr_number": "2051222194",
+      "expiry_date": "2028-06-18",
+      "vat_number": "335524741628573"
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة درة لتصنيع الحديد",
+      "cr_number": "2051222194",
+      "expiry_date": "2026-06-17"
+    },
+    "scan_8870.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051222194",
+      "expiry_date": null,
+      "iban": "SA9820251278003558585512",
+      "account_name": "Durrah Steel Fabrication Company"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate expired on 2026-06-17.",
+  "expected_fields": {
+    "company_name": "Durrah Steel Fabrication Company",
+    "company_name_ar": "شركة درة لتصنيع الحديد",
+    "cr_number": "2051222194",
+    "vat_number": "335524741628573",
+    "iban": "SA9820251278003558585512",
+    "account_name": "Durrah Steel Fabrication Company",
+    "expiry": {
+      "commercial_registration": "2027-11-28",
+      "vat_certificate": "2028-06-18",
+      "gosi_certificate": "2026-06-17"
+    }
+  }
+}

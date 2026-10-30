@@ -1,0 +1,85 @@
+{
+  "case_id": "dev_041_cr_inactive",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "cr_inactive",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Logistics Est.",
+      "company_name_ar": "مؤسسة الخليج للخدمات اللوجستية",
+      "cr_number": "2051483853",
+      "expiry_date": "2027-02-19"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051483853",
+      "expiry_date": null,
+      "iban": "SA4805963496404216446802",
+      "account_name": "Gulf Logistics Est."
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Logistics Est.",
+      "company_name_ar": null,
+      "cr_number": "2051483853",
+      "expiry_date": "2027-05-28",
+      "vat_number": "322436066321123"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Logistics Est.",
+      "company_name_ar": "مؤسسة الخليج للخدمات اللوجستية",
+      "cr_number": "2051483853",
+      "expiry_date": "2027-12-10"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "cr_not_active"
+  ],
+  "fraud": true,
+  "reason": "CR is cancelled in the registry.",
+  "expected_fields": {
+    "company_name": "Gulf Logistics Est.",
+    "company_name_ar": "مؤسسة الخليج للخدمات اللوجستية",
+    "cr_number": "2051483853",
+    "vat_number": "322436066321123",
+    "iban": "SA4805963496404216446802",
+    "account_name": "Gulf Logistics Est.",
+    "expiry": {
+      "commercial_registration": "2027-02-19",
+      "vat_certificate": "2027-05-28",
+      "gosi_certificate": "2027-12-10"
+    }
+  }
+}

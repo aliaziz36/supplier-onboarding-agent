@@ -1,0 +1,87 @@
+{
+  "case_id": "dev_012_clean",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "scanned",
+    "arabic",
+    "hijri"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_6387.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "hijri",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة الفارس للمستلزمات الطبية",
+      "cr_number": "1010540874",
+      "expiry_date": "2028-08-12"
+    },
+    "scan_3347.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Faris Medical Supplies Co.",
+      "company_name_ar": null,
+      "cr_number": "1010540874",
+      "expiry_date": "2027-05-12",
+      "vat_number": "313844362243683"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "hijri",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة الفارس للمستلزمات الطبية",
+      "cr_number": "1010540874",
+      "expiry_date": "2028-08-12"
+    },
+    "scan_5412.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010540874",
+      "expiry_date": null,
+      "iban": "SA6410898264474473759735",
+      "account_name": "Al Faris Medical Supplies Co."
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Faris Medical Supplies Co.",
+    "company_name_ar": "شركة الفارس للمستلزمات الطبية",
+    "cr_number": "1010540874",
+    "vat_number": "313844362243683",
+    "iban": "SA6410898264474473759735",
+    "account_name": "Al Faris Medical Supplies Co.",
+    "expiry": {
+      "commercial_registration": "2028-08-12",
+      "vat_certificate": "2027-05-12",
+      "gosi_certificate": "2028-08-12"
+    }
+  }
+}

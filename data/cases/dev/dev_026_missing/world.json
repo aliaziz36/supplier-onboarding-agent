@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051205224": {
+        "name": "شركة نجد للمستلزمات المكتبية",
+        "name_en": "Najd Office Supplies Co.",
+        "status": "active",
+        "issue_date": "2025-12-30",
+        "expiry_date": "2027-08-26",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "307071961789813": {
+        "registered": true,
+        "name": "شركة نجد للمستلزمات المكتبية",
+        "name_en": "Najd Office Supplies Co.",
+        "crNumber": "2051205224"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "smoke-test",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.57,
+ "response": {
+  "content": [
+   {
+    "text": "ready",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 16,
+   "output_tokens": 4
+  }
+ }
+}

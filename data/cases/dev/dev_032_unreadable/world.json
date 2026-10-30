@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050901762": {
+        "name": "شركة المدى للإعاشة",
+        "name_en": "Al Mada Catering LLC",
+        "status": "active",
+        "issue_date": "2025-11-09",
+        "expiry_date": "2027-12-26",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "362888892467453": {
+        "registered": true,
+        "name": "شركة المدى للإعاشة",
+        "name_en": "Al Mada Catering LLC",
+        "crNumber": "2050901762"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

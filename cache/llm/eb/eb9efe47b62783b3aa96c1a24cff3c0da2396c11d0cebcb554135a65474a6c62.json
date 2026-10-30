@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:demo_4_al_noor_bank_change",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.82,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_012HDP7KUYAiPfNJkdDrkrw3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_4_al_noor_bank_change"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2776,
+   "output_tokens": 62
+  }
+ }
+}

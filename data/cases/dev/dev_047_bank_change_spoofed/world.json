@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "1010674845": {
+        "name": "مؤسسة النور للإعاشة",
+        "name_en": "Al Noor Catering Est.",
+        "status": "active",
+        "issue_date": "2025-05-15",
+        "expiry_date": "2027-04-06",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "327016750732523": {
+        "registered": true,
+        "name": "مؤسسة النور للإعاشة",
+        "name_en": "Al Noor Catering Est.",
+        "crNumber": "1010674845"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-1010674845",
+    "name": "Al Noor Catering Est.",
+    "name_ar": "مؤسسة النور للإعاشة",
+    "cr_number": "1010674845",
+    "vat_number": "327016750732523",
+    "iban": "SA2145724533909747775661",
+    "bank_code": "45",
+    "account_name": "Al Noor Catering Est.",
+    "email": "nora@alnoor-catering.com.sa",
+    "email_domain": "alnoor-catering.com.sa",
+    "phone": "+966550516875",
+    "documents": {
+      "commercial_registration": "2027-04-06",
+      "vat_certificate": "2028-09-16",
+      "gosi_certificate": "2028-07-26"
+    }
+  }
+}

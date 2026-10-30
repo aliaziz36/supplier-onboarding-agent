@@ -1,0 +1,88 @@
+{
+  "case_id": "dev_011_clean",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "scanned",
+    "arabic",
+    "name_variant",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "مؤسسة المدى لخدمات النظافة",
+      "cr_number": "2051428792",
+      "expiry_date": "2027-04-15"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "مؤسسة المدى لخدمات النظافة",
+      "cr_number": "2051428792",
+      "expiry_date": "2027-04-25"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Mada Cleaning Services Est.",
+      "company_name_ar": null,
+      "cr_number": "2051428792",
+      "expiry_date": "2027-07-24",
+      "vat_number": "382406905664013"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051428792",
+      "expiry_date": null,
+      "iban": "SA5120064745756717526202",
+      "account_name": "Al Mada Cleaning Services Establishment"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Mada Cleaning Services Est.",
+    "company_name_ar": "مؤسسة المدى لخدمات النظافة",
+    "cr_number": "2051428792",
+    "vat_number": "382406905664013",
+    "iban": "SA5120064745756717526202",
+    "account_name": "Al Mada Cleaning Services Establishment",
+    "expiry": {
+      "commercial_registration": "2027-04-25",
+      "vat_certificate": "2027-07-24",
+      "gosi_certificate": "2027-04-15"
+    }
+  }
+}

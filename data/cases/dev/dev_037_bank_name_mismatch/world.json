@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010833214": {
+        "name": "شركة الريادة لخدمات النظافة",
+        "name_en": "Al Riyadah Cleaning Services Company",
+        "status": "active",
+        "issue_date": "2025-07-20",
+        "expiry_date": "2028-04-03",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "380054304221293": {
+        "registered": true,
+        "name": "شركة الريادة لخدمات النظافة",
+        "name_en": "Al Riyadah Cleaning Services Company",
+        "crNumber": "1010833214"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

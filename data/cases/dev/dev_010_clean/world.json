@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050554588": {
+        "name": "شركة الهلال للمقاولات",
+        "name_en": "Al Hilal Contracting LLC",
+        "status": "active",
+        "issue_date": "2026-02-21",
+        "expiry_date": "2027-03-29",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "308125559174773": {
+        "registered": true,
+        "name": "شركة الهلال للمقاولات",
+        "name_en": "Al Hilal Contracting LLC",
+        "crNumber": "2050554588"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

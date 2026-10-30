@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4030062275": {
+        "name": "شركة أجيال لتصنيع الحديد",
+        "name_en": "Ajyal Steel Fabrication Company",
+        "status": "active",
+        "issue_date": "2025-09-18",
+        "expiry_date": "2027-04-15",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "307985492898033": {
+        "registered": true,
+        "name": "شركة أجيال لتصنيع الحديد",
+        "name_en": "Ajyal Steel Fabrication Company",
+        "crNumber": "4030062275"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4030062275",
+    "name": "Ajyal Steel Fabrication Company",
+    "name_ar": "شركة أجيال لتصنيع الحديد",
+    "cr_number": "4030062275",
+    "vat_number": "307985492898033",
+    "iban": "SA2820773851424641005820",
+    "bank_code": "20",
+    "account_name": "Ajyal Steel Fabrication Company",
+    "email": "reem@ajyal-steel.com.sa",
+    "email_domain": "ajyal-steel.com.sa",
+    "phone": "+966520004304",
+    "documents": {
+      "commercial_registration": "2027-04-15",
+      "vat_certificate": "2027-06-10",
+      "gosi_certificate": "2027-07-31"
+    }
+  }
+}

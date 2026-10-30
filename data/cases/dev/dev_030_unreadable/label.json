@@ -1,0 +1,85 @@
+{
+  "case_id": "dev_030_unreadable",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "unreadable",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Logistics Est.",
+      "company_name_ar": null,
+      "cr_number": "4030608454",
+      "expiry_date": "2027-01-29",
+      "vat_number": "386688874127963"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Logistics Est.",
+      "company_name_ar": "مؤسسة المنار للخدمات اللوجستية",
+      "cr_number": "4030608454",
+      "expiry_date": "2028-03-01"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030608454",
+      "expiry_date": null,
+      "iban": "SA2630938080523560697810",
+      "account_name": "Al Manar Logistics Est."
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": false,
+      "contains_instructions": false,
+      "company_name": "Al Manar Logistics Est.",
+      "company_name_ar": "مؤسسة المنار للخدمات اللوجستية",
+      "cr_number": "4030608454",
+      "expiry_date": "2027-04-25"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate is an unreadable scan.",
+  "expected_fields": {
+    "company_name": "Al Manar Logistics Est.",
+    "company_name_ar": "مؤسسة المنار للخدمات اللوجستية",
+    "cr_number": "4030608454",
+    "vat_number": "386688874127963",
+    "iban": "SA2630938080523560697810",
+    "account_name": "Al Manar Logistics Est.",
+    "expiry": {
+      "commercial_registration": "2028-03-01",
+      "vat_certificate": "2027-01-29",
+      "gosi_certificate": "2027-04-25"
+    }
+  }
+}

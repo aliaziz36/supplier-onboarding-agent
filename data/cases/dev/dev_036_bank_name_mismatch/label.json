@@ -1,0 +1,93 @@
+{
+  "case_id": "dev_036_bank_name_mismatch",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [
+    "scanned",
+    "date_format",
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Tamayuz Electrical Services Company",
+      "company_name_ar": null,
+      "cr_number": "4030871663",
+      "expiry_date": "2028-07-24",
+      "vat_number": "340404129476413"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Tamayuz Electrical Services Company",
+      "company_name_ar": "شركة التميز للخدمات الكهربائية",
+      "cr_number": "4030871663",
+      "expiry_date": "2028-04-20"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Tamayuz Electrical Services Company",
+      "company_name_ar": "شركة التميز للخدمات الكهربائية",
+      "cr_number": "4030871663",
+      "expiry_date": "2027-09-27"
+    },
+    "scan_4294.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030871663",
+      "expiry_date": null,
+      "iban": "SA3355072483206809840651",
+      "account_name": "Qimam Office Supplies Est."
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Qimam Office Supplies Est.' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Al Tamayuz Electrical Services Company",
+    "company_name_ar": "شركة التميز للخدمات الكهربائية",
+    "cr_number": "4030871663",
+    "vat_number": "340404129476413",
+    "iban": "SA3355072483206809840651",
+    "account_name": "Qimam Office Supplies Est.",
+    "expiry": {
+      "commercial_registration": "2028-04-20",
+      "vat_certificate": "2028-07-24",
+      "gosi_certificate": "2027-09-27"
+    }
+  }
+}

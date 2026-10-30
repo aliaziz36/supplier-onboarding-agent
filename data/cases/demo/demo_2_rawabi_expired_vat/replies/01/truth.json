@@ -1,0 +1,16 @@
+{
+  "VAT_certificate_renewed.pdf": {
+    "doc_type": "vat_certificate",
+    "lang": "bi",
+    "layout": 0,
+    "date_style": "dmy",
+    "scanned": false,
+    "legible": true,
+    "contains_instructions": false,
+    "company_name": "Rawabi Logistics Company",
+    "company_name_ar": "شركة روابي للخدمات اللوجستية",
+    "cr_number": "1010752917",
+    "expiry_date": "2027-10-10",
+    "vat_number": "303423667127683"
+  }
+}

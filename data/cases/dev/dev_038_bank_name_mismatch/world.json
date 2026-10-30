@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030732338": {
+        "name": "شركة روابي لحلول تقنية المعلومات",
+        "name_en": "Rawabi IT Solutions LLC",
+        "status": "active",
+        "issue_date": "2026-01-02",
+        "expiry_date": "2027-02-20",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "354799833419003": {
+        "registered": true,
+        "name": "شركة روابي لحلول تقنية المعلومات",
+        "name_en": "Rawabi IT Solutions LLC",
+        "crNumber": "4030732338"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050260181": {
+        "name": "شركة النور للتجارة",
+        "name_en": "Al Noor Trading Co.",
+        "status": "active",
+        "issue_date": "2025-07-21",
+        "expiry_date": "2027-10-20",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "359083016613183": {
+        "registered": true,
+        "name": "شركة النور للتجارة",
+        "name_en": "Al Noor Trading Co.",
+        "crNumber": "2050260181"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050260181",
+    "name": "Al Noor Trading Co.",
+    "name_ar": "شركة النور للتجارة",
+    "cr_number": "2050260181",
+    "vat_number": "359083016613183",
+    "iban": "SA4080091390996030824628",
+    "bank_code": "80",
+    "account_name": "Al Noor Trading Co.",
+    "email": "faisal@alnoor-trading.com.sa",
+    "email_domain": "alnoor-trading.com.sa",
+    "phone": "+966594821993",
+    "documents": {
+      "commercial_registration": "2027-10-20",
+      "vat_certificate": "2028-03-14",
+      "gosi_certificate": "2028-01-09"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650520834": {
+        "name": "مؤسسة سحاب للمستلزمات الطبية",
+        "name_en": "Sahab Medical Supplies Est.",
+        "status": "active",
+        "issue_date": "2026-03-26",
+        "expiry_date": "2027-03-24",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "391740480961153": {
+        "registered": true,
+        "name": "مؤسسة سحاب للمستلزمات الطبية",
+        "name_en": "Sahab Medical Supplies Est.",
+        "crNumber": "4650520834"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

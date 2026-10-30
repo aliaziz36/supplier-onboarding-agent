@@ -1,0 +1,85 @@
+{
+  "case_id": "dev_034_bank_name_mismatch",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Wadi Trading LLC",
+      "company_name_ar": "شركة الوادي للتجارة",
+      "cr_number": "4650962527",
+      "expiry_date": "2028-08-14"
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Wadi Trading LLC",
+      "company_name_ar": "شركة الوادي للتجارة",
+      "cr_number": "4650962527",
+      "expiry_date": "2027-12-13",
+      "vat_number": "369828199964673"
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Wadi Trading LLC",
+      "company_name_ar": "شركة الوادي للتجارة",
+      "cr_number": "4650962527",
+      "expiry_date": "2027-03-27"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650962527",
+      "expiry_date": null,
+      "iban": "SA0610424641401172733031",
+      "account_name": "Najd Medical Supplies Co."
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Najd Medical Supplies Co.' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Wadi Trading LLC",
+    "company_name_ar": "شركة الوادي للتجارة",
+    "cr_number": "4650962527",
+    "vat_number": "369828199964673",
+    "iban": "SA0610424641401172733031",
+    "account_name": "Najd Medical Supplies Co.",
+    "expiry": {
+      "commercial_registration": "2028-08-14",
+      "vat_certificate": "2027-12-13",
+      "gosi_certificate": "2027-03-27"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "case_id": "dev_033_unreadable",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "unreadable",
+  "perturbations": [
+    "name_variant"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal IT Solutions Company",
+      "company_name_ar": "شركة أجيال لحلول تقنية المعلومات",
+      "cr_number": "4030422667",
+      "expiry_date": "2027-01-31"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal IT Solutions Company",
+      "company_name_ar": "شركة أجيال لحلول تقنية المعلومات",
+      "cr_number": "4030422667",
+      "expiry_date": "2027-12-04",
+      "vat_number": "350810532367893"
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": false,
+      "contains_instructions": false,
+      "company_name": "Ajyal IT Solutions Company",
+      "company_name_ar": "شركة أجيال لحلول تقنية المعلومات",
+      "cr_number": "4030422667",
+      "expiry_date": "2028-07-12"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030422667",
+      "expiry_date": null,
+      "iban": "SA8655695751990287210102",
+      "account_name": "AJYAL IT SOLUTIONS COMPANY"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate is an unreadable scan.",
+  "expected_fields": {
+    "company_name": "Ajyal IT Solutions Company",
+    "company_name_ar": "شركة أجيال لحلول تقنية المعلومات",
+    "cr_number": "4030422667",
+    "vat_number": "350810532367893",
+    "iban": "SA8655695751990287210102",
+    "account_name": "AJYAL IT SOLUTIONS COMPANY",
+    "expiry": {
+      "commercial_registration": "2027-01-31",
+      "vat_certificate": "2027-12-04",
+      "gosi_certificate": "2028-07-12"
+    }
+  }
+}

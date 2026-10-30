@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051141502": {
+        "name": "مؤسسة الخليج للمستلزمات الطبية",
+        "name_en": "Gulf Medical Supplies Est.",
+        "status": "active",
+        "issue_date": "2025-05-03",
+        "expiry_date": "2026-05-03",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "353544476042403": {
+        "registered": true,
+        "name": "مؤسسة الخليج للمستلزمات الطبية",
+        "name_en": "Gulf Medical Supplies Est.",
+        "crNumber": "2051141502"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

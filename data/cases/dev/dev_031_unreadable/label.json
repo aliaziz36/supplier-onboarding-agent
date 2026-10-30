@@ -1,0 +1,87 @@
+{
+  "case_id": "dev_031_unreadable",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "unreadable",
+  "perturbations": [
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650510697",
+      "expiry_date": null,
+      "iban": "SA9860292647376084144091",
+      "account_name": "Ajyal Logistics Company"
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": false,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة أجيال للخدمات اللوجستية",
+      "cr_number": "4650510697",
+      "expiry_date": "2027-09-02"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة أجيال للخدمات اللوجستية",
+      "cr_number": "4650510697",
+      "expiry_date": "2027-01-31"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal Logistics Company",
+      "company_name_ar": "شركة أجيال للخدمات اللوجستية",
+      "cr_number": "4650510697",
+      "expiry_date": "2027-12-30",
+      "vat_number": "307137581504983"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate is an unreadable scan.",
+  "expected_fields": {
+    "company_name": "Ajyal Logistics Company",
+    "company_name_ar": "شركة أجيال للخدمات اللوجستية",
+    "cr_number": "4650510697",
+    "vat_number": "307137581504983",
+    "iban": "SA9860292647376084144091",
+    "account_name": "Ajyal Logistics Company",
+    "expiry": {
+      "commercial_registration": "2027-01-31",
+      "vat_certificate": "2027-12-30",
+      "gosi_certificate": "2027-09-02"
+    }
+  }
+}

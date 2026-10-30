@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010830047": {
+        "name": "شركة نجد للطباعة",
+        "name_en": "Najd Printing LLC",
+        "status": "active",
+        "issue_date": "2026-04-28",
+        "expiry_date": "2027-04-03",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "346292858786823": {
+        "registered": true,
+        "name": "شركة نجد للطباعة",
+        "name_en": "Najd Printing LLC",
+        "crNumber": "1010830047"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

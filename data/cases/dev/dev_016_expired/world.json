@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650574900": {
+        "name": "شركة الصفوة لخدمات النظافة",
+        "name_en": "Al Safwa Cleaning Services Co.",
+        "status": "active",
+        "issue_date": "2025-07-06",
+        "expiry_date": "2028-03-21",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "352211693388613": {
+        "registered": true,
+        "name": "شركة الصفوة لخدمات النظافة",
+        "name_en": "Al Safwa Cleaning Services Co.",
+        "crNumber": "4650574900"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

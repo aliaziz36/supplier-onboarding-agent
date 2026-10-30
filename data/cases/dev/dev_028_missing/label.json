@@ -1,0 +1,72 @@
+{
+  "case_id": "dev_028_missing",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Tamayuz Electrical Services Co.",
+      "company_name_ar": null,
+      "cr_number": "2051780237",
+      "expiry_date": "2028-09-01",
+      "vat_number": "314963851337913"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051780237",
+      "expiry_date": null,
+      "iban": "SA6130759966860626204696",
+      "account_name": "Al Tamayuz Electrical Services Co."
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Tamayuz Electrical Services Co.",
+      "company_name_ar": "شركة التميز للخدمات الكهربائية",
+      "cr_number": "2051780237",
+      "expiry_date": "2028-08-09"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "commercial_registration"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "commercial_registration not provided.",
+  "expected_fields": {
+    "company_name": "Al Tamayuz Electrical Services Co.",
+    "company_name_ar": "شركة التميز للخدمات الكهربائية",
+    "cr_number": "2051780237",
+    "vat_number": "314963851337913",
+    "iban": "SA6130759966860626204696",
+    "account_name": "Al Tamayuz Electrical Services Co.",
+    "expiry": {
+      "commercial_registration": "2027-02-11",
+      "vat_certificate": "2028-09-01",
+      "gosi_certificate": "2028-08-09"
+    }
+  }
+}

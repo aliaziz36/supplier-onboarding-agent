@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:demo_3_gulf_steel_bank_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.89,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_011QD1LembPjb67mRdTxChP4",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_3_gulf_steel_bank_mismatch",
+     "reason": "Bank letter account holder does not match the registering company; possible bank-detail fraud.",
+     "evidence": [
+      "Bank letter account holder and company name: 'Desert Bloom Trading Co.'",
+      "VAT, CR and GOSI documents name 'Gulf Steel Fabrication Co.' (CR 4030888539)",
+      "IBAN SA2045957551313735379907, Saudi Awwal Bank",
+      "run_checks failed bank_name_matches_cr (risk); 15 other checks passed"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01A9gd8Y9mYLZuP7SduSFX99",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_3_gulf_steel_bank_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4511,
+   "output_tokens": 356
+  }
+ }
+}

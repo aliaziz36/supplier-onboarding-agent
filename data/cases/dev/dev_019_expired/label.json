@@ -1,0 +1,87 @@
+{
+  "case_id": "dev_019_expired",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Ofoq Printing Company",
+      "company_name_ar": "شركة الأفق للطباعة",
+      "cr_number": "2051601504",
+      "expiry_date": "2026-05-10"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051601504",
+      "expiry_date": null,
+      "iban": "SA7420124695302895446687",
+      "account_name": "Al Ofoq Printing Company"
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Ofoq Printing Company",
+      "company_name_ar": "شركة الأفق للطباعة",
+      "cr_number": "2051601504",
+      "expiry_date": "2028-08-03"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Ofoq Printing Company",
+      "company_name_ar": "شركة الأفق للطباعة",
+      "cr_number": "2051601504",
+      "expiry_date": "2028-06-22",
+      "vat_number": "380460554903153"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate expired on 2026-05-10.",
+  "expected_fields": {
+    "company_name": "Al Ofoq Printing Company",
+    "company_name_ar": "شركة الأفق للطباعة",
+    "cr_number": "2051601504",
+    "vat_number": "380460554903153",
+    "iban": "SA7420124695302895446687",
+    "account_name": "Al Ofoq Printing Company",
+    "expiry": {
+      "commercial_registration": "2028-08-03",
+      "vat_certificate": "2028-06-22",
+      "gosi_certificate": "2026-05-10"
+    }
+  }
+}

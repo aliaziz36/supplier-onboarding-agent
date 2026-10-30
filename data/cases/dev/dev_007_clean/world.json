@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650665991": {
+        "name": "شركة الجزيرة للتجارة",
+        "name_en": "Al Jazeera Trading LLC",
+        "status": "active",
+        "issue_date": "2025-03-11",
+        "expiry_date": "2027-11-14",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "373406264219053": {
+        "registered": true,
+        "name": "شركة الجزيرة للتجارة",
+        "name_en": "Al Jazeera Trading LLC",
+        "crNumber": "4650665991"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

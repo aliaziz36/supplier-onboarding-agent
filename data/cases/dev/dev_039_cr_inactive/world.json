@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030588716": {
+        "name": "شركة نجد لحلول تقنية المعلومات",
+        "name_en": "Najd IT Solutions Company",
+        "status": "expired",
+        "issue_date": "2025-06-09",
+        "expiry_date": "2026-09-21",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "395229152791763": {
+        "registered": true,
+        "name": "شركة نجد لحلول تقنية المعلومات",
+        "name_en": "Najd IT Solutions Company",
+        "crNumber": "4030588716"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030888539": {
+        "name": "شركة الخليج لتصنيع الحديد",
+        "name_en": "Gulf Steel Fabrication Co.",
+        "status": "active",
+        "issue_date": "2025-06-12",
+        "expiry_date": "2028-09-09",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "333633875004743": {
+        "registered": true,
+        "name": "شركة الخليج لتصنيع الحديد",
+        "name_en": "Gulf Steel Fabrication Co.",
+        "crNumber": "4030888539"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

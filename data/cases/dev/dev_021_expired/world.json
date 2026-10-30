@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051222194": {
+        "name": "شركة درة لتصنيع الحديد",
+        "name_en": "Durrah Steel Fabrication Company",
+        "status": "active",
+        "issue_date": "2025-04-27",
+        "expiry_date": "2027-11-28",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "335524741628573": {
+        "registered": true,
+        "name": "شركة درة لتصنيع الحديد",
+        "name_en": "Durrah Steel Fabrication Company",
+        "crNumber": "2051222194"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

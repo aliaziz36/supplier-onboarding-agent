@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650461998": {
+        "name": "شركة البيان للطباعة",
+        "name_en": "Al Bayan Printing Company",
+        "status": "active",
+        "issue_date": "2026-05-06",
+        "expiry_date": "2028-09-20",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "379686434820983": {
+        "registered": true,
+        "name": "شركة البيان للطباعة",
+        "name_en": "Al Bayan Printing Company",
+        "crNumber": "4650461998"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

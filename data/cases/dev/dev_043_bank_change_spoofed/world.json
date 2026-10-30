@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2051545326": {
+        "name": "شركة عسير للتجارة",
+        "name_en": "Asir Trading Company",
+        "status": "active",
+        "issue_date": "2025-06-17",
+        "expiry_date": "2028-09-11",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "315167581002693": {
+        "registered": true,
+        "name": "شركة عسير للتجارة",
+        "name_en": "Asir Trading Company",
+        "crNumber": "2051545326"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2051545326",
+    "name": "Asir Trading Company",
+    "name_ar": "شركة عسير للتجارة",
+    "cr_number": "2051545326",
+    "vat_number": "315167581002693",
+    "iban": "SA3445312780594427004209",
+    "bank_code": "45",
+    "account_name": "Asir Trading Company",
+    "email": "reem@asir-trading.com.sa",
+    "email_domain": "asir-trading.com.sa",
+    "phone": "+966502413497",
+    "documents": {
+      "commercial_registration": "2028-09-11",
+      "vat_certificate": "2027-05-04",
+      "gosi_certificate": "2027-08-02"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050464674": {
+        "name": "مؤسسة درة للطباعة",
+        "name_en": "Durrah Printing Est.",
+        "status": "expired",
+        "issue_date": "2025-09-01",
+        "expiry_date": "2026-09-21",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "319016131037133": {
+        "registered": true,
+        "name": "مؤسسة درة للطباعة",
+        "name_en": "Durrah Printing Est.",
+        "crNumber": "2050464674"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051601504": {
+        "name": "شركة الأفق للطباعة",
+        "name_en": "Al Ofoq Printing Company",
+        "status": "active",
+        "issue_date": "2025-10-16",
+        "expiry_date": "2028-08-03",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "380460554903153": {
+        "registered": true,
+        "name": "شركة الأفق للطباعة",
+        "name_en": "Al Ofoq Printing Company",
+        "crNumber": "2051601504"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

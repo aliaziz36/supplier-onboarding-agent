@@ -1,0 +1,90 @@
+{
+  "case_id": "dev_013_clean",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "arabic",
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Printing Company",
+      "company_name_ar": null,
+      "cr_number": "4650461998",
+      "expiry_date": "2027-10-17",
+      "vat_number": "379686434820983"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650461998",
+      "expiry_date": null,
+      "iban": "SA3120233648048484726151",
+      "account_name": "Al Bayan Printing Company"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة البيان للطباعة",
+      "cr_number": "4650461998",
+      "expiry_date": "2028-09-23"
+    },
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة البيان للطباعة",
+      "cr_number": "4650461998",
+      "expiry_date": "2028-09-20"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Bayan Printing Company",
+    "company_name_ar": "شركة البيان للطباعة",
+    "cr_number": "4650461998",
+    "vat_number": "379686434820983",
+    "iban": "SA3120233648048484726151",
+    "account_name": "Al Bayan Printing Company",
+    "expiry": {
+      "commercial_registration": "2028-09-20",
+      "vat_certificate": "2027-10-17",
+      "gosi_certificate": "2028-09-23"
+    }
+  }
+}

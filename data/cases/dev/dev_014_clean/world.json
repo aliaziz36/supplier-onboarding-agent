@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051393185": {
+        "name": "مؤسسة الهلال للإعاشة",
+        "name_en": "Al Hilal Catering Est.",
+        "status": "active",
+        "issue_date": "2026-07-17",
+        "expiry_date": "2027-02-09",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "321056540966653": {
+        "registered": true,
+        "name": "مؤسسة الهلال للإعاشة",
+        "name_en": "Al Hilal Catering Est.",
+        "crNumber": "2051393185"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

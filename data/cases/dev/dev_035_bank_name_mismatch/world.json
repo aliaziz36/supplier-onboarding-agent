@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030479805": {
+        "name": "شركة نجمة الخليج لتصنيع الحديد",
+        "name_en": "Al Khaleej Star Steel Fabrication Co.",
+        "status": "active",
+        "issue_date": "2025-05-15",
+        "expiry_date": "2027-07-01",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "302343165531063": {
+        "registered": true,
+        "name": "شركة نجمة الخليج لتصنيع الحديد",
+        "name_en": "Al Khaleej Star Steel Fabrication Co.",
+        "crNumber": "4030479805"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051257297": {
+        "name": "شركة الواحة للخدمات الكهربائية",
+        "name_en": "Al Waha Electrical Services LLC",
+        "status": "active",
+        "issue_date": "2025-07-11",
+        "expiry_date": "2027-11-28",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "331698614436803": {
+        "registered": true,
+        "name": "شركة الواحة للخدمات الكهربائية",
+        "name_en": "Al Waha Electrical Services LLC",
+        "crNumber": "2051257297"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

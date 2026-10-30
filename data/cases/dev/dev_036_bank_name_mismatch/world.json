@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030871663": {
+        "name": "شركة التميز للخدمات الكهربائية",
+        "name_en": "Al Tamayuz Electrical Services Company",
+        "status": "active",
+        "issue_date": "2025-03-28",
+        "expiry_date": "2028-04-20",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "340404129476413": {
+        "registered": true,
+        "name": "شركة التميز للخدمات الكهربائية",
+        "name_en": "Al Tamayuz Electrical Services Company",
+        "crNumber": "4030871663"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

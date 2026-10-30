@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050884332": {
+        "name": "شركة زهرة الصحراء للخدمات الكهربائية",
+        "name_en": "Desert Bloom Electrical Services LLC",
+        "status": "active",
+        "issue_date": "2025-04-14",
+        "expiry_date": "2028-04-14",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "328221798262593": {
+        "registered": true,
+        "name": "شركة زهرة الصحراء للخدمات الكهربائية",
+        "name_en": "Desert Bloom Electrical Services LLC",
+        "crNumber": "2050884332"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

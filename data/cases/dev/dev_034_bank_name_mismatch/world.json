@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650962527": {
+        "name": "شركة الوادي للتجارة",
+        "name_en": "Wadi Trading LLC",
+        "status": "active",
+        "issue_date": "2026-04-09",
+        "expiry_date": "2028-08-14",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "369828199964673": {
+        "registered": true,
+        "name": "شركة الوادي للتجارة",
+        "name_en": "Wadi Trading LLC",
+        "crNumber": "4650962527"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

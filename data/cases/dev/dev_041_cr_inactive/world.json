@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051483853": {
+        "name": "مؤسسة الخليج للخدمات اللوجستية",
+        "name_en": "Gulf Logistics Est.",
+        "status": "cancelled",
+        "issue_date": "2026-05-23",
+        "expiry_date": "2026-09-21",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "322436066321123": {
+        "registered": true,
+        "name": "مؤسسة الخليج للخدمات اللوجستية",
+        "name_en": "Gulf Logistics Est.",
+        "crNumber": "2051483853"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

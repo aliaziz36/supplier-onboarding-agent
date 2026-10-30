@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4650795455": {
+        "name": "شركة البيان للخدمات اللوجستية",
+        "name_en": "Al Bayan Logistics Co.",
+        "status": "active",
+        "issue_date": "2025-06-10",
+        "expiry_date": "2027-02-20",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "350164408740753": {
+        "registered": true,
+        "name": "شركة البيان للخدمات اللوجستية",
+        "name_en": "Al Bayan Logistics Co.",
+        "crNumber": "4650795455"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4650795455",
+    "name": "Al Bayan Logistics Co.",
+    "name_ar": "شركة البيان للخدمات اللوجستية",
+    "cr_number": "4650795455",
+    "vat_number": "350164408740753",
+    "iban": "SA2980798832806435319266",
+    "bank_code": "80",
+    "account_name": "Al Bayan Logistics Co.",
+    "email": "huda@albayan-logistics.com.sa",
+    "email_domain": "albayan-logistics.com.sa",
+    "phone": "+966549214349",
+    "documents": {
+      "commercial_registration": "2027-02-20",
+      "vat_certificate": "2028-06-16",
+      "gosi_certificate": "2028-06-27"
+    }
+  }
+}

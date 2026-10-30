@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650510697": {
+        "name": "شركة أجيال للخدمات اللوجستية",
+        "name_en": "Ajyal Logistics Company",
+        "status": "active",
+        "issue_date": "2025-06-23",
+        "expiry_date": "2027-01-31",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "307137581504983": {
+        "registered": true,
+        "name": "شركة أجيال للخدمات اللوجستية",
+        "name_en": "Ajyal Logistics Company",
+        "crNumber": "4650510697"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

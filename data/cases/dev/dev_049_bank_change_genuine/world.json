@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050675687": {
+        "name": "شركة نجد للنقل",
+        "name_en": "Najd Transport Co.",
+        "status": "active",
+        "issue_date": "2025-10-01",
+        "expiry_date": "2027-04-19",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "376800753105123": {
+        "registered": true,
+        "name": "شركة نجد للنقل",
+        "name_en": "Najd Transport Co.",
+        "crNumber": "2050675687"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050675687",
+    "name": "Najd Transport Co.",
+    "name_ar": "شركة نجد للنقل",
+    "cr_number": "2050675687",
+    "vat_number": "376800753105123",
+    "iban": "SA4105132712475230478879",
+    "bank_code": "05",
+    "account_name": "Najd Transport Co.",
+    "email": "khalid@najd-transport.com.sa",
+    "email_domain": "najd-transport.com.sa",
+    "phone": "+966530472332",
+    "documents": {
+      "commercial_registration": "2027-04-19",
+      "vat_certificate": "2028-09-23",
+      "gosi_certificate": "2027-09-07"
+    }
+  }
+}

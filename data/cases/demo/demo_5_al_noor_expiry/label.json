@@ -1,0 +1,19 @@
+{
+  "case_id": "demo_5_al_noor_expiry",
+  "split": "demo",
+  "kind": "expiry",
+  "scenario": "expiring",
+  "perturbations": [],
+  "as_of": "2027-09-30",
+  "attachments": {},
+  "expected_decision": "renewal_request",
+  "expected_documents_requested": [
+    "commercial_registration"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "Commercial registration expires on 2027-10-20, 20 days after the fast-forwarded date.",
+  "expected_fields": {
+    "vendor_id": "V-2050260181"
+  }
+}

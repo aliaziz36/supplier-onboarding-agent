@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+*.db
+.pytest_cache/
+# keep the model cache committed so judges can replay; ignore only scratch
+scratch/
+data/store/
+.DS_Store

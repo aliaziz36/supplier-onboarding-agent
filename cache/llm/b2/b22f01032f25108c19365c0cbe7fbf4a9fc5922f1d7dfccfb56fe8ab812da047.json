@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:demo_3_gulf_steel_bank_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.67,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Ha96VJcURbx12kCE7eLLLp",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_3_gulf_steel_bank_mismatch",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3373,
+   "output_tokens": 94
+  }
+ }
+}

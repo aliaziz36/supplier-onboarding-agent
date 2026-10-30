@@ -1,0 +1,85 @@
+{
+  "case_id": "demo_1_al_noor_clean",
+  "split": "demo",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة النور للتجارة",
+      "cr_number": "2050260181",
+      "expiry_date": "2027-10-20"
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Trading Co.",
+      "company_name_ar": null,
+      "cr_number": "2050260181",
+      "expiry_date": "2028-03-14",
+      "vat_number": "359083016613183"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050260181",
+      "expiry_date": null,
+      "iban": "SA4080091390996030824628",
+      "account_name": "Al Noor Trading Co."
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة النور للتجارة",
+      "cr_number": "2050260181",
+      "expiry_date": "2028-01-09"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Noor Trading Co.",
+    "company_name_ar": "شركة النور للتجارة",
+    "cr_number": "2050260181",
+    "vat_number": "359083016613183",
+    "iban": "SA4080091390996030824628",
+    "account_name": "Al Noor Trading Co.",
+    "expiry": {
+      "commercial_registration": "2027-10-20",
+      "vat_certificate": "2028-03-14",
+      "gosi_certificate": "2028-01-09"
+    }
+  }
+}

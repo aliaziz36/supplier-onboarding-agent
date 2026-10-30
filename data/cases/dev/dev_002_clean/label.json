@@ -1,0 +1,83 @@
+{
+  "case_id": "dev_002_clean",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051598386",
+      "expiry_date": null,
+      "iban": "SA4445289218401107043419",
+      "account_name": "Tihama Electrical Services Co."
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Tihama Electrical Services Co.",
+      "company_name_ar": "شركة تهامة للخدمات الكهربائية",
+      "cr_number": "2051598386",
+      "expiry_date": "2027-02-04",
+      "vat_number": "375650889957903"
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Tihama Electrical Services Co.",
+      "company_name_ar": "شركة تهامة للخدمات الكهربائية",
+      "cr_number": "2051598386",
+      "expiry_date": "2027-02-01"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Tihama Electrical Services Co.",
+      "company_name_ar": "شركة تهامة للخدمات الكهربائية",
+      "cr_number": "2051598386",
+      "expiry_date": "2028-09-25"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Tihama Electrical Services Co.",
+    "company_name_ar": "شركة تهامة للخدمات الكهربائية",
+    "cr_number": "2051598386",
+    "vat_number": "375650889957903",
+    "iban": "SA4445289218401107043419",
+    "account_name": "Tihama Electrical Services Co.",
+    "expiry": {
+      "commercial_registration": "2028-09-25",
+      "vat_certificate": "2027-02-04",
+      "gosi_certificate": "2027-02-01"
+    }
+  }
+}

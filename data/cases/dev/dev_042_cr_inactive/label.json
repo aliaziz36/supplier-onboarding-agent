@@ -1,0 +1,85 @@
+{
+  "case_id": "dev_042_cr_inactive",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "cr_inactive",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Steel Fabrication LLC",
+      "company_name_ar": null,
+      "cr_number": "2051468167",
+      "expiry_date": "2027-10-27",
+      "vat_number": "388410625317513"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051468167",
+      "expiry_date": null,
+      "iban": "SA8060139522513489179787",
+      "account_name": "Al Noor Steel Fabrication LLC"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Steel Fabrication LLC",
+      "company_name_ar": "شركة النور لتصنيع الحديد",
+      "cr_number": "2051468167",
+      "expiry_date": "2027-05-22"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Steel Fabrication LLC",
+      "company_name_ar": "شركة النور لتصنيع الحديد",
+      "cr_number": "2051468167",
+      "expiry_date": "2028-04-04"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "cr_not_active"
+  ],
+  "fraud": true,
+  "reason": "CR is cancelled in the registry.",
+  "expected_fields": {
+    "company_name": "Al Noor Steel Fabrication LLC",
+    "company_name_ar": "شركة النور لتصنيع الحديد",
+    "cr_number": "2051468167",
+    "vat_number": "388410625317513",
+    "iban": "SA8060139522513489179787",
+    "account_name": "Al Noor Steel Fabrication LLC",
+    "expiry": {
+      "commercial_registration": "2028-04-04",
+      "vat_certificate": "2027-10-27",
+      "gosi_certificate": "2027-05-22"
+    }
+  }
+}

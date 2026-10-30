@@ -1,0 +1,87 @@
+{
+  "case_id": "dev_017_expired",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "name_variant"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Hilal Medical Supplies Co.",
+      "company_name_ar": "شركة الهلال للمستلزمات الطبية",
+      "cr_number": "2051495299",
+      "expiry_date": "2026-08-20"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051495299",
+      "expiry_date": null,
+      "iban": "SA4615015558059171875880",
+      "account_name": "Al-Hilal Medical Supplies Co."
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Hilal Medical Supplies Co.",
+      "company_name_ar": "شركة الهلال للمستلزمات الطبية",
+      "cr_number": "2051495299",
+      "expiry_date": "2027-03-31",
+      "vat_number": "384195668099103"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Hilal Medical Supplies Co.",
+      "company_name_ar": "شركة الهلال للمستلزمات الطبية",
+      "cr_number": "2051495299",
+      "expiry_date": "2027-10-31"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate expired on 2026-08-20.",
+  "expected_fields": {
+    "company_name": "Al Hilal Medical Supplies Co.",
+    "company_name_ar": "شركة الهلال للمستلزمات الطبية",
+    "cr_number": "2051495299",
+    "vat_number": "384195668099103",
+    "iban": "SA4615015558059171875880",
+    "account_name": "Al-Hilal Medical Supplies Co.",
+    "expiry": {
+      "commercial_registration": "2027-10-31",
+      "vat_certificate": "2027-03-31",
+      "gosi_certificate": "2026-08-20"
+    }
+  }
+}

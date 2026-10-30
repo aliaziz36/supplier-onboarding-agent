@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050225229": {
+        "name": "مؤسسة سحاب للخدمات اللوجستية",
+        "name_en": "Sahab Logistics Est.",
+        "status": "active",
+        "issue_date": "2026-09-03",
+        "expiry_date": "2027-07-17",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "384386778842893": {
+        "registered": true,
+        "name": "مؤسسة سحاب للخدمات اللوجستية",
+        "name_en": "Sahab Logistics Est.",
+        "crNumber": "2050225229"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

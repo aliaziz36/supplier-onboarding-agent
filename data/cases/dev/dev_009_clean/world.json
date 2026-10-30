@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050433099": {
+        "name": "مؤسسة سحاب للخدمات الكهربائية",
+        "name_en": "Sahab Electrical Services Est.",
+        "status": "active",
+        "issue_date": "2025-11-24",
+        "expiry_date": "2027-05-13",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "325698805868383": {
+        "registered": true,
+        "name": "مؤسسة سحاب للخدمات الكهربائية",
+        "name_en": "Sahab Electrical Services Est.",
+        "crNumber": "2050433099"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

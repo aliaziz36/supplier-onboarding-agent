@@ -1,0 +1,74 @@
+{
+  "case_id": "dev_026_missing",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [
+    "scanned",
+    "hijri"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_9222.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Najd Office Supplies Co.",
+      "company_name_ar": "شركة نجد للمستلزمات المكتبية",
+      "cr_number": "2051205224",
+      "expiry_date": "2028-04-10"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051205224",
+      "expiry_date": null,
+      "iban": "SA2030869863867571139951",
+      "account_name": "Najd Office Supplies Co."
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "hijri",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Najd Office Supplies Co.",
+      "company_name_ar": "شركة نجد للمستلزمات المكتبية",
+      "cr_number": "2051205224",
+      "expiry_date": "2027-08-26"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "vat_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "vat_certificate not provided.",
+  "expected_fields": {
+    "company_name": "Najd Office Supplies Co.",
+    "company_name_ar": "شركة نجد للمستلزمات المكتبية",
+    "cr_number": "2051205224",
+    "vat_number": "307071961789813",
+    "iban": "SA2030869863867571139951",
+    "account_name": "Najd Office Supplies Co.",
+    "expiry": {
+      "commercial_registration": "2027-08-26",
+      "vat_certificate": "2027-12-09",
+      "gosi_certificate": "2028-04-10"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.22,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Rawabi Logistics Company\",\"company_name_ar\":null,\"cr_number\":\"1010752917\",\"vat_number\":null,\"iban\":\"SA7955268465632122330792\",\"account_name\":\"Rawabi Logistics Company\",\"account_number\":\"268465632122330792\",\"bank_name\":\"Banque Saudi Fransi\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2026-03-02\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":3,\"day\":2},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3898,
+   "output_tokens": 282
+  }
+ }
+}

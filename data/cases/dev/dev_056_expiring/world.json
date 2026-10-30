@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4030542077": {
+        "name": "شركة الخليج لتصنيع الحديد",
+        "name_en": "Gulf Steel Fabrication LLC",
+        "status": "active",
+        "issue_date": "2026-08-27",
+        "expiry_date": "2027-02-26",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "355598838236133": {
+        "registered": true,
+        "name": "شركة الخليج لتصنيع الحديد",
+        "name_en": "Gulf Steel Fabrication LLC",
+        "crNumber": "4030542077"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4030542077",
+    "name": "Gulf Steel Fabrication LLC",
+    "name_ar": "شركة الخليج لتصنيع الحديد",
+    "cr_number": "4030542077",
+    "vat_number": "355598838236133",
+    "iban": "SA5655487570772066248639",
+    "bank_code": "55",
+    "account_name": "Gulf Steel Fabrication LLC",
+    "email": "omar@gulf-steel.com.sa",
+    "email_domain": "gulf-steel.com.sa",
+    "phone": "+966503755741",
+    "documents": {
+      "commercial_registration": "2027-02-26",
+      "vat_certificate": "2026-11-15",
+      "gosi_certificate": "2028-04-27"
+    }
+  }
+}

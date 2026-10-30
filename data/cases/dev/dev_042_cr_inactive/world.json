@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051468167": {
+        "name": "شركة النور لتصنيع الحديد",
+        "name_en": "Al Noor Steel Fabrication LLC",
+        "status": "cancelled",
+        "issue_date": "2025-06-07",
+        "expiry_date": "2026-09-21",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "388410625317513": {
+        "registered": true,
+        "name": "شركة النور لتصنيع الحديد",
+        "name_en": "Al Noor Steel Fabrication LLC",
+        "crNumber": "2051468167"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

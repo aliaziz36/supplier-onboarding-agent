@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050177763": {
+        "name": "شركة زهرة الصحراء لخدمات النظافة",
+        "name_en": "Desert Bloom Cleaning Services Co.",
+        "status": "active",
+        "issue_date": "2025-09-13",
+        "expiry_date": "2028-07-28",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "317066907439153": {
+        "registered": true,
+        "name": "شركة زهرة الصحراء لخدمات النظافة",
+        "name_en": "Desert Bloom Cleaning Services Co.",
+        "crNumber": "2050177763"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

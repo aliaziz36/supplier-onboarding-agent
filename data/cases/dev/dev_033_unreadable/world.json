@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030422667": {
+        "name": "شركة أجيال لحلول تقنية المعلومات",
+        "name_en": "Ajyal IT Solutions Company",
+        "status": "active",
+        "issue_date": "2025-07-09",
+        "expiry_date": "2027-01-31",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "350810532367893": {
+        "registered": true,
+        "name": "شركة أجيال لحلول تقنية المعلومات",
+        "name_en": "Ajyal IT Solutions Company",
+        "crNumber": "4030422667"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

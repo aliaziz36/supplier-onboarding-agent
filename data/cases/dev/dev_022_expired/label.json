@@ -1,0 +1,91 @@
+{
+  "case_id": "dev_022_expired",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Medical Supplies Est.",
+      "company_name_ar": "مؤسسة الخليج للمستلزمات الطبية",
+      "cr_number": "2051141502",
+      "expiry_date": "2026-05-03"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051141502",
+      "expiry_date": null,
+      "iban": "SA5620669345979494252516",
+      "account_name": "Gulf Medical Supplies Est."
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Medical Supplies Est.",
+      "company_name_ar": "مؤسسة الخليج للمستلزمات الطبية",
+      "cr_number": "2051141502",
+      "expiry_date": "2027-07-02",
+      "vat_number": "353544476042403"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Medical Supplies Est.",
+      "company_name_ar": "مؤسسة الخليج للمستلزمات الطبية",
+      "cr_number": "2051141502",
+      "expiry_date": "2027-03-07"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "commercial_registration"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "commercial_registration expired on 2026-05-03.",
+  "expected_fields": {
+    "company_name": "Gulf Medical Supplies Est.",
+    "company_name_ar": "مؤسسة الخليج للمستلزمات الطبية",
+    "cr_number": "2051141502",
+    "vat_number": "353544476042403",
+    "iban": "SA5620669345979494252516",
+    "account_name": "Gulf Medical Supplies Est.",
+    "expiry": {
+      "commercial_registration": "2026-05-03",
+      "vat_certificate": "2027-07-02",
+      "gosi_certificate": "2027-03-07"
+    }
+  }
+}

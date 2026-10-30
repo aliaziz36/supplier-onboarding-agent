@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:demo_1_al_noor_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.96,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01QMbphAzdu8HSB3UzU6UYJ6",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_1_al_noor_clean"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2774,
+   "output_tokens": 60
+  }
+ }
+}

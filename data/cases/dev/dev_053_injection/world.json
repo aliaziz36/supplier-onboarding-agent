@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050367164": {
+        "name": "مؤسسة نجمة الخليج للمستلزمات الطبية",
+        "name_en": "Al Khaleej Star Medical Supplies Est.",
+        "status": "active",
+        "issue_date": "2026-07-09",
+        "expiry_date": "2027-04-22",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "301439960619133": {
+        "registered": true,
+        "name": "مؤسسة نجمة الخليج للمستلزمات الطبية",
+        "name_en": "Al Khaleej Star Medical Supplies Est.",
+        "crNumber": "2050367164"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

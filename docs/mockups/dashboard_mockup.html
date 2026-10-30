@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard mockup</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F4F5F7}
+a{color:#0F5E66}a:hover{color:#0A4146}
+</style>
+
+</head><body>
+<!-- Static design reference for the dashboard. Not wired to anything. -->
+
+
+<div style="box-sizing: border-box; width: 100%; min-height: 1000px; background: #F4F5F7; color: #111827; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 32px; background: #0B1F2A; color: #FFFFFF">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="width: 36px; height: 36px; border-radius: 8px; background: #14B8A6; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B1F2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"></path><path d="M16 15l2 2 4-4"></path></svg>
+</div>
+<div style="display: flex; flex-direction: column">
+<span style="font-size: 17px; font-weight: 600">Supplier Onboarding Agent</span>
+<span style="font-size: 12px; color: #A7B4BE">Procurement · Demo data</span>
+</div>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: #123441; font-size: 13px; color: #CCFBF1"><span style="width: 8px; height: 8px; border-radius: 50%; background: #2DD4BF"></span>Agent running · watching onboarding@company.sa</span>
+</div>
+</header>
+
+<section aria-label="Summary" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; padding: 24px 32px 8px">
+<div style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #4B5563">Suppliers this week</span>
+<span style="font-size: 28px; font-weight: 600">12</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #4B5563">Onboarded by agent alone</span>
+<span style="font-size: 28px; font-weight: 600; color: #166534">8</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #4B5563">Waiting on supplier</span>
+<span style="font-size: 28px; font-weight: 600; color: #92400E">3</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #FCA5A5; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #4B5563">Needs your decision</span>
+<span style="font-size: 28px; font-weight: 600; color: #991B1B">1</span>
+</div>
+</section>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 16px 32px 32px; align-items: flex-start">
+
+<section aria-label="Suppliers" style="flex: 1 1 280px; max-width: 340px; min-width: 0; background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; overflow: hidden">
+<div style="padding: 16px 18px; border-bottom: 1px solid #E5E7EB; display: flex; justify-content: space-between; align-items: center">
+<h2 style="margin: 0; font-size: 15px; font-weight: 600">Suppliers</h2>
+<span style="font-size: 12px; color: #4B5563">5 active</span>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0">
+<li style="padding: 14px 18px; border-bottom: 1px solid #F3F4F6; display: flex; flex-direction: column; gap: 6px; background: #FEF2F2">
+<span style="font-size: 14px; font-weight: 600">Gulf Steel Fabrication</span>
+<span style="align-self: flex-start; font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: 6px; background: #FEE2E2; color: #991B1B">Escalated · bank name mismatch</span>
+</li>
+<li style="padding: 14px 18px; border-bottom: 1px solid #F3F4F6; display: flex; flex-direction: column; gap: 6px; background: #F0FDFA; box-shadow: inset 3px 0 0 #0F766E">
+<span style="font-size: 14px; font-weight: 600">Rawabi Logistics</span>
+<span style="align-self: flex-start; font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: 6px; background: #FEF3C7; color: #92400E">Waiting on supplier · VAT cert</span>
+</li>
+<li style="padding: 14px 18px; border-bottom: 1px solid #F3F4F6; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; font-weight: 600">Desert Bloom Catering</span>
+<span style="align-self: flex-start; font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: 6px; background: #DBEAFE; color: #1E40AF">Agent checking documents</span>
+</li>
+<li style="padding: 14px 18px; border-bottom: 1px solid #F3F4F6; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; font-weight: 600">Najd Office Supplies</span>
+<span style="align-self: flex-start; font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: 6px; background: #F3F4F6; color: #374151">Email received</span>
+</li>
+<li style="padding: 14px 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; font-weight: 600">Al Noor Trading Co.</span>
+<span style="align-self: flex-start; font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: 6px; background: #DCFCE7; color: #166534">Onboarded · no human needed</span>
+</li>
+</ul>
+</section>
+
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+
+<section aria-label="Needs your decision" style="background: #FFFFFF; border: 1px solid #FCA5A5; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3z"></path><path d="M12 10v4M12 17h.01"></path></svg>
+<h2 style="margin: 0; font-size: 15px; font-weight: 600; color: #991B1B">Needs your decision: Gulf Steel Fabrication</h2>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #374151">The bank letter is in the name of <strong>Al Khaleej Metals Est.</strong>, but the commercial registration is for <strong>Gulf Steel Fabrication Co.</strong> Paying a different entity is a common fraud pattern, so I stopped instead of asking the supplier myself.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" style="font: inherit; font-size: 14px; font-weight: 500; padding: 10px 16px; min-height: 44px; border-radius: 8px; border: 1px solid #0F766E; background: #0F766E; color: #FFFFFF; cursor: pointer">Ask supplier to explain</button>
+<button type="button" style="font: inherit; font-size: 14px; font-weight: 500; padding: 10px 16px; min-height: 44px; border-radius: 8px; border: 1px solid #D1D5DB; background: #FFFFFF; color: #111827; cursor: pointer">Approve anyway</button>
+<button type="button" style="font: inherit; font-size: 14px; font-weight: 500; padding: 10px 16px; min-height: 44px; border-radius: 8px; border: 1px solid #D1D5DB; background: #FFFFFF; color: #991B1B; cursor: pointer">Reject supplier</button>
+</div>
+</section>
+
+<section aria-label="Rawabi Logistics documents" style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; overflow: hidden">
+<div style="padding: 16px 20px; border-bottom: 1px solid #E5E7EB; display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 600">Rawabi Logistics</h2>
+<span style="font-size: 13px; color: #4B5563">procurement@rawabi-logistics.sa · 4 documents received</span>
+</div>
+<span style="font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 6px; background: #FEF3C7; color: #92400E">Waiting on supplier</span>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 520px">
+<thead>
+<tr style="text-align: left; color: #4B5563; font-size: 12px">
+<th scope="col" style="padding: 10px 20px; font-weight: 500">Document</th>
+<th scope="col" style="padding: 10px 20px; font-weight: 500">What the agent read</th>
+<th scope="col" style="padding: 10px 20px; font-weight: 500">Check</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-top: 1px solid #F3F4F6">
+<td style="padding: 12px 20px; font-weight: 500">Commercial registration</td>
+<td style="padding: 12px 20px; color: #374151">CR 1010XXXXXX · valid to Mar 2027</td>
+<td style="padding: 12px 20px; color: #166534; font-weight: 500">Valid</td>
+</tr>
+<tr style="border-top: 1px solid #F3F4F6; background: #FFFBEB">
+<td style="padding: 12px 20px; font-weight: 500">VAT certificate</td>
+<td style="padding: 12px 20px; color: #374151">VAT 3XXXXXXXXX00003 · expired 12 Sep 2026</td>
+<td style="padding: 12px 20px; color: #92400E; font-weight: 600">Expired</td>
+</tr>
+<tr style="border-top: 1px solid #F3F4F6">
+<td style="padding: 12px 20px; font-weight: 500">Bank letter</td>
+<td style="padding: 12px 20px; color: #374151">IBAN SA03 •••• 4417 · name matches CR</td>
+<td style="padding: 12px 20px; color: #166534; font-weight: 500">Valid</td>
+</tr>
+<tr style="border-top: 1px solid #F3F4F6">
+<td style="padding: 12px 20px; font-weight: 500">Saudization certificate</td>
+<td style="padding: 12px 20px; color: #374151">Nitaqat: Green · valid to Jan 2027</td>
+<td style="padding: 12px 20px; color: #166534; font-weight: 500">Valid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="padding: 14px 20px; border-top: 1px solid #E5E7EB; background: #F9FAFB; font-size: 14px; color: #374151">
+<strong style="color: #111827">Next step:</strong> emailed the supplier for a renewed VAT certificate. When it arrives, the agent re-checks and adds Rawabi to the vendor system.
+</div>
+</section>
+</div>
+
+<section aria-label="Agent activity" style="flex: 1 1 320px; max-width: 400px; min-width: 0; background: #0B1F2A; color: #E5E7EB; border-radius: 12px; overflow: hidden">
+<div style="padding: 16px 18px; border-bottom: 1px solid #1F3A47; display: flex; justify-content: space-between; align-items: center">
+<h2 style="margin: 0; font-size: 15px; font-weight: 600; color: #FFFFFF">What the agent is doing</h2>
+<span style="font-size: 12px; color: #A7B4BE">Rawabi Logistics</span>
+</div>
+<ol style="list-style: none; margin: 0; padding: 16px 18px; display: flex; flex-direction: column; gap: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 1.5">
+<li style="display: flex; gap: 10px"><span style="color: #7C8E99; flex-shrink: 0">21:38</span><span>Email received with 4 PDF attachments</span></li>
+<li style="display: flex; gap: 10px"><span style="color: #7C8E99; flex-shrink: 0">21:38</span><span>Read CR → name "Rawabi Logistics Co.", expiry Mar 2027</span></li>
+<li style="display: flex; gap: 10px"><span style="color: #7C8E99; flex-shrink: 0">21:39</span><span>Checked CR in registry → <span style="color: #86EFAC">active</span></span></li>
+<li style="display: flex; gap: 10px"><span style="color: #7C8E99; flex-shrink: 0">21:39</span><span>Read VAT certificate → <span style="color: #FCD34D">expired 12 Sep 2026</span></span></li>
+<li style="display: flex; gap: 10px"><span style="color: #7C8E99; flex-shrink: 0">21:40</span><span>Read bank letter → account name <span style="color: #86EFAC">matches CR</span></span></li>
+<li style="display: flex; gap: 10px; padding: 10px 12px; border-radius: 8px; background: #123441"><span style="color: #5EEAD4; flex-shrink: 0">think</span><span style="color: #E0F2F1">Can't onboard with an expired VAT certificate. Low risk: the supplier can fix this, no need to involve a human.</span></li>
+<li style="display: flex; gap: 10px"><span style="color: #7C8E99; flex-shrink: 0">21:41</span><span>Sent email asking for renewed VAT certificate</span></li>
+<li style="display: flex; gap: 10px"><span style="color: #7C8E99; flex-shrink: 0">21:41</span><span style="color: #A7B4BE">Waiting for reply…</span></li>
+</ol>
+</section>
+
+</div>
+</div>
+
+</body></html>

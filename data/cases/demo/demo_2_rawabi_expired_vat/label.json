@@ -1,0 +1,86 @@
+{
+  "case_id": "demo_2_rawabi_expired_vat",
+  "split": "demo",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Logistics Company",
+      "company_name_ar": "شركة روابي للخدمات اللوجستية",
+      "cr_number": "1010752917",
+      "expiry_date": "2028-02-21"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Logistics Company",
+      "company_name_ar": "شركة روابي للخدمات اللوجستية",
+      "cr_number": "1010752917",
+      "expiry_date": "2026-10-10",
+      "vat_number": "303423667127683"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010752917",
+      "expiry_date": null,
+      "iban": "SA7955268465632122330792",
+      "account_name": "Rawabi Logistics Company"
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Logistics Company",
+      "company_name_ar": "شركة روابي للخدمات اللوجستية",
+      "cr_number": "1010752917",
+      "expiry_date": "2027-03-18"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "vat_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "VAT certificate expired on 2026-10-10; renewed copy arrives in the reply.",
+  "expected_fields": {
+    "company_name": "Rawabi Logistics Company",
+    "company_name_ar": "شركة روابي للخدمات اللوجستية",
+    "cr_number": "1010752917",
+    "vat_number": "303423667127683",
+    "iban": "SA7955268465632122330792",
+    "account_name": "Rawabi Logistics Company",
+    "expiry": {
+      "commercial_registration": "2028-02-21",
+      "vat_certificate": "2026-10-10",
+      "gosi_certificate": "2027-03-18"
+    }
+  },
+  "expected_final_decision": "onboard"
+}

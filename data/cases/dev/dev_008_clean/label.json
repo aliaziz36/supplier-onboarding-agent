@@ -1,0 +1,83 @@
+{
+  "case_id": "dev_008_clean",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Medical Supplies Company",
+      "company_name_ar": null,
+      "cr_number": "4030275463",
+      "expiry_date": "2027-06-18",
+      "vat_number": "313411365712003"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Medical Supplies Company",
+      "company_name_ar": "شركة عسير للمستلزمات الطبية",
+      "cr_number": "4030275463",
+      "expiry_date": "2028-02-27"
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Medical Supplies Company",
+      "company_name_ar": "شركة عسير للمستلزمات الطبية",
+      "cr_number": "4030275463",
+      "expiry_date": "2027-01-29"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030275463",
+      "expiry_date": null,
+      "iban": "SA9510307897541921363776",
+      "account_name": "Asir Medical Supplies Company"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Asir Medical Supplies Company",
+    "company_name_ar": "شركة عسير للمستلزمات الطبية",
+    "cr_number": "4030275463",
+    "vat_number": "313411365712003",
+    "iban": "SA9510307897541921363776",
+    "account_name": "Asir Medical Supplies Company",
+    "expiry": {
+      "commercial_registration": "2028-02-27",
+      "vat_certificate": "2027-06-18",
+      "gosi_certificate": "2027-01-29"
+    }
+  }
+}

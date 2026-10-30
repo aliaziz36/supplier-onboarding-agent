@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050780231": {
+        "name": "شركة البيان للنقل",
+        "name_en": "Al Bayan Transport LLC",
+        "status": "active",
+        "issue_date": "2026-07-01",
+        "expiry_date": "2028-04-11",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "334539275502683": {
+        "registered": true,
+        "name": "شركة البيان للنقل",
+        "name_en": "Al Bayan Transport LLC",
+        "crNumber": "2050780231"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

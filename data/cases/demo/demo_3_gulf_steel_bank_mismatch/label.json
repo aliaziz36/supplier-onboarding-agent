@@ -1,0 +1,85 @@
+{
+  "case_id": "demo_3_gulf_steel_bank_mismatch",
+  "split": "demo",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Steel Fabrication Co.",
+      "company_name_ar": null,
+      "cr_number": "4030888539",
+      "expiry_date": "2027-06-12",
+      "vat_number": "333633875004743"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030888539",
+      "expiry_date": null,
+      "iban": "SA2045957551313735379907",
+      "account_name": "Desert Bloom Trading Co."
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Steel Fabrication Co.",
+      "company_name_ar": "شركة الخليج لتصنيع الحديد",
+      "cr_number": "4030888539",
+      "expiry_date": "2028-09-09"
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Steel Fabrication Co.",
+      "company_name_ar": "شركة الخليج لتصنيع الحديد",
+      "cr_number": "4030888539",
+      "expiry_date": "2028-01-07"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Desert Bloom Trading Co.' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Gulf Steel Fabrication Co.",
+    "company_name_ar": "شركة الخليج لتصنيع الحديد",
+    "cr_number": "4030888539",
+    "vat_number": "333633875004743",
+    "iban": "SA2045957551313735379907",
+    "account_name": "Desert Bloom Trading Co.",
+    "expiry": {
+      "commercial_registration": "2028-09-09",
+      "vat_certificate": "2027-06-12",
+      "gosi_certificate": "2028-01-07"
+    }
+  }
+}

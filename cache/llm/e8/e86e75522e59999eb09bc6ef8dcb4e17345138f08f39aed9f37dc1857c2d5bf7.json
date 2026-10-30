@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:demo_4_al_noor_bank_change",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.07,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_016sPjWfgUmzutLTko1ESG5D",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_4_al_noor_bank_change",
+     "vendor_id": "V-2050260181",
+     "new_iban": "SA3060412524273167232686",
+     "account_name": "Al Noor Trading Co."
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3223,
+   "output_tokens": 161
+  }
+ }
+}

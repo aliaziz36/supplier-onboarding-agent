@@ -1,0 +1,23 @@
+{
+  "case_id": "demo_4_al_noor_bank_change",
+  "split": "demo",
+  "kind": "bank_change",
+  "scenario": "bank_change_spoofed",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {},
+  "expected_decision": "freeze",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "sender_domain_mismatch",
+    "bank_differs_from_file"
+  ],
+  "fraud": true,
+  "variant": "lookalike_diff_bank",
+  "reason": "Bank changes are always frozen pending a callback to the phone on file.",
+  "expected_fields": {
+    "new_iban": "SA3060412524273167232686",
+    "account_name": "Al Noor Trading Co.",
+    "vendor_id": "V-2050260181"
+  }
+}

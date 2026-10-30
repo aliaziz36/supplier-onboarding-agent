@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051495299": {
+        "name": "شركة الهلال للمستلزمات الطبية",
+        "name_en": "Al Hilal Medical Supplies Co.",
+        "status": "active",
+        "issue_date": "2026-07-08",
+        "expiry_date": "2027-10-31",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "384195668099103": {
+        "registered": true,
+        "name": "شركة الهلال للمستلزمات الطبية",
+        "name_en": "Al Hilal Medical Supplies Co.",
+        "crNumber": "2051495299"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

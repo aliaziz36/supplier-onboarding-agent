@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010033962": {
+        "name": "شركة النور للخدمات اللوجستية",
+        "name_en": "Al Noor Logistics LLC",
+        "status": "active",
+        "issue_date": "2025-11-11",
+        "expiry_date": "2027-07-24",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "317232166848473": {
+        "registered": true,
+        "name": "شركة النور للخدمات اللوجستية",
+        "name_en": "Al Noor Logistics LLC",
+        "crNumber": "1010033962"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010000855": {
+        "name": "شركة درة للنقل",
+        "name_en": "Durrah Transport Co.",
+        "status": "active",
+        "issue_date": "2026-02-18",
+        "expiry_date": "2027-04-13",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "309083734498843": {
+        "registered": true,
+        "name": "شركة درة للنقل",
+        "name_en": "Durrah Transport Co.",
+        "crNumber": "1010000855"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

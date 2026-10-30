@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051231616": {
+        "name": "شركة الأفق للخدمات الكهربائية",
+        "name_en": "Al Ofoq Electrical Services Company",
+        "status": "active",
+        "issue_date": "2026-07-03",
+        "expiry_date": "2028-07-11",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "329344989761153": {
+        "registered": true,
+        "name": "شركة الأفق للخدمات الكهربائية",
+        "name_en": "Al Ofoq Electrical Services Company",
+        "crNumber": "2051231616"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

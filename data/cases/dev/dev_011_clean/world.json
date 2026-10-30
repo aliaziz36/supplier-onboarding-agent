@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051428792": {
+        "name": "مؤسسة المدى لخدمات النظافة",
+        "name_en": "Al Mada Cleaning Services Est.",
+        "status": "active",
+        "issue_date": "2025-08-19",
+        "expiry_date": "2027-04-25",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "382406905664013": {
+        "registered": true,
+        "name": "مؤسسة المدى لخدمات النظافة",
+        "name_en": "Al Mada Cleaning Services Est.",
+        "crNumber": "2051428792"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

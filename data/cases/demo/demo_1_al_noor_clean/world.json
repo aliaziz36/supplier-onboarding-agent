@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050260181": {
+        "name": "شركة النور للتجارة",
+        "name_en": "Al Noor Trading Co.",
+        "status": "active",
+        "issue_date": "2025-07-21",
+        "expiry_date": "2027-10-20",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "359083016613183": {
+        "registered": true,
+        "name": "شركة النور للتجارة",
+        "name_en": "Al Noor Trading Co.",
+        "crNumber": "2050260181"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4030616893": {
+        "name": "شركة سحاب للمستلزمات المكتبية",
+        "name_en": "Sahab Office Supplies Co.",
+        "status": "active",
+        "issue_date": "2026-08-09",
+        "expiry_date": "2027-08-01",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "377812050972763": {
+        "registered": true,
+        "name": "شركة سحاب للمستلزمات المكتبية",
+        "name_en": "Sahab Office Supplies Co.",
+        "crNumber": "4030616893"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4030616893",
+    "name": "Sahab Office Supplies Co.",
+    "name_ar": "شركة سحاب للمستلزمات المكتبية",
+    "cr_number": "4030616893",
+    "vat_number": "377812050972763",
+    "iban": "SA1745390537428788602304",
+    "bank_code": "45",
+    "account_name": "Sahab Office Supplies Co.",
+    "email": "omar@sahab-office.com.sa",
+    "email_domain": "sahab-office.com.sa",
+    "phone": "+966512064824",
+    "documents": {
+      "commercial_registration": "2027-08-01",
+      "vat_certificate": "2027-08-12",
+      "gosi_certificate": "2026-11-23"
+    }
+  }
+}

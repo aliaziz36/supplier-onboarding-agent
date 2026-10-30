@@ -1,0 +1,88 @@
+{
+  "case_id": "dev_038_bank_name_mismatch",
+  "split": "dev",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [
+    "arabic",
+    "name_variant"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030732338",
+      "expiry_date": null,
+      "iban": "SA5760182781628025573671",
+      "account_name": "Al Mada Contracting Est."
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة روابي لحلول تقنية المعلومات",
+      "cr_number": "4030732338",
+      "expiry_date": "2027-10-19"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة روابي لحلول تقنية المعلومات",
+      "cr_number": "4030732338",
+      "expiry_date": "2027-02-20"
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi IT Solutions LLC",
+      "company_name_ar": null,
+      "cr_number": "4030732338",
+      "expiry_date": "2028-09-12",
+      "vat_number": "354799833419003"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Al Mada Contracting Est.' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Rawabi IT Solutions LLC",
+    "company_name_ar": "شركة روابي لحلول تقنية المعلومات",
+    "cr_number": "4030732338",
+    "vat_number": "354799833419003",
+    "iban": "SA5760182781628025573671",
+    "account_name": "Al Mada Contracting Est.",
+    "expiry": {
+      "commercial_registration": "2027-02-20",
+      "vat_certificate": "2028-09-12",
+      "gosi_certificate": "2027-10-19"
+    }
+  }
+}

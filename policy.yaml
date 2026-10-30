@@ -1,0 +1,41 @@
+# Onboarding policy. Rules live here, not in code or the prompt.
+# Changing a requirement = edit this file + rerun the eval.
+
+version: 1
+
+required_documents:
+  - commercial_registration   # CR
+  - vat_certificate
+  - bank_letter
+  - gosi_certificate          # GOSI / Nitaqat
+  # - zakat_certificate       # robustness test: uncomment, regenerate, rerun
+
+checks:
+  document_must_be_unexpired: true
+  cr_must_be_active_in_registry: true
+  vat_must_be_registered: true
+  bank_account_name_must_match_cr_name: true
+  cr_number_must_match_across_documents: true
+  name_match:
+    ignore_suffixes: ["co", "co.", "company", "est", "est.", "establishment", "llc", "ltd"]
+    min_similarity: 0.9       # after normalisation; below this -> mismatch
+
+follow_up:
+  max_follow_ups_before_escalation: 2
+
+bank_change:
+  always_freeze: true         # the agent never applies a bank change itself
+  require_callback_to_phone_on_file: true
+  flag_if_sender_domain_differs: true
+  flag_if_bank_differs_from_letter_on_file: true
+
+expiry_watch:
+  renewal_notice_days: 30
+  hold_payments_on_expiry: true
+
+extraction:
+  min_confidence_for_key_fields: 0.8   # below this -> escalate with field highlighted
+  key_fields: [cr_number, company_name, iban, account_name, expiry_date, vat_number]
+
+agent:
+  max_tool_calls_per_turn: 12
