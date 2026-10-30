@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_VAT_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.91,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Bayan Transport LLC\",\"company_name_ar\":null,\"cr_number\":\"2050780231\",\"vat_number\":\"334539275502683\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"29 August 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":8,\"day\":29},\"expiry_date\":{\"raw\":\"30 July 2027\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":7,\"day\":30},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3902,
+   "output_tokens": 290
+  }
+ }
+}

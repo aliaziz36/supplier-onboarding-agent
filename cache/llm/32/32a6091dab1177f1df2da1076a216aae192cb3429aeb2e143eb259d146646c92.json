@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_social_insurance.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.02,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"other\",\"legible\":false,\"language\":\"other\",\"company_name\":null,\"company_name_ar\":null,\"cr_number\":null,\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":null,\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0,\"cr_number\":0,\"vat_number\":0,\"iban\":0,\"account_name\":0,\"expiry_date\":0},\"notes\":\"Scan is heavily blurred and degraded; no text, numbers or dates can be read with any confidence. Document type cannot be determined.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 238
+  }
+ }
+}

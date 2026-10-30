@@ -1,0 +1,23 @@
+{
+ "purpose": "extract-reread:1_nitaqat_gosi.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 6.73,
+ "response": {
+  "content": [
+   {
+    "signature": "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",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة الهلال للمقاولات\",\"cr_number\":\"2050554588\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"921269018\",\"nitaqat_band\":\"Medium Green\",\"issue_date\":{\"raw\":\"٠٩-٠٩-٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":9,\"day\":9},\"expiry_date\":{\"raw\":\"٣١-٠٣-٢٠٢٨\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":3,\"day\":31},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.95,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"Re-read the CR number digit by digit: 2-0-5-0-5-5-4-5-8-8, printed as 2050554588. This is a different value from the 2050054588 on record, so the mismatch comes from the document and not from a misread. The GOSI subscription number is 921269018. The issue date is 09-09-2026, which is in the future relative to the expiry date's validity period, so check it.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3863,
+   "output_tokens": 904
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.19,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Gulf IT Solutions Company\",\"company_name_ar\":null,\"cr_number\":\"2050367164\",\"vat_number\":null,\"iban\":\"SA6720687848027795281348\",\"account_name\":\"Gulf IT Solutions Company\",\"account_number\":\"687848027795281348\",\"bank_name\":\"Riyad Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"08/04/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":4,\"day\":8},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.95,\"cr_number\":0.95,\"vat_number\":1,\"iban\":0.93,\"account_name\":0.95,\"expiry_date\":1},\"notes\":\"Slightly blurred scan but key values readable. Bank letter lists the CR number; company name taken from account name.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 326
+  }
+ }
+}

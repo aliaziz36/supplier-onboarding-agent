@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_028_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.76,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01UXN4ATyg7dt9v3ydtG22Ph",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_028_missing",
+     "kind": "request_fix",
+     "subject": "Missing document: Commercial Registration",
+     "body": "Dear Sara,\n\nThank you for your registration documents. We received your VAT certificate, bank letter and GOSI certificate. However, your commercial registration (CR) certificate is missing. Please reply with a copy of it so we can complete onboarding.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "commercial_registration"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01XpRBzYH8G6WrtimxwetunH",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_028_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4108,
+   "output_tokens": 341
+  }
+ }
+}

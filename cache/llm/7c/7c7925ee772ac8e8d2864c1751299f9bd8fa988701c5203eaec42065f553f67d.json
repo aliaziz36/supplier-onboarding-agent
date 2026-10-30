@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_سجل_تجاري.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.15,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"مؤسسة سحاب للخدمات الكهربائية\",\"cr_number\":\"2050433099\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"٢٤/١١/٢٠٢٥\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":11,\"day\":24},\"expiry_date\":{\"raw\":\"١٣/٠٥/٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":5,\"day\":13},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Company name printed only in Arabic; activity listed as Electrical Services, city Dammam.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3954,
+   "output_tokens": 347
+  }
+ }
+}

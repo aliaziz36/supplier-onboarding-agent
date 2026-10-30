@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_commercial_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.0,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة الهلال للمقاولات\",\"cr_number\":\"2050054588\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"٢١/٠٢/٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":2,\"day\":21},\"expiry_date\":{\"raw\":\"٢٩/٠٣/٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":3,\"day\":29},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.9,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"Commercial registration certificate from Ministry of Commerce; city Dammam; activity Contracting. Scan slightly blurred but legible. Dates assumed Gregorian (2026/2027).\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 380
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_gosi.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.28,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Jazeera Trading LLC\",\"company_name_ar\":\"شركة الجزيرة للتجارة\",\"cr_number\":\"4650665991\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"943833541\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"06/02/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":2,\"day\":6},\"expiry_date\":{\"raw\":\"29/09/2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":9,\"day\":29},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4028,
+   "output_tokens": 309
+  }
+ }
+}

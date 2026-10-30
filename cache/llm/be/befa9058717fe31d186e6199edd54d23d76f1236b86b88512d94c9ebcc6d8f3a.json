@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.32,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Noor Trading Co.\",\"company_name_ar\":null,\"cr_number\":\"2050260181\",\"vat_number\":null,\"iban\":\"SA4080091390996030824628\",\"account_name\":\"Al Noor Trading Co.\",\"account_number\":\"091390996030824628\",\"bank_name\":\"Al Rajhi Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-11-29\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":11,\"day\":29},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3945,
+   "output_tokens": 281
+  }
+ }
+}

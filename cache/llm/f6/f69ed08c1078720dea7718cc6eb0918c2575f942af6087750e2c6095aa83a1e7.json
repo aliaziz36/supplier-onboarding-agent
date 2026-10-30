@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_3450.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.14,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Noor Logistics LLC\",\"company_name_ar\":null,\"cr_number\":\"1010033962\",\"vat_number\":null,\"iban\":\"SA4160135000495765611597\",\"account_name\":\"Al Noor Logistics LLC\",\"account_number\":\"135000495765611597\",\"bank_name\":\"Bank AlJazira\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-03-23\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":3,\"day\":23},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3942,
+   "output_tokens": 281
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract-reread:1_scan_8511.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 5.66,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Hilal Contracting LLC\",\"company_name_ar\":null,\"cr_number\":\"2050554588\",\"vat_number\":null,\"iban\":\"SA2060619020879439555647\",\"account_name\":\"Al Hilal Contracting LLC\",\"account_number\":\"619020879439555647\",\"bank_name\":\"Bank AlJazira\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"20/09/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":9,\"day\":20},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.95,\"cr_number\":0.93,\"vat_number\":1,\"iban\":0.93,\"account_name\":0.97,\"expiry_date\":1},\"notes\":\"Re-read digit by digit. The CR number printed on this letter reads 2050554588 (2-0-5-0-5-5-4-5-8-8), which differs from the CR number 2050054588 reported in the mismatch check, so the discrepancy appears to be in the source documents. IBAN reads SA20 60 6190 2087 9439 5556 47 (24 characters). The account number 619020879439555647 matches the last 18 digits of the IBAN. The company name is the account holder name; the document has no company_name label.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3863,
+   "output_tokens": 460
+  }
+ }
+}

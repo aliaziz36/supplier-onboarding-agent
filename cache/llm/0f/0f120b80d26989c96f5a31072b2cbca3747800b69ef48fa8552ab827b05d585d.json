@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_025_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.63,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01DFznpgwenurC9FYFq6A9wq",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_025_missing"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3970,
+   "output_tokens": 56
+  }
+ }
+}

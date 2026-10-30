@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_commercial_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.1,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Hilal Catering Est.\",\"company_name_ar\":\"مؤسسة الهلال للإعاشة\",\"cr_number\":\"2051393185\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"1448/02/03 AH\",\"calendar\":\"hijri\",\"year\":1448,\"month\":2,\"day\":3},\"expiry_date\":{\"raw\":\"1448/09/02 AH\",\"calendar\":\"hijri\",\"year\":1448,\"month\":9,\"day\":2},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.97,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.97},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 312
+  }
+ }
+}

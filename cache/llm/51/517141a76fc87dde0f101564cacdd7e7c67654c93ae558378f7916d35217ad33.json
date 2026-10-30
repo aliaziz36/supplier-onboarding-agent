@@ -1,0 +1,23 @@
+{
+ "purpose": "extract-reread:1_bank.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 8.08,
+ "response": {
+  "content": [
+   {
+    "signature": "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",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Najd Office Supplies Co.\",\"company_name_ar\":\"شركة نجد للمستلزمات المكتبية\",\"cr_number\":\"2051205224\",\"vat_number\":null,\"iban\":\"SA2030869863867571139951\",\"account_name\":\"Najd Office Supplies Co.\",\"account_number\":\"869863867571139951\",\"bank_name\":\"Arab National Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"30/12/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":12,\"day\":30},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.95,\"cr_number\":0.95,\"vat_number\":1,\"iban\":0.9,\"account_name\":0.95,\"expiry_date\":1},\"notes\":\"Re-read digit by digit. The IBAN has 24 characters: SA + 22 digits, with bank code 30 followed by the 18-digit account number 869863867571139951. This matches the printed account number. The earlier failed value had an extra digit (a doubled 5), which is not on the document. The scan is slightly skewed and soft but the digits are readable.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3895,
+   "output_tokens": 1009
+  }
+ }
+}

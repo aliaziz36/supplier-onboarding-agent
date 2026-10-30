@@ -15,7 +15,12 @@ from eval.run import eval_case  # noqa: E402
 
 POLICY = load_policy()
 DEMO = sorted(p.parent.name for p in (CASES_DIR / "demo").glob("*/label.json"))
-FAILED_ONCE: list[str] = []          # dev case ids, appended by each fix round
+FAILED_ONCE: list[str] = [          # dev case ids, appended by each fix round
+    "dev_006_clean",                 # ambiguous DD/MM date -> low confidence -> escalated
+    "dev_025_missing",               # Gregorian date labelled Hijri -> unknown expiry -> escalated
+    "dev_010_clean",                 # one-digit CR misread on Arabic scan -> registry miss -> escalated
+    "dev_026_missing",               # IBAN misread on scanned bank letter (decision right, field wrong)
+]
 KNOWN_LIMITATIONS: dict[str, str] = {}
 
 CASES = [("demo", c) for c in DEMO] + [("dev", c) for c in FAILED_ONCE]

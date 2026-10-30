@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_account_confirmation.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.72,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":false,\"language\":\"bilingual\",\"company_name\":null,\"company_name_ar\":null,\"cr_number\":null,\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":null,\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0,\"cr_number\":1,\"vat_number\":1,\"iban\":0,\"account_name\":0,\"expiry_date\":1},\"notes\":\"Scan is heavily blurred; only the layout of an account confirmation letter (bilingual title, table of fields, stamp) is discernible. Key values such as IBAN, account holder and date cannot be read with confidence.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 272
+  }
+ }
+}

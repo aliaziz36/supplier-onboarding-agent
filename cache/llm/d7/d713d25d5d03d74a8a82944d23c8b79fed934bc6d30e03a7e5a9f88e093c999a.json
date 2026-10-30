@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_سجل_تجاري.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.78,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Noor Steel Fabrication LLC\",\"company_name_ar\":\"شركة النور لتصنيع الحديد\",\"cr_number\":\"2051468167\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-06-07\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":6,\"day\":7},\"expiry_date\":{\"raw\":\"2028-04-04\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":4,\"day\":4},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4003,
+   "output_tokens": 307
+  }
+ }
+}

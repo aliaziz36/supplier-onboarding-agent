@@ -1,0 +1,29 @@
+{
+ "purpose": "agent:dev_010_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.53,
+ "response": {
+  "content": [
+   {
+    "text": "CR number differs in d1 (2050054588 vs 2050554588).",
+    "type": "text"
+   },
+   {
+    "id": "toolu_015LNwtCYjffb889qKZevDRZ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_010_clean"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4376,
+   "output_tokens": 80
+  }
+ }
+}

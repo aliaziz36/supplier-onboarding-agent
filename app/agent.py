@@ -194,10 +194,50 @@ def _checks(ctx, case_id):
                              ablate=ctx.ablate)
 
 
+REREAD_ON = {"cr_in_registry", "cr_number_matches", "vat_registered", "iban_valid"}
+
+
+def _reread_disagreements(ctx, case_id, s) -> list:
+    """Numbers that disagree with the registry or other documents get one careful re-read before anyone
+    acts on them. A real mismatch survives the re-read; a misread digit does not."""
+    fails = [r for r in s["risk"] + s["fixable"] if r["check"] in REREAD_ON]
+    if not fails or ctx.mode != "hybrid":
+        return []
+    chosen, _ = checks.pick_documents(cases.case_documents(ctx.conn, case_id))
+    targets = {}
+    for r in fails:
+        for t in {r["doc_type"], "commercial_registration"} if r["check"] == "cr_number_matches" else {r["doc_type"]}:
+            if t in chosen and not chosen[t]["extraction"].get("reread"):
+                targets[t] = (chosen[t], f"the {r['check'].replace('_', ' ')} check failed ({r['detail']}).")
+    changes = []
+    for t, (d, why) in targets.items():
+        ex, res = extract.extract_pdf(d["path"], focus=why)
+        before = d["extraction"]
+        for f in ("cr_number", "vat_number", "iban", "account_name", "company_name", "expiry_date_iso"):
+            if before.get(f) != ex.get(f):
+                changes.append({"document": d["filename"], "field": f, "first_read": before.get(f),
+                                "careful_reread": ex.get(f)})
+        ex["reread"] = True
+        ctx.conn.execute("UPDATE documents SET extraction=? WHERE id=?", (db.dumps(ex), d["id"]))
+        db.log_event(ctx.conn, kind="llm", name="reread", case_id=case_id,
+                     summary=f"second read of {d['filename']}: {why}",
+                     tokens_in=res.usage.get("input_tokens", 0), tokens_out=res.usage.get("output_tokens", 0),
+                     cached=res.cached, seconds=res.seconds)
+    ctx.conn.commit()
+    if targets and not changes:
+        changes.append({"note": "careful re-read confirmed the first reading"})
+    return changes
+
+
 def t_run_checks(ctx, case_id):
     s = _checks(ctx, case_id)
+    reread = _reread_disagreements(ctx, case_id, s)
+    if reread:
+        s = _checks(ctx, case_id)
     passed = sum(r["status"] == "pass" for r in s["results"])
-    return {"clean": s["clean"], "recommended": s["recommended"], "risk_failures": s["risk"],
+    out = {} if not reread else {"rereads": reread, "note": "Disagreeing numbers were re-read carefully; the "
+                                 "checks below use the corrected values, which supersede earlier extraction output."}
+    return out | {"clean": s["clean"], "recommended": s["recommended"], "risk_failures": s["risk"],
             "fixable_failures": s["fixable"], "documents_to_request": s["documents_to_request"],
             "checks_passed": passed}
 

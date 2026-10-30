@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_vat_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.57,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Gulf Steel Fabrication Co.\",\"company_name_ar\":null,\"cr_number\":\"4030888539\",\"vat_number\":\"333633875004743\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"03/06/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":6,\"day\":3},\"expiry_date\":{\"raw\":\"12/06/2027\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":6,\"day\":12},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3914,
+   "output_tokens": 293
+  }
+ }
+}

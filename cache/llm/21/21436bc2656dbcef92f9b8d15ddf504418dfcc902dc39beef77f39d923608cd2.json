@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_nitaqat_gosi.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.22,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Safwa Electrical Services Company\",\"company_name_ar\":\"شركة الصفوة للخدمات الكهربائية\",\"cr_number\":\"1010341768\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"736589430\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"2025-06-13\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":6,\"day\":13},\"expiry_date\":{\"raw\":\"2027-07-02\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":7,\"day\":2},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4039,
+   "output_tokens": 315
+  }
+ }
+}

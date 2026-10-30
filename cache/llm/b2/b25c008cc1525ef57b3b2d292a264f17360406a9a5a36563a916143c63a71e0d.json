@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:dev_011_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.61,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01QCAHFa65gp41uMk6xtP2Qh",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_011_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Mada Cleaning Services Est. onboarded",
+     "body": "Dear Khalid, thank you for submitting your documents. Your registration is complete and Al Mada Cleaning Services Est. is now set up as a supplier (vendor ID V-2051428792). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01RMEBbji7SzuQ5GvVEVkHfG",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_011_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4367,
+   "output_tokens": 319
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_account_confirmation.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.39,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Tihama Electrical Services Co.\",\"company_name_ar\":\"شركة تهامة للخدمات الكهربائية\",\"cr_number\":\"2051598386\",\"vat_number\":null,\"iban\":\"SA4445289218401107043419\",\"account_name\":\"Tihama Electrical Services Co.\",\"account_number\":\"289218401107043419\",\"bank_name\":\"Saudi Awwal Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"26/08/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":8,\"day\":26},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4040,
+   "output_tokens": 306
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_account_confirmation.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.97,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"AJYAL IT SOLUTIONS COMPANY\",\"company_name_ar\":null,\"cr_number\":\"4030422667\",\"vat_number\":null,\"iban\":\"SA8655695751990287210102\",\"account_name\":\"AJYAL IT SOLUTIONS COMPANY\",\"account_number\":\"695751990287210102\",\"bank_name\":\"Banque Saudi Fransi\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"10/08/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":8,\"day\":10},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3943,
+   "output_tokens": 300
+  }
+ }
+}

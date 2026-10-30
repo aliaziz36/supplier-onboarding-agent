@@ -9,6 +9,7 @@ from datetime import date
 from difflib import SequenceMatcher
 
 from app.registry import Registry
+from app.saudi import iban_problems
 
 EXPIRING = {"commercial_registration", "vat_certificate", "gosi_certificate", "zakat_certificate"}
 ARABIC_LEGAL = {"شركة", "مؤسسة", "مؤسسه", "شركه", "ذ.م.م", "المحدودة"}
@@ -135,6 +136,13 @@ def run_checks(docs: list[dict], registry: Registry | None, policy: dict, today:
             conf = (e.get("confidence") or {}).get(f, 1.0)
             if conf < min_conf:
                 add("confidence", False, "risk", t, f"low confidence ({conf:.2f}) on {f}")
+
+    # IBAN on the bank letter must be a valid Saudi IBAN (checksum, bank code). A misread digit fails here.
+    if "bank_letter" in ex:
+        iban = ex["bank_letter"].get("iban")
+        problems = iban_problems(iban) if iban else ["no IBAN found"]
+        add("iban_valid", not problems, "fixable", "bank_letter",
+            f"IBAN {iban}: {', '.join(problems)}; need a clearer bank letter" if problems else f"IBAN {iban} valid")
 
     cr_doc = ex.get("commercial_registration", {})
     cr_number = cr_doc.get("cr_number")

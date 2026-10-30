@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.81,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Sahab Medical Supplies Est.\",\"company_name_ar\":\"مؤسسة سحاب للمستلزمات الطبية\",\"cr_number\":\"4650520834\",\"vat_number\":null,\"iban\":\"SA7705197859032091018843\",\"account_name\":\"Sahab Medical Supplies Est.\",\"account_number\":\"197859032091018843\",\"bank_name\":\"Alinma Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-10-03\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":10,\"day\":3},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":0.97,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Scan is slightly rotated but legible. Date printed in ISO format (YYYY-MM-DD).\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 345
+  }
+ }
+}

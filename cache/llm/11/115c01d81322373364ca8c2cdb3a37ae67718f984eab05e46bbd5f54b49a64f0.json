@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_3331.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.46,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة درة لتصنيع الحديد\",\"cr_number\":\"2051222194\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"٢٧/٠٤/٢٠٢٥\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":4,\"day\":27},\"expiry_date\":{\"raw\":\"٢٨/١١/٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":11,\"day\":28},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Commercial registration certificate issued by Ministry of Commerce; city Khobar; activity Steel Fabrication. Dates are Gregorian, written in Arabic-Indic digits.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 374
+  }
+ }
+}

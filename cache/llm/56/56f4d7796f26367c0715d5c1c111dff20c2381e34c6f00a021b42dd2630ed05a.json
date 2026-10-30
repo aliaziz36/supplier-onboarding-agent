@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.6,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Desert Bloom Electrical Services LLC\",\"company_name_ar\":\"شركة زهرة الصحراء للخدمات الكهربائية\",\"cr_number\":\"2050884332\",\"vat_number\":null,\"iban\":\"SA4460920523379701287923\",\"account_name\":\"Desert Bloom Electrical Services LLC\",\"account_number\":\"920523379701287923\",\"bank_name\":\"Bank AlJazira\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-10-09\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":10,\"day\":9},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":0.97,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Scan is slightly skewed but all key values are readable. Letter carries a CERTIFIED stamp.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 351
+  }
+ }
+}

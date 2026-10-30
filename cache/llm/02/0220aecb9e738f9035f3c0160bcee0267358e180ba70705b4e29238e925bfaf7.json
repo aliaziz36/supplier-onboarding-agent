@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_6387.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.44,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة الفارس للمستلزمات الطبية\",\"cr_number\":\"1010540874\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"582359775\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"١٤٤٧/٠٩/٢٢ هـ\",\"calendar\":\"hijri\",\"year\":1447,\"month\":9,\"day\":22},\"expiry_date\":{\"raw\":\"١٤٥٠/٠٤/٢١ هـ\",\"calendar\":\"hijri\",\"year\":1450,\"month\":4,\"day\":21},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.9,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.9},\"notes\":\"The scan is slightly blurred. The GOSI subscription number is read as ٥٨٢٣٥٩٧٧٥, so its digits are somewhat less certain.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 386
+  }
+ }
+}
