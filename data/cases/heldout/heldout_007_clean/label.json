@@ -1,0 +1,85 @@
+{
+  "case_id": "heldout_007_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة قمم للمقاولات",
+      "cr_number": "4650828123",
+      "expiry_date": "2027-06-24"
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة قمم للمقاولات",
+      "cr_number": "4650828123",
+      "expiry_date": "2028-08-18"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650828123",
+      "expiry_date": null,
+      "iban": "SA0315174487436281098333",
+      "account_name": "Qimam Contracting LLC"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Qimam Contracting LLC",
+      "company_name_ar": null,
+      "cr_number": "4650828123",
+      "expiry_date": "2027-10-24",
+      "vat_number": "326345626265413"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Qimam Contracting LLC",
+    "company_name_ar": "شركة قمم للمقاولات",
+    "cr_number": "4650828123",
+    "vat_number": "326345626265413",
+    "iban": "SA0315174487436281098333",
+    "account_name": "Qimam Contracting LLC",
+    "expiry": {
+      "commercial_registration": "2027-06-24",
+      "vat_certificate": "2027-10-24",
+      "gosi_certificate": "2028-08-18"
+    }
+  }
+}

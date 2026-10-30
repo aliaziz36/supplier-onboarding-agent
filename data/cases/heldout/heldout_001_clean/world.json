@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050244939": {
+        "name": "شركة روابي للخدمات اللوجستية",
+        "name_en": "Rawabi Logistics Co.",
+        "status": "active",
+        "issue_date": "2025-03-10",
+        "expiry_date": "2028-08-17",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "309266858784003": {
+        "registered": true,
+        "name": "شركة روابي للخدمات اللوجستية",
+        "name_en": "Rawabi Logistics Co.",
+        "crNumber": "2050244939"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

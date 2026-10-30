@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_031_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.16,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_015vhJVb8g1P4FNqdLad5qmQ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_031_unreadable",
+     "kind": "request_fix",
+     "subject": "Al Bayan Printing LLC - clearer VAT certificate needed",
+     "body": "Dear Omar,\n\nThank you for your registration documents. The VAT certificate (VAT_certificate.pdf) was unreadable in the scan we received. Please reply with a clear, complete copy and we will continue onboarding. All other documents were received fine.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "vat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01FMHNVsVMLcEwASRFtexZvJ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_031_unreadable",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4349,
+   "output_tokens": 361
+  }
+ }
+}

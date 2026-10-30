@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_GOSI_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.43,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Gulf Office Supplies Est.\",\"company_name_ar\":\"مؤسسة الخليج للمستلزمات المكتبية\",\"cr_number\":\"1010442220\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"876961996\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"13/03/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":3,\"day\":13},\"expiry_date\":{\"raw\":\"05/08/2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":8,\"day\":5},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4077,
+   "output_tokens": 317
+  }
+ }
+}

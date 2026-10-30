@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_027_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.41,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01K6a1uvHW6W6yAoGxu43eRp",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_027_missing",
+     "kind": "request_fix",
+     "subject": "Bank letter needed to complete onboarding",
+     "body": "Dear Reem, thank you for your documents. Your commercial registration, VAT certificate and social insurance certificate were received. To complete onboarding we still need your bank letter, which was missing from your email. Please reply with a copy of it. Best regards, Procurement Team",
+     "documents_requested": [
+      "bank_letter"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_012RZrYJNt6nzmARvuYXCfcc",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_027_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4106,
+   "output_tokens": 336
+  }
+ }
+}

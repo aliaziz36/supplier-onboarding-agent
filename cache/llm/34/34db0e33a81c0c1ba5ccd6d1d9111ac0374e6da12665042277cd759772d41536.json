@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_GOSI_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.83,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Khaleej Star Contracting Company\",\"company_name_ar\":null,\"cr_number\":\"4650975144\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"411722168\",\"nitaqat_band\":\"High Green\",\"issue_date\":{\"raw\":\"1446/12/12 AH\",\"calendar\":\"hijri\",\"year\":1446,\"month\":12,\"day\":12},\"expiry_date\":{\"raw\":\"1447/12/22 AH\",\"calendar\":\"hijri\",\"year\":1447,\"month\":12,\"day\":22},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3961,
+   "output_tokens": 301
+  }
+ }
+}

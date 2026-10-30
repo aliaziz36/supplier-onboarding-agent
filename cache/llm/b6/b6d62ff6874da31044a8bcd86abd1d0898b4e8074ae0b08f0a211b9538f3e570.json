@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:heldout_048_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.92,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01PAhwUUb9hWCe8zKTAnL42o",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_048_bank_change_genuine",
+     "vendor_id": "V-4650183306",
+     "new_iban": "SA9455739794966469653168",
+     "account_name": "Qimam Contracting Co."
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3285,
+   "output_tokens": 161
+  }
+ }
+}

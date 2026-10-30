@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4030618609": {
+        "name": "مؤسسة أجيال لحلول تقنية المعلومات",
+        "name_en": "Ajyal IT Solutions Est.",
+        "status": "active",
+        "issue_date": "2025-11-29",
+        "expiry_date": "2027-11-24",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "372678074477003": {
+        "registered": true,
+        "name": "مؤسسة أجيال لحلول تقنية المعلومات",
+        "name_en": "Ajyal IT Solutions Est.",
+        "crNumber": "4030618609"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4030618609",
+    "name": "Ajyal IT Solutions Est.",
+    "name_ar": "مؤسسة أجيال لحلول تقنية المعلومات",
+    "cr_number": "4030618609",
+    "vat_number": "372678074477003",
+    "iban": "SA8410682618301908680445",
+    "bank_code": "10",
+    "account_name": "Ajyal IT Solutions Est.",
+    "email": "yousef@ajyal-it.com.sa",
+    "email_domain": "ajyal-it.com.sa",
+    "phone": "+966526812505",
+    "documents": {
+      "commercial_registration": "2027-11-24",
+      "vat_certificate": "2027-10-27",
+      "gosi_certificate": "2027-04-05"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050321981": {
+        "name": "مؤسسة الجزيرة للخدمات اللوجستية",
+        "name_en": "Al Jazeera Logistics Est.",
+        "status": "active",
+        "issue_date": "2026-03-19",
+        "expiry_date": "2028-01-01",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "362226795816513": {
+        "registered": true,
+        "name": "مؤسسة الجزيرة للخدمات اللوجستية",
+        "name_en": "Al Jazeera Logistics Est.",
+        "crNumber": "2050321981"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

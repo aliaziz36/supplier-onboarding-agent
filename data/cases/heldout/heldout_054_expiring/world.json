@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4030048371": {
+        "name": "شركة البيان لتصنيع الحديد",
+        "name_en": "Al Bayan Steel Fabrication Co.",
+        "status": "active",
+        "issue_date": "2025-12-06",
+        "expiry_date": "2026-11-05",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "305051354210623": {
+        "registered": true,
+        "name": "شركة البيان لتصنيع الحديد",
+        "name_en": "Al Bayan Steel Fabrication Co.",
+        "crNumber": "4030048371"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4030048371",
+    "name": "Al Bayan Steel Fabrication Co.",
+    "name_ar": "شركة البيان لتصنيع الحديد",
+    "cr_number": "4030048371",
+    "vat_number": "305051354210623",
+    "iban": "SA7510550633795017073131",
+    "bank_code": "10",
+    "account_name": "Al Bayan Steel Fabrication Co.",
+    "email": "ahmed@albayan-steel.com.sa",
+    "email_domain": "albayan-steel.com.sa",
+    "phone": "+966514266983",
+    "documents": {
+      "commercial_registration": "2026-11-05",
+      "vat_certificate": "2027-07-31",
+      "gosi_certificate": "2028-01-29"
+    }
+  }
+}

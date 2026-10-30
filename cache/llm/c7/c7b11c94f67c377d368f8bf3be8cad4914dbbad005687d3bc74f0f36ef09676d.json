@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_8651.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.54,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Riyadah Office Supplies Co.\",\"company_name_ar\":null,\"cr_number\":\"2051957446\",\"vat_number\":null,\"iban\":\"SA1920795013108707261494\",\"account_name\":\"Al Riyadah Office Supplies Co.\",\"account_number\":\"795013108707261494\",\"bank_name\":\"Riyad Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"12/08/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":8,\"day\":12},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 291
+  }
+ }
+}

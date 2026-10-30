@@ -1,0 +1,86 @@
+{
+  "case_id": "heldout_004_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "name_variant",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 3,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "DESERT BLOOM IT SOLUTIONS CO. LTD",
+      "company_name_ar": null,
+      "cr_number": "1010583842",
+      "expiry_date": "2027-09-30",
+      "vat_number": "327365927709623"
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Desert Bloom IT Solutions LLC",
+      "company_name_ar": "شركة زهرة الصحراء لحلول تقنية المعلومات",
+      "cr_number": "1010583842",
+      "expiry_date": "2028-08-15"
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Desert Bloom IT Solutions LLC",
+      "company_name_ar": "شركة زهرة الصحراء لحلول تقنية المعلومات",
+      "cr_number": "1010583842",
+      "expiry_date": "2028-04-02"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010583842",
+      "expiry_date": null,
+      "iban": "SA1880807464675851389366",
+      "account_name": "Desert Bloom IT Solutions L.L.C."
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Desert Bloom IT Solutions LLC",
+    "company_name_ar": "شركة زهرة الصحراء لحلول تقنية المعلومات",
+    "cr_number": "1010583842",
+    "vat_number": "327365927709623",
+    "iban": "SA1880807464675851389366",
+    "account_name": "Desert Bloom IT Solutions L.L.C.",
+    "expiry": {
+      "commercial_registration": "2028-04-02",
+      "vat_certificate": "2027-09-30",
+      "gosi_certificate": "2028-08-15"
+    }
+  }
+}

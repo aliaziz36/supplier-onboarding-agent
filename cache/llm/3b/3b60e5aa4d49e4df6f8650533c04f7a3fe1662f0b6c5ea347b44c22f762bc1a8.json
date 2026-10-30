@@ -1,0 +1,37 @@
+{
+ "purpose": "agent:heldout_040_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.01,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01VUpQ2djedQgTRRS5uhWe1P",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_040_cr_inactive"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01QSVEbLBJ1ZFGmz96LnKWvm",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_040_cr_inactive",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2562,
+   "output_tokens": 144
+  }
+ }
+}

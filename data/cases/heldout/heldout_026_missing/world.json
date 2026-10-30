@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030723250": {
+        "name": "شركة نجد للتجارة",
+        "name_en": "Najd Trading Co.",
+        "status": "active",
+        "issue_date": "2026-07-17",
+        "expiry_date": "2027-12-08",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "350843342047983": {
+        "registered": true,
+        "name": "شركة نجد للتجارة",
+        "name_en": "Najd Trading Co.",
+        "crNumber": "4030723250"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

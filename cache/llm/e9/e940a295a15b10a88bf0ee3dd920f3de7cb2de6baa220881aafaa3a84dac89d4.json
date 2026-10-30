@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:heldout_050_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.99,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_011ffhiW1F3mGZ57J1sVGZX5",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_050_bank_change_genuine",
+     "vendor_id": "V-2050000505",
+     "new_iban": "SA5955569293501036942434",
+     "account_name": "Al Tamayuz Catering LLC"
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3304,
+   "output_tokens": 164
+  }
+ }
+}

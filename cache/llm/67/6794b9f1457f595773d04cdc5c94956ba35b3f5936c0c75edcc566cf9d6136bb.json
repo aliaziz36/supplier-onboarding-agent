@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_032_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.81,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01DjVk54pi3gh2uFLjAPS4E5",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_032_unreadable",
+     "kind": "request_fix",
+     "subject": "Please resend your VAT certificate - clearer copy needed",
+     "body": "Dear Khalid,\n\nThank you for your registration. The VAT certificate (tax_cert.pdf) was an unreadable scan. Please reply with a clear, legible copy. All your other documents were received.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "vat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01FusggEFZqwZefMgEd9advc",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_032_unreadable",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4353,
+   "output_tokens": 340
+  }
+ }
+}

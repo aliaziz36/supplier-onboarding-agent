@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050833118": {
+        "name": "مؤسسة اليمامة لتصنيع الحديد",
+        "name_en": "Al Yamamah Steel Fabrication Est.",
+        "status": "active",
+        "issue_date": "2026-09-24",
+        "expiry_date": "2028-05-24",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "348758233148773": {
+        "registered": true,
+        "name": "مؤسسة اليمامة لتصنيع الحديد",
+        "name_en": "Al Yamamah Steel Fabrication Est.",
+        "crNumber": "2050833118"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

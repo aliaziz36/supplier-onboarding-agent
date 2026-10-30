@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050311839": {
+        "name": "شركة الخليج للخدمات الكهربائية",
+        "name_en": "Gulf Electrical Services Company",
+        "status": "active",
+        "issue_date": "2025-06-26",
+        "expiry_date": "2027-07-11",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "374379556632173": {
+        "registered": true,
+        "name": "شركة الخليج للخدمات الكهربائية",
+        "name_en": "Gulf Electrical Services Company",
+        "crNumber": "2050311839"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

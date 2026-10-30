@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010259739": {
+        "name": "مؤسسة المنار للمقاولات",
+        "name_en": "Al Manar Contracting Est.",
+        "status": "active",
+        "issue_date": "2026-06-01",
+        "expiry_date": "2028-04-04",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "392438410035053": {
+        "registered": true,
+        "name": "مؤسسة المنار للمقاولات",
+        "name_en": "Al Manar Contracting Est.",
+        "crNumber": "1010259739"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

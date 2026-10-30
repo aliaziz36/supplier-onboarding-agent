@@ -1,0 +1,50 @@
+{
+ "purpose": "agent:heldout_046_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 7.0,
+ "response": {
+  "content": [
+   {
+    "signature": "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",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01Rd7G9DqZzB3s9ur6NogTHN",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_046_bank_change_spoofed",
+     "vendor_id": "V-4650462543",
+     "new_iban": "SA5010192438068114825178",
+     "account_name": "Lama Al-Mutairi",
+     "reason": "Bank change request moves payments to a personal account (Lama Al-Mutairi) at a different bank (SNB, code 10 vs 55 on file), with urgency pressure. Needs phone callback to the number on file (+966507816869) before any change.",
+     "red_flags": [
+      "bank_differs_from_file",
+      "account_name_mismatch"
+     ]
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_018sbdV6VgzRYM9TKNKhWnLd",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_046_bank_change_spoofed",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3111,
+   "output_tokens": 891
+  }
+ }
+}

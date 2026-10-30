@@ -1,0 +1,50 @@
+{
+ "purpose": "agent:heldout_044_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 7.89,
+ "response": {
+  "content": [
+   {
+    "signature": "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",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01HvYNku375w8YTW4kLnCzJR",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_044_bank_change_spoofed",
+     "vendor_id": "V-1010342158",
+     "new_iban": "SA5620856519154422866519",
+     "account_name": "Al Jazeera IT Solutions Est.",
+     "reason": "Bank change request from sender domain aljazeerait.com.sa, which differs from the domain on file (aljazeera-it.com.sa). The new IBAN fails the Saudi IBAN mod-97 checksum. The email is urgent and says the old account is closing. A callback to the phone on file (+966527700043) is required.",
+     "red_flags": [
+      "iban_invalid",
+      "sender_domain_mismatch"
+     ]
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01U4WB3XNTHGLS8J6i2o9iZE",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_044_bank_change_spoofed",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3142,
+   "output_tokens": 1007
+  }
+ }
+}

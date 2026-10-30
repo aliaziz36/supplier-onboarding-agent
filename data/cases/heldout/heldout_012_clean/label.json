@@ -1,0 +1,88 @@
+{
+  "case_id": "heldout_012_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "scanned",
+    "name_variant",
+    "hijri",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_1782.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "hijri",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Hilal Logistics Est.",
+      "company_name_ar": "مؤسسة الهلال للخدمات اللوجستية",
+      "cr_number": "2050088316",
+      "expiry_date": "2027-05-26"
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Hilal Logistics Est.",
+      "company_name_ar": null,
+      "cr_number": "2050088316",
+      "expiry_date": "2028-08-16",
+      "vat_number": "322947305702393"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "hijri",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Hilal Logistics Est.",
+      "company_name_ar": "مؤسسة الهلال للخدمات اللوجستية",
+      "cr_number": "2050088316",
+      "expiry_date": "2027-06-22"
+    },
+    "scan_2184.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050088316",
+      "expiry_date": null,
+      "iban": "SA1760413230514151892526",
+      "account_name": "AL HILAL LOGISTICS EST."
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Hilal Logistics Est.",
+    "company_name_ar": "مؤسسة الهلال للخدمات اللوجستية",
+    "cr_number": "2050088316",
+    "vat_number": "322947305702393",
+    "iban": "SA1760413230514151892526",
+    "account_name": "AL HILAL LOGISTICS EST.",
+    "expiry": {
+      "commercial_registration": "2027-06-22",
+      "vat_certificate": "2028-08-16",
+      "gosi_certificate": "2027-05-26"
+    }
+  }
+}

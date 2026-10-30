@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_012_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.5,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_018TqJ24FMmiCNbt8v3vwqnH",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_012_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Hilal Logistics Est. registered",
+     "body": "Dear Nora, thank you for your documents. Al Hilal Logistics Est. has been successfully registered as a supplier (vendor ID V-2050088316). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01TB2kvgVGHsYuJ6aSh7Kt7v",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_012_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4398,
+   "output_tokens": 306
+  }
+ }
+}

@@ -1,0 +1,88 @@
+{
+  "case_id": "heldout_019_expired",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "name_variant",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Yamamah Steel Fabrication Est.",
+      "company_name_ar": "مؤسسة اليمامة لتصنيع الحديد",
+      "cr_number": "2050833118",
+      "expiry_date": "2026-04-16"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Yamamah Steel Fabrication Est.",
+      "company_name_ar": "مؤسسة اليمامة لتصنيع الحديد",
+      "cr_number": "2050833118",
+      "expiry_date": "2028-05-24"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 3,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "AL-YAMAMAH STEEL FABRICATION CO. LTD",
+      "company_name_ar": null,
+      "cr_number": "2050833118",
+      "expiry_date": "2028-07-23",
+      "vat_number": "348758233148773"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050833118",
+      "expiry_date": null,
+      "iban": "SA4905854277068623958647",
+      "account_name": "Al-Yamamah Steel Fabrication Est."
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate expired on 2026-04-16.",
+  "expected_fields": {
+    "company_name": "Al Yamamah Steel Fabrication Est.",
+    "company_name_ar": "مؤسسة اليمامة لتصنيع الحديد",
+    "cr_number": "2050833118",
+    "vat_number": "348758233148773",
+    "iban": "SA4905854277068623958647",
+    "account_name": "Al-Yamamah Steel Fabrication Est.",
+    "expiry": {
+      "commercial_registration": "2028-05-24",
+      "vat_certificate": "2028-07-23",
+      "gosi_certificate": "2026-04-16"
+    }
+  }
+}

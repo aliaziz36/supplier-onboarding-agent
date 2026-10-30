@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:heldout_028_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.75,
+ "response": {
+  "content": [
+   {
+    "text": "GOSI missing. Still verify registry/VAT quickly.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01KFKaaHfVdNFRUcTt2LXpeG",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "4650458950"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01VmHYSNvmvkNmviBX4C1eyn",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "376504360830723"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3757,
+   "output_tokens": 128
+  }
+ }
+}

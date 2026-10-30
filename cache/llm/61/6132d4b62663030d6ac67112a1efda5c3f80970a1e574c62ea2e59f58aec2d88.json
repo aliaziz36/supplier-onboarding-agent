@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:heldout_039_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.95,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_016ZDAxPh23EzhPAakTzN39q",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_039_cr_inactive",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3381,
+   "output_tokens": 87
+  }
+ }
+}

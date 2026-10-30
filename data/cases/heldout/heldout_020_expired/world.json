@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030693731": {
+        "name": "شركة نجد للمستلزمات المكتبية",
+        "name_en": "Najd Office Supplies LLC",
+        "status": "active",
+        "issue_date": "2026-01-19",
+        "expiry_date": "2027-07-10",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "328153357542783": {
+        "registered": true,
+        "name": "شركة نجد للمستلزمات المكتبية",
+        "name_en": "Najd Office Supplies LLC",
+        "crNumber": "4030693731"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

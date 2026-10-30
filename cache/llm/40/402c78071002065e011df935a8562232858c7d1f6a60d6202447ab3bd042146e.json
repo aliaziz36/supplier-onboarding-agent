@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_commercial_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.0,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Rawabi Steel Fabrication Company\",\"company_name_ar\":\"شركة روابي لتصنيع الحديد\",\"cr_number\":\"4030538092\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2026-01-22\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":1,\"day\":22},\"expiry_date\":{\"raw\":\"2027-02-24\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":2,\"day\":24},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4003,
+   "output_tokens": 307
+  }
+ }
+}

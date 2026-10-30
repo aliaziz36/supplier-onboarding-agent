@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:heldout_050_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.65,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_011cecKyKGKNZ2wPBd86fyA8",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_050_bank_change_genuine"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2776,
+   "output_tokens": 62
+  }
+ }
+}

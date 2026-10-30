@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.04,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Mada Cleaning Services Co.\",\"company_name_ar\":null,\"cr_number\":\"2051221540\",\"vat_number\":null,\"iban\":\"SA7755958968123706944593\",\"account_name\":\"Al Mada Cleaning Services Co.\",\"account_number\":\"958968123706944593\",\"bank_name\":\"Banque Saudi Fransi\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2026-04-20\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":4,\"day\":20},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"The Issuing Bank field has overlapping text (bank name overprinted with the disclaimer line), but the bank name Banque Saudi Fransi is readable.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3977,
+   "output_tokens": 345
+  }
+ }
+}

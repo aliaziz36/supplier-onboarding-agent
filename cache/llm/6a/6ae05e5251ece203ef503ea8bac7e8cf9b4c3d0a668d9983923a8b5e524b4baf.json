@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_038_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.7,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_018SbxNoxfYMoitG7CfGa6hZ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_038_bank_name_mismatch",
+     "reason": "Bank letter account holder (Al Safwa Catering LLC) does not match CR company name (Al Jazeera Transport Co.). Possible fraud or wrong document.",
+     "evidence": [
+      "Bank letter d2: company/account name 'Al Safwa Catering LLC', IBAN SA8945791104270671550676, Saudi Awwal Bank, CR 2050529545",
+      "CR, GOSI, VAT and Wathq registry all show Al Jazeera Transport Co. (CR 2050529545, active, expires 2027-06-24)",
+      "ZATCA VAT 343203018675943 registered to Al Jazeera Transport Co.",
+      "All documents unexpired and no embedded instructions"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01NW3k4UmkyfH7MTFVkLaahL",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_038_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4618,
+   "output_tokens": 415
+  }
+ }
+}

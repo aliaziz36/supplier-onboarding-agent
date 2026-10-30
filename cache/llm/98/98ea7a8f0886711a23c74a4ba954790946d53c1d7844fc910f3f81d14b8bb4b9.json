@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_account_confirmation.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.09,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Riyadah Transport Co.\",\"company_name_ar\":null,\"cr_number\":\"4030364013\",\"vat_number\":null,\"iban\":\"SA5560496961829392171927\",\"account_name\":\"Al Riyadah Transport Co.\",\"account_number\":\"496961829392171927\",\"bank_name\":\"Bank AlJazira\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"15 July 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":7,\"day\":15},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"The 'Issuing Bank' box has overlapping text where the disclaimer line is printed over 'Bank AlJazira'; bank name is still readable from the letterhead and the box.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3943,
+   "output_tokens": 342
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+  "case_id": "heldout_044_bank_change_spoofed",
+  "split": "heldout_044_bank",
+  "kind": "bank_change",
+  "scenario": "bank_change_spoofed",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {},
+  "expected_decision": "freeze",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "sender_domain_mismatch",
+    "iban_invalid"
+  ],
+  "fraud": true,
+  "variant": "lookalike_bad_iban",
+  "reason": "Bank changes are always frozen pending a callback to the phone on file.",
+  "expected_fields": {
+    "new_iban": "SA5620856519154422866519",
+    "account_name": "Al Jazeera IT Solutions Est.",
+    "vendor_id": "V-1010342158"
+  }
+}

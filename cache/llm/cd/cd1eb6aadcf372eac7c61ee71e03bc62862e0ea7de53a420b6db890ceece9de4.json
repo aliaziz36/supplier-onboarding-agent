@@ -1,0 +1,30 @@
+{
+ "purpose": "agent:heldout_010_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.76,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSzQoKEAgTGAI4AUIIdGhpbmtpbmcSDNadyyWWqHlKXpVC9hoM33pZNtGoywPY9ejeIjC7jcvcDwFeknG+7+VpAu+s35wXr95IJXYuu9+kN/V8sOyRdJDmJj3oXTGa9Sv6N+Uq6glHj1N24sO2F7cZZp0dpB41+2V4gIcrl1B2j2Q7OwJ1b8H54bJLCTcWliL2ONoKlguA73hbgP4cnW2eKAy6ZxNhwTDxcQcEOVR5jNs6AFVVHXOGQWhX11yv0yUAaz2p9l0Hu/XTcG/pbzLtfVm+rWhpV56nkV+axnKEXtQxC2AhyGHoMlnGeXuXIuNJd1/Iianmv9Rsh5K3sE/vjdMSTAB1xLzeXMeDINnERq199Q2uEvqU+x+RaswPv2CuPmF+/ZI9Y0C/vMj/yBsC38jAQrkTyhbMNxg7qJF1ot2zaYn5eo8SV+wLTI3AT7uTa1GImHgbAB2ThJPcUKl4QOwZ1tpetHGshMeL02nArF6/0jfbSrEUwFgnjW/uM+1UoKko/dkzhXYJ9K3zcwhJ4dL4NS3CfdVS1qVJsVmEZL/Bz+0BK6WVn1qn//p5yRv3lBHxdSFyiF/31hectLYMh1pA6qxsBB9eNEqdp2cMLjDz3aNFsz0trbM9eIRQvzfzYPLw8dzG2QgHcI0uQL8d0QiZjeEWPyMeN4B70HvzcLnF0nDWv0Mq9YkDdINhAyPR3v94KbagjMccJFuFRLpOugTNCKlYkXNrxxQ33qbekU4pNlc2Fzg4dSNaU2ivaquDg6mvII75XR5uPSNiUqYIGiMleL0XHTn8cTmQmb2i3UCkQlTnodcpWD6rY7zn2HVt0opQw1Op+l0eOqgBcpDjEvybYxg4b8CVh7e7JMmPc47IFzesbUcZki2khfn7xB1jMIgJLqEar3ViU6JnQkOxB3NCsujLQbfKfdIIUF7NcOFQAkqGh6UO8UDKk0rZ8E8RhiXHutogOyGpOGO515SF4ublU+MZdi6qC613ZpL5QGdn/QVEb1qQvKdAQMHgT/pWbaoxN+0EIo2rGNSbl1kBL1HVWcvBQOoYXKx7e1wwk54T86ngmiFG+Ka+M+nO4al4nsCXUSTmUxb9G3bqZxrhDNVE12fmNVYVAk8z/wF+qnJeVgtSqImVPcls864ql4WgkGttIxhxqZIZ/yHhshgVSw/UvczB/oYfpZoOBDJOaZl1PZrpwDk+ky7F1t2ClowPOARIygoPhv9Cm1zDC6SZiUKUTlF/Ih4Wnus6QF6DOj34d5Gd5es6Lg62AW5Vb9RkGUJiJLaSblrTH5f4mTSIfb238kCO1yOzVfdOFjdrYAm6ivFjsqn1frqnzFkSwqJ0NRfjUvbNuklrfTLFuCBh4+vaWKU5RMaXDtqXklNUcgq7uD+fLGEe3QoGnl3VXXWEhxAgT53X8gfeZnKbfI/F6y+iF+rK/ISRjg43Q2PyVwWxsnM1LymIquKvH9BXaUfazbp7iG5o82ujeCEQwhbOuqZphl9rgCbLLDhwKJB5jJG1Ack1LAblPwLwVRHZNrUWs9FrVXJrapvSlG4+JnY3SR1Z8Jr0Ut4ulnA56NrhE4Amy0weH8D4GNLaur8JpoGWaXdythqSEKHEoKuaMaR9HrAa0F/rlVvJgyCtwYZfdwn3vZoISD9LDeFevzr3fzm8CEfR/ZUiKCDvo3sGfbg4Zx/AhvwMMPKt+XodvJM+rXt5KoMBM2zBXdPhV+AHKVqj9YT83zFZbE6+8ZUhZjgTv4okdCGrtiFtppn6KkYw8gDfoOQX2UVYhd+DnZm9V9uPWm9JASCqjSlrpCYrKJi3GAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_013ZyaumxFKkWfw2eZaQkLWV",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_010_clean"
+    },
+    "name": "create_vendor",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4302,
+   "output_tokens": 421
+  }
+ }
+}

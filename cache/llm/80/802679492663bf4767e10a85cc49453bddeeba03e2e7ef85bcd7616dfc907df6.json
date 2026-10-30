@@ -1,0 +1,52 @@
+{
+ "purpose": "agent:heldout_012_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.65,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Eh6p3aYJrqDV9vHBGnddvB",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_012_clean"
+    },
+    "name": "create_vendor",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01WzkxVHDk2XhAQCaSp2CRzn",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_012_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Hilal Logistics Est. onboarded",
+     "body": "Dear Nora, your documents have been verified and Al Hilal Logistics Est. is now registered as a supplier. Thank you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01U8c7EdbCYts9EEXMAWgGG3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_012_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4324,
+   "output_tokens": 344
+  }
+ }
+}

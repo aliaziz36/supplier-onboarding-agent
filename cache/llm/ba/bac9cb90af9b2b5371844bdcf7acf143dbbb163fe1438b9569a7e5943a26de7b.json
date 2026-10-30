@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_سجل_تجاري.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.02,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Manar Logistics Est.\",\"company_name_ar\":\"مؤسسة المنار للخدمات اللوجستية\",\"cr_number\":\"2050835630\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"26 March 2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":3,\"day\":26},\"expiry_date\":{\"raw\":\"10 June 2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":6,\"day\":10},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Scan is slightly skewed but all key values are clearly readable.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 329
+  }
+ }
+}

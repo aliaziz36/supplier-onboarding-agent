@@ -1,0 +1,49 @@
+{
+ "purpose": "agent:heldout_035_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.02,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSiQcKEAgTGAI4AUIIdGhpbmtpbmcSDPIm7ZShlUatzcJDABoMNFeu1+w+GUrWJZFpIjClmsBZ+XKTJZOtjroIGLlNW6laGq9g35iw8EviM6h+Rfl+2E+rzEyOjf+WoLaGgbgqpgbZvnGcZ/xrXYUzaCrtoYK+ClBoOtNhg9mzNvrfzwa4JwER9HRaOJ+akpH1QzhK4MPQIBjw4+uLOR8IzBVNuoDPtM1eB0cz5odyWUGkcgVZbmqSlmODOoRXhwgenNef0fbK0m/Z2rXbn0o+1lCB95oar0PelXBIFmTy4egjqTExtgTUISJS3e1Rg/otXC3D5jZSf7dA8BQv9s4PapSxCywgKoXOXKxF14liukSQ4ptW/t9GsifGnDRa+cJllK7YB7SYNinc9q5c9xGnALRSGjfcpl1nB7X/wig6sydxgGBgeaXfWarHbQK+DnBaW60icQ3UgAF5ykdocgXOYYLcVpteak1J069DI7H1qDej0PKDTKpxiwxVunJgG42H88RHRhg834ncg2+XKVbflylvnxM4EjzdpWhjZ+Cd3Ws482y6U6P1/HztKQuIGP1/k0BniYod4SHHCcl6gd/AyD70+/VWgaUUEVrWOIZwpspcUIfWgNXMcyWVPRhoxdWY9UGJRLcYJe3iFgG6yvoWBom9CUcLdHdZ9BslH1ggnMMu3ahiO6poYyiiKSPC0VuSM4abeh2Kko+2Y41nmfMGbd3opKJviXGiaeTErotCqucsK7qkSs6Htl7i1Ru67TyiSTCosS8blvJTKMQCdS/MgjdHqn4eijpu0Lhjw84Fci363NDbRNecEDOR1dO1ht828qMa2uHha0jrq7roXURkNSN67weWWN4U4BlFrAIwuXOfAKwbbXb9NCZCv7VTyyo0Rn7A7Y+Qs1LchdLpcLdmKgY1FSOiX0iZWpkyVfP/okols9ua2BvCpnVUGhZKAeE4Rk/7KQaU3wIZAgOMHvvfE5r6ncIPPGG5q0PwWhtHt14l5lI6JvyCR58UQ6qq7O43vQ48mgQKbIlft3TF+D4QnpB4VkIXEwSRNK5mk0DbNkrbmtl3Oqpar6PE+PGSEdmohRNJ99cGLA332iHTkQJz5miLln/6o5inng+jqGVrC8mHWKU43TfbbNPWVGZ7QFQxnOazwGNVF7jszWzN6wNzmfRLUIEPWBCWBXSY/S8kVpkYqkKx0ohVZP9bVBgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_018pkFKgdsWMwCSUy6Won1WN",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_035_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registering supplier, although run_checks reported clean. Possible payment-diversion fraud.",
+     "evidence": [
+      "Registering supplier: Al Ofoq Catering Est. (مؤسسة الأفق للإعاشة), CR 1010489732, matching CR, GOSI and VAT docs",
+      "bank.pdf names Al Yamamah Trading Company as company and account holder, Al Rajhi Bank, IBAN SA3880947119231722535905",
+      "The bank letter carries the same CR number 1010489732 but a different company name",
+      "run_checks was clean and did not catch the bank account name mismatch"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01PD8Bw12crqXc2K5Nx6HHw1",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_035_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4345,
+   "output_tokens": 488
+  }
+ }
+}

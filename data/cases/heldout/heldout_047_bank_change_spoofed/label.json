@@ -1,0 +1,22 @@
+{
+  "case_id": "heldout_047_bank_change_spoofed",
+  "split": "heldout_047_bank",
+  "kind": "bank_change",
+  "scenario": "bank_change_spoofed",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {},
+  "expected_decision": "freeze",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "sender_domain_mismatch"
+  ],
+  "fraud": true,
+  "variant": "lookalike_only",
+  "reason": "Bank changes are always frozen pending a callback to the phone on file.",
+  "expected_fields": {
+    "new_iban": "SA2510347763440245100040",
+    "account_name": "Al Tamayuz Logistics Co.",
+    "vendor_id": "V-4030388502"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "case_id": "heldout_010_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030792520",
+      "expiry_date": null,
+      "iban": "SA2645506906408794437758",
+      "account_name": "Sahab Electrical Services LLC"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 2,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Sahab Electrical Services LLC",
+      "company_name_ar": null,
+      "cr_number": "4030792520",
+      "expiry_date": "2028-01-06",
+      "vat_number": "342269477736643"
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة سحاب للخدمات الكهربائية",
+      "cr_number": "4030792520",
+      "expiry_date": "2028-01-20"
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 2,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة سحاب للخدمات الكهربائية",
+      "cr_number": "4030792520",
+      "expiry_date": "2027-06-13"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Sahab Electrical Services LLC",
+    "company_name_ar": "شركة سحاب للخدمات الكهربائية",
+    "cr_number": "4030792520",
+    "vat_number": "342269477736643",
+    "iban": "SA2645506906408794437758",
+    "account_name": "Sahab Electrical Services LLC",
+    "expiry": {
+      "commercial_registration": "2028-01-20",
+      "vat_certificate": "2028-01-06",
+      "gosi_certificate": "2027-06-13"
+    }
+  }
+}

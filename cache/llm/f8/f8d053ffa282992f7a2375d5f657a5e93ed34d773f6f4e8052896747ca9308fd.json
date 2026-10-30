@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:heldout_045_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.7,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Q9PUGMxBaHjunqKytad1yw",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_045_bank_change_spoofed",
+     "vendor_id": "V-4030618609",
+     "new_iban": "SA3610376472244554846959",
+     "account_name": "Al Bayan Contracting Est."
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3233,
+   "output_tokens": 164
+  }
+ }
+}

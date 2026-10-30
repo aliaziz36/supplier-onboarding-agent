@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650507944": {
+        "name": "شركة نجمة الخليج للخدمات اللوجستية",
+        "name_en": "Al Khaleej Star Logistics Co.",
+        "status": "active",
+        "issue_date": "2025-12-23",
+        "expiry_date": "2028-03-05",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "383347236489903": {
+        "registered": true,
+        "name": "شركة نجمة الخليج للخدمات اللوجستية",
+        "name_en": "Al Khaleej Star Logistics Co.",
+        "crNumber": "4650507944"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

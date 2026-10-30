@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051005523": {
+        "name": "شركة الواحة للمستلزمات المكتبية",
+        "name_en": "Al Waha Office Supplies Co.",
+        "status": "active",
+        "issue_date": "2026-05-11",
+        "expiry_date": "2028-08-07",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "301110005422283": {
+        "registered": true,
+        "name": "شركة الواحة للمستلزمات المكتبية",
+        "name_en": "Al Waha Office Supplies Co.",
+        "crNumber": "2051005523"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

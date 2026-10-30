@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051090351": {
+        "name": "شركة الوادي للخدمات اللوجستية",
+        "name_en": "Wadi Logistics LLC",
+        "status": "active",
+        "issue_date": "2026-08-01",
+        "expiry_date": "2027-02-27",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "334123164714993": {
+        "registered": true,
+        "name": "شركة الوادي للخدمات اللوجستية",
+        "name_en": "Wadi Logistics LLC",
+        "crNumber": "2051090351"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

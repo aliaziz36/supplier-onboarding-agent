@@ -1,0 +1,49 @@
+{
+ "purpose": "agent:heldout_039_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.28,
+ "response": {
+  "content": [
+   {
+    "text": "Registry is suspended and its expiry (2026-09-21) has passed, which differs from the document.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01VsJpUHAiz48de5PhJq3b4V",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_039_cr_inactive",
+     "reason": "CR is not active in Wathq: status \"suspended\", registry expiry 2026-09-21 (already past), while the submitted CR shows expiry 2027-04-13.",
+     "evidence": [
+      "CR 2050616834 Al Faris Catering Co.: Wathq status suspended, expiry 2026-09-21",
+      "Submitted CR document shows expiry 2027-04-13, which conflicts with the registry",
+      "VAT 380853121235633 is registered with ZATCA and matches the name and CR",
+      "Names, CR number and bank holder match across documents",
+      "All four required documents are present and unexpired, with no embedded instructions"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01VQxLtxEYxPzq8Xdfn5C8Dy",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_039_cr_inactive",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4527,
+   "output_tokens": 411
+  }
+ }
+}

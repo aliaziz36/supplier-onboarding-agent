@@ -1,0 +1,85 @@
+{
+  "case_id": "heldout_031_unreadable",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "unreadable",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Printing LLC",
+      "company_name_ar": "شركة البيان للطباعة",
+      "cr_number": "1010841248",
+      "expiry_date": "2027-09-24"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": false,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Printing LLC",
+      "company_name_ar": "شركة البيان للطباعة",
+      "cr_number": "1010841248",
+      "expiry_date": "2028-04-01",
+      "vat_number": "322021304850413"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010841248",
+      "expiry_date": null,
+      "iban": "SA6920465361210727946713",
+      "account_name": "Al Bayan Printing LLC"
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Printing LLC",
+      "company_name_ar": "شركة البيان للطباعة",
+      "cr_number": "1010841248",
+      "expiry_date": "2027-10-19"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "vat_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "vat_certificate is an unreadable scan.",
+  "expected_fields": {
+    "company_name": "Al Bayan Printing LLC",
+    "company_name_ar": "شركة البيان للطباعة",
+    "cr_number": "1010841248",
+    "vat_number": "322021304850413",
+    "iban": "SA6920465361210727946713",
+    "account_name": "Al Bayan Printing LLC",
+    "expiry": {
+      "commercial_registration": "2027-10-19",
+      "vat_certificate": "2028-04-01",
+      "gosi_certificate": "2027-09-24"
+    }
+  }
+}

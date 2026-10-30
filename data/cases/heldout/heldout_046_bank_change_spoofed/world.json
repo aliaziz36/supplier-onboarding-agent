@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4650462543": {
+        "name": "شركة المدى للخدمات اللوجستية",
+        "name_en": "Al Mada Logistics LLC",
+        "status": "active",
+        "issue_date": "2025-05-26",
+        "expiry_date": "2028-01-31",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "329869784413403": {
+        "registered": true,
+        "name": "شركة المدى للخدمات اللوجستية",
+        "name_en": "Al Mada Logistics LLC",
+        "crNumber": "4650462543"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4650462543",
+    "name": "Al Mada Logistics LLC",
+    "name_ar": "شركة المدى للخدمات اللوجستية",
+    "cr_number": "4650462543",
+    "vat_number": "329869784413403",
+    "iban": "SA9855673879257169904018",
+    "bank_code": "55",
+    "account_name": "Al Mada Logistics LLC",
+    "email": "khalid@almada-logistics.com.sa",
+    "email_domain": "almada-logistics.com.sa",
+    "phone": "+966507816869",
+    "documents": {
+      "commercial_registration": "2028-01-31",
+      "vat_certificate": "2028-04-14",
+      "gosi_certificate": "2027-11-29"
+    }
+  }
+}

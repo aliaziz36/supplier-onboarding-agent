@@ -1,0 +1,47 @@
+{
+ "purpose": "agent:heldout_031_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.55,
+ "response": {
+  "content": [
+   {
+    "text": "VAT unreadable; nothing suspicious. Request a fix.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_0156NS8UuEjQ66Rf74vWYU45",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_031_unreadable",
+     "kind": "request_fix",
+     "subject": "Please resend a legible VAT certificate",
+     "body": "Dear Omar, thank you for your submission. The VAT certificate you attached (VAT_certificate.pdf) could not be read. Please resend a clear, legible copy so we can complete onboarding. The other documents were received. Best regards, Procurement Team",
+     "documents_requested": [
+      "vat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_017T4u8FN4q1zXuiR9Ev8egJ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_031_unreadable",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3941,
+   "output_tokens": 360
+  }
+ }
+}

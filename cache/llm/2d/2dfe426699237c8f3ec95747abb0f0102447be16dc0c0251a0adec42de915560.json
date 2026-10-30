@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_046_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.82,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01FnSnD93m5q6qz7xRuocLgA",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_046_bank_change_spoofed",
+     "vendor_id": "V-4650462543",
+     "new_iban": "SA5010192438068114825178",
+     "account_name": "Lama Al-Mutairi",
+     "reason": "High risk: bank differs from file (Banque Saudi Fransi -> Saudi National Bank) and account holder is an individual (Lama Al-Mutairi), not the vendor. Urgency pressure. Human to call phone on file +966507816869."
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01MDwb32cEZtM9wFxL5LcxtY",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_046_bank_change_spoofed",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3572,
+   "output_tokens": 350
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "purpose": "agent:heldout_044_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.9,
+ "response": {
+  "content": [
+   {
+    "text": "Sender domain differs from the one on file.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_012tqEdH1oP64zVSr7mDUfhM",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_044_bank_change_spoofed",
+     "vendor_id": "V-1010342158",
+     "new_iban": "SA5620856519154422866519",
+     "account_name": "Al Jazeera IT Solutions Est."
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3250,
+   "output_tokens": 181
+  }
+ }
+}

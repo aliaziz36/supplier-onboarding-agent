@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_001_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.35,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Dk73ZziW2oT1TPCCAEZyr5",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_001_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Rawabi Logistics Co. registered as a vendor",
+     "body": "Dear Yousef, thank you for submitting your documents. All checks passed and Rawabi Logistics Co. is now registered as a vendor (ID V-2050244939). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01PddarhwEGGfRSjhkELEve7",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_001_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4380,
+   "output_tokens": 313
+  }
+ }
+}

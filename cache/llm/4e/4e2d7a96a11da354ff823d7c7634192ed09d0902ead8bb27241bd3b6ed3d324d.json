@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_005_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.9,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01FLsQjBwL2WYC2dMqMZEzdX",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_005_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Hilal Medical Supplies Co. registered",
+     "body": "Dear Sara, thank you for your documents. All checks passed and Al Hilal Medical Supplies Co. is now registered as a vendor (ID V-2050086973). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_0139uZBj914p2io9LxsvNX4Z",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_005_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4386,
+   "output_tokens": 312
+  }
+ }
+}

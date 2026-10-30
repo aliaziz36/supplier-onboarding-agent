@@ -1,0 +1,87 @@
+{
+  "case_id": "heldout_041_cr_inactive",
+  "split": "heldout_041",
+  "kind": "onboarding",
+  "scenario": "cr_inactive",
+  "perturbations": [
+    "hijri"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Durrah Electrical Services Company",
+      "company_name_ar": "شركة درة للخدمات الكهربائية",
+      "cr_number": "2051606112",
+      "expiry_date": "2028-09-28",
+      "vat_number": "356680445245943"
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Durrah Electrical Services Company",
+      "company_name_ar": "شركة درة للخدمات الكهربائية",
+      "cr_number": "2051606112",
+      "expiry_date": "2028-05-30"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051606112",
+      "expiry_date": null,
+      "iban": "SA9430405956249658194464",
+      "account_name": "Durrah Electrical Services Company"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Durrah Electrical Services Company",
+      "company_name_ar": "شركة درة للخدمات الكهربائية",
+      "cr_number": "2051606112",
+      "expiry_date": "2028-07-23"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "cr_not_active"
+  ],
+  "fraud": true,
+  "reason": "CR is cancelled in the registry.",
+  "expected_fields": {
+    "company_name": "Durrah Electrical Services Company",
+    "company_name_ar": "شركة درة للخدمات الكهربائية",
+    "cr_number": "2051606112",
+    "vat_number": "356680445245943",
+    "iban": "SA9430405956249658194464",
+    "account_name": "Durrah Electrical Services Company",
+    "expiry": {
+      "commercial_registration": "2028-07-23",
+      "vat_certificate": "2028-09-28",
+      "gosi_certificate": "2028-05-30"
+    }
+  }
+}

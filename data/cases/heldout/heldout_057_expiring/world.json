@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050274937": {
+        "name": "شركة الخليج للطباعة",
+        "name_en": "Gulf Printing Co.",
+        "status": "active",
+        "issue_date": "2026-07-18",
+        "expiry_date": "2027-04-14",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "347189340381933": {
+        "registered": true,
+        "name": "شركة الخليج للطباعة",
+        "name_en": "Gulf Printing Co.",
+        "crNumber": "2050274937"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050274937",
+    "name": "Gulf Printing Co.",
+    "name_ar": "شركة الخليج للطباعة",
+    "cr_number": "2050274937",
+    "vat_number": "347189340381933",
+    "iban": "SA4460994050278878463165",
+    "bank_code": "60",
+    "account_name": "Gulf Printing Co.",
+    "email": "lama@gulf-printing.com.sa",
+    "email_domain": "gulf-printing.com.sa",
+    "phone": "+966542149770",
+    "documents": {
+      "commercial_registration": "2027-04-14",
+      "vat_certificate": "2026-11-26",
+      "gosi_certificate": "2027-08-04"
+    }
+  }
+}

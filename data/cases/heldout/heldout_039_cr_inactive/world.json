@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050616834": {
+        "name": "شركة الفارس للإعاشة",
+        "name_en": "Al Faris Catering Co.",
+        "status": "suspended",
+        "issue_date": "2025-05-29",
+        "expiry_date": "2026-09-21",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "380853121235633": {
+        "registered": true,
+        "name": "شركة الفارس للإعاشة",
+        "name_en": "Al Faris Catering Co.",
+        "crNumber": "2050616834"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650921750": {
+        "name": "شركة المنار للتجارة",
+        "name_en": "Al Manar Trading LLC",
+        "status": "active",
+        "issue_date": "2025-09-13",
+        "expiry_date": "2027-06-07",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "381954540611433": {
+        "registered": true,
+        "name": "شركة المنار للتجارة",
+        "name_en": "Al Manar Trading LLC",
+        "crNumber": "4650921750"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

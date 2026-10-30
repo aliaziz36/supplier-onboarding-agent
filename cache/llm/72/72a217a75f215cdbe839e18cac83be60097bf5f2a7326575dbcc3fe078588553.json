@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_019_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.8,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_018o2kb1GwYv5NTvQgAZRXyU",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_019_expired",
+     "kind": "request_fix",
+     "subject": "Updated GOSI certificate needed for supplier registration",
+     "body": "Dear Faisal,\n\nThank you for your registration documents. The GOSI certificate you sent expired on 2026-04-16. Please reply with a current, valid copy and we will continue onboarding.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_017jiRexVzvFXMzdfKjV7ZEC",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_019_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4396,
+   "output_tokens": 333
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010489732": {
+        "name": "مؤسسة الأفق للإعاشة",
+        "name_en": "Al Ofoq Catering Est.",
+        "status": "active",
+        "issue_date": "2026-09-05",
+        "expiry_date": "2027-05-19",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "323944855851753": {
+        "registered": true,
+        "name": "مؤسسة الأفق للإعاشة",
+        "name_en": "Al Ofoq Catering Est.",
+        "crNumber": "1010489732"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

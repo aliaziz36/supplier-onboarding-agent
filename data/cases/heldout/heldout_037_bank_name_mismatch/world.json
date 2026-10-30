@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051046123": {
+        "name": "شركة درة للمستلزمات المكتبية",
+        "name_en": "Durrah Office Supplies Company",
+        "status": "active",
+        "issue_date": "2025-10-15",
+        "expiry_date": "2028-08-11",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "344620510943693": {
+        "registered": true,
+        "name": "شركة درة للمستلزمات المكتبية",
+        "name_en": "Durrah Office Supplies Company",
+        "crNumber": "2051046123"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

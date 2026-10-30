@@ -1,0 +1,29 @@
+{
+ "purpose": "agent:heldout_015_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.19,
+ "response": {
+  "content": [
+   {
+    "text": "All good.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01BZqGkRqzhxKun3pMD1m6xA",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_015_clean"
+    },
+    "name": "create_vendor",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4522,
+   "output_tokens": 62
+  }
+ }
+}

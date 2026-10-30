@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_007_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.14,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01F1g3Z2rJywfhus77zfWBg6",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_007_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Qimam Contracting LLC onboarded",
+     "body": "Dear Omar, thank you for submitting your documents. Qimam Contracting LLC has been verified and registered as a vendor (ID V-4650828123). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01QFkPQqehG3fePBosT8tNRq",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_007_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4398,
+   "output_tokens": 304
+  }
+ }
+}

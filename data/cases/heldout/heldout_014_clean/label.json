@@ -1,0 +1,85 @@
+{
+  "case_id": "heldout_014_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 2,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "مؤسسة الريادة للمستلزمات المكتبية",
+      "cr_number": "2050075270",
+      "expiry_date": "2027-08-24"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 2,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "مؤسسة الريادة للمستلزمات المكتبية",
+      "cr_number": "2050075270",
+      "expiry_date": "2027-07-24"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050075270",
+      "expiry_date": null,
+      "iban": "SA8680726412061892005398",
+      "account_name": "Al Riyadah Office Supplies Est."
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Riyadah Office Supplies Est.",
+      "company_name_ar": "مؤسسة الريادة للمستلزمات المكتبية",
+      "cr_number": "2050075270",
+      "expiry_date": "2027-01-23",
+      "vat_number": "335474840506323"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Riyadah Office Supplies Est.",
+    "company_name_ar": "مؤسسة الريادة للمستلزمات المكتبية",
+    "cr_number": "2050075270",
+    "vat_number": "335474840506323",
+    "iban": "SA8680726412061892005398",
+    "account_name": "Al Riyadah Office Supplies Est.",
+    "expiry": {
+      "commercial_registration": "2027-07-24",
+      "vat_certificate": "2027-01-23",
+      "gosi_certificate": "2027-08-24"
+    }
+  }
+}

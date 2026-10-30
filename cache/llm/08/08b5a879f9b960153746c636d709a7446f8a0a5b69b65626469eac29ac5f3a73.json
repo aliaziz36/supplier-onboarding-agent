@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_029_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.22,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01J3DBbwCYFCTeE5t6wb99aN",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_029_missing",
+     "kind": "request_fix",
+     "subject": "Missing document: VAT certificate",
+     "body": "Dear Khalid, thank you for your registration. We received your CR certificate, GOSI certificate and bank letter. However, the VAT certificate is missing. Please reply with a copy of your VAT registration certificate so we can complete onboarding. Best regards, Procurement Team",
+     "documents_requested": [
+      "vat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01N4sUDFWK8b3cFV9iauFS18",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_029_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4100,
+   "output_tokens": 338
+  }
+ }
+}

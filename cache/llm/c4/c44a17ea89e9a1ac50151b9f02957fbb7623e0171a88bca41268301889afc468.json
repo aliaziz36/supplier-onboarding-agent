@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_033_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.05,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01GbpoE9RNfQi9LNP71wuB2D",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_033_unreadable",
+     "kind": "request_fix",
+     "subject": "Please resend your bank letter - registration of Al Jazeera Trading Co.",
+     "body": "Dear Yousef,\n\nThank you for your registration. Your other documents were received and are in order. However, the bank letter (bank.pdf) was an unreadable scan. Please reply with a clear, complete copy of the bank letter so we can finish onboarding.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "bank_letter"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_018rL68qHkyUCH5hFPpvtXcp",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_033_unreadable",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4313,
+   "output_tokens": 362
+  }
+ }
+}

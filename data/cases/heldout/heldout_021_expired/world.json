@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030112333": {
+        "name": "مؤسسة نجمة الخليج لحلول تقنية المعلومات",
+        "name_en": "Al Khaleej Star IT Solutions Est.",
+        "status": "active",
+        "issue_date": "2025-10-21",
+        "expiry_date": "2026-10-21",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "315035088250843": {
+        "registered": true,
+        "name": "مؤسسة نجمة الخليج لحلول تقنية المعلومات",
+        "name_en": "Al Khaleej Star IT Solutions Est.",
+        "crNumber": "4030112333"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

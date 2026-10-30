@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:heldout_045_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.64,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_013nZvNQarUZWSnQGcLYBLR4",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_045_bank_change_spoofed"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2777,
+   "output_tokens": 63
+  }
+ }
+}

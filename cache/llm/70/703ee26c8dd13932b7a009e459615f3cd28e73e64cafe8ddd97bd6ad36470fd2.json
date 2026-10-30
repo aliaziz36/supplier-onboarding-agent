@@ -1,0 +1,48 @@
+{
+ "purpose": "agent:heldout_040_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.0,
+ "response": {
+  "content": [
+   {
+    "text": "Registry is suspended (and expired 2026-09-21 vs. the CR doc's 2028 date).",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01Y7S38tFa8gX6HrW4ZgJ3X5",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_040_cr_inactive",
+     "reason": "CR is not active in Wathq: status \"suspended\". The registry expiry date (2026-09-21) is also before today (2026-10-31) and differs from the CR document's expiry (2028-02-16).",
+     "evidence": [
+      "Wathq CR 2051979395: status suspended, expiry 2026-09-21",
+      "Submitted CR document expiry 2028-02-16 conflicts with registry",
+      "Names, CR number and VAT (ZATCA registered) are otherwise consistent across documents",
+      "Bank letter holder Asir Catering LLC matches; all four required documents are present and unexpired"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01UeVPnUDopULQZU7daFPnEK",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_040_cr_inactive",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4529,
+   "output_tokens": 404
+  }
+ }
+}

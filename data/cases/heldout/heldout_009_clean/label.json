@@ -1,0 +1,83 @@
+{
+  "case_id": "heldout_009_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Steel Fabrication Company",
+      "company_name_ar": "شركة روابي لتصنيع الحديد",
+      "cr_number": "4030538092",
+      "expiry_date": "2028-08-15",
+      "vat_number": "341881262048473"
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Steel Fabrication Company",
+      "company_name_ar": "شركة روابي لتصنيع الحديد",
+      "cr_number": "4030538092",
+      "expiry_date": "2028-03-01"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 3,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030538092",
+      "expiry_date": null,
+      "iban": "SA4110855195195547489200",
+      "account_name": "Rawabi Steel Fabrication Company"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Steel Fabrication Company",
+      "company_name_ar": "شركة روابي لتصنيع الحديد",
+      "cr_number": "4030538092",
+      "expiry_date": "2027-02-24"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Rawabi Steel Fabrication Company",
+    "company_name_ar": "شركة روابي لتصنيع الحديد",
+    "cr_number": "4030538092",
+    "vat_number": "341881262048473",
+    "iban": "SA4110855195195547489200",
+    "account_name": "Rawabi Steel Fabrication Company",
+    "expiry": {
+      "commercial_registration": "2027-02-24",
+      "vat_certificate": "2028-08-15",
+      "gosi_certificate": "2028-03-01"
+    }
+  }
+}

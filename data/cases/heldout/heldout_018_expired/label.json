@@ -1,0 +1,87 @@
+{
+  "case_id": "heldout_018_expired",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 2,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة الجزيرة لتصنيع الحديد",
+      "cr_number": "2050679166",
+      "expiry_date": "2026-04-01"
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Steel Fabrication Co.",
+      "company_name_ar": null,
+      "cr_number": "2050679166",
+      "expiry_date": "2027-12-28",
+      "vat_number": "379470878563913"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة الجزيرة لتصنيع الحديد",
+      "cr_number": "2050679166",
+      "expiry_date": "2028-03-20"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050679166",
+      "expiry_date": null,
+      "iban": "SA2410240406463684966404",
+      "account_name": "Al Jazeera Steel Fabrication Co."
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate expired on 2026-04-01.",
+  "expected_fields": {
+    "company_name": "Al Jazeera Steel Fabrication Co.",
+    "company_name_ar": "شركة الجزيرة لتصنيع الحديد",
+    "cr_number": "2050679166",
+    "vat_number": "379470878563913",
+    "iban": "SA2410240406463684966404",
+    "account_name": "Al Jazeera Steel Fabrication Co.",
+    "expiry": {
+      "commercial_registration": "2028-03-20",
+      "vat_certificate": "2027-12-28",
+      "gosi_certificate": "2026-04-01"
+    }
+  }
+}

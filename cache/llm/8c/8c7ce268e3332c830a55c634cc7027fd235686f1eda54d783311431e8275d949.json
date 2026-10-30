@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:heldout_033_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.34,
+ "response": {
+  "content": [
+   {
+    "text": "Bank letter unreadable; nothing suspicious. I'll check the registry and VAT too.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01Q2cauViabhGa2KnfPHkokw",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "2051225311"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01HMimz3DKpq86p9cLnXsyb3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "301327082888863"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3912,
+   "output_tokens": 138
+  }
+ }
+}

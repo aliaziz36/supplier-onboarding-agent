@@ -1,0 +1,36 @@
+{
+ "purpose": "agent:heldout_040_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.37,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01TKnzGF2ZttwUMAKZSgr9fo",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "2051979395"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_019Kr2QXYr8GPJGMnBzRsW2q",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "302076924823653"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4200,
+   "output_tokens": 106
+  }
+ }
+}

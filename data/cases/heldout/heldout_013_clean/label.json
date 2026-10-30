@@ -1,0 +1,86 @@
+{
+  "case_id": "heldout_013_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "scanned",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_1697.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 2,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Logistics Est.",
+      "company_name_ar": "مؤسسة المنار للخدمات اللوجستية",
+      "cr_number": "2050835630",
+      "expiry_date": "2028-05-09",
+      "vat_number": "322226214670163"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Logistics Est.",
+      "company_name_ar": "مؤسسة المنار للخدمات اللوجستية",
+      "cr_number": "2050835630",
+      "expiry_date": "2028-06-10"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050835630",
+      "expiry_date": null,
+      "iban": "SA9410103603652244493844",
+      "account_name": "Al Manar Logistics Est."
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Logistics Est.",
+      "company_name_ar": "مؤسسة المنار للخدمات اللوجستية",
+      "cr_number": "2050835630",
+      "expiry_date": "2027-10-26"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Manar Logistics Est.",
+    "company_name_ar": "مؤسسة المنار للخدمات اللوجستية",
+    "cr_number": "2050835630",
+    "vat_number": "322226214670163",
+    "iban": "SA9410103603652244493844",
+    "account_name": "Al Manar Logistics Est.",
+    "expiry": {
+      "commercial_registration": "2028-06-10",
+      "vat_certificate": "2028-05-09",
+      "gosi_certificate": "2027-10-26"
+    }
+  }
+}

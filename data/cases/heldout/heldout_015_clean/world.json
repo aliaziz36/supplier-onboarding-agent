@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030364013": {
+        "name": "شركة الريادة للنقل",
+        "name_en": "Al Riyadah Transport Company",
+        "status": "active",
+        "issue_date": "2026-08-05",
+        "expiry_date": "2027-11-10",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "394548404178293": {
+        "registered": true,
+        "name": "شركة الريادة للنقل",
+        "name_en": "Al Riyadah Transport Company",
+        "crNumber": "4030364013"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_CR_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.61,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة قمم للمقاولات\",\"cr_number\":\"4650828123\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"٠٣-١١-٢٠٢٥\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":11,\"day\":3},\"expiry_date\":{\"raw\":\"٢٤-٠٦-٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":6,\"day\":24},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3948,
+   "output_tokens": 309
+  }
+ }
+}

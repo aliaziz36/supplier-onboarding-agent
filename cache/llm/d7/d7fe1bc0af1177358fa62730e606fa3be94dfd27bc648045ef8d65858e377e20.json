@@ -1,0 +1,50 @@
+{
+ "purpose": "agent:heldout_034_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.29,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSlAcKEAgTGAI4AUIIdGhpbmtpbmcSDPgeZj7cQCTYL60qpRoM6AROc3pNLkS+b4eWIjBax5wQB4NJkWFC/gQTjsboYLtEczXtFdCGkpZbNSXkf+IZ6ljc/HnhtaESifNfBTUqsQYsnlHtczRRxpn77R/RL3s9dLl0g+kPPWNgYt7RE527d+J/XScQpqhriQ+CFsRnRO558WUhLc0RDJMbRIQfx8OiDx4j98l3xD1oVLgweWLaFkAUyXS+ey9K/YKclImqjvsV0275Gn2rdIVYJ1DSPnFQalpnhqis99zlzw/ctER4hoWpOks78emB+My3SyOtSpEyb69paQng9H3g8KV8FDil+Dg8bK/dvwMsV8XJZM+BmcRK9WR2RJ3rUcLnvyykt7LYBsKD/lQ9Goe+sB4dpsGIvCQqbGhBFoe18jGTaan/QD+/qn8yv1a3eXmtxLxMv0Y2v5xI4G1txlIBbk4TJi90Janpt81E8PlyZPTWfXkRCKBEGHoCSyRd06xs00U5G1VYtaU69jOqwvkLKosfV3jxLPym8kZ2QGeGxowTHn8ZY3LjIpwoYvNANe7byuqKX8L/RCe7iMJO6N0P9R30CrNTotNmOR4TcRzClQX0E2dDa3ZA8iZC/Q1iQAafiOHyf6tWLnv8aTPcFVjNxTE/zgVV3espP237DahCNR99q16JIzDxHDvn3JybqWRWxWTABqUmzgYBgQbJkFDqhxRs6kKunUuaZonrJKul7zayPcTB35RVLbSKG/lGMwxMsFgdP+rut1ElZNOaT29P1jVQIaalTKbR9XuCyS1/LChuDZdTw/12T5HbjrCLUx5RZiwzfQ8Z0mdXltpBtLT/G22I5T1FK6cqG2XFBP2svJ8U2Y9V0wz1LaDSUgH2AnJXlXlusbAfy6Yv3EJs4Y1NfsZ2PbiCcasLjFZI7a1mTRKx5YhKsyV/iw6vv/zN26ii7Ew3MHRaWAXFnsTHAke0nwciKZRTX/hC5yW2rwnESK2xKDZ9AWELCBt0l3bc2bWtxcNANHrHDYQCdIPglT/AjQUiqlJWBjTfbhD8nK2jcac/vyWFrtuVmZcCoxN/JkOFfQfZEUqYGPHQWOso3CknrZLMlZtf1dDsRo8ZEoz/grpayBsiXGDInWinq5HBZDqJugLlQlnSFlXxC26MAr/6yK8Dnjs4fh2A5uiSa+aetUBxea663SrhXC42rZt9zn2B4SA0ZA2TGAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01ARwyzcwm2EvsGVByE9eiVD",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_034_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registering supplier, although run_checks reported clean. Possible payment-diversion fraud.",
+     "evidence": [
+      "IBAN letter (d1) names 'Al Yamamah Catering Est.' as company and account holder, IBAN SA2310318925957267755952, Saudi National Bank",
+      "CR, GOSI, VAT documents name Gulf Logistics Est. / Co. Ltd (same CR 4650746773)",
+      "The IBAN letter shows the same CR number as Gulf Logistics but a different company name",
+      "VAT certificate English name 'GULF LOGISTICS CO. LTD' differs from 'Est.' on the CR and GOSI",
+      "Sender: lama@gulf-logistics.com.sa. Vendor not created and supplier not emailed."
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01FBfgYfdaEN4KoDmyDKncs1",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_034_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4401,
+   "output_tokens": 551
+  }
+ }
+}

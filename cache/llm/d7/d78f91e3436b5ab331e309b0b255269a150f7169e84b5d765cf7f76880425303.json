@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:heldout_047_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.01,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01FCsZ6tRnHQczU3bkWeASyT",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_047_bank_change_spoofed",
+     "vendor_id": "V-4030388502",
+     "new_iban": "SA2510347763440245100040",
+     "account_name": "Al Tamayuz Logistics Co."
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3253,
+   "output_tokens": 166
+  }
+ }
+}

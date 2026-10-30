@@ -1,0 +1,29 @@
+{
+ "purpose": "agent:heldout_032_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.23,
+ "response": {
+  "content": [
+   {
+    "text": "Check registry too, then request fix.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_019x4u4NsjAdrsd7JHShZmgx",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "1010442220"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3947,
+   "output_tokens": 66
+  }
+ }
+}

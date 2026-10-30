@@ -1,0 +1,50 @@
+{
+ "purpose": "agent:heldout_035_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.32,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSowcKEAgTGAI4AUIIdGhpbmtpbmcSDDszW87+PX7BGwBiVRoMGQPGXNKWYws2X+oWIjChIIe37qx7kL6yGfIWkZi/xQwE2C4DnfROFgrcpmqLEhnW7nNn/wmXgpglSoI1LiMqwAYYeWinG+e4ad1JFbCfIVHIm+dgF5fHbtr6VNpB66rsPkbSDkA+v16Hzpf1OsdJAEQDTCnSODz4AvUBjmu9ljaMI79jimKAqYw2ru9U66NA6cQE+QjsjgIBZPj1qNqCVDAS3E+R1+5yumzD8D7XaZqf6e8eE1b64ENWnH92ZvdU6wWP0dLmWAZOudsLLZE/5eZKqMfXvs/jnd/PnJ7KKVmniahC/LFnSPoNGSt0YD6cmDz+lZqWUs7oRRVJYI/LmbddJstJKGkgemjbA/UvMZRJH8eNt7Z5wKJeDW5khyWW+Q1tYQs2+K8HbAg/fCU7bhZusY+XB7r/gez6QAyGlNVrG3Qi0RN0RskBhkgh+PdsKhRtw6nSR+z6DePbr0XeIdCf2Js3RtbNRSjiDKmC9/Lo/FqIezhJxsME61sMlElqvYb6h3V3uzq+Pwgp2HsIg59mbl2ErF6GAYbmqLwsBxiKi5MED/VjxS/grn16iav+MLwcQY4sO/3gPFvAFU57PKR1asa28CINGx1BuCjUUnSjlhRNaBqe2WlbXloDz1OBAs64pmcl0bwcvSTqo9quvdPH5BatCEIZwk+wumNnyKlg9KO7e4oaTP3sr25hcEodn+9bv1bo6g+65GqdaF5HDCk+5pAxoCi9QsjXO8KxrE7uLa14T3spDEP/zsbsrQ576XWkVe1h+AoCsGo2W9VpvR2fd8/myXYUcJ25jQb8nGKA0hl8Ny4eYnPIzcWU04n1YpttWijED42mk8fIXAI9vefhJrv7ozHb9nebFPb+1qzPZZwPWOKqksjt3ohW4LZcENVe7f0UTSMflL54GYFwBVbH2xDha/+wZmNIPhFcjTGMnd5UkMM+EN2cs9t6/tMO3MSxmKG8exwMK6fjoPNFOHs62pH7M6BLE+HRsdVrZmLHoMK+LYhx6zYKXuPe37ZmXO05V8BbSjKF8kvjOAWvT8CiqdzGYefrtbtQ1olqdyfDXCBySq0/w7BDpWfO6Eh1PtonpsfTXc2LqKDbhLPkZoUvhU/QavUq3L4FpfNdxwlZFNPscy0ruzQ6ZtIeYu41thvKbGiNbOfaWTa8emw5V27H8L37OGx7ExV5yW9dqZdGGAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01L32xca4CFeHAgJAikAVKf3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_035_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registering company, although run_checks came back clean. Possible payment diversion, so a human should review before any vendor is created.",
+     "evidence": [
+      "Registering company: Al Ofoq Catering Est. (مؤسسة الأفق للإعاشة), CR 1010489732",
+      "bank.pdf account name and company name: Al Yamamah Trading Company, which is a different entity",
+      "IBAN SA3880947119231722535905, Al Rajhi Bank",
+      "The bank letter carries the same CR number as the CR certificate",
+      "The CR, VAT and GOSI documents are consistent with each other and unexpired"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_011RyouaycngFfCGsgb79XdR",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_035_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4345,
+   "output_tokens": 500
+  }
+ }
+}

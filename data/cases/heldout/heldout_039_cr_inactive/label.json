@@ -1,0 +1,92 @@
+{
+  "case_id": "heldout_039_cr_inactive",
+  "split": "heldout_039",
+  "kind": "onboarding",
+  "scenario": "cr_inactive",
+  "perturbations": [
+    "date_format",
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Faris Catering Co.",
+      "company_name_ar": "شركة الفارس للإعاشة",
+      "cr_number": "2050616834",
+      "expiry_date": "2027-04-13"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Faris Catering Co.",
+      "company_name_ar": null,
+      "cr_number": "2050616834",
+      "expiry_date": "2028-01-31",
+      "vat_number": "380853121235633"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050616834",
+      "expiry_date": null,
+      "iban": "SA0330084458667922145334",
+      "account_name": "Al Faris Catering Co."
+    },
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 2,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Faris Catering Co.",
+      "company_name_ar": "شركة الفارس للإعاشة",
+      "cr_number": "2050616834",
+      "expiry_date": "2027-06-04"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "cr_not_active"
+  ],
+  "fraud": true,
+  "reason": "CR is suspended in the registry.",
+  "expected_fields": {
+    "company_name": "Al Faris Catering Co.",
+    "company_name_ar": "شركة الفارس للإعاشة",
+    "cr_number": "2050616834",
+    "vat_number": "380853121235633",
+    "iban": "SA0330084458667922145334",
+    "account_name": "Al Faris Catering Co.",
+    "expiry": {
+      "commercial_registration": "2027-04-13",
+      "vat_certificate": "2028-01-31",
+      "gosi_certificate": "2027-06-04"
+    }
+  }
+}

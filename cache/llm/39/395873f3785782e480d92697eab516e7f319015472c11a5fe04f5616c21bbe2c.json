@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_IBAN_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.38,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Qimam Contracting LLC\",\"company_name_ar\":\"شركة قمم للمقاولات\",\"cr_number\":\"4650828123\",\"vat_number\":null,\"iban\":\"SA0315174487436281098333\",\"account_name\":\"Qimam Contracting LLC\",\"account_number\":\"174487436281098333\",\"bank_name\":\"Bank AlBilad\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-08-02\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":8,\"day\":2},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Arabic section prints the IBAN with the SA prefix at the end of the digit string (0315174487436281098333SA); the English section prints it in standard form SA0315174487436281098333, and the two agree.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4057,
+   "output_tokens": 359
+  }
+ }
+}

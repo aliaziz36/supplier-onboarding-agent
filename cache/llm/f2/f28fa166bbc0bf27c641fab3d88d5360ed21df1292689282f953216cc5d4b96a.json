@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_039_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.8,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01BtZmHGywdgdKjEiZGaTyds",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_039_cr_inactive",
+     "kind": "welcome",
+     "subject": "Welcome - Al Faris Catering Co. registered as a vendor",
+     "body": "Dear Nora, thank you for your documents. Al Faris Catering Co. is now registered as a vendor (ID V-2050616834). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_016Pg5hGoqf8xHSSunA26qrP",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_039_cr_inactive",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4757,
+   "output_tokens": 309
+  }
+ }
+}

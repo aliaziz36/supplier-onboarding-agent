@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_014_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.66,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01BKZuXoFKAhSN4ce5rfSCwN",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_014_clean",
+     "kind": "welcome",
+     "subject": "Welcome - registration complete",
+     "body": "Dear Lama, thank you for submitting your documents. Al Riyadah Office Supplies Est. is now registered as a vendor (ID V-2050075270). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01GVCXZqL5T3UAz2D74C1zxH",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_014_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4414,
+   "output_tokens": 295
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4650183306": {
+        "name": "شركة قمم للمقاولات",
+        "name_en": "Qimam Contracting Co.",
+        "status": "active",
+        "issue_date": "2026-05-12",
+        "expiry_date": "2027-05-28",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "315207346702673": {
+        "registered": true,
+        "name": "شركة قمم للمقاولات",
+        "name_en": "Qimam Contracting Co.",
+        "crNumber": "4650183306"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4650183306",
+    "name": "Qimam Contracting Co.",
+    "name_ar": "شركة قمم للمقاولات",
+    "cr_number": "4650183306",
+    "vat_number": "315207346702673",
+    "iban": "SA0855665170503251574201",
+    "bank_code": "55",
+    "account_name": "Qimam Contracting Co.",
+    "email": "sara@qimam-contracting.com.sa",
+    "email_domain": "qimam-contracting.com.sa",
+    "phone": "+966543407318",
+    "documents": {
+      "commercial_registration": "2027-05-28",
+      "vat_certificate": "2028-08-10",
+      "gosi_certificate": "2027-09-12"
+    }
+  }
+}

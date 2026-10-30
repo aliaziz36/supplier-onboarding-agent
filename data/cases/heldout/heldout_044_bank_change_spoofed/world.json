@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "1010342158": {
+        "name": "مؤسسة الجزيرة لحلول تقنية المعلومات",
+        "name_en": "Al Jazeera IT Solutions Est.",
+        "status": "active",
+        "issue_date": "2026-08-29",
+        "expiry_date": "2027-11-08",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "378496395987373": {
+        "registered": true,
+        "name": "مؤسسة الجزيرة لحلول تقنية المعلومات",
+        "name_en": "Al Jazeera IT Solutions Est.",
+        "crNumber": "1010342158"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-1010342158",
+    "name": "Al Jazeera IT Solutions Est.",
+    "name_ar": "مؤسسة الجزيرة لحلول تقنية المعلومات",
+    "cr_number": "1010342158",
+    "vat_number": "378496395987373",
+    "iban": "SA4520715534850142443361",
+    "bank_code": "20",
+    "account_name": "Al Jazeera IT Solutions Est.",
+    "email": "lama@aljazeera-it.com.sa",
+    "email_domain": "aljazeera-it.com.sa",
+    "phone": "+966527700043",
+    "documents": {
+      "commercial_registration": "2027-11-08",
+      "vat_certificate": "2027-03-01",
+      "gosi_certificate": "2028-04-05"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_vat_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.49,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"en\",\"company_name\":\"AL-YAMAMAH STEEL FABRICATION CO. LTD\",\"company_name_ar\":null,\"cr_number\":\"2050833118\",\"vat_number\":\"348758233148773\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"10 March 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":3,\"day\":10},\"expiry_date\":{\"raw\":\"23 July 2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":7,\"day\":23},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.9,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"The CR number is given as 'Unified Registration No.' on the certificate; the issue date is taken from 'Registration Date'.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3922,
+   "output_tokens": 347
+  }
+ }
+}

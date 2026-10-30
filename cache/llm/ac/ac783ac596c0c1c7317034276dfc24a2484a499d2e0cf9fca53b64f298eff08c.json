@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_016_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.83,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01TooJTJBduWvkNHQBYh7RTP",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_016_expired",
+     "kind": "request_fix",
+     "subject": "Updated VAT certificate needed - Wadi Logistics LLC",
+     "body": "Dear Yousef,\n\nThank you for your registration documents. The VAT certificate you sent expired on 2026-07-29. Please reply with a current, valid copy of the VAT registration certificate. All other documents are in order.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "vat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01U78WduVHtS4TKfuPrTnK3i",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_016_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4581,
+   "output_tokens": 345
+  }
+ }
+}

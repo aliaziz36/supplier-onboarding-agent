@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_ZATCA_VAT.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.81,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Rawabi Steel Fabrication Company\",\"company_name_ar\":\"شركة روابي لتصنيع الحديد\",\"cr_number\":\"4030538092\",\"vat_number\":\"341881262048473\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"19-02-2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":2,\"day\":19},\"expiry_date\":{\"raw\":\"15-08-2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":8,\"day\":15},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4052,
+   "output_tokens": 311
+  }
+ }
+}

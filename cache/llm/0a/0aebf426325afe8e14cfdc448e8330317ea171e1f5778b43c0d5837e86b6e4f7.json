@@ -1,0 +1,47 @@
+{
+ "purpose": "agent:heldout_019_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.32,
+ "response": {
+  "content": [
+   {
+    "text": "Everything else matches; only GOSI is expired.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01XVz5AqACumLX6xvmH9RGsS",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_019_expired",
+     "kind": "request_fix",
+     "subject": "Updated GOSI certificate required",
+     "body": "Dear Faisal, thank you for your submission. Your GOSI certificate expired on 2026-04-16. Please send a current, valid GOSI certificate so we can complete onboarding. Best regards, Procurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01N3EcK36mGvguF3dUVPoW1h",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_019_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4425,
+   "output_tokens": 338
+  }
+ }
+}

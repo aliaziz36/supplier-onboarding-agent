@@ -1,0 +1,31 @@
+{
+ "purpose": "agent:heldout_050_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 5.74,
+ "response": {
+  "content": [
+   {
+    "signature": "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",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_019wu9XrPKe5Dfeyh3v3BqRH",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_050_bank_change_genuine",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3181,
+   "output_tokens": 558
+  }
+ }
+}

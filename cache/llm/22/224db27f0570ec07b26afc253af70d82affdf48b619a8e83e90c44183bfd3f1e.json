@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_034_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.74,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Mk7MYNjydgjgPDAwPEdn4P",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_034_bank_name_mismatch",
+     "reason": "Bank letter account holder (Al Yamamah Catering Est.) does not match CR company name (Gulf Logistics Est.).",
+     "evidence": [
+      "Bank letter: Al Yamamah Catering Est., IBAN SA2310318925957267755952, same CR number 4650746773",
+      "CR/Wathq: Gulf Logistics Est., active, expires 2027-02-25",
+      "VAT and GOSI match Gulf Logistics; ZATCA registered",
+      "Sender domain gulf-logistics.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01EP6uw3dNvr3mC3XTg3GeN1",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_034_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4436,
+   "output_tokens": 356
+  }
+ }
+}

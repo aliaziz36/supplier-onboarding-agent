@@ -1,0 +1,85 @@
+{
+  "case_id": "heldout_023_expired",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Sahab IT Solutions Co.",
+      "company_name_ar": "شركة سحاب لحلول تقنية المعلومات",
+      "cr_number": "2050953400",
+      "expiry_date": "2028-09-23"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050953400",
+      "expiry_date": null,
+      "iban": "SA3530759495428864045886",
+      "account_name": "Sahab IT Solutions Co."
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Sahab IT Solutions Co.",
+      "company_name_ar": "شركة سحاب لحلول تقنية المعلومات",
+      "cr_number": "2050953400",
+      "expiry_date": "2026-09-04"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 2,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Sahab IT Solutions Co.",
+      "company_name_ar": null,
+      "cr_number": "2050953400",
+      "expiry_date": "2028-09-21",
+      "vat_number": "356098371708753"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate expired on 2026-09-04.",
+  "expected_fields": {
+    "company_name": "Sahab IT Solutions Co.",
+    "company_name_ar": "شركة سحاب لحلول تقنية المعلومات",
+    "cr_number": "2050953400",
+    "vat_number": "356098371708753",
+    "iban": "SA3530759495428864045886",
+    "account_name": "Sahab IT Solutions Co.",
+    "expiry": {
+      "commercial_registration": "2028-09-23",
+      "vat_certificate": "2028-09-21",
+      "gosi_certificate": "2026-09-04"
+    }
+  }
+}

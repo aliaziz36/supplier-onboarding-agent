@@ -1,0 +1,74 @@
+{
+  "case_id": "heldout_024_missing",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [
+    "scanned"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_7823.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Printing LLC",
+      "company_name_ar": "شركة المنار للطباعة",
+      "cr_number": "2050066404",
+      "expiry_date": "2027-10-24"
+    },
+    "scan_3598.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050066404",
+      "expiry_date": null,
+      "iban": "SA0245290879723678801164",
+      "account_name": "Al Manar Printing LLC"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 2,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Printing LLC",
+      "company_name_ar": "شركة المنار للطباعة",
+      "cr_number": "2050066404",
+      "expiry_date": "2027-08-08",
+      "vat_number": "313844005054663"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate not provided.",
+  "expected_fields": {
+    "company_name": "Al Manar Printing LLC",
+    "company_name_ar": "شركة المنار للطباعة",
+    "cr_number": "2050066404",
+    "vat_number": "313844005054663",
+    "iban": "SA0245290879723678801164",
+    "account_name": "Al Manar Printing LLC",
+    "expiry": {
+      "commercial_registration": "2027-10-24",
+      "vat_certificate": "2027-08-08",
+      "gosi_certificate": "2028-05-13"
+    }
+  }
+}

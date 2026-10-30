@@ -1,0 +1,49 @@
+{
+ "purpose": "agent:heldout_037_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.65,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQStAYKEAgTGAI4AUIIdGhpbmtpbmcSDMl7GHrEKjJpZUmdwBoMgMejtzbcmm2Bp9eBIjBx/dN15mlIdrc8if1+F/BME3wMeDm8NcPwEQIcUQd8Ij5yRrdGCrCmxznJZR5X/OYq0QULvDJDgXbTaPO9DEhZTM09u9PqGM419s3HHySnQJUYpsb7bBUCqHvKF4OKjdZJJBlR9FL+J9CBCW202HX+erW/4pZlnX8YmGx46jSPqt5k09hXmFhX+pp3mrQ3Zetf9OKVbyo6GjuSlmK0MTUJfu5ekEb+gF8Nff0JpClR8zfTE5paRXTko6CEOpYeEI6EHiPt6GWIlL83rI0KBsYIjZYw6EzZpqLgyZXEyPbFBakFsHfU11O09yXuU6DmXRfUosn8T7/+9AbbLcC77k5hnb55Le/fRiyBwoOnYLhm3GSRyxUgCKtd0n3iZKe8cslZDjRu6RbookX5mrMSY+fFqva6XYgOoqKDZpCSVCY2lgl9QkacjpsJRl/xgjCnLOp1cShYPCCeSNTYpXq/HZ+1HXUIN/LuM21ulGKwF8o7/eaCPPUjylFbEglGoJv3k1Xl9dsjr2hqGTXlJXvDTXOCQS0D7RjlNFDWtXMoxbszBcARNDs8QgiwopbMGZbkRiR0k901zBm5Sjm7jgic9Hehxj/VgGQYM6HsV+zj7JMVNpLZll/NYOdwn0TfwsH5eCtKc/dVj0DO4CHAT3QB9scvfjYAsdjcgozFaki7XcF9rheTMADMUBuHeoSGoFmtcsGg7/FHbbCjeLTT51X1eWdhkn84SwTtI/XzDk+0N+Pdf3lsFVc/ZXyNhXYUsS3v+CpxoXQE3zABVVLRTULLToaRgFH/c/0LTSDLgUNPNeS5yFo7DSsrvKbAQY4vBZK4DrHwomB4GcQd04TuXx8vAqI1x3wi+Oh15gk3Av+GsVal0OsfOJsWtT+1qozqOBUAW6rvYb4UahseFuj7oM/gjrkm0i6cqDw7rqTgjITXxzAC9rXWNQ4u4pOGNNy6Y6P1bnCkJyqJJKjzSkd9nzacxu2W5dS9BZ/h66rNs0wUkDD4IDn9wqQrJmeobGkHd9ugHiWK+kN0GAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_019QaBqKvZFKQPd7UN8nRq59",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_037_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registering company. run_checks was clean, but the mismatch is a payment-fraud risk, so I did not onboard.",
+     "evidence": [
+      "Registering company (CR, VAT, GOSI, profile): Durrah Office Supplies Company, CR 2051046123",
+      "IBAN_letter.pdf names Al Ofoq Trading Est. as company and account holder, IBAN SA8705343650977875764160, Alinma Bank",
+      "The bank letter carries the same CR number 2051046123 as Durrah's CR",
+      "Sender: sara@durrah-office.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_015ZWRkUkFnUjcqGxyJe1DmG",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_037_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4598,
+   "output_tokens": 455
+  }
+ }
+}

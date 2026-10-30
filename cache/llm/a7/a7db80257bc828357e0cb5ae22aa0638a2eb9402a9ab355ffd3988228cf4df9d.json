@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_018_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.53,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01XmjmgS35wFwk8yTWCtMTd7",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_018_expired",
+     "kind": "request_fix",
+     "subject": "Updated GOSI certificate needed for your registration",
+     "body": "Dear Faisal,\n\nThank you for your registration. All documents were received, but the GOSI (Nitaqat) certificate expired on 2026-04-01. Please reply with a current, valid copy and we will continue onboarding.\n\nKind regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01JMVJwtc7MHmvUHzoqgyZQF",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_018_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4406,
+   "output_tokens": 342
+  }
+ }
+}

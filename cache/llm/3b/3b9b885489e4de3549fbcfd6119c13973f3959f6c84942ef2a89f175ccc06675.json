@@ -1,0 +1,29 @@
+{
+ "purpose": "agent:heldout_005_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.42,
+ "response": {
+  "content": [
+   {
+    "text": "Everything matches (the bank holder name differs only by hyphens and the \"LTD\" suffix).",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01UqB9cZBayVhvo8snJKP4Jf",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_005_clean"
+    },
+    "name": "create_vendor",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4309,
+   "output_tokens": 90
+  }
+ }
+}

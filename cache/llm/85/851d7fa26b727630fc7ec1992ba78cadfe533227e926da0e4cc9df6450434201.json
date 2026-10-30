@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:heldout_036_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.31,
+ "response": {
+  "content": [
+   {
+    "text": "Bank holder mismatch. Escalate; I'll check the registry too.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_016G2md9PefKQGUVeFvhQsq8",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "2051957446"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_0173AqV7X7kQM6A6RqbK9Hwq",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "391763785063813"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4072,
+   "output_tokens": 131
+  }
+ }
+}

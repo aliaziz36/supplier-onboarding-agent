@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050529545": {
+        "name": "شركة الجزيرة للنقل",
+        "name_en": "Al Jazeera Transport Co.",
+        "status": "active",
+        "issue_date": "2026-04-29",
+        "expiry_date": "2027-06-24",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "343203018675943": {
+        "registered": true,
+        "name": "شركة الجزيرة للنقل",
+        "name_en": "Al Jazeera Transport Co.",
+        "crNumber": "2050529545"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

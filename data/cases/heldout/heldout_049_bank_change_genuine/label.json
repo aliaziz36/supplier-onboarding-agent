@@ -1,0 +1,36 @@
+{
+  "case_id": "heldout_049_bank_change_genuine",
+  "split": "heldout_049_bank",
+  "kind": "bank_change",
+  "scenario": "bank_change_genuine",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "new_bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650168502",
+      "expiry_date": null,
+      "iban": "SA8705398526211101667581",
+      "account_name": "Al Manar Transport Company"
+    }
+  },
+  "expected_decision": "freeze",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "variant": "genuine",
+  "reason": "Bank changes are always frozen pending a callback to the phone on file.",
+  "expected_fields": {
+    "new_iban": "SA8705398526211101667581",
+    "account_name": "Al Manar Transport Company",
+    "vendor_id": "V-4650168502"
+  }
+}

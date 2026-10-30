@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_8963.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.19,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"مؤسسة الأفق للإعاشة\",\"cr_number\":\"1010489732\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"٠٥-٠٩-٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":9,\"day\":5},\"expiry_date\":{\"raw\":\"١٩-٠٥-٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":5,\"day\":19},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.85},\"notes\":\"Dates are printed in DD-MM-YYYY order with Arabic-Indic digits; no calendar label is shown, read as Gregorian given the 2026/2027 years. Issue date (05-09-2026) is later than a typical current date, which may warrant review.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 401
+  }
+ }
+}

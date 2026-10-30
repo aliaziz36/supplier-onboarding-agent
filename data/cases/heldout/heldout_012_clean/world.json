@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050088316": {
+        "name": "مؤسسة الهلال للخدمات اللوجستية",
+        "name_en": "Al Hilal Logistics Est.",
+        "status": "active",
+        "issue_date": "2025-11-28",
+        "expiry_date": "2027-06-22",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "322947305702393": {
+        "registered": true,
+        "name": "مؤسسة الهلال للخدمات اللوجستية",
+        "name_en": "Al Hilal Logistics Est.",
+        "crNumber": "2050088316"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

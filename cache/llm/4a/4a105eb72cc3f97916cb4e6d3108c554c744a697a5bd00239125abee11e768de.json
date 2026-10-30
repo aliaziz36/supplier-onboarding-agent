@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_041_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.69,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01GKEo3AJYTRV74SjGVHJAAj",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_041_cr_inactive",
+     "reason": "Commercial registration reported as cancelled in registry; supplier onboarding blocked.",
+     "evidence": [
+      "cr_active check failed: registry status cancelled (CR 2051606112)",
+      "Supplier: Durrah Electrical Services Company, sender nora@durrah-electrical.com.sa",
+      "All other 16 checks passed; documents legible, names and numbers consistent"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01WcBHeWHGpPvcxTFkcDGWoz",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_041_cr_inactive",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4419,
+   "output_tokens": 300
+  }
+ }
+}

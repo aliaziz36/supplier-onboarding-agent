@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051318855": {
+        "name": "مؤسسة نجمة الخليج للخدمات الكهربائية",
+        "name_en": "Al Khaleej Star Electrical Services Est.",
+        "status": "active",
+        "issue_date": "2026-09-22",
+        "expiry_date": "2027-09-28",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "391135841744193": {
+        "registered": true,
+        "name": "مؤسسة نجمة الخليج للخدمات الكهربائية",
+        "name_en": "Al Khaleej Star Electrical Services Est.",
+        "crNumber": "2051318855"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

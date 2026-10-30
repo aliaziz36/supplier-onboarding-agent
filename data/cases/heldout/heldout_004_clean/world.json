@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010583842": {
+        "name": "شركة زهرة الصحراء لحلول تقنية المعلومات",
+        "name_en": "Desert Bloom IT Solutions LLC",
+        "status": "active",
+        "issue_date": "2025-05-26",
+        "expiry_date": "2028-04-02",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "327365927709623": {
+        "registered": true,
+        "name": "شركة زهرة الصحراء لحلول تقنية المعلومات",
+        "name_en": "Desert Bloom IT Solutions LLC",
+        "crNumber": "1010583842"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

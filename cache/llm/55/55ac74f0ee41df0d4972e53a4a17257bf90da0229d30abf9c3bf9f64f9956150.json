@@ -1,0 +1,29 @@
+{
+ "purpose": "agent:heldout_050_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.25,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_018fGPFzuCne3mQncAhN3L1x",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_050_bank_change_genuine",
+     "vendor_id": "V-2050000505",
+     "new_iban": "SA5955569293501036942434",
+     "account_name": "Al Tamayuz Catering LLC",
+     "reason": "Bank change request; checks low risk, but callback to phone on file required before applying."
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3633,
+   "output_tokens": 212
+  }
+ }
+}

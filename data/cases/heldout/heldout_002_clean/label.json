@@ -1,0 +1,90 @@
+{
+  "case_id": "heldout_002_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "scanned",
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Waha Office Supplies Co.",
+      "company_name_ar": "شركة الواحة للمستلزمات المكتبية",
+      "cr_number": "2051005523",
+      "expiry_date": "2027-03-13",
+      "vat_number": "301110005422283"
+    },
+    "scan_8285.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Waha Office Supplies Co.",
+      "company_name_ar": "شركة الواحة للمستلزمات المكتبية",
+      "cr_number": "2051005523",
+      "expiry_date": "2028-08-07"
+    },
+    "scan_1324.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051005523",
+      "expiry_date": null,
+      "iban": "SA4710690320059145704789",
+      "account_name": "Al Waha Office Supplies Co."
+    },
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "scan_4442.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Waha Office Supplies Co.",
+      "company_name_ar": "شركة الواحة للمستلزمات المكتبية",
+      "cr_number": "2051005523",
+      "expiry_date": "2027-02-17"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Waha Office Supplies Co.",
+    "company_name_ar": "شركة الواحة للمستلزمات المكتبية",
+    "cr_number": "2051005523",
+    "vat_number": "301110005422283",
+    "iban": "SA4710690320059145704789",
+    "account_name": "Al Waha Office Supplies Co.",
+    "expiry": {
+      "commercial_registration": "2028-08-07",
+      "vat_certificate": "2027-03-13",
+      "gosi_certificate": "2027-02-17"
+    }
+  }
+}

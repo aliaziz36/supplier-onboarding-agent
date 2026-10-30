@@ -1,0 +1,50 @@
+{
+ "purpose": "agent:heldout_043_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 9.02,
+ "response": {
+  "content": [
+   {
+    "signature": "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",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01FpqJuJxdvk1ovEYsdaeamz",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_043_bank_change_spoofed",
+     "vendor_id": "V-4030774533",
+     "new_iban": "SA6160942705888138991767",
+     "account_name": "Al Ofoq Office Supplies Company",
+     "reason": "Bank change request from sender domain alofoq-office.co, which differs from the domain on file (alofoq-office.com.sa). The new IBAN is at a different bank (code 60 vs 15 on file). The request is urgent. Callback to the phone on file (+966579898747) is required before any change.",
+     "red_flags": [
+      "bank_differs_from_file",
+      "sender_domain_mismatch"
+     ]
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_0144akndccCmgPi7gF4xqZZR",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_043_bank_change_spoofed",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3129,
+   "output_tokens": 1101
+  }
+ }
+}

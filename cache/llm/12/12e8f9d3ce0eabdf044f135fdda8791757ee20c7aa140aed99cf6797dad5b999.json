@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_IBAN_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.04,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Manar Logistics Est.\",\"company_name_ar\":\"مؤسسة المنار للخدمات اللوجستية\",\"cr_number\":\"2050835630\",\"vat_number\":null,\"iban\":\"SA9410103603652244493844\",\"account_name\":\"Al Manar Logistics Est.\",\"account_number\":\"10360365224493844\",\"bank_name\":\"Saudi National Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"18 September 2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":9,\"day\":18},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Scan is slightly skewed but legible. Bank letter lists the Unified Registration No. as 2050835630, treated as the CR number.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 348
+  }
+ }
+}

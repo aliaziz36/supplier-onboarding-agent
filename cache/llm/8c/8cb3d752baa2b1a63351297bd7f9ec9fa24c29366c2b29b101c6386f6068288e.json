@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_036_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.73,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01MaJetS5vCLVgaT49aWS8ke",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_036_bank_name_mismatch",
+     "reason": "Bank letter account holder (Al Riyadah Office Supplies Co.) does not match CR company name (Durrah Cleaning Services Est.). Possible fraud or wrong document.",
+     "evidence": [
+      "Bank letter scan_8651.pdf: Al Riyadah Office Supplies Co., IBAN SA1920795013108707261494, Riyad Bank, CR 2051957446",
+      "CR, VAT, GOSI all name Durrah Cleaning Services Est., CR 2051957446",
+      "Wathq: active, Durrah Cleaning Services Est.; ZATCA VAT registered and matches",
+      "All documents unexpired; no embedded instructions"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Kgp8TZwQb8HJxo4ZB28TPv",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_036_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4444,
+   "output_tokens": 404
+  }
+ }
+}

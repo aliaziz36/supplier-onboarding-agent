@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:heldout_043_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.05,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Y9zDrFPkUmDZTkNy1ajTHz",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_043_bank_change_spoofed",
+     "vendor_id": "V-4030774533",
+     "new_iban": "SA6160942705888138991767",
+     "account_name": "Al Ofoq Office Supplies Company"
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3244,
+   "output_tokens": 166
+  }
+ }
+}

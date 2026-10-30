@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_008_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.44,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01UFYPLRYag5osUmWjK46iH7",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_008_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Manar Contracting Est. registered",
+     "body": "Dear Lama, thank you for your documents. Al Manar Contracting Est. is now registered as a vendor (ID V-1010259739). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01MTeiSPAtJpzJry6dy5bNSg",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_008_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4386,
+   "output_tokens": 298
+  }
+ }
+}

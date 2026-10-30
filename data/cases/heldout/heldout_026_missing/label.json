@@ -1,0 +1,72 @@
+{
+  "case_id": "heldout_026_missing",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة نجد للتجارة",
+      "cr_number": "4030723250",
+      "expiry_date": "2027-10-12"
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة نجد للتجارة",
+      "cr_number": "4030723250",
+      "expiry_date": "2027-12-08"
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Najd Trading Co.",
+      "company_name_ar": null,
+      "cr_number": "4030723250",
+      "expiry_date": "2027-11-17",
+      "vat_number": "350843342047983"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "bank_letter"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "bank_letter not provided.",
+  "expected_fields": {
+    "company_name": "Najd Trading Co.",
+    "company_name_ar": "شركة نجد للتجارة",
+    "cr_number": "4030723250",
+    "vat_number": "350843342047983",
+    "iban": "SA4005262103671521946428",
+    "account_name": "Najd Trading Co.",
+    "expiry": {
+      "commercial_registration": "2027-12-08",
+      "vat_certificate": "2027-11-17",
+      "gosi_certificate": "2027-10-12"
+    }
+  }
+}

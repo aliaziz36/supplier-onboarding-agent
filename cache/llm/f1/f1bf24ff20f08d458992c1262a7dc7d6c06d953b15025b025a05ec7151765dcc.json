@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:heldout_016_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.57,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01BWH3zsERXpJRgJq1jkEjFt",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_016_expired"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4398,
+   "output_tokens": 57
+  }
+ }
+}

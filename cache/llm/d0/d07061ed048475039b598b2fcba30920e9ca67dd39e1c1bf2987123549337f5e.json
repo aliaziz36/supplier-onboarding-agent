@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_vat_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.64,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Khaleej Star Logistics Co.\",\"company_name_ar\":\"شركة نجمة الخليج للخدمات اللوجستية\",\"cr_number\":\"4650507944\",\"vat_number\":\"383347236489903\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"05/08/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":8,\"day\":5},\"expiry_date\":{\"raw\":\"12/09/2027\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":9,\"day\":12},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4059,
+   "output_tokens": 318
+  }
+ }
+}

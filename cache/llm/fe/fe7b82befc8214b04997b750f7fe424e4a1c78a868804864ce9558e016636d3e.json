@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.69,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Jazeera Steel Fabrication Co.\",\"company_name_ar\":\"شركة الجزيرة لتصنيع الحديد\",\"cr_number\":\"2050679166\",\"vat_number\":null,\"iban\":\"SA2410240406463684966404\",\"account_name\":\"Al Jazeera Steel Fabrication Co.\",\"account_number\":\"240406463684966404\",\"bank_name\":\"Saudi National Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-04-05\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":4,\"day\":5},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":0.95,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Arabic section prints the IBAN as 2410240406463684966404SA (country code at end, rendering of RTL text); English section IBAN is SA2410240406463684966404, used here. Letter cites 'Unified Registration No.' / السجل التجاري as 2050679166.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4088,
+   "output_tokens": 407
+  }
+ }
+}

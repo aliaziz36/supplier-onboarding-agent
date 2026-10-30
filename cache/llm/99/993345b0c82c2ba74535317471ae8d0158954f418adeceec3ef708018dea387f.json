@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_004_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.64,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01HuLEf1STZ9ou4HkobYKmNT",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_004_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Desert Bloom IT Solutions LLC onboarded",
+     "body": "Dear Ahmed, thank you for submitting your documents. Your company has been verified and registered as a vendor (ID V-1010583842). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01H569ymwbMG5MhSiLf1oyh9",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_004_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4491,
+   "output_tokens": 303
+  }
+ }
+}

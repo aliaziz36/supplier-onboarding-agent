@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_009_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.29,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01T3BodMZywJyxi2yQymAx6G",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_009_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Rawabi Steel Fabrication Company onboarded",
+     "body": "Dear Reem, thank you for your documents. All checks passed and Rawabi Steel Fabrication Company is now registered as a vendor (ID V-4030538092). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_014R1C6jd2QPMhfPKbbVP7C5",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_009_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4436,
+   "output_tokens": 312
+  }
+ }
+}

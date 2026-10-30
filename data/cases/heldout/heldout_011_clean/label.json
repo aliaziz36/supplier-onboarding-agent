@@ -1,0 +1,83 @@
+{
+  "case_id": "heldout_011_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 2,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650371905",
+      "expiry_date": null,
+      "iban": "SA8945395254699774183953",
+      "account_name": "Ajyal Medical Supplies LLC"
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal Medical Supplies LLC",
+      "company_name_ar": "شركة أجيال للمستلزمات الطبية",
+      "cr_number": "4650371905",
+      "expiry_date": "2027-08-17"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal Medical Supplies LLC",
+      "company_name_ar": null,
+      "cr_number": "4650371905",
+      "expiry_date": "2027-01-20",
+      "vat_number": "304720056790793"
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal Medical Supplies LLC",
+      "company_name_ar": "شركة أجيال للمستلزمات الطبية",
+      "cr_number": "4650371905",
+      "expiry_date": "2027-07-19"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Ajyal Medical Supplies LLC",
+    "company_name_ar": "شركة أجيال للمستلزمات الطبية",
+    "cr_number": "4650371905",
+    "vat_number": "304720056790793",
+    "iban": "SA8945395254699774183953",
+    "account_name": "Ajyal Medical Supplies LLC",
+    "expiry": {
+      "commercial_registration": "2027-07-19",
+      "vat_certificate": "2027-01-20",
+      "gosi_certificate": "2027-08-17"
+    }
+  }
+}

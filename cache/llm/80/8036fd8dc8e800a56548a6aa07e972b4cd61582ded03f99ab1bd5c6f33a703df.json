@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_034_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.16,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01LDiJYdhbBtyXTkRB9U2tiG",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_034_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registered company name on the CR: possible payment diversion fraud.",
+     "evidence": [
+      "Bank letter (IBAN SA2310318925957267755952, Saudi National Bank) names 'Al Yamamah Catering Est.' as account holder and company",
+      "CR, GOSI and VAT documents name Gulf Logistics Est. / Co. Ltd (CR 4650746773)",
+      "run_checks: bank_name_matches_cr failed (risk)",
+      "Sender: lama@gulf-logistics.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01UutLkQwVEAgVxWUuiFEKPu",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_034_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4470,
+   "output_tokens": 365
+  }
+ }
+}

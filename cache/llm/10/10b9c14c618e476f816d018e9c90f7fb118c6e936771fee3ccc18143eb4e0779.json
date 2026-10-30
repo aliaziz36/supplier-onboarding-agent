@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_026_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.67,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01HzaQDuMAAargYDbAJpgqFK",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_026_missing",
+     "kind": "request_fix",
+     "subject": "Missing document: bank letter",
+     "body": "Dear Yousef, thank you for your registration documents. We reviewed your CR, VAT and GOSI certificates. To complete onboarding, please send a bank letter (IBAN confirmation) issued in the company's name. Best regards, Procurement",
+     "documents_requested": [
+      "bank_letter"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01UBwcqZacsZTb92FccVkQu3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_026_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4013,
+   "output_tokens": 326
+  }
+ }
+}

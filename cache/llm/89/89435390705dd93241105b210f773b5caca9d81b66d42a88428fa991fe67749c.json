@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:heldout_026_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.56,
+ "response": {
+  "content": [
+   {
+    "text": "Bank letter missing. Quickly verify registry and VAT too.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01ATWe5kL9tVpDfAPsAYgLVp",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "4030723250"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01GERpUPQjQU2RvwYV6CB1PP",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "350843342047983"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3664,
+   "output_tokens": 129
+  }
+ }
+}

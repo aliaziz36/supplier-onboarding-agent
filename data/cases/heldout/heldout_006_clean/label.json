@@ -1,0 +1,83 @@
+{
+  "case_id": "heldout_006_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Steel Fabrication LLC",
+      "company_name_ar": "شركة عسير لتصنيع الحديد",
+      "cr_number": "2050415333",
+      "expiry_date": "2027-12-24"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050415333",
+      "expiry_date": null,
+      "iban": "SA6260891596306779589919",
+      "account_name": "Asir Steel Fabrication LLC"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Steel Fabrication LLC",
+      "company_name_ar": "شركة عسير لتصنيع الحديد",
+      "cr_number": "2050415333",
+      "expiry_date": "2027-02-08"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Steel Fabrication LLC",
+      "company_name_ar": "شركة عسير لتصنيع الحديد",
+      "cr_number": "2050415333",
+      "expiry_date": "2028-03-26",
+      "vat_number": "390559022167423"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Asir Steel Fabrication LLC",
+    "company_name_ar": "شركة عسير لتصنيع الحديد",
+    "cr_number": "2050415333",
+    "vat_number": "390559022167423",
+    "iban": "SA6260891596306779589919",
+    "account_name": "Asir Steel Fabrication LLC",
+    "expiry": {
+      "commercial_registration": "2027-02-08",
+      "vat_certificate": "2028-03-26",
+      "gosi_certificate": "2027-12-24"
+    }
+  }
+}

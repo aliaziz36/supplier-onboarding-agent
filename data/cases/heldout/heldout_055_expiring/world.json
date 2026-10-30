@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "1010670365": {
+        "name": "شركة الجزيرة للمقاولات",
+        "name_en": "Al Jazeera Contracting Company",
+        "status": "active",
+        "issue_date": "2025-10-19",
+        "expiry_date": "2027-04-20",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "397298888444713": {
+        "registered": true,
+        "name": "شركة الجزيرة للمقاولات",
+        "name_en": "Al Jazeera Contracting Company",
+        "crNumber": "1010670365"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-1010670365",
+    "name": "Al Jazeera Contracting Company",
+    "name_ar": "شركة الجزيرة للمقاولات",
+    "cr_number": "1010670365",
+    "vat_number": "397298888444713",
+    "iban": "SA1855636493273618045703",
+    "bank_code": "55",
+    "account_name": "Al Jazeera Contracting Company",
+    "email": "nora@aljazeera-contracting.com.sa",
+    "email_domain": "aljazeera-contracting.com.sa",
+    "phone": "+966561565902",
+    "documents": {
+      "commercial_registration": "2027-04-20",
+      "vat_certificate": "2026-11-05",
+      "gosi_certificate": "2028-08-04"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050476489": {
+        "name": "شركة زهرة الصحراء للمقاولات",
+        "name_en": "Desert Bloom Contracting Company",
+        "status": "active",
+        "issue_date": "2026-02-28",
+        "expiry_date": "2027-07-20",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "331384695408713": {
+        "registered": true,
+        "name": "شركة زهرة الصحراء للمقاولات",
+        "name_en": "Desert Bloom Contracting Company",
+        "crNumber": "2050476489"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

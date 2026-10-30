@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_037_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.51,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01KpJi4a4ZtadCvnRthP849n",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_037_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match CR company name",
+     "evidence": [
+      "Bank letter account holder/company: Al Ofoq Trading Est. (IBAN SA8705343650977875764160, Alinma Bank)",
+      "CR, VAT, GOSI and Wathq registry: Durrah Office Supplies Company / شركة درة للمستلزمات المكتبية, CR 2051046123",
+      "Registry active; VAT registered; all documents unexpired",
+      "Bank letter carries the same CR number 2051046123 but a different company name"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_015qjpPfsBHE3eswZGjin3Zv",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_037_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4631,
+   "output_tokens": 359
+  }
+ }
+}

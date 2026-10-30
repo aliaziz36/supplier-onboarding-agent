@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010442220": {
+        "name": "مؤسسة الخليج للمستلزمات المكتبية",
+        "name_en": "Gulf Office Supplies Est.",
+        "status": "active",
+        "issue_date": "2026-05-23",
+        "expiry_date": "2027-09-09",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "312797290399933": {
+        "registered": true,
+        "name": "مؤسسة الخليج للمستلزمات المكتبية",
+        "name_en": "Gulf Office Supplies Est.",
+        "crNumber": "1010442220"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

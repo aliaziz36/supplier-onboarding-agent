@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_008_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.99,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01BDDy7TYKoLpQbbdT4UDJJ2",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_008_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Manar Contracting Est. onboarded",
+     "body": "Dear Lama, thank you for your documents. Your registration has been verified and Al Manar Contracting Est. is now set up as a vendor. We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01QzEbBLYXMwu89tktEEDDwc",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_008_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4396,
+   "output_tokens": 300
+  }
+ }
+}

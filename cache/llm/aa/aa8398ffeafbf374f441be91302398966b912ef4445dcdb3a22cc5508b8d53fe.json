@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_043_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.75,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01VNNtCNzAoMwmR5jvbBaTfL",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_043_bank_change_spoofed",
+     "vendor_id": "V-4030774533",
+     "new_iban": "SA6160942705888138991767",
+     "account_name": "Al Ofoq Office Supplies Company",
+     "reason": "High risk: sender domain alofoq-office.co differs from domain on file alofoq-office.com.sa; new bank Bank AlJazira differs from Bank AlBilad on file. Urgency pressure. Human to call phone on file."
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_0194WjYMWgcQiwpvz8evLG6k",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_043_bank_change_spoofed",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3585,
+   "output_tokens": 349
+  }
+ }
+}

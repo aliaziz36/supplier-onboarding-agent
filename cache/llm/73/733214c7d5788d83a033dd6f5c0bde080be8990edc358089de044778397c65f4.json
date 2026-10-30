@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_021_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.77,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01SxfxZgSKkDqzXYn35X2r2L",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_021_expired",
+     "kind": "request_fix",
+     "subject": "Updated commercial registration needed",
+     "body": "Dear Ahmed, thank you for your registration documents. Your commercial registration (CR) shows as expired on 2026-10-21. Please reply with a valid, renewed copy of the CR so we can complete onboarding. Best regards, Procurement Team",
+     "documents_requested": [
+      "commercial_registration"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01AP4m6bpdmYJMPUc5ryQopB",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_021_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4424,
+   "output_tokens": 330
+  }
+ }
+}

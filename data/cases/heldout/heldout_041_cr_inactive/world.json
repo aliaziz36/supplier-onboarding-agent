@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051606112": {
+        "name": "شركة درة للخدمات الكهربائية",
+        "name_en": "Durrah Electrical Services Company",
+        "status": "cancelled",
+        "issue_date": "2025-08-30",
+        "expiry_date": "2026-09-21",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "356680445245943": {
+        "registered": true,
+        "name": "شركة درة للخدمات الكهربائية",
+        "name_en": "Durrah Electrical Services Company",
+        "crNumber": "2051606112"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

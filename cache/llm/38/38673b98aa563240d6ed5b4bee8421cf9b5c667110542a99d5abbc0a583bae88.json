@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.8,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Ajyal Medical Supplies LLC\",\"company_name_ar\":null,\"cr_number\":\"4650371905\",\"vat_number\":null,\"iban\":\"SA8945395254699774183953\",\"account_name\":\"Ajyal Medical Supplies LLC\",\"account_number\":\"395254699774183953\",\"bank_name\":\"Saudi Awwal Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2026-07-08\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":7,\"day\":8},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"The 'Issuing Bank' field has overlapping text (bank name overprinted with the disclaimer sentence) but the bank name reads as Saudi Awwal Bank; the header also shows it.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3974,
+   "output_tokens": 357
+  }
+ }
+}

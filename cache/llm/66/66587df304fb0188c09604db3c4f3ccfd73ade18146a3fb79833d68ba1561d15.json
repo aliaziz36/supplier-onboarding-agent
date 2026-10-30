@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:heldout_037_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.27,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01TXaiY9s2MY5bmQUgEfWRQu",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_037_bank_name_mismatch",
+     "document_ids": ""
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3193,
+   "output_tokens": 88
+  }
+ }
+}

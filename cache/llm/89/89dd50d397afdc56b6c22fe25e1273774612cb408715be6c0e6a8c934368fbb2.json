@@ -1,0 +1,45 @@
+{
+ "purpose": "agent:heldout_042_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.47,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01LRWTVydCHnsRxQk9qR7Drq",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_042_cr_inactive",
+     "reason": "Registry lookup shows the commercial registration is cancelled, though the supplied CR certificate shows an expiry of 2028-06-04.",
+     "evidence": [
+      "cr_active check failed: registry status cancelled",
+      "CR number 2051221540 (Al Mada Cleaning Services Co.)",
+      "CR certificate issued 2025-04-20, expiry 2028-06-04",
+      "All other 16 checks passed",
+      "Sender: yousef@almada-cleaning.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01XMGfBRMfD5wXi2EVntKr9Z",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_042_cr_inactive",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4398,
+   "output_tokens": 334
+  }
+ }
+}

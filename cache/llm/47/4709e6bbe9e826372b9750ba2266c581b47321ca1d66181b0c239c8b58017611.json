@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_003_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.88,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01DpkQxWYHnSm7fg9MbyuLc9",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_003_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Manar Trading LLC onboarded",
+     "body": "Dear Sara, your documents were verified and Al Manar Trading LLC is now registered as a vendor (ID V-4650921750). Welcome aboard.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01JbBKbDbp42BMc5KN3cPQqD",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_003_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4346,
+   "output_tokens": 296
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4650168502": {
+        "name": "شركة المنار للنقل",
+        "name_en": "Al Manar Transport Company",
+        "status": "active",
+        "issue_date": "2026-06-24",
+        "expiry_date": "2027-12-26",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "389957892015343": {
+        "registered": true,
+        "name": "شركة المنار للنقل",
+        "name_en": "Al Manar Transport Company",
+        "crNumber": "4650168502"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4650168502",
+    "name": "Al Manar Transport Company",
+    "name_ar": "شركة المنار للنقل",
+    "cr_number": "4650168502",
+    "vat_number": "389957892015343",
+    "iban": "SA5005350557463012383138",
+    "bank_code": "05",
+    "account_name": "Al Manar Transport Company",
+    "email": "reem@almanar-transport.com.sa",
+    "email_domain": "almanar-transport.com.sa",
+    "phone": "+966587502116",
+    "documents": {
+      "commercial_registration": "2027-12-26",
+      "vat_certificate": "2027-01-17",
+      "gosi_certificate": "2028-04-06"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "case_id": "heldout_040_cr_inactive",
+  "split": "heldout_040",
+  "kind": "onboarding",
+  "scenario": "cr_inactive",
+  "perturbations": [
+    "scanned",
+    "arabic",
+    "hijri",
+    "date_format",
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_1524.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051979395",
+      "expiry_date": null,
+      "iban": "SA0830191372953814393807",
+      "account_name": "Asir Catering LLC"
+    },
+    "scan_6016.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "hijri",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة عسير للإعاشة",
+      "cr_number": "2051979395",
+      "expiry_date": "2028-02-16"
+    },
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "scan_9641.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Catering LLC",
+      "company_name_ar": null,
+      "cr_number": "2051979395",
+      "expiry_date": "2027-07-23",
+      "vat_number": "302076924823653"
+    },
+    "scan_2910.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "hijri",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة عسير للإعاشة",
+      "cr_number": "2051979395",
+      "expiry_date": "2027-09-19"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "cr_not_active"
+  ],
+  "fraud": true,
+  "reason": "CR is suspended in the registry.",
+  "expected_fields": {
+    "company_name": "Asir Catering LLC",
+    "company_name_ar": "شركة عسير للإعاشة",
+    "cr_number": "2051979395",
+    "vat_number": "302076924823653",
+    "iban": "SA0830191372953814393807",
+    "account_name": "Asir Catering LLC",
+    "expiry": {
+      "commercial_registration": "2028-02-16",
+      "vat_certificate": "2027-07-23",
+      "gosi_certificate": "2027-09-19"
+    }
+  }
+}

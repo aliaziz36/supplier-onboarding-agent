@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050415333": {
+        "name": "شركة عسير لتصنيع الحديد",
+        "name_en": "Asir Steel Fabrication LLC",
+        "status": "active",
+        "issue_date": "2026-05-04",
+        "expiry_date": "2027-02-08",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "390559022167423": {
+        "registered": true,
+        "name": "شركة عسير لتصنيع الحديد",
+        "name_en": "Asir Steel Fabrication LLC",
+        "crNumber": "2050415333"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

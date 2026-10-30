@@ -1,0 +1,47 @@
+{
+ "purpose": "agent:heldout_050_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.24,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQS8wUKEAgTGAI4AUIIdGhpbmtpbmcSDEMxBDdQLOF/3b4bIxoMZEEs1yWoLf6go1noIjCpM2sPCNDF9Ntf29WExmwBheSWibbSlPPG3mA2cnR2/SWZV0uMf5M1e5gGiM3L8FMqkAWL498qan3fBisYR8M6TjIQphLqtcLAZGDD7B7BS+wwYyd6XeRHf2jx6TiQm0dNnwBH3/0oQgfMTmQuV+hFqJVRAgvIt4aW3GOYBirYiYaR1r5mL+WkpdpZZO6dd0+8+DLFI//LiU/5brfCJZLCQxeu41yoDoFND3zFxedeHZa4d34b8M2/GOLUebbm1YUfcA2jQAfhiFTk8Bn9+50eYUNVBhES5xEXtzXR7VzgOJzLLMq5joUSp3c9kl00073sz5MSu41Qu5gEJt4qbHCNf3al+XOYFcywm1iups05XxVlqzEoMrk1Hm1gi6/mx38CvIQqpqNCtNZ+6fXfl7Rf7k+Q7qI/TazL14bIltNttbS5IXzrMrlTtNQ/xjw6gkpBvieLn6LkNe2i029tbPZlIB0XOR3AJB+vvM27PWW/WPoBGGbKnLGouuqSzo266uLDcH1GQwgoemLws4AZ/Jr7O6yhn8QHshhMwenjP2e+v52m+Ulk0PQ2Si39ZwL1jgpG0BAT/lAoapxSXkGIHFXEkSmDVxblerIti9muQI46fKcNuQa+5miAQ5gr5lDc3s8csEC6nkHiKbmngRGXngwWqEHvSVnowd63pZx+tstraXbXwBnGiZAVzWRkflG4e7th5XtiyP8w+CpE1k43dD689LQfs4AcucOofKtdH6eaT7BuiFxc7p04oAkRLP0wPhl1Q8v6xy8n//ZbueLpjIYyjw5ltNnRf4ex5PvRHhdHS/0EY0LM1L68M/i7dAW1zQYuUAH5X/ZFj9kSOGOjBc+jvFqWop5Laoyms8sv4eiHUum5QUgrWtoAnEgV+Iwy2dL5oaofMzm42B3GRJpxazw60DD9lWMkNUuNtLsQhYMU6IjO1RgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01BrVrtoFLsh8fguL9eh9LY3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_050_bank_change_genuine",
+     "vendor_id": "V-2050000505",
+     "new_iban": "SA5955569293501036942434",
+     "account_name": "Al Tamayuz Catering LLC",
+     "reason": "Bank change requires phone callback verification before taking effect. No red flags found: IBAN checksum valid, account name and sender domain match file, bank letter consistent. Call vendor on file number +966583610075.",
+     "red_flags": []
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01MEvXTPAuDsoxMWMY9Ct6EG",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_050_bank_change_genuine",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3966,
+   "output_tokens": 385
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051979395": {
+        "name": "شركة عسير للإعاشة",
+        "name_en": "Asir Catering LLC",
+        "status": "suspended",
+        "issue_date": "2025-10-13",
+        "expiry_date": "2026-09-21",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "302076924823653": {
+        "registered": true,
+        "name": "شركة عسير للإعاشة",
+        "name_en": "Asir Catering LLC",
+        "crNumber": "2051979395"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

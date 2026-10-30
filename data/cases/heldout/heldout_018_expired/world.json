@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050679166": {
+        "name": "شركة الجزيرة لتصنيع الحديد",
+        "name_en": "Al Jazeera Steel Fabrication Co.",
+        "status": "active",
+        "issue_date": "2025-08-05",
+        "expiry_date": "2028-03-20",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "379470878563913": {
+        "registered": true,
+        "name": "شركة الجزيرة لتصنيع الحديد",
+        "name_en": "Al Jazeera Steel Fabrication Co.",
+        "crNumber": "2050679166"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

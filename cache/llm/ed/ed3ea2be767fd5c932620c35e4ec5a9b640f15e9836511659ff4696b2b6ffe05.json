@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:heldout_049_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.99,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01QuyPWmbQFqYnLfA4NKpGXE",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_049_bank_change_genuine",
+     "vendor_id": "V-4650168502",
+     "new_iban": "SA8705398526211101667581",
+     "account_name": "Al Manar Transport Company"
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3276,
+   "output_tokens": 160
+  }
+ }
+}

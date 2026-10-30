@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_015_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.62,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01FkP2muEULwT8sK1CrCr6Sf",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_015_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Riyadah Transport Company registered as a supplier",
+     "body": "Dear Ahmed, thank you for your registration. Your documents were verified and Al Riyadah Transport Company is now set up as a supplier (vendor ID V-4030364013). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Lp7yZr7LZEKsuGQ7GF3Dcg",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_015_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4615,
+   "output_tokens": 316
+  }
+ }
+}

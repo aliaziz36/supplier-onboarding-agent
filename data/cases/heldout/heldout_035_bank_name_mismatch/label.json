@@ -1,0 +1,88 @@
+{
+  "case_id": "heldout_035_bank_name_mismatch",
+  "split": "heldout_035_bank",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [
+    "scanned",
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_2610.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 2,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "مؤسسة الأفق للإعاشة",
+      "cr_number": "1010489732",
+      "expiry_date": "2028-03-11"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 2,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Ofoq Catering Est.",
+      "company_name_ar": "مؤسسة الأفق للإعاشة",
+      "cr_number": "1010489732",
+      "expiry_date": "2027-06-24",
+      "vat_number": "323944855851753"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010489732",
+      "expiry_date": null,
+      "iban": "SA3880947119231722535905",
+      "account_name": "Al Yamamah Trading Company"
+    },
+    "scan_8963.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "مؤسسة الأفق للإعاشة",
+      "cr_number": "1010489732",
+      "expiry_date": "2027-05-19"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Al Yamamah Trading Company' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Al Ofoq Catering Est.",
+    "company_name_ar": "مؤسسة الأفق للإعاشة",
+    "cr_number": "1010489732",
+    "vat_number": "323944855851753",
+    "iban": "SA3880947119231722535905",
+    "account_name": "Al Yamamah Trading Company",
+    "expiry": {
+      "commercial_registration": "2027-05-19",
+      "vat_certificate": "2027-06-24",
+      "gosi_certificate": "2028-03-11"
+    }
+  }
+}

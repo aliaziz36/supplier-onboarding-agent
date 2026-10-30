@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_013_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.73,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Se2Wnu84oQgLZmkBuSvVL7",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_013_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Manar Logistics Est. registered as a supplier",
+     "body": "Dear Huda, thank you for your documents. All checks passed and Al Manar Logistics Est. is now registered as a supplier (vendor ID V-2050835630). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_0148LeFsoAvomQbUu3haxZ34",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_013_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4418,
+   "output_tokens": 312
+  }
+ }
+}

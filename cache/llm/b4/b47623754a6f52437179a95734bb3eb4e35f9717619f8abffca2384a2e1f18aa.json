@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_035_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.28,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01FpR1PRK54cTqmuY7SGx33Q",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_035_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registered company name (possible payment fraud risk).",
+     "evidence": [
+      "Bank letter (bank.pdf) account holder and company name: 'Al Yamamah Trading Company', IBAN SA3880947119231722535905, Al Rajhi Bank",
+      "CR, VAT and GOSI documents name Al Ofoq Catering Est. / مؤسسة الأفق للإعاشة, CR 1010489732",
+      "Bank letter shows the same CR number 1010489732 under a different name",
+      "run_checks: bank_name_matches_cr failed; other 16 checks passed"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Lf6ZJ5VcaMa4Ugxx7UWsuz",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_035_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4413,
+   "output_tokens": 385
+  }
+ }
+}

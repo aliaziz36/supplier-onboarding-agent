@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_040_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.63,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01D1zx3zKGPcy6Uf7mTTtjRn",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_040_cr_inactive",
+     "reason": "Commercial registration is suspended in the registry; supplier cannot be onboarded without human review.",
+     "evidence": [
+      "cr_active check failed: registry status suspended",
+      "CR number 2051979395 (Asir Catering LLC)",
+      "All other 16 checks passed",
+      "Sender: omar@asir-catering.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01EnNUy6sbk5Y8xFrJRup546",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_040_cr_inactive",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4541,
+   "output_tokens": 282
+  }
+ }
+}

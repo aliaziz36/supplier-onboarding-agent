@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030538092": {
+        "name": "شركة روابي لتصنيع الحديد",
+        "name_en": "Rawabi Steel Fabrication Company",
+        "status": "active",
+        "issue_date": "2026-01-22",
+        "expiry_date": "2027-02-24",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "341881262048473": {
+        "registered": true,
+        "name": "شركة روابي لتصنيع الحديد",
+        "name_en": "Rawabi Steel Fabrication Company",
+        "crNumber": "4030538092"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

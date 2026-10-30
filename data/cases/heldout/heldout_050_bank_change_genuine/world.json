@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050000505": {
+        "name": "شركة التميز للإعاشة",
+        "name_en": "Al Tamayuz Catering LLC",
+        "status": "active",
+        "issue_date": "2025-05-05",
+        "expiry_date": "2027-11-01",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "366543112881913": {
+        "registered": true,
+        "name": "شركة التميز للإعاشة",
+        "name_en": "Al Tamayuz Catering LLC",
+        "crNumber": "2050000505"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050000505",
+    "name": "Al Tamayuz Catering LLC",
+    "name_ar": "شركة التميز للإعاشة",
+    "cr_number": "2050000505",
+    "vat_number": "366543112881913",
+    "iban": "SA3555364026820951902245",
+    "bank_code": "55",
+    "account_name": "Al Tamayuz Catering LLC",
+    "email": "yousef@altamayuz-catering.com.sa",
+    "email_domain": "altamayuz-catering.com.sa",
+    "phone": "+966583610075",
+    "documents": {
+      "commercial_registration": "2027-11-01",
+      "vat_certificate": "2027-07-02",
+      "gosi_certificate": "2028-07-21"
+    }
+  }
+}

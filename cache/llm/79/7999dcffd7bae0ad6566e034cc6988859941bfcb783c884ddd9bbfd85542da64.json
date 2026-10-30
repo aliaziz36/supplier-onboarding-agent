@@ -1,0 +1,47 @@
+{
+ "purpose": "agent:heldout_048_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.66,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSmwYKEAgTGAI4AUIIdGhpbmtpbmcSDJwz7Vru2Ydi4DX39RoMFbiJ2Mn8tAFpET/FIjDxNmDxUb2jqCQrVMh8VnxvNRnSnVSY7/mf3802Q0hBPmbZq/2ybGE3m3izr2SuKPoquAW0tvCFH51AxnVUHuEL5bsfMGeXTsplBte0Bmppd6ZYYl6G92ZEJ0e4eA4PjEwZMemZ8WnKwAT7LFcicishb/P8+cV9UF8Vzob7tQyYlDzXnI0stcDThIrBSiokGVweHz+PKyVBJ+QplU561hxXQM1e9e2CaaQtLbTwve9eHjO3OQtRVD2fZs8VvMmZbPbs/miKKLEFCrJOivEekfyoCm3RiNfVdyd8/YBTOU9AqBxIbj7zzeSB40qz+bE72ldK+dxGVA1YPUJc/P5sH5ZN/eiM3IT38FKDxcR5Xx4YmmTuHDaGdEB4ZCuMPcCFeAPfEMzBguzgeonYoAvSs4NOQS72ROxhA8gbTkKIZPZ6Lj2zEPC0DVhBDg1qU3UrdcOrA5aeWVSUs38TDyf9ukHm8n1L3kC/bKSpGtAsa8sEOAA11Joz9+iFTXTIyp92pcW+AySdp5F++8nf6tBOF8oUe6k7PRc9Fg/mWT9PzciFgde+nKqwf8DMsjTtXuT1LA4Spgavdypp2NfiMtv1OZd3gD9z84LiYtBkTtDxXY5LbOsm/4kt5Su47jCBPxqtV2MDUfFkB7PcVTJlK4cmJcgfo4Bl0PIjfmjOxrVoQDVOFugs3G1QAc9V0j9Gehoq++0FDOPK2Ycr196hnfWoCK85ZHtz8u9WzAGtH5Rw3u6f+pCLQJk40RwaeguIfkgF5eueyoJJ3KfyVUPOS36AMQNvGZX6q/l/SJRniAyb9gyKTAw9HIpG+/ZxAwpYq8s61GPfI0lQ21sthMvjLsJcbnEiserA899lZyAkh9CZNepW9PdrkwkLPh9WumbbS4EBbHhnJr7AR2R/Rz4CT3Ky7XmIe1QFs0SP8Dp7/j6m8LLib77GGtwCpPQH/4ZdEqeolqfdnLk35SU+wGEY/vdmeb8hhKdZmK7y8hjfAqwYAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01ALhcw7gFyx4M3oiaMuFSjr",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_048_bank_change_genuine",
+     "vendor_id": "V-4650183306",
+     "new_iban": "SA9455739794966469653168",
+     "account_name": "Qimam Contracting Co.",
+     "reason": "Bank change request; IBAN checksum valid, account name, CR number and sender domain match file. Policy requires phone callback verification to file number +966543407318 before applying.",
+     "red_flags": []
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01E243pKmMPGxerMLTAmdHKz",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_048_bank_change_genuine",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3987,
+   "output_tokens": 381
+  }
+ }
+}

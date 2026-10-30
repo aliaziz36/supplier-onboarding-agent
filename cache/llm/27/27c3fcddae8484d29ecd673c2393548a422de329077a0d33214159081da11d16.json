@@ -1,0 +1,49 @@
+{
+ "purpose": "agent:heldout_037_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.34,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSpwcKEAgTGAI4AUIIdGhpbmtpbmcSDKSuK/9KgDyo4hhepBoM6mFUWutfWosUtwIdIjDorV/1fagL/1lwxYiCdAZabNw51c82GpQ1BuLf6uzeXzw99FxEwRNYlUUIiDminVkqxAYVzgJ6V+MBIMzPm1M2kw/9ELtQISx60EUmKfES93t9kBZWzgm5OVYbYf7bxNDukvCF+uM4tQiEo85SssN6jlbjndADyt7qPLp03WCkZoZONgbvKMd275CPbEUeut4iumhXVKnPFdCVqRprZf9cnLPakkxi0pw2X6WYm/o3EkZcKyuN4zBpmcR3rqwPC1zAy+Ya6y9xgoJXblb42P+9PBpcAxXFnZ9FH9Kc8NR38DZvtKZ++hQQSPTmFwnGgek3BVsoEW9YAfpTQ9TYmAAnyMsjKmSLjKhnUX8rVurzgLX5V2R1xpXlPR8+R8gg3rk7dtk2wu2lvija0lE2qzEYvb2R//Glm4qjR+IN1ZD/Ro3BzQySSwB/oUDSvnb2aCKaYxGRveOBiEg+09dRkMDxK1E7+WUCNZEbURFGAU3w4+xU6H9Dco8VOuX928JJbD3t6zZPIByWvTFCRnFp937bpmpeyjwbRVKVsMGo2CXj13QzTDDFUq+b464Q7Jv1Yo7EUCRwbBCRUvf8DDdmgNj6ZQb+mxWFHdq3JagjDmypqVws9N63xLHwe/ozF9SGd/mGaAeL/Mu0UqirGxzCvNK9Kx9A13ekeANC8GQ3G3GW6+fTXDkaaKcW7NwbwbMdFs9ezNAUrvNz6Cdq2VWBouZrsuAqRFTFjMgMTfNTN4/LpSmjA2fPqem1i+vGCmxp1ZULeUGPxmydfXFpzLZCHdGCtucWOznNh6PzUzvNNTK/YLdkY/3gSd1YKcEaXOIMmoNnfIX/nGXPfmD6E3tVTXfQysnAk38/DU0SSTFvQe247QPUsu3CXOzDLIlWimlYFtKVCvGTt/lwcpHLE6x6CpiAMJmv0r9kD1jjz1w9PBrE5AbI1wRmuluc5L/sLC5mxNvK7FkDodeHfxq4Y4kEFk/nOxJeGEUFoWOMYJYUEyIO63opTukZt66r7oh9ZfJYGq2J3RBWGFv7ElTf9LCYeDJ1i7ZI8JkbjMQi2FHmYkz4+c+hNbMh1r3PKLZr88IC8JNxmIQ8g0mxsZxJ37sf5EBXPwHG4VYuIIp9ZDEZlsv+Vf6csXWH+KUKBqlugoAV2TTJtkPazGIv8R40/fN9HmeoQfjUHyjCZRgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01EBxNNFLDYH8dD6NZyKTuVq",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_037_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registering company, although run_checks came back clean. Possible payment-diversion fraud.",
+     "evidence": [
+      "IBAN_letter.pdf names the account holder as 'Al Ofoq Trading Est.' (IBAN SA8705343650977875764160, Alinma Bank).",
+      "The CR, VAT and GOSI documents and the company profile all name 'Durrah Office Supplies Company'.",
+      "The bank letter carries the same CR number, 2051046123, as the Durrah CR, but under a different company name.",
+      "run_checks returned clean with 11 checks passed and did not flag the mismatch. Vendor not created."
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01DvUXDy7X6pLBPVTTF6CzZS",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_037_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4598,
+   "output_tokens": 515
+  }
+ }
+}

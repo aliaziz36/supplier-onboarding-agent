@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_049_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.25,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_011sx818g34dPyLaoYer6L2N",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_049_bank_change_genuine",
+     "vendor_id": "V-4650168502",
+     "new_iban": "SA8705398526211101667581",
+     "account_name": "Al Manar Transport Company",
+     "reason": "Bank change request; checks low risk, but policy requires human callback to phone on file (+966587502116) before applying."
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01A9Tnn1qr2h1Mr68RJPf7or",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_049_bank_change_genuine",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3589,
+   "output_tokens": 301
+  }
+ }
+}

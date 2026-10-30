@@ -1,0 +1,19 @@
+{
+  "case_id": "heldout_055_expiring",
+  "split": "heldout",
+  "kind": "expiry",
+  "scenario": "expiring",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {},
+  "expected_decision": "renewal_request",
+  "expected_documents_requested": [
+    "vat_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "vat_certificate expires on 2026-11-05.",
+  "expected_fields": {
+    "vendor_id": "V-1010670365"
+  }
+}

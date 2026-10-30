@@ -1,0 +1,87 @@
+{
+  "case_id": "heldout_033_unreadable",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "unreadable",
+  "perturbations": [
+    "hijri"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 2,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Trading Co.",
+      "company_name_ar": "شركة الجزيرة للتجارة",
+      "cr_number": "2051225311",
+      "expiry_date": "2027-05-14"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 3,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": false,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051225311",
+      "expiry_date": null,
+      "iban": "SA4905816837997158037610",
+      "account_name": "Al Jazeera Trading Co."
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Trading Co.",
+      "company_name_ar": "شركة الجزيرة للتجارة",
+      "cr_number": "2051225311",
+      "expiry_date": "2027-05-14",
+      "vat_number": "301327082888863"
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Trading Co.",
+      "company_name_ar": "شركة الجزيرة للتجارة",
+      "cr_number": "2051225311",
+      "expiry_date": "2027-01-28"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "bank_letter"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "bank_letter is an unreadable scan.",
+  "expected_fields": {
+    "company_name": "Al Jazeera Trading Co.",
+    "company_name_ar": "شركة الجزيرة للتجارة",
+    "cr_number": "2051225311",
+    "vat_number": "301327082888863",
+    "iban": "SA4905816837997158037610",
+    "account_name": "Al Jazeera Trading Co.",
+    "expiry": {
+      "commercial_registration": "2027-05-14",
+      "vat_certificate": "2027-05-14",
+      "gosi_certificate": "2027-01-28"
+    }
+  }
+}

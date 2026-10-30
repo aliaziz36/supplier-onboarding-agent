@@ -1,0 +1,37 @@
+{
+ "purpose": "agent:heldout_019_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.74,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_0168QjW5MBsQAYuw57kizRwj",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_019_expired"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01KiuuGWAwpf33qmRKgCz6zY",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_019_expired",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2558,
+   "output_tokens": 136
+  }
+ }
+}

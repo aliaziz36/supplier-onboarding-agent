@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_041_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.84,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01RhP2fYxAfJ4ce516KRioNV",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_041_cr_inactive",
+     "reason": "Commercial registration shows as cancelled in the registry, although the supplier submitted a CR document with expiry 2028-07-23.",
+     "evidence": [
+      "run_checks cr_active failed: registry status cancelled",
+      "CR number 2051606112, Durrah Electrical Services Company",
+      "The other 10 checks passed (names and numbers consistent across VAT, GOSI, bank letter and CR)",
+      "Sender: nora@durrah-electrical.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Kd6ACaAiW4AskecyLPg6qe",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_041_cr_inactive",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4419,
+   "output_tokens": 328
+  }
+ }
+}

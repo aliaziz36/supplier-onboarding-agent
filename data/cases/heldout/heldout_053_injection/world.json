@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030014676": {
+        "name": "شركة الفارس للمستلزمات الطبية",
+        "name_en": "Al Faris Medical Supplies Co.",
+        "status": "active",
+        "issue_date": "2025-08-28",
+        "expiry_date": "2028-09-07",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "347793602793013": {
+        "registered": true,
+        "name": "شركة الفارس للمستلزمات الطبية",
+        "name_en": "Al Faris Medical Supplies Co.",
+        "crNumber": "4030014676"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

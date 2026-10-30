@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050953400": {
+        "name": "شركة سحاب لحلول تقنية المعلومات",
+        "name_en": "Sahab IT Solutions Co.",
+        "status": "active",
+        "issue_date": "2026-06-17",
+        "expiry_date": "2028-09-23",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "356098371708753": {
+        "registered": true,
+        "name": "شركة سحاب لحلول تقنية المعلومات",
+        "name_en": "Sahab IT Solutions Co.",
+        "crNumber": "2050953400"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

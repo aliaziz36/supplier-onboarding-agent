@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_024_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.72,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_013T8fAynqGrjbjyAoVc5sJj",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_024_missing",
+     "kind": "request_fix",
+     "subject": "Missing document: GOSI certificate",
+     "body": "Dear Omar,\n\nThank you for your registration documents. To complete onboarding, we still need your GOSI certificate, which was not included in your email. Please reply with a copy attached.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_013ySTH8HYfBBHxyDRnEtSau",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_024_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4086,
+   "output_tokens": 321
+  }
+ }
+}

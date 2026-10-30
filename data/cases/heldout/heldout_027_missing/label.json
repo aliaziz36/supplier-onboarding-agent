@@ -1,0 +1,70 @@
+{
+  "case_id": "heldout_027_missing",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 2,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Logistics Est.",
+      "company_name_ar": "مؤسسة الجزيرة للخدمات اللوجستية",
+      "cr_number": "2050321981",
+      "expiry_date": "2028-01-01"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Logistics Est.",
+      "company_name_ar": "مؤسسة الجزيرة للخدمات اللوجستية",
+      "cr_number": "2050321981",
+      "expiry_date": "2028-08-24",
+      "vat_number": "362226795816513"
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Jazeera Logistics Est.",
+      "company_name_ar": "مؤسسة الجزيرة للخدمات اللوجستية",
+      "cr_number": "2050321981",
+      "expiry_date": "2027-07-11"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "bank_letter"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "bank_letter not provided.",
+  "expected_fields": {
+    "company_name": "Al Jazeera Logistics Est.",
+    "company_name_ar": "مؤسسة الجزيرة للخدمات اللوجستية",
+    "cr_number": "2050321981",
+    "vat_number": "362226795816513",
+    "iban": "SA0520726385687357904830",
+    "account_name": "Al Jazeera Logistics Est.",
+    "expiry": {
+      "commercial_registration": "2028-01-01",
+      "vat_certificate": "2028-08-24",
+      "gosi_certificate": "2027-07-11"
+    }
+  }
+}

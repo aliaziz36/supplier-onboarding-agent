@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:heldout_037_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.38,
+ "response": {
+  "content": [
+   {
+    "text": "Bank holder mismatch. Escalate (registry check optional but do it for evidence).",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01RiLcmho2B4CuAF9qTeCBie",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "2051046123"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01GbosPaPc3w8Cx7movnQduG",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "344620510943693"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4259,
+   "output_tokens": 135
+  }
+ }
+}

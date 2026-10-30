@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:heldout_021_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.32,
+ "response": {
+  "content": [
+   {
+    "text": "CR expired 2026-10-21. Check registry anyway.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_017yQavCXmyUCLbkVExzmKiC",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "4030112333"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01BEQcAHccgmbxr525kDdyV5",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "315035088250843"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4029,
+   "output_tokens": 127
+  }
+ }
+}

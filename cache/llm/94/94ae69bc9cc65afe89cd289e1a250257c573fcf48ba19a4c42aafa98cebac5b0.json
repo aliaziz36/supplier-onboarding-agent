@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_035_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.81,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01WHcB449cz3AtTxqqchJpPe",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_035_bank_name_mismatch",
+     "reason": "Bank letter account holder (Al Yamamah Trading Company) does not match CR company name (Al Ofoq Catering Est.). Other checks pass.",
+     "evidence": [
+      "Bank letter bank.pdf: account_name and company_name 'Al Yamamah Trading Company', IBAN SA3880947119231722535905, Al Rajhi Bank, CR 1010489732",
+      "CR, VAT, GOSI: Al Ofoq Catering Est. / مؤسسة الأفق للإعاشة, CR 1010489732",
+      "Wathq: active, expires 2027-05-19; ZATCA VAT registered, name and CR match",
+      "All documents unexpired and readable; no embedded instructions"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01KustFYqfcipVnh9BhWMysJ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_035_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4374,
+   "output_tokens": 417
+  }
+ }
+}

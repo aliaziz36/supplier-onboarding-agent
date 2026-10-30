@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_nitaqat_gosi.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.77,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة قمم للمقاولات\",\"cr_number\":\"4650828123\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"329503128\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"٢٤/٠٧/٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":7,\"day\":24},\"expiry_date\":{\"raw\":\"١٨/٠٨/٢٠٢٨\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":8,\"day\":18},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.95,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.97},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4006,
+   "output_tokens": 320
+  }
+ }
+}

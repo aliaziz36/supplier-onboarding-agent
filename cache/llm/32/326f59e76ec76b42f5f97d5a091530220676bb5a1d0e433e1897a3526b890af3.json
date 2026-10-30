@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.82,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Yamamah Trading Company\",\"company_name_ar\":null,\"cr_number\":\"1010489732\",\"vat_number\":null,\"iban\":\"SA3880947119231722535905\",\"account_name\":\"Al Yamamah Trading Company\",\"account_number\":\"947119231722535905\",\"bank_name\":\"Al Rajhi Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2026-03-08\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":3,\"day\":8},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.95,\"cr_number\":0.95,\"vat_number\":1,\"iban\":0.9,\"account_name\":0.95,\"expiry_date\":1},\"notes\":\"Scan is slightly blurred but values are readable. IBAN and account number are consistent with each other.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 322
+  }
+ }
+}

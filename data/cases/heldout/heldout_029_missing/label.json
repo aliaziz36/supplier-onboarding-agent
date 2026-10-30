@@ -1,0 +1,71 @@
+{
+  "case_id": "heldout_029_missing",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Electrical Services Company",
+      "company_name_ar": "شركة الخليج للخدمات الكهربائية",
+      "cr_number": "2050311839",
+      "expiry_date": "2027-07-11"
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Electrical Services Company",
+      "company_name_ar": "شركة الخليج للخدمات الكهربائية",
+      "cr_number": "2050311839",
+      "expiry_date": "2027-04-15"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 2,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050311839",
+      "expiry_date": null,
+      "iban": "SA7210546177224373653338",
+      "account_name": "Gulf Electrical Services Company"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "vat_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "vat_certificate not provided.",
+  "expected_fields": {
+    "company_name": "Gulf Electrical Services Company",
+    "company_name_ar": "شركة الخليج للخدمات الكهربائية",
+    "cr_number": "2050311839",
+    "vat_number": "374379556632173",
+    "iban": "SA7210546177224373653338",
+    "account_name": "Gulf Electrical Services Company",
+    "expiry": {
+      "commercial_registration": "2027-07-11",
+      "vat_certificate": "2028-02-23",
+      "gosi_certificate": "2027-04-15"
+    }
+  }
+}

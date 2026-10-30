@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650371905": {
+        "name": "شركة أجيال للمستلزمات الطبية",
+        "name_en": "Ajyal Medical Supplies LLC",
+        "status": "active",
+        "issue_date": "2025-05-23",
+        "expiry_date": "2027-07-19",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "304720056790793": {
+        "registered": true,
+        "name": "شركة أجيال للمستلزمات الطبية",
+        "name_en": "Ajyal Medical Supplies LLC",
+        "crNumber": "4650371905"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

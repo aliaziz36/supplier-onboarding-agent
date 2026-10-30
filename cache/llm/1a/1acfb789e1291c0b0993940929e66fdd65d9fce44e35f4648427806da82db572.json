@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_042_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.59,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01GnX8s4FzHgqz6xMXPQfRqK",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_042_cr_inactive",
+     "kind": "welcome",
+     "subject": "Welcome - supplier registration complete",
+     "body": "Dear Yousef, thank you for submitting your documents. Al Mada Cleaning Services Co. is now registered as a supplier (vendor ID V-2051221540). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01FAf2jdwbXK2bD8aMbNqBE9",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_042_cr_inactive",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4589,
+   "output_tokens": 309
+  }
+ }
+}

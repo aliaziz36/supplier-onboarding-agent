@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4030774533": {
+        "name": "شركة الأفق للمستلزمات المكتبية",
+        "name_en": "Al Ofoq Office Supplies Company",
+        "status": "active",
+        "issue_date": "2025-06-06",
+        "expiry_date": "2027-12-20",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "398134131449263": {
+        "registered": true,
+        "name": "شركة الأفق للمستلزمات المكتبية",
+        "name_en": "Al Ofoq Office Supplies Company",
+        "crNumber": "4030774533"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4030774533",
+    "name": "Al Ofoq Office Supplies Company",
+    "name_ar": "شركة الأفق للمستلزمات المكتبية",
+    "cr_number": "4030774533",
+    "vat_number": "398134131449263",
+    "iban": "SA1115711758732757647979",
+    "bank_code": "15",
+    "account_name": "Al Ofoq Office Supplies Company",
+    "email": "faisal@alofoq-office.com.sa",
+    "email_domain": "alofoq-office.com.sa",
+    "phone": "+966579898747",
+    "documents": {
+      "commercial_registration": "2027-12-20",
+      "vat_certificate": "2027-05-22",
+      "gosi_certificate": "2027-08-09"
+    }
+  }
+}

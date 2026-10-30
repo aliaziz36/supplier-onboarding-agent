@@ -1,0 +1,91 @@
+{
+  "case_id": "heldout_015_clean",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "name_variant",
+    "date_format",
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 2,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030364013",
+      "expiry_date": null,
+      "iban": "SA5560496961829392171927",
+      "account_name": "Al Riyadah Transport Co."
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Riyadah Transport Company",
+      "company_name_ar": "شركة الريادة للنقل",
+      "cr_number": "4030364013",
+      "expiry_date": "2027-08-30"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Riyadah Transport Company",
+      "company_name_ar": "شركة الريادة للنقل",
+      "cr_number": "4030364013",
+      "expiry_date": "2027-11-10"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "AL-RIYADAH TRANSPORT CO. LTD",
+      "company_name_ar": "شركة الريادة للنقل",
+      "cr_number": "4030364013",
+      "expiry_date": "2028-04-10",
+      "vat_number": "394548404178293"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Riyadah Transport Company",
+    "company_name_ar": "شركة الريادة للنقل",
+    "cr_number": "4030364013",
+    "vat_number": "394548404178293",
+    "iban": "SA5560496961829392171927",
+    "account_name": "Al Riyadah Transport Co.",
+    "expiry": {
+      "commercial_registration": "2027-11-10",
+      "vat_certificate": "2028-04-10",
+      "gosi_certificate": "2027-08-30"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_IBAN_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.38,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Desert Bloom IT Solutions L.L.C.\",\"company_name_ar\":null,\"cr_number\":\"1010583842\",\"vat_number\":null,\"iban\":\"SA1880807464675851389366\",\"account_name\":\"Desert Bloom IT Solutions L.L.C.\",\"account_number\":\"807464675851389366\",\"bank_name\":\"Al Rajhi Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"06 March 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":3,\"day\":6},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"The Arabic section prints the IBAN as 1880807464675851389366SA (bidi rendering artifact); the English section gives SA1880807464675851389366.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4086,
+   "output_tokens": 352
+  }
+ }
+}

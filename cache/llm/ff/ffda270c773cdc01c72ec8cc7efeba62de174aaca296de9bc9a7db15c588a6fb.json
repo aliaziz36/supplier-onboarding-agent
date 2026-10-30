@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_007_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.19,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01DuqCikTgMXxqCUFbF3zFFk",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_007_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Qimam Contracting LLC registered as a vendor",
+     "body": "Dear Omar, thank you for submitting your documents. All checks passed and Qimam Contracting LLC is now registered as a vendor (ID V-4650828123). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01SxqV4kC46Tsckru1WVBcxS",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_007_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4397,
+   "output_tokens": 310
+  }
+ }
+}

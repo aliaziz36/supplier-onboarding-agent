@@ -1,0 +1,57 @@
+{
+ "purpose": "agent:heldout_011_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 6.69,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQS1AoKEAgTGAI4AUIIdGhpbmtpbmcSDKGkuyvCwaKMocFfNBoMKj3Voc3dqtAhCc16IjD5Q2TEzdRsuSN31h6IPS1Y5likwPF4JNoJbLg/IULqPrPuLYtfACxo/FK/VooSldsq8QmJQR/OGsKYv0J3XWNsdKTGFz0m68YGvwGFrrx9IxqWvZsZ4ijj0cvZq9Wb7LYQILKY1hAVX8r/UVcgjG3hLa8yMTHptVRNvswX01pUKDmsoKvXnK2yBJTwsysvW0aqsQjehB6spqh7xXrFRLjyTTd8MvwMAxQhSb8FDCX11fwQtB1MZJtqPrOI6mOn7rh8vyHge2+TxlF73nFNoKzHJvRDAzhhuG5YYuY2iCYlbRBnLELqy3VJMjjHh0J9Ee44m515fLpmuq00EtYVI3uLPLpoPBbp4Z1U2SSlxTETbgdMh7BKYCK8OnlByJqPbeZPj0Hc21S4UFAO0P2SHpyNh0cbfPwaYDE5VZ/J/8bF6W6ysyqWH7Qv1gWNjRntDahzwh+k9QA+UDbez/1Dy9gJprmiS3xVAXtqh/pBzaB2TlOd7PkPA890vPjJHg/g+0zUn6/V3Gn5x9oZwntqACahhGdcaSe+b73R+3XhZj1YxiTozBx3UCgXaqYjpVevnrZtlU86bMZ93GA+lvkiSDs2/TdFIp1L4b8MRjRu5BvAHTRsJunQdmZqfoMkt9RwjB6g+l/4rqVwwaR8aXrvdw0DZyaWQxR5lLVmQM0gZk7avruBxg6QxAkaOtZsJ+r5icq4fglUGWkIWTikHmc7o7TF9+HeZ/xvZBz73W+sPP7ZIrfnvqoDs3SGlcKXJixQDKpq9LVtLKBSANhOPUGW0K+wCBJMEmEN5YzsSQQakAI5hJACltgjQSlRohcc37cLF9fUPia0LTy2fnvnbQ2MOdcMYY2UK20mF6Yn0w5J1G7OQgVJ+QpBrneNggXYlHFjdVxhFzxNd6836SLch/hgYHazAyjUsQED8NIJ8fxkuUbkpan6cUSI3G0R5grWF7m7civTmECtAQn7wOe6IOQhYry9UnFwyBt/abhpEPixO+0xMzJ43IifmTNf4gY1+qZFeu0GHAe+N1NZz94sjrpbplVd1qsE2GVMzcC1qzacuAqut1JlP0USm5ro7VJ+ndd946Z7X+7wC7ABj2nDo2B1pdxccWU9R3j2Sm8rtGMLy9/Rqvq+6Ahn4n/W1u+zoRPEdiL8Gc2tjTJqd2A3pNM2C/C/T3tu8NmfMzQbSpFgT+tYQyw4DzTsB+2FQSlHeuzjGAj1pYVAF5Bq1kWGzNY+DJEFwurheom+WgYUCbAVxvPr+2lvqKBHHapFYG6XaraVXeBqXTR0iZplWOL5I9ZNT6xYFzQtvmpFtP3zPgiguomkkOzYTo2LeiGThcE/yfsuOPv1YFSfTHB9bhpzESjhFPimvDhT7Hy7UDxOIIrILDhWkUVjdg7yF8sHVGjsGgv9x3ISlaV4ju0zUxBDguiD+6tJ5broqj5mp9gXB/S93xIS1DavyfDmSHcPqLlTFEki8371lL7t9iItxmj1ewX/1K+A6y6SUGGVLpAdZ4zIWOfg4SuC/ziYbNXYWOsrJf8J6bg9ZC52YWXtHKRz6yhK8BBLJbG35+dCG1YThfnhU4FNiy5QuN4t+Dn6ilZNx2D+/12mDr0Sts5bxRlMFlhbL0Rjot/zOTKBGlGij12hzoVbf6x5zZ+bGx92fRZpOnAN5YaRTofYYrSGWQuPCy9v559CIlitWnH9zuM/J389ZjT5xSXPqOAYyaORFGgJENgAosVmFN4EbhYy7nGgMU+t/SGWvPWxpBgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_015hWw4YtHANZq3nB1mXYxQU",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_011_clean"
+    },
+    "name": "create_vendor",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01X8sWbZcwyftnN35ECcnVTp",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_011_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Ajyal Medical Supplies LLC onboarded",
+     "body": "Dear Reem, thank you for your documents. Your registration has been verified and Ajyal Medical Supplies LLC is now set up as a vendor. Best regards, Procurement Team",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01VHrA4f5UjkVKAbyEQfBeJt",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_011_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4324,
+   "output_tokens": 724
+  }
+ }
+}

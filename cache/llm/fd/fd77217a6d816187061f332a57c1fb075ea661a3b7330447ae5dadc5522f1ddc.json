@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_026_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.78,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01HjhdwGzT1wSwKFLGT74Vso",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_026_missing",
+     "kind": "request_fix",
+     "subject": "Najd Trading Co. registration - bank letter needed",
+     "body": "Dear Yousef, thank you for your registration documents. Your bank letter (IBAN confirmation on bank letterhead) was missing from the email. Please reply with a copy so we can complete your registration. Regards, Procurement",
+     "documents_requested": [
+      "bank_letter"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01PN8Y2AJpi4ZxE2R3Z2HwmL",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_026_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4049,
+   "output_tokens": 327
+  }
+ }
+}

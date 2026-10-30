@@ -1,0 +1,87 @@
+{
+  "case_id": "heldout_021_expired",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "scanned"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_6680.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star IT Solutions Est.",
+      "company_name_ar": "مؤسسة نجمة الخليج لحلول تقنية المعلومات",
+      "cr_number": "4030112333",
+      "expiry_date": "2026-10-21"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 2,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030112333",
+      "expiry_date": null,
+      "iban": "SA7445283370886478029315",
+      "account_name": "Al Khaleej Star IT Solutions Est."
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star IT Solutions Est.",
+      "company_name_ar": "مؤسسة نجمة الخليج لحلول تقنية المعلومات",
+      "cr_number": "4030112333",
+      "expiry_date": "2028-09-01"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 2,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star IT Solutions Est.",
+      "company_name_ar": "مؤسسة نجمة الخليج لحلول تقنية المعلومات",
+      "cr_number": "4030112333",
+      "expiry_date": "2028-09-29",
+      "vat_number": "315035088250843"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "commercial_registration"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "commercial_registration expired on 2026-10-21.",
+  "expected_fields": {
+    "company_name": "Al Khaleej Star IT Solutions Est.",
+    "company_name_ar": "مؤسسة نجمة الخليج لحلول تقنية المعلومات",
+    "cr_number": "4030112333",
+    "vat_number": "315035088250843",
+    "iban": "SA7445283370886478029315",
+    "account_name": "Al Khaleej Star IT Solutions Est.",
+    "expiry": {
+      "commercial_registration": "2026-10-21",
+      "vat_certificate": "2028-09-29",
+      "gosi_certificate": "2028-09-01"
+    }
+  }
+}

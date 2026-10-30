@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_002_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.55,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01JYAU9oD3Y5t9a5zAbzmTAn",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_002_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Waha Office Supplies Co. onboarded",
+     "body": "Dear Ahmed, thank you for submitting your documents. All checks passed and Al Waha Office Supplies Co. is now registered as a vendor (ID V-2051005523). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_015GDNsPU8sbuHP5jrFbbps4",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_002_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4660,
+   "output_tokens": 315
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "purpose": "agent:heldout_042_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.5,
+ "response": {
+  "content": [
+   {
+    "text": "Checks are clean, so I'm proceeding.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_019dfME1c2GBbtfSdJrfHuME",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_042_cr_inactive"
+    },
+    "name": "create_vendor",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4469,
+   "output_tokens": 79
+  }
+ }
+}

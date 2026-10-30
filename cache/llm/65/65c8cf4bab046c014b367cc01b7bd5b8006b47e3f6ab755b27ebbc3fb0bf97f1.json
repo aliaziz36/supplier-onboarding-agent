@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:heldout_027_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.45,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01AvEvqtiqtniagJCUP8ooZJ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_027_missing"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3931,
+   "output_tokens": 57
+  }
+ }
+}

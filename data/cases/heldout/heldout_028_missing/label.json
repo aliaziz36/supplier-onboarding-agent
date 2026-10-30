@@ -1,0 +1,72 @@
+{
+  "case_id": "heldout_028_missing",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650458950",
+      "expiry_date": null,
+      "iban": "SA5260769780335132334182",
+      "account_name": "Al Waha Medical Supplies Est."
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Waha Medical Supplies Est.",
+      "company_name_ar": "مؤسسة الواحة للمستلزمات الطبية",
+      "cr_number": "4650458950",
+      "expiry_date": "2027-11-22",
+      "vat_number": "376504360830723"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Waha Medical Supplies Est.",
+      "company_name_ar": "مؤسسة الواحة للمستلزمات الطبية",
+      "cr_number": "4650458950",
+      "expiry_date": "2027-06-07"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate not provided.",
+  "expected_fields": {
+    "company_name": "Al Waha Medical Supplies Est.",
+    "company_name_ar": "مؤسسة الواحة للمستلزمات الطبية",
+    "cr_number": "4650458950",
+    "vat_number": "376504360830723",
+    "iban": "SA5260769780335132334182",
+    "account_name": "Al Waha Medical Supplies Est.",
+    "expiry": {
+      "commercial_registration": "2027-06-07",
+      "vat_certificate": "2027-11-22",
+      "gosi_certificate": "2028-04-30"
+    }
+  }
+}

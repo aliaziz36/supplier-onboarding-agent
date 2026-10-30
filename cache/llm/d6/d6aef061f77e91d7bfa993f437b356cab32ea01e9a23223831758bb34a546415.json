@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_CR_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.49,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Yamamah Steel Fabrication Est.\",\"company_name_ar\":\"مؤسسة اليمامة لتصنيع الحديد\",\"cr_number\":\"2050833118\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"24 September 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":9,\"day\":24},\"expiry_date\":{\"raw\":\"24 May 2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":5,\"day\":24},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"English text spells the name 'Yamamah' while the document title block reads 'Al Yamamah'; the Arabic name is consistent. Issue date (24 September 2026) is later than many typical review dates and may be in the future.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4051,
+   "output_tokens": 386
+  }
+ }
+}

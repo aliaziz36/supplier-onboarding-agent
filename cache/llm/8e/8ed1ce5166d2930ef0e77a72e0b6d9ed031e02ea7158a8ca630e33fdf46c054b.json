@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_GOSI_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.26,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Yamamah Steel Fabrication Est.\",\"company_name_ar\":\"مؤسسة اليمامة لتصنيع الحديد\",\"cr_number\":\"2050833118\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"399658342\",\"nitaqat_band\":\"Medium Green\",\"issue_date\":{\"raw\":\"16 April 2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":4,\"day\":16},\"expiry_date\":{\"raw\":\"16 April 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":4,\"day\":16},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4041,
+   "output_tokens": 322
+  }
+ }
+}

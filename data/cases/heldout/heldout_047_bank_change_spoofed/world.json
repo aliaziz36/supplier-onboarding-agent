@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4030388502": {
+        "name": "شركة التميز للخدمات اللوجستية",
+        "name_en": "Al Tamayuz Logistics Co.",
+        "status": "active",
+        "issue_date": "2026-05-17",
+        "expiry_date": "2028-02-11",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "330401956206243": {
+        "registered": true,
+        "name": "شركة التميز للخدمات اللوجستية",
+        "name_en": "Al Tamayuz Logistics Co.",
+        "crNumber": "4030388502"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4030388502",
+    "name": "Al Tamayuz Logistics Co.",
+    "name_ar": "شركة التميز للخدمات اللوجستية",
+    "cr_number": "4030388502",
+    "vat_number": "330401956206243",
+    "iban": "SA5510396897224864965090",
+    "bank_code": "10",
+    "account_name": "Al Tamayuz Logistics Co.",
+    "email": "faisal@altamayuz-logistics.com.sa",
+    "email_domain": "altamayuz-logistics.com.sa",
+    "phone": "+966509945222",
+    "documents": {
+      "commercial_registration": "2028-02-11",
+      "vat_certificate": "2027-08-02",
+      "gosi_certificate": "2028-01-13"
+    }
+  }
+}

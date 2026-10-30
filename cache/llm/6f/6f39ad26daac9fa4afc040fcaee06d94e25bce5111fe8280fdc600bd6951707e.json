@@ -1,0 +1,49 @@
+{
+ "purpose": "agent:heldout_038_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.81,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSlwcKEAgTGAI4AUIIdGhpbmtpbmcSDP0IfhCk04UCzEI6bhoMme2mIiIJzOqbCkThIjA8d2u9SBUHlds6OzHVBWkKCzxiEZSI/VAdd0tSvDj94B/C82YZ9pO07MQr5sa2dRgqtAZ0WpetiSUnrhSxQ0hVdb+JJYI31DuObLAdOwP7r5vNJtE6nrT4KmW6qgDKYPxHTaCxbGOJ+erhsH/RyvMyDZtShwNz2BrTL9XSMfWuyXLow3auUq04TXn6XdY/5WdFF81VG1SA6ZmORoOiA+NU6i/lLPmQUzK4o2F794T5dgZMn5GzyTouGKuFLKiaoVnbDhcTI9Lff0n8KuipYW1xrXsGsTYJg8n4xcdPBJLiUIpjtqvncCdTn7BKfwhUeHiarjMF6qLETY6rOWqdAeIVouRZ+ua9pnAhdHy8j9NjIPi/qaZDlt2O8Fk2N/sZyJ7muBvxl42J0J19X+r2hSVMl0FHEu7DmVyPs0Y+r8lX9Sl2KiCabuztsbqu9osmV2pZSmtzZ/PNTC6rBKv3UQwJpiINqAckfP9FAedOdSpL8jf6GxYMFoVfIKkPdbDmDqmbJMfkHHWKm9ow2kCorN1dXSZ70hHAL4v7mFAeZ3v798dXZjVxts1gbkvwWrkP5BUE8+naOwXj5Af5Fcq9CkHCElGHJIENDStSA1VDVEGrIGPHfB6sBUm+A0VWInMI0zqILRKE1hFv9lAbXQsEP2iqSsgtz8kZLZW3AbTiKsJaJLtzSuCVgXwl9iiVc3lbnNRZJdNidnF1ts75PkIbFKaRMH10bMRU0mEJemv1KC4ownLm4CzEDln98MtWSw+G7y/BBaodzBVxvN5PWbXhYgGYs7J3ngFHtC8B+3usqdSc1e1ET8i0rzu2y2RICLSTja+ap/sByiWaWghzrIYCbb8MPIHYwcY3xPHTfGpo8iSbwoO4pSYOW5GOfKq9S63YotErI0RbULcC4oiUf+62yEsnOMjsBhw8SOzQ5VxabVQa+u+BQCrlCf4FHtEV9dSbhnqlHyuiT0BBA0OqFHuNj/fcvLlgNXsxn9Y/aIaqQ+EaorrRfTd6AlOo0i+Xuk2kK01tlm1j34cUuK6aGyaa5MbvF5dcGqJJln/Qb0p4LZxr9ldTCdKJGnbq3ifbvreCxBsPCwT2dNSy+Yic0Rvq+pl2iCHudarGVKUATkb/d0cawM6Cy3Q4r0NAWYdQ9m8J2SkwIQUEO53OGAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01SQJQU4XATiBBa5ETmRuyfv",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_038_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match applicant company, although run_checks reported clean.",
+     "evidence": [
+      "Applicant: Al Jazeera Transport Co. (CR 2050529545), per CR, GOSI and VAT documents",
+      "bank_letter.pdf names Al Safwa Catering LLC as company and account holder, IBAN SA8945791104270671550676, Saudi Awwal Bank",
+      "The bank letter carries the same CR number 2050529545 as the applicant but a different company name",
+      "Vendor not created; supplier not emailed"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Ss5h8xfN1kHp1Towj6j1M7",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_038_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4594,
+   "output_tokens": 458
+  }
+ }
+}

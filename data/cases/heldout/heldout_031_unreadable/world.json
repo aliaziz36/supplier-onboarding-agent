@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010841248": {
+        "name": "شركة البيان للطباعة",
+        "name_en": "Al Bayan Printing LLC",
+        "status": "active",
+        "issue_date": "2026-01-26",
+        "expiry_date": "2027-10-19",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "322021304850413": {
+        "registered": true,
+        "name": "شركة البيان للطباعة",
+        "name_en": "Al Bayan Printing LLC",
+        "crNumber": "1010841248"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

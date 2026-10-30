@@ -1,0 +1,72 @@
+{
+  "case_id": "heldout_025_missing",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [
+    "hijri"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star Logistics Co.",
+      "company_name_ar": "شركة نجمة الخليج للخدمات اللوجستية",
+      "cr_number": "4650507944",
+      "expiry_date": "2028-03-05"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star Logistics Co.",
+      "company_name_ar": "شركة نجمة الخليج للخدمات اللوجستية",
+      "cr_number": "4650507944",
+      "expiry_date": "2027-09-12",
+      "vat_number": "383347236489903"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star Logistics Co.",
+      "company_name_ar": "شركة نجمة الخليج للخدمات اللوجستية",
+      "cr_number": "4650507944",
+      "expiry_date": "2027-03-12"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "bank_letter"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "bank_letter not provided.",
+  "expected_fields": {
+    "company_name": "Al Khaleej Star Logistics Co.",
+    "company_name_ar": "شركة نجمة الخليج للخدمات اللوجستية",
+    "cr_number": "4650507944",
+    "vat_number": "383347236489903",
+    "iban": "SA4060054647543962475176",
+    "account_name": "Al Khaleej Star Logistics Co.",
+    "expiry": {
+      "commercial_registration": "2028-03-05",
+      "vat_certificate": "2027-09-12",
+      "gosi_certificate": "2027-03-12"
+    }
+  }
+}

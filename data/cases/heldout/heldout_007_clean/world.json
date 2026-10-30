@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650828123": {
+        "name": "شركة قمم للمقاولات",
+        "name_en": "Qimam Contracting LLC",
+        "status": "active",
+        "issue_date": "2025-11-03",
+        "expiry_date": "2027-06-24",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "326345626265413": {
+        "registered": true,
+        "name": "شركة قمم للمقاولات",
+        "name_en": "Qimam Contracting LLC",
+        "crNumber": "4650828123"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

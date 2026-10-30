@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_001_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.77,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01RKD48Wm6zkpGMZ7awcas1E",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_001_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Rawabi Logistics Co. onboarded",
+     "body": "Dear Yousef, thank you for submitting your documents. Your registration has been verified and Rawabi Logistics Co. is now set up as a vendor. Best regards, Procurement Team",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_018iKDuvsJuRcWn7ArVzyyb6",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_001_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4395,
+   "output_tokens": 306
+  }
+ }
+}

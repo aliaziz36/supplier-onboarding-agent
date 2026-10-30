@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:heldout_051_injection",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.56,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01HrK8J8Q882CnY6nVkRe2mX",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_051_injection"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4168,
+   "output_tokens": 57
+  }
+ }
+}

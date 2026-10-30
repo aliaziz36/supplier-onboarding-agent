@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050075270": {
+        "name": "مؤسسة الريادة للمستلزمات المكتبية",
+        "name_en": "Al Riyadah Office Supplies Est.",
+        "status": "active",
+        "issue_date": "2025-08-06",
+        "expiry_date": "2027-07-24",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "335474840506323": {
+        "registered": true,
+        "name": "مؤسسة الريادة للمستلزمات المكتبية",
+        "name_en": "Al Riyadah Office Supplies Est.",
+        "crNumber": "2050075270"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

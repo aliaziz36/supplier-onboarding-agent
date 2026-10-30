@@ -1,0 +1,50 @@
+{
+ "purpose": "agent:heldout_036_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.43,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSxgcKEAgTGAI4AUIIdGhpbmtpbmcSDAUHhzbryyIAV2q7yhoMS5m+j6Hc6oeSqF6FIjDZj2ikq65WE08Uk9huq6s7aWwkcfgE3aARBzZ3h/jpfwoxQ/hxaZNbqpNXzMq3hHgq4wZle8fldeoJV27XtwBOi3U+Zo2yNaP5VN/aMTcvtsPwK2eOuqqX20taEMq5plFlRTwb2edHjWxAsr4XKwwgGxJMTnvq7B6G8TUcNz1RtjtK5tmF6Y84KSIIJEMu7zMlfNLbZcIc+Bc3zFqrpZpSFyUgBeEPW+Xvtpcbo+5c5fSbARwR79C3n9F4N9srSodOKX4VXVNn8UahbI91AizO/HuIrs58jIiqeYzIReLvF8VyBZlMQ+J+Na5UIRRJKscysLekhUa6PZDoH669MZ0ARjzqO5NWK7mpPpxsLwIv/bsTLuOrFFQdWdlffdtbcTUAHrSlnPLpQ3KwIGFzIIusLwqHfm6yeQQzxqVKEAZm4jAgRwg0gDxvqAQsWo8KPYT0n+i3pODr+WUpiZW70ZUdCTAwTKis/N0h7CRN7/BtfgCQusT3l87CSfkfg95WaRKVYnbua1agcqHRJiE5BzlYVnHhnGT2juNLtTcFZqGYxSilhi/r1Si7pLehWV/fWhjvyC/cDEwH+TyKH/w03yS475JRaF4IguG9rIa8nUnrtWqR5wzlyiK0N94Ji7OslyU1otA/B7qZR4r8iUpBfPSvRSBdt1jtCXP0QXJ9jnwtwZ4QWiKTzgzdtY5pM/Avk/Az0Vj3gFMeO/XzAF4aHPPC+NoO5RxhdItkKlX8HAbfGv1CCNsKfphlNc08p+DDUJ1FCbkRVkwDGQJNSTrDsHsStfAqVTUpo74s82nPWWgUX4q/IqdlE7qK7SUqv2YGHDPe//ZTjk5ckUhujirhta43oT/EUZ6jA3orJku9AshAykWUVv8aTgosrGGUgzJ3er7dLF3NuzmI3qEMfLFF32VM9SzIcI01XCMoQgPZOUSPWQ5lVr3pqlfvOK74RAfepjuQJaoxJK902lCopdtNnOUk3AaDzswu3h/2imq9QS8QJfDaCXfBbvZmCY6DgsV5qqkymgAvIJsXWMZ6FKekisJvIlLa/zhpSQ2kWzNtyGUbQGlCMu7eKN2CLJt/96ybnrRVxfJ9MaG11SMXvyRkvpmwNFDhOV2IuYr7LpbwBeC4MZh/alvQ4Q8WxaD0+PIeXbUDUnlGSl/xOahAzmvesDU8g4cqOcN8omw1+xS48krqDPmmZp3p6qOs4ncmwc2i8i+vsM2pu1UYAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01B2Jonq48iKeEXfym1AoQwm",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_036_bank_name_mismatch",
+     "reason": "Bank letter is in a different company's name than the registering supplier, which is a possible payment-fraud risk. run_checks passed, but it did not flag this.",
+     "evidence": [
+      "Bank letter (scan_8651.pdf): account name and company 'Al Riyadah Office Supplies Co.', IBAN SA1920795013108707261494, Riyad Bank",
+      "VAT certificate, GOSI certificate and CR all name 'Durrah Cleaning Services Est.'",
+      "The bank letter shows the same CR number 2051957446 as the CR for Durrah Cleaning Services Est.",
+      "Sender is yousef@durrah-cleaning.com.sa",
+      "The supplier was not emailed and no vendor was created."
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01LekeJMrWzKJURM87sKf7yU",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_036_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4409,
+   "output_tokens": 539
+  }
+ }
+}

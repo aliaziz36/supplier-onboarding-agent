@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650975144": {
+        "name": "شركة نجمة الخليج للمقاولات",
+        "name_en": "Al Khaleej Star Contracting Company",
+        "status": "active",
+        "issue_date": "2026-03-11",
+        "expiry_date": "2027-06-03",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "331158780255473": {
+        "registered": true,
+        "name": "شركة نجمة الخليج للمقاولات",
+        "name_en": "Al Khaleej Star Contracting Company",
+        "crNumber": "4650975144"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

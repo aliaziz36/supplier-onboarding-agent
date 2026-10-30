@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:heldout_039_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.69,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01MQc9gUiWVAbsuci39kqoZV",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_039_cr_inactive",
+     "reason": "Commercial registration is suspended in the registry; supplier onboarding blocked.",
+     "evidence": [
+      "run_checks cr_active failed: registry status suspended",
+      "CR number 2050616834, Al Faris Catering Co.",
+      "All other 10 checks passed",
+      "Sender nora@alfaris-catering.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01GoHi4pUB5e3ijPy924nXax",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_039_cr_inactive",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4580,
+   "output_tokens": 282
+  }
+ }
+}

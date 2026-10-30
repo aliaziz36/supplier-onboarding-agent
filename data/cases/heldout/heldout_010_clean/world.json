@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030792520": {
+        "name": "شركة سحاب للخدمات الكهربائية",
+        "name_en": "Sahab Electrical Services LLC",
+        "status": "active",
+        "issue_date": "2025-03-10",
+        "expiry_date": "2028-01-20",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "342269477736643": {
+        "registered": true,
+        "name": "شركة سحاب للخدمات الكهربائية",
+        "name_en": "Sahab Electrical Services LLC",
+        "crNumber": "4030792520"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

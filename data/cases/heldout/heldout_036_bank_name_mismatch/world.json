@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051957446": {
+        "name": "مؤسسة درة لخدمات النظافة",
+        "name_en": "Durrah Cleaning Services Est.",
+        "status": "active",
+        "issue_date": "2026-07-31",
+        "expiry_date": "2028-09-18",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "391763785063813": {
+        "registered": true,
+        "name": "مؤسسة درة لخدمات النظافة",
+        "name_en": "Durrah Cleaning Services Est.",
+        "crNumber": "2051957446"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

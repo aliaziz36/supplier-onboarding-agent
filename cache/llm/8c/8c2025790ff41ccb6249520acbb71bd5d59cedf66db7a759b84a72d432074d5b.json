@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_028_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.45,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01N1F354HgKcXwq9quRRi9tc",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_028_missing",
+     "kind": "request_fix",
+     "subject": "Missing document: GOSI certificate",
+     "body": "Dear Huda, thank you for your submission. Your CR, VAT certificate and bank letter were received and verified. To complete registration, please send a valid GOSI certificate. Best regards, Procurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01KVTijWFUeKAYJ8JB9sK3Lc",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_028_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4136,
+   "output_tokens": 317
+  }
+ }
+}

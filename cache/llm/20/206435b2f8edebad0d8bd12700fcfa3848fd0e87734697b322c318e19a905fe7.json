@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_030_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.81,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_014enLzFVNQeKo4NvjJ4NfHg",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_030_unreadable",
+     "kind": "request_fix",
+     "subject": "Clearer copy of GOSI certificate needed",
+     "body": "Dear Omar,\n\nThank you for your registration. The attached GOSI certificate (GOSI_certificate.pdf) is unreadable. Please reply with a clear, legible copy. Your other documents are fine.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01WJgd438bw5kNSdPpE5iyCc",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_030_unreadable",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4451,
+   "output_tokens": 341
+  }
+ }
+}

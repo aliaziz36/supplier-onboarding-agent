@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:heldout_020_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.05,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_013iNKdKNqRxuAEYXW1Shxy8",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_020_expired",
+     "kind": "request_fix",
+     "subject": "Najd Office Supplies LLC - updated GOSI certificate needed",
+     "body": "Dear Ahmed,\n\nThank you for your registration. Our review found one issue: the GOSI certificate you sent expired on 2026-04-28. Please reply with a valid, current GOSI certificate. All your other documents are in order.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_011PZZD1tPavQNXGUdqx3suJ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_020_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4587,
+   "output_tokens": 351
+  }
+ }
+}

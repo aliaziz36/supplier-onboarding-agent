@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:heldout_004_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.66,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01DjGivF1XYh3qn51xHFJucr",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_004_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Desert Bloom IT Solutions LLC registered",
+     "body": "Dear Ahmed, thank you for submitting your documents. All checks passed and Desert Bloom IT Solutions LLC is now registered as a vendor (ID V-1010583842). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01BHLwBczzU63GX5TPmexrRR",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_004_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4447,
+   "output_tokens": 317
+  }
+ }
+}

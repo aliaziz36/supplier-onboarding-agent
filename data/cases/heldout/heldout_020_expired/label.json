@@ -1,0 +1,92 @@
+{
+  "case_id": "heldout_020_expired",
+  "split": "heldout",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "name_variant",
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 3,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030693731",
+      "expiry_date": null,
+      "iban": "SA7055891088258333366424",
+      "account_name": "NAJD OFFICE SUPPLIES CO. LTD"
+    },
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Najd Office Supplies LLC",
+      "company_name_ar": "شركة نجد للمستلزمات المكتبية",
+      "cr_number": "4030693731",
+      "expiry_date": "2028-01-08",
+      "vat_number": "328153357542783"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 2,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Najd Office Supplies LLC",
+      "company_name_ar": "شركة نجد للمستلزمات المكتبية",
+      "cr_number": "4030693731",
+      "expiry_date": "2026-04-28"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 3,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Najd Office Supplies LLC",
+      "company_name_ar": "شركة نجد للمستلزمات المكتبية",
+      "cr_number": "4030693731",
+      "expiry_date": "2027-07-10"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate expired on 2026-04-28.",
+  "expected_fields": {
+    "company_name": "Najd Office Supplies LLC",
+    "company_name_ar": "شركة نجد للمستلزمات المكتبية",
+    "cr_number": "4030693731",
+    "vat_number": "328153357542783",
+    "iban": "SA7055891088258333366424",
+    "account_name": "NAJD OFFICE SUPPLIES CO. LTD",
+    "expiry": {
+      "commercial_registration": "2027-07-10",
+      "vat_certificate": "2028-01-08",
+      "gosi_certificate": "2026-04-28"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650282492": {
+        "name": "شركة نجد للمستلزمات الطبية",
+        "name_en": "Najd Medical Supplies LLC",
+        "status": "active",
+        "issue_date": "2025-07-27",
+        "expiry_date": "2028-03-25",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "381820509946593": {
+        "registered": true,
+        "name": "شركة نجد للمستلزمات الطبية",
+        "name_en": "Najd Medical Supplies LLC",
+        "crNumber": "4650282492"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:heldout_020_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.71,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01ByJEHkmViVMrhTnQPCqHnp",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_020_expired",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3348,
+   "output_tokens": 83
+  }
+ }
+}

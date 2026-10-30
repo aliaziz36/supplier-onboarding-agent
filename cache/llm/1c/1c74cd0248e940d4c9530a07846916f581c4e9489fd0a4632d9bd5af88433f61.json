@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:heldout_030_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.15,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01EHA47of6cwMi6K2nyJZAEA",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "heldout_030_unreadable",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3114,
+   "output_tokens": 85
+  }
+ }
+}

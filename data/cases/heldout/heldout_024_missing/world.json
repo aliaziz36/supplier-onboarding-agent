@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050066404": {
+        "name": "شركة المنار للطباعة",
+        "name_en": "Al Manar Printing LLC",
+        "status": "active",
+        "issue_date": "2026-09-21",
+        "expiry_date": "2027-10-24",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "313844005054663": {
+        "registered": true,
+        "name": "شركة المنار للطباعة",
+        "name_en": "Al Manar Printing LLC",
+        "crNumber": "2050066404"
+      }
+    }
+  },
+  "vendor_on_file": null
+}
