@@ -1,0 +1,23 @@
+{
+  "case_id": "dev_zakat_045_bank_change_spoofed",
+  "split": "dev_zakat_045_bank",
+  "kind": "bank_change",
+  "scenario": "bank_change_spoofed",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {},
+  "expected_decision": "freeze",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "sender_domain_mismatch",
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "variant": "freemail_name_mismatch",
+  "reason": "Bank changes are always frozen pending a callback to the phone on file.",
+  "expected_fields": {
+    "new_iban": "SA3210531051271327124752",
+    "account_name": "Al Waha Trading Est.",
+    "vendor_id": "V-1010238765"
+  }
+}

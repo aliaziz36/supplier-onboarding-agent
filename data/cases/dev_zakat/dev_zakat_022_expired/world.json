@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051682977": {
+        "name": "شركة النور للمقاولات",
+        "name_en": "Al Noor Contracting Co.",
+        "status": "active",
+        "issue_date": "2025-05-01",
+        "expiry_date": "2026-05-01",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "387530111862763": {
+        "registered": true,
+        "name": "شركة النور للمقاولات",
+        "name_en": "Al Noor Contracting Co.",
+        "crNumber": "2051682977"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

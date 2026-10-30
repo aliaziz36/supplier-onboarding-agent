@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650129510": {
+        "name": "شركة المنار للمستلزمات المكتبية",
+        "name_en": "Al Manar Office Supplies LLC",
+        "status": "active",
+        "issue_date": "2025-05-31",
+        "expiry_date": "2028-07-17",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "369707137581503": {
+        "registered": true,
+        "name": "شركة المنار للمستلزمات المكتبية",
+        "name_en": "Al Manar Office Supplies LLC",
+        "crNumber": "4650129510"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

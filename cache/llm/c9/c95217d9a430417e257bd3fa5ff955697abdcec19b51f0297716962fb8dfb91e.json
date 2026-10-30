@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_010_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.45,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Kd9n5qDnSzjkEBR7V8oYmt",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_010_clean",
+     "reason": "CR number on commercial registration not found in registry and conflicts with other documents; possible document tampering or error.",
+     "evidence": [
+      "CR document shows 2050054588; VAT, GOSI and bank letter show 2050554588",
+      "cr_in_registry fail: CR 2050054588 not found",
+      "Low extraction confidence (0.75) on cr_number; careful re-read confirmed",
+      "Other checks passed (9)"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01JMWtGcgmGBi6TnZGdhRSGt",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_010_clean",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4706,
+   "output_tokens": 302
+  }
+ }
+}

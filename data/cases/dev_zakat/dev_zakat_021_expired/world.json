@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030718594": {
+        "name": "مؤسسة البيان للمستلزمات الطبية",
+        "name_en": "Al Bayan Medical Supplies Est.",
+        "status": "active",
+        "issue_date": "2026-08-23",
+        "expiry_date": "2027-03-27",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "395917561415023": {
+        "registered": true,
+        "name": "مؤسسة البيان للمستلزمات الطبية",
+        "name_en": "Al Bayan Medical Supplies Est.",
+        "crNumber": "4030718594"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

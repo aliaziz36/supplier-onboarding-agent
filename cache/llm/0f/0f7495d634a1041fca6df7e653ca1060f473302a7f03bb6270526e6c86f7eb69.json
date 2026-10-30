@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_021_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.92,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_017ec5voYnzzqsb9VhNYwveb",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_021_expired",
+     "kind": "request_fix",
+     "subject": "Durrah Steel registration: documents needed",
+     "body": "Dear Omar,\n\nThank you for your registration. To proceed we need two documents:\n- GOSI certificate: the copy provided expired on 2026-06-17. Please send a current copy.\n- Zakat certificate: not received. Please send a copy.\n\nPlease reply to this email with the documents attached.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate",
+      "zakat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Mjr4kZkun9Bum9TUY4Zba9",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_021_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4396,
+   "output_tokens": 368
+  }
+ }
+}

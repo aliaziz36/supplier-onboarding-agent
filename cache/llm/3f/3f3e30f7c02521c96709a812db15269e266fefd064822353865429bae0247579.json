@@ -1,0 +1,32 @@
+{
+ "purpose": "agent:dev_zakat_047_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.15,
+ "response": {
+  "content": [
+   {
+    "text": "Sender domain differs from the one on file.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01H9u5knpenMLiBUdBMWzn8y",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_047_bank_change_spoofed",
+     "vendor_id": "V-4030161629",
+     "new_iban": "SA5380160626598692183377",
+     "account_name": "Tihama Medical Supplies Company"
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3245,
+   "output_tokens": 181
+  }
+ }
+}

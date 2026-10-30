@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050802803": {
+        "name": "مؤسسة روابي للإعاشة",
+        "name_en": "Rawabi Catering Est.",
+        "status": "cancelled",
+        "issue_date": "2025-07-21",
+        "expiry_date": "2026-09-21",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "351246821878163": {
+        "registered": true,
+        "name": "مؤسسة روابي للإعاشة",
+        "name_en": "Rawabi Catering Est.",
+        "crNumber": "2050802803"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

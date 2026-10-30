@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:demo_2_rawabi_expired_vat",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.82,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Gko5Ke8t7FHB9taM6fyWT4",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_2_rawabi_expired_vat",
+     "kind": "request_fix",
+     "subject": "Updated VAT certificate needed - Rawabi Logistics Company",
+     "body": "Dear Khalid,\n\nThank you for your registration documents. Your VAT certificate (vat_registration.pdf) expired on 2026-10-10. Please reply with a current, valid copy. All other documents are in order.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "vat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01G2DR5MAQLAK7cvVbFahQ8C",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_2_rawabi_expired_vat",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4460,
+   "output_tokens": 358
+  }
+ }
+}

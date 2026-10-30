@@ -1,0 +1,23 @@
+{
+ "purpose": "extract-reread:1_scan_9055.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 6.96,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSmQoKEAgTGAI4AUIIdGhpbmtpbmcSDKSY7HbNBwqf2SYc5hoMDOE055JC2NxzSHAXIjBaz5hw+lsRx59OayjHLcmjMJsHMl2MQqv1Fp4xUwrmGXGBLbNGGbfJK1Gf0gDD1vsqtgk2NnEJ2GgZajTd0SFCPtm0oYIQdb3mYKV5E3oUMHD0J+7kPDS7j2lUyQIsWkRhGN1b6cfblYByYV1VAmQJfiUXcZvWwDGvPIPy4Pq1+p+SlRRccr51MZyEU6i/lK6Tk+B8ifQKZibkzK3BCirVk/4Wi8Tk+sL3V5pH5NIyiWZPyRDI3eUE5K31r74m8tG3ML/b/D4uWzr4gaHT/nhIKw2Iu7iKZ5gEIjOu8s+IWj2Qy4azKusO/qggmlatS3Xh5Dhs1EgjpHOxvhLqdCyNzqYBv9ArE+9PyZlifNi9JJG9RcqcMN2u1ocurK3liBvbuyKio8GhJXvi03wgmkhyJEsIyD1vxAkD7ucWvjcacDb9ign/cBH+PNA2aWe+NC/ihs6ulDCIyQRUWjp6WYvC4QOeulIbBZNKKxQNRd9ylm93tO2w8X91X1gqvF65QyGTgpHmXfk1m+L8At+LIJYe40ufgGF+igt66IUbagPm+HWrqBv3R9dONvjy9SlLhpXSi1dETf7GDELBDdRBARwKoskHjUQ5nB20CV6JqpLMjruGLRC1fW9lEueRUHyOIJkRZM5jnRr5FDg2Lu0mgxJxL0lgPQD2/bxcKENgurVDjnKr+d3+ErHFbVbXSPMk5opWbkQ17opaXmNIZgwJF7XUTlTiOF4Zt4dXY/Pfdxug3WYv6Sx90kQ+4nbbEQvGS46O/3zt0Mu2JtV5izrAM/1bTMu+twjQ+WN1VS8VEEKQdou+CCsSc5Re2L3hJS8FMV2xh8xm+WTCJlBtv1uof4RdCzvr4vgcmtdAZriugO7poySVOwKL8JoBtldKPPnlUTW3PpYj6Hs0CVBjBs3H1cCrVtlRfZADvLAocyFNGKqgkAYJ5hfFhKJtY0GGtE4mOwAglbrs8KZXPaHrpQa7IP/HONnt7u7UX6M6X/N9Ah/qqYQUVk6SQEwbiyhKGRZTG7TbVxxiDcl1UxQZFaVPoXJlaaeMzcNSf7XYc5Mw3LwrPijXhYg1e8fQgxjsxO/PKS7iOdHd0WEvggoSQcKoNBo2z3ED8OSvvYC4m6Xjqi2WOdhvK0AvG52486GB4kxcAoV3XNsqAmwyMArya3ECNsVmP4H8/6l1khUPNqpItZG7RcakpgvCR7zkk60FFKjtKv6JNtUBV1zCelLC/rX9WAKKdg/Y+A2X9dthFnMv/FvdAZ2niDjL4S3HgT+Mb3JX9Zjp+mBcKf+eqeR3L8ijqtO0N7Ks4T8/0BfjMq2VcvkHzzWI0rcNcJDBqJt4/Fs2Ok0xslJCWYu8DydgEe/KHReN37NnNGltQqvb/N38mjCpioOeqi0KO6R1LhkfsgXPYWRG2Z1wKvUXRsU6zi+H16Him80TrYUn4yQRwfwrzL5uZP0v32nZkO6dmnp1Z8Y3KK+Unr5IFuqnpt2mmV/b0daA9BXruR60hmKpYxGOHkIsUL6IVhf7Cf+PtBxHGzSNe5ArQwgzCLvHCLU2NRbBCdy8SiIkNz/qNJQjuaAaex1DdjrZbt3cbHQQ4bSUQjwX/qf5QO1sdgKDt98OAgO+sI7e4LsvUcCR0KVDhYh+IEQJ+zi/XtmptrmJ5TuAU1LNg7gCy3zfxN3qf2MYAQ==",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة المدى للنقل\",\"cr_number\":\"2050730315\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"٢٤-٠٨-٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":8,\"day\":24},\"expiry_date\":{\"raw\":\"٠٨-٠٤-٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":4,\"day\":8},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.95,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"CR number read digit by digit from Arabic-Indic digits: ٢=2, ٠=0, ٥=5, ٠=0, ٧=7, ٣=3, ٠=0, ٣=3, ١=1, ٥=5, giving 2050730315. This matches the CR number in the check (2050730315), not 2050731015. The document is a slightly skewed scan but legible. The Arabic company name is printed without a Latin name. The activity field reads 'Transport'.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3863,
+   "output_tokens": 892
+  }
+ }
+}

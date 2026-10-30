@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650438335": {
+        "name": "مؤسسة التميز للنقل",
+        "name_en": "Al Tamayuz Transport Est.",
+        "status": "active",
+        "issue_date": "2025-08-21",
+        "expiry_date": "2027-09-04",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "341185788024843": {
+        "registered": true,
+        "name": "مؤسسة التميز للنقل",
+        "name_en": "Al Tamayuz Transport Est.",
+        "crNumber": "4650438335"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050730315": {
+        "name": "شركة المدى للنقل",
+        "name_en": "Al Mada Transport Company",
+        "status": "expired",
+        "issue_date": "2026-08-24",
+        "expiry_date": "2026-09-21",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "310365677799753": {
+        "registered": true,
+        "name": "شركة المدى للنقل",
+        "name_en": "Al Mada Transport Company",
+        "crNumber": "2050730315"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

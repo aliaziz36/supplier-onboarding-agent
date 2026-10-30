@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.97,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Noor Trading LLC\",\"company_name_ar\":\"شركة النور للتجارة\",\"cr_number\":\"2050694362\",\"vat_number\":null,\"iban\":\"SA2555008082041613072437\",\"account_name\":\"Al Noor Trading LLC\",\"account_number\":\"008082041613072437\",\"bank_name\":\"Banque Saudi Fransi\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"17 August 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":8,\"day\":17},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4036,
+   "output_tokens": 294
+  }
+ }
+}

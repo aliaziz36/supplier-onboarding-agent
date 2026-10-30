@@ -1,0 +1,45 @@
+{
+ "purpose": "agent:demo_3_gulf_steel_bank_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.07,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Wd4hSSUWZ2Rpdy49vQgd6E",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_3_gulf_steel_bank_mismatch",
+     "reason": "Bank letter account holder does not match the registering company; possible bank detail fraud.",
+     "evidence": [
+      "bank_name_matches_cr failed: bank letter account holder 'Desert Bloom Trading Co.' vs company 'Gulf Steel Fabrication Co.'",
+      "Bank letter IBAN SA2045957551313735379907 (Saudi Awwal Bank) carries the same CR number 4030888539 as the other documents",
+      "VAT, CR and GOSI documents all name Gulf Steel Fabrication Co.",
+      "16 other checks passed",
+      "Sender: reem@gulfsteel-fab.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_016wz41e8nkFFwsdeJip1aks",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_3_gulf_steel_bank_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4511,
+   "output_tokens": 396
+  }
+ }
+}

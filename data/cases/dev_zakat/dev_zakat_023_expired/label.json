@@ -1,0 +1,102 @@
+{
+  "case_id": "dev_zakat_023_expired",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "name_variant",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Contracting Est.",
+      "company_name_ar": "مؤسسة البيان للمقاولات",
+      "cr_number": "4650963435",
+      "expiry_date": "2028-06-05"
+    },
+    "zakat_cert.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Contracting Est.",
+      "company_name_ar": "مؤسسة البيان للمقاولات",
+      "cr_number": "4650963435",
+      "expiry_date": "2028-05-08"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Contracting Est.",
+      "company_name_ar": "مؤسسة البيان للمقاولات",
+      "cr_number": "4650963435",
+      "expiry_date": "2027-05-30"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "AL BAYAN CONTRACTING EST.",
+      "company_name_ar": "مؤسسة البيان للمقاولات",
+      "cr_number": "4650963435",
+      "expiry_date": "2026-10-10",
+      "vat_number": "366206599331953"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650963435",
+      "expiry_date": null,
+      "iban": "SA3580341605162182526658",
+      "account_name": "AL BAYAN CONTRACTING EST."
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "vat_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "vat_certificate expired on 2026-10-10.",
+  "expected_fields": {
+    "company_name": "Al Bayan Contracting Est.",
+    "company_name_ar": "مؤسسة البيان للمقاولات",
+    "cr_number": "4650963435",
+    "vat_number": "366206599331953",
+    "iban": "SA3580341605162182526658",
+    "account_name": "AL BAYAN CONTRACTING EST.",
+    "expiry": {
+      "commercial_registration": "2028-06-05",
+      "vat_certificate": "2026-10-10",
+      "gosi_certificate": "2027-05-30",
+      "zakat_certificate": "2028-05-08"
+    }
+  }
+}

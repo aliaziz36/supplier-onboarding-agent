@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030464140": {
+        "name": "مؤسسة درة للتجارة",
+        "name_en": "Durrah Trading Est.",
+        "status": "active",
+        "issue_date": "2025-11-22",
+        "expiry_date": "2027-08-30",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "311727330311103": {
+        "registered": true,
+        "name": "مؤسسة درة للتجارة",
+        "name_en": "Durrah Trading Est.",
+        "crNumber": "4030464140"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

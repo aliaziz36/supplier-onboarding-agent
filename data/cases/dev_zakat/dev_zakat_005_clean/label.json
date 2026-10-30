@@ -1,0 +1,99 @@
+{
+  "case_id": "dev_zakat_005_clean",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Catering LLC",
+      "company_name_ar": "شركة عسير للإعاشة",
+      "cr_number": "4650629137",
+      "expiry_date": "2027-04-27"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650629137",
+      "expiry_date": null,
+      "iban": "SA6060894301852834448527",
+      "account_name": "Asir Catering LLC"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Catering LLC",
+      "company_name_ar": "شركة عسير للإعاشة",
+      "cr_number": "4650629137",
+      "expiry_date": "2027-04-07"
+    },
+    "ZATCA_zakat.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Catering LLC",
+      "company_name_ar": "شركة عسير للإعاشة",
+      "cr_number": "4650629137",
+      "expiry_date": "2027-09-17"
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Catering LLC",
+      "company_name_ar": "شركة عسير للإعاشة",
+      "cr_number": "4650629137",
+      "expiry_date": "2027-04-09",
+      "vat_number": "302858733577363"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Asir Catering LLC",
+    "company_name_ar": "شركة عسير للإعاشة",
+    "cr_number": "4650629137",
+    "vat_number": "302858733577363",
+    "iban": "SA6060894301852834448527",
+    "account_name": "Asir Catering LLC",
+    "expiry": {
+      "commercial_registration": "2027-04-27",
+      "vat_certificate": "2027-04-09",
+      "gosi_certificate": "2027-04-07",
+      "zakat_certificate": "2027-09-17"
+    }
+  }
+}

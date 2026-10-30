@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030236038": {
+        "name": "مؤسسة المنار لحلول تقنية المعلومات",
+        "name_en": "Al Manar IT Solutions Est.",
+        "status": "active",
+        "issue_date": "2025-07-22",
+        "expiry_date": "2027-04-15",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "370556109281233": {
+        "registered": true,
+        "name": "مؤسسة المنار لحلول تقنية المعلومات",
+        "name_en": "Al Manar IT Solutions Est.",
+        "crNumber": "4030236038"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

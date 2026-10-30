@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_zakat_025_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.3,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_015CCzw4Y35KzkKW9Tt4VAtK",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_025_missing"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4210,
+   "output_tokens": 60
+  }
+ }
+}

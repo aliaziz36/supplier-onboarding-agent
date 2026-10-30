@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_029_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.32,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01TTfNnqyQJUusX4ZmgybjGS",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_029_missing",
+     "kind": "request_fix",
+     "subject": "Additional documents needed - Al Safwa Logistics LLC",
+     "body": "Dear Lama,\n\nThank you for your registration. Two documents are missing:\n- bank_letter: not received. Please send a bank letter showing your IBAN and account name.\n- zakat_certificate: not received. Please send your current Zakat certificate.\n\nPlease reply with copies of both and we will continue.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "bank_letter",
+      "zakat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01RUvP7YPJUhuNzkvEJY1Y42",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_029_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4139,
+   "output_tokens": 373
+  }
+ }
+}

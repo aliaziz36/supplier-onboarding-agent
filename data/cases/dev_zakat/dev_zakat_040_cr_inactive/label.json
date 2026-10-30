@@ -1,0 +1,101 @@
+{
+  "case_id": "dev_zakat_040_cr_inactive",
+  "split": "dev_zakat_040",
+  "kind": "onboarding",
+  "scenario": "cr_inactive",
+  "perturbations": [
+    "name_variant"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Qimam Printing Co.",
+      "company_name_ar": "شركة قمم للطباعة",
+      "cr_number": "1010001128",
+      "expiry_date": "2027-05-04"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Qimam Printing Co.",
+      "company_name_ar": "شركة قمم للطباعة",
+      "cr_number": "1010001128",
+      "expiry_date": "2027-07-12"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010001128",
+      "expiry_date": null,
+      "iban": "SA6680758100269331278059",
+      "account_name": "Qimam Printing Company"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Qimam Printing Company",
+      "company_name_ar": null,
+      "cr_number": "1010001128",
+      "expiry_date": "2028-09-11",
+      "vat_number": "340365453261513"
+    },
+    "zakat_cert.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Qimam Printing Co.",
+      "company_name_ar": "شركة قمم للطباعة",
+      "cr_number": "1010001128",
+      "expiry_date": "2027-08-02"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "cr_not_active"
+  ],
+  "fraud": true,
+  "reason": "CR is cancelled in the registry.",
+  "expected_fields": {
+    "company_name": "Qimam Printing Co.",
+    "company_name_ar": "شركة قمم للطباعة",
+    "cr_number": "1010001128",
+    "vat_number": "340365453261513",
+    "iban": "SA6680758100269331278059",
+    "account_name": "Qimam Printing Company",
+    "expiry": {
+      "commercial_registration": "2027-07-12",
+      "vat_certificate": "2028-09-11",
+      "gosi_certificate": "2027-05-04",
+      "zakat_certificate": "2027-08-02"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650629137": {
+        "name": "شركة عسير للإعاشة",
+        "name_en": "Asir Catering LLC",
+        "status": "active",
+        "issue_date": "2026-01-01",
+        "expiry_date": "2027-04-27",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "302858733577363": {
+        "registered": true,
+        "name": "شركة عسير للإعاشة",
+        "name_en": "Asir Catering LLC",
+        "crNumber": "4650629137"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_9687.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.31,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Bayan Medical Supplies Est.\",\"company_name_ar\":\"مؤسسة البيان للمستلزمات الطبية\",\"cr_number\":\"4030718594\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"251658936\",\"nitaqat_band\":\"High Green\",\"issue_date\":{\"raw\":\"1446/11/26 AH\",\"calendar\":\"hijri\",\"year\":1446,\"month\":11,\"day\":26},\"expiry_date\":{\"raw\":\"1449/12/15 AH\",\"calendar\":\"hijri\",\"year\":1449,\"month\":12,\"day\":15},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 321
+  }
+ }
+}

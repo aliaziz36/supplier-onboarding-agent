@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_006_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.64,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01KLZPU1MTsdbHjEmHG1ci86",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_006_clean",
+     "kind": "request_fix",
+     "subject": "Missing document: Zakat certificate",
+     "body": "Dear Lama,\n\nThank you for sending your registration documents. One document is missing: the Zakat certificate (not received). Please reply to this email with a valid copy and we will complete your registration.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "zakat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01VmoQ4rsmsg7wnxPLZ2QDLg",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_006_clean",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4385,
+   "output_tokens": 322
+  }
+ }
+}

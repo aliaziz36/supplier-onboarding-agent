@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051304493": {
+        "name": "شركة الصفوة للمستلزمات الطبية",
+        "name_en": "Al Safwa Medical Supplies Co.",
+        "status": "active",
+        "issue_date": "2025-05-31",
+        "expiry_date": "2027-11-15",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "360756312806203": {
+        "registered": true,
+        "name": "شركة الصفوة للمستلزمات الطبية",
+        "name_en": "Al Safwa Medical Supplies Co.",
+        "crNumber": "2051304493"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

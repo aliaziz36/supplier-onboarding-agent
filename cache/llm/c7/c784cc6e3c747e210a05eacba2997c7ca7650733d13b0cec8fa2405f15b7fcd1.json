@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_GOSI_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.56,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة زهرة الصحراء لخدمات النظافة\",\"cr_number\":\"2050177763\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"868344978\",\"nitaqat_band\":\"High Green\",\"issue_date\":{\"raw\":\"١٣/٠٦/٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":6,\"day\":13},\"expiry_date\":{\"raw\":\"١٧/٠٦/٢٠٢٨\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":6,\"day\":17},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3984,
+   "output_tokens": 323
+  }
+ }
+}

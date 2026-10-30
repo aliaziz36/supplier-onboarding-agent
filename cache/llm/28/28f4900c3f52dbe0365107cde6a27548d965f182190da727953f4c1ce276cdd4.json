@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_GOSI_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.27,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Faris IT Solutions Est.\",\"company_name_ar\":\"مؤسسة الفارس لحلول تقنية المعلومات\",\"cr_number\":\"4030404894\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"702493642\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"2025-05-21\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":5,\"day\":21},\"expiry_date\":{\"raw\":\"2028-03-18\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":3,\"day\":18},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 319
+  }
+ }
+}

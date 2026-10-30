@@ -1,0 +1,99 @@
+{
+  "case_id": "dev_zakat_012_clean",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "hijri"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "zakat_certificate.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Desert Bloom Logistics Est.",
+      "company_name_ar": "مؤسسة زهرة الصحراء للخدمات اللوجستية",
+      "cr_number": "4030905111",
+      "expiry_date": "2028-08-30"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030905111",
+      "expiry_date": null,
+      "iban": "SA4720540851529461998796",
+      "account_name": "Desert Bloom Logistics Est."
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Desert Bloom Logistics Est.",
+      "company_name_ar": "مؤسسة زهرة الصحراء للخدمات اللوجستية",
+      "cr_number": "4030905111",
+      "expiry_date": "2028-01-20",
+      "vat_number": "345348050126533"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Desert Bloom Logistics Est.",
+      "company_name_ar": "مؤسسة زهرة الصحراء للخدمات اللوجستية",
+      "cr_number": "4030905111",
+      "expiry_date": "2027-03-25"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Desert Bloom Logistics Est.",
+      "company_name_ar": "مؤسسة زهرة الصحراء للخدمات اللوجستية",
+      "cr_number": "4030905111",
+      "expiry_date": "2028-08-04"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Desert Bloom Logistics Est.",
+    "company_name_ar": "مؤسسة زهرة الصحراء للخدمات اللوجستية",
+    "cr_number": "4030905111",
+    "vat_number": "345348050126533",
+    "iban": "SA4720540851529461998796",
+    "account_name": "Desert Bloom Logistics Est.",
+    "expiry": {
+      "commercial_registration": "2027-03-25",
+      "vat_certificate": "2028-01-20",
+      "gosi_certificate": "2028-08-04",
+      "zakat_certificate": "2028-08-30"
+    }
+  }
+}

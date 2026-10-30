@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:dev_zakat_035_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.51,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_013MHqtWrg2w3FANxR3MK8QQ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_035_bank_name_mismatch",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3428,
+   "output_tokens": 93
+  }
+ }
+}

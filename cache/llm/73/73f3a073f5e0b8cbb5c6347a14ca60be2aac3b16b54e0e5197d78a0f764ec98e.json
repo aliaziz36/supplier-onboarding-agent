@@ -1,0 +1,49 @@
+{
+ "purpose": "agent:dev_010_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.94,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSjQYKEAgTGAI4AUIIdGhpbmtpbmcSDO5KkhaNyBpenIx3eBoMM88yRc30aMmZaT1UIjBBdd4BPq/vMMD3K0p/hNIwxGjHVf8tG6SKNH9xmZ2/KcuLD05WPtaWEb5CmpclaSYqqgUxDQI3SOZC6r4mm04eRYq2HEWvIv1pUOAT+lBAuqWwwPHc87XUvtBaQvIQoxQUqP1gCkOIm4w9r5FTPDyvL5N+xzyJbqjagmUusj2qiqQZbI31vfE5b6zoJzCma4KJJV86xguznEgTn7qEQBhz3kEtObdlAVueVsjWEDPu1AhTSrm1s4stf/aPwzbiDIxDogBL/bOGxV8SkdrE9Ypwg8Jb6Uo/tDBcEWNAolyZSjA0P9Nbb7SyXpt2rvuJiUH2untjIriW1xlYwAc2jNr/3spirlUll82PrQ9GCh+LdwRn71VzoXpbOBrRSaOFYEim3kpICzisPEDt44zhhSdcMiGV1lscTrv4a+XdUhSl/fz6uRMzVOVHqdm/BqxKkd8BNeo9Pyojd+Yhg9LLqhGvJTEdPCWB6DvA+xtWFQi431/CiAh9HPUws6wGjwJLeBak/0gUftEhqBSCE4n3mKHNl+SYBu+IyqpkpDEvCTwYsiCtcd5qj/+2AWFT88RFEW0Jf4HZgzspyVfQNwTG2hXzcS/N8SrzpULofIuprgcKGTeSW1UcBi6yYqmCgQMKROD2dWkLnetAokcPQ66YpTNBNJ1pAateMv4hYid8buYYMk1f5cMLHm3GGcS+Wo0w6k2+Cmmx06fX9fnocU22eEXaSxAK9fSVJtUy1vYfbn9Y9uTRt4SGAAMbFop0MKviS8YbHpZ93fRHnFo606r8M0X3zkH35aBKwlYlKi5HiZ2HmElAenlwwt5sAGkucAycBTVMe1nnH09adh4pYEH7orTnxC5IxsEOeOTAAu6AoTe7oLtcqLRTt8oz3CagXgPEmw68Za3QH+Ikh2MyNP972EJjDJ0ZLsp1qV6swVM3ZLaSU8yQFxapbONfhJMiQISLPH5uMvemZhvY8koE4clCGAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01Ni5NxLbfMUYbCrxuu7hyNT",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_010_clean",
+     "reason": "CR number mismatch across documents; unclear key value, so onboarding is held.",
+     "evidence": [
+      "Commercial registration doc CR: 2050054588",
+      "VAT certificate, GOSI certificate and bank letter CR: 2050554588",
+      "Names otherwise match (Al Hilal Contracting / شركة الهلال للمقاولات); bank holder matches",
+      "Registry and VAT lookups not yet run because the CR number is ambiguous"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01FBYjx7SLSDn5qtgVSZ1CVD",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_010_clean",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4164,
+   "output_tokens": 380
+  }
+ }
+}

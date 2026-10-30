@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010532367": {
+        "name": "شركة نجمة الخليج للتجارة",
+        "name_en": "Al Khaleej Star Trading Co.",
+        "status": "active",
+        "issue_date": "2026-06-24",
+        "expiry_date": "2028-04-15",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "389469575199023": {
+        "registered": true,
+        "name": "شركة نجمة الخليج للتجارة",
+        "name_en": "Al Khaleej Star Trading Co.",
+        "crNumber": "1010532367"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

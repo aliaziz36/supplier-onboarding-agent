@@ -1,0 +1,104 @@
+{
+  "case_id": "dev_zakat_003_clean",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "date_format",
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "zakat.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Tihama Contracting Co.",
+      "company_name_ar": "شركة تهامة للمقاولات",
+      "cr_number": "4030969371",
+      "expiry_date": "2027-10-14"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030969371",
+      "expiry_date": null,
+      "iban": "SA3530563416858783101222",
+      "account_name": "Tihama Contracting Co."
+    },
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Tihama Contracting Co.",
+      "company_name_ar": "شركة تهامة للمقاولات",
+      "cr_number": "4030969371",
+      "expiry_date": "2027-08-31"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Tihama Contracting Co.",
+      "company_name_ar": "شركة تهامة للمقاولات",
+      "cr_number": "4030969371",
+      "expiry_date": "2027-05-11"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Tihama Contracting Co.",
+      "company_name_ar": "شركة تهامة للمقاولات",
+      "cr_number": "4030969371",
+      "expiry_date": "2027-04-02",
+      "vat_number": "364870596402353"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Tihama Contracting Co.",
+    "company_name_ar": "شركة تهامة للمقاولات",
+    "cr_number": "4030969371",
+    "vat_number": "364870596402353",
+    "iban": "SA3530563416858783101222",
+    "account_name": "Tihama Contracting Co.",
+    "expiry": {
+      "commercial_registration": "2027-05-11",
+      "vat_certificate": "2027-04-02",
+      "gosi_certificate": "2027-08-31",
+      "zakat_certificate": "2027-10-14"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_account_confirmation.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.28,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Asir Transport LLC\",\"company_name_ar\":null,\"cr_number\":\"2050135000\",\"vat_number\":null,\"iban\":\"SA2555398754283433514171\",\"account_name\":\"Asir Transport LLC\",\"account_number\":\"398754283433514171\",\"bank_name\":\"Banque Saudi Fransi\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-05-06\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":5,\"day\":6},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.95,\"cr_number\":0.97,\"vat_number\":1,\"iban\":0.95,\"account_name\":0.95,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3765,
+   "output_tokens": 286
+  }
+ }
+}

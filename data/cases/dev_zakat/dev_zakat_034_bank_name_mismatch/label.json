@@ -1,0 +1,101 @@
+{
+  "case_id": "dev_zakat_034_bank_name_mismatch",
+  "split": "dev_zakat_034_bank",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [
+    "scanned"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_4638.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Faris IT Solutions Est.",
+      "company_name_ar": "مؤسسة الفارس لحلول تقنية المعلومات",
+      "cr_number": "4030404894",
+      "expiry_date": "2028-04-04"
+    },
+    "zakat.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Faris IT Solutions Est.",
+      "company_name_ar": "مؤسسة الفارس لحلول تقنية المعلومات",
+      "cr_number": "4030404894",
+      "expiry_date": "2028-09-19"
+    },
+    "scan_5791.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Faris IT Solutions Est.",
+      "company_name_ar": "مؤسسة الفارس لحلول تقنية المعلومات",
+      "cr_number": "4030404894",
+      "expiry_date": "2027-09-05",
+      "vat_number": "374424452467723"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030404894",
+      "expiry_date": null,
+      "iban": "SA0680019350840619520539",
+      "account_name": "Wadi Logistics Est."
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Faris IT Solutions Est.",
+      "company_name_ar": "مؤسسة الفارس لحلول تقنية المعلومات",
+      "cr_number": "4030404894",
+      "expiry_date": "2028-03-18"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Wadi Logistics Est.' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Al Faris IT Solutions Est.",
+    "company_name_ar": "مؤسسة الفارس لحلول تقنية المعلومات",
+    "cr_number": "4030404894",
+    "vat_number": "374424452467723",
+    "iban": "SA0680019350840619520539",
+    "account_name": "Wadi Logistics Est.",
+    "expiry": {
+      "commercial_registration": "2028-04-04",
+      "vat_certificate": "2027-09-05",
+      "gosi_certificate": "2028-03-18",
+      "zakat_certificate": "2028-09-19"
+    }
+  }
+}

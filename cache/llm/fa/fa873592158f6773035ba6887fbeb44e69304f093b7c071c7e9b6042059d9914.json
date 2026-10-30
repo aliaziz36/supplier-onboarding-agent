@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:dev_zakat_049_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.09,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01RyR7KEuZyzYt4rFpDipvJt",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_049_bank_change_genuine",
+     "vendor_id": "V-2050392755",
+     "new_iban": "SA3020272767409481918895",
+     "account_name": "Najd Office Supplies Est.",
+     "reason": "Bank change request; checks low risk, but policy requires human callback to phone on file (+966571633718) before applying."
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Qgnd2nxegSsWLu2tACRwva",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_049_bank_change_genuine",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3607,
+   "output_tokens": 309
+  }
+ }
+}

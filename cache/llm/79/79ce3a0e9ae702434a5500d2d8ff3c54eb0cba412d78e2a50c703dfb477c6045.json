@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:dev_zakat_046_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.7,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01QsvooWA3k7DJ95jFbZXtP8",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_046_bank_change_spoofed",
+     "vendor_id": "V-2051227507",
+     "new_iban": "SA4080331314851199538441",
+     "account_name": "Faisal Al-Harbi"
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3255,
+   "output_tokens": 165
+  }
+ }
+}

@@ -39,7 +39,8 @@ from app.config import CASES_DIR, load_policy
 from app.saudi import BANKS, make_iban, to_arabic_digits, to_hijri
 
 BUYER_EMAIL = "onboarding@buyer-company.sa"
-REF_DATE = {"dev": date(2026, 10, 31), "heldout": date(2026, 10, 31), "demo": date(2026, 10, 31)}
+REF_DATE = {"dev": date(2026, 10, 31), "dev_zakat": date(2026, 10, 31), "heldout": date(2026, 10, 31),
+            "demo": date(2026, 10, 31)}
 
 DOC_TYPES = ["commercial_registration", "vat_certificate", "bank_letter", "gosi_certificate"]
 EXPIRING_TYPES = ["commercial_registration", "vat_certificate", "gosi_certificate"]
@@ -576,7 +577,7 @@ class Gen:
         }
 
     # ---- onboarding scenarios
-    def onboarding(self, case_id, scenario, sup=None, perts=None):
+    def onboarding(self, case_id, scenario, sup=None, perts=None, missing=None):
         rng = self.rng
         sup = sup or new_supplier(rng, self.used_names)
         perts = self.pick_perts() if perts is None else perts
@@ -597,7 +598,7 @@ class Gen:
             sup.issue[t] = sup.expiry[t] - timedelta(days=365)
             decision, requested, reason = "request_fix", [t], f"{t} expired on {sup.expiry[t]}."
         elif scenario == "missing":
-            t = rng.choice(doc_types)
+            t = missing or rng.choice(doc_types)
             doc_types.remove(t)
             decision, requested, reason = "request_fix", [t], f"{t} not provided."
         elif scenario == "unreadable":
@@ -751,6 +752,8 @@ def generate_split(split: str, seed: int, policy: dict) -> list[CaseOut]:
             if scenario.startswith("bank_change"):
                 variant = SPOOF_VARIANTS[i % len(SPOOF_VARIANTS)] if scenario == "bank_change_spoofed" else "genuine"
                 cases.append(g.bank_change(cid, scenario, variant))
+            elif scenario == "missing" and "zakat_certificate" in policy["required_documents"] and i == 0:
+                cases.append(g.onboarding(cid, scenario, missing="zakat_certificate"))
             elif scenario == "expiring":
                 cases.append(g.expiring(cid, days=g.rng.randint(3, 28)))
             else:
@@ -835,7 +838,7 @@ def write_case(case: CaseOut, out_dir: Path):
         (rd / "truth.json").write_text(json.dumps({a[0]: a[3] for a in rep["attachments"]}, ensure_ascii=False, indent=2))
     (d / "world.json").write_text(json.dumps(case.world, ensure_ascii=False, indent=2, default=str))
     label = {
-        "case_id": case.case_id, "split": case.case_id.split("_")[0], "kind": case.kind,
+        "case_id": case.case_id, "split": case.case_id.rsplit("_", 2)[0], "kind": case.kind,
         "scenario": case.scenario, "perturbations": case.perturbations, "as_of": str(case.as_of),
         "attachments": {a[0]: a[3] for a in case.attachments},
         **case.label,
@@ -845,7 +848,8 @@ def write_case(case: CaseOut, out_dir: Path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--split", choices=["dev", "heldout", "demo"], required=True)
+    ap.add_argument("--split", choices=["dev", "dev_zakat", "heldout", "demo"], required=True,
+                    help="dev_zakat = dev settings under the policy given by POLICY_PATH (robustness test)")
     ap.add_argument("--seed", type=int, default=1)
     ap.add_argument("--limit", type=int, default=0, help="only write the first N cases")
     args = ap.parse_args()

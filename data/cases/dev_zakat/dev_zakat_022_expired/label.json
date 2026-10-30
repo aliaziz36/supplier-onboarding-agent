@@ -1,0 +1,101 @@
+{
+  "case_id": "dev_zakat_022_expired",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "scanned"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Contracting Co.",
+      "company_name_ar": "شركة النور للمقاولات",
+      "cr_number": "2051682977",
+      "expiry_date": "2027-06-03"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051682977",
+      "expiry_date": null,
+      "iban": "SA4930778909397764529420",
+      "account_name": "Al Noor Contracting Co."
+    },
+    "scan_9017.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Contracting Co.",
+      "company_name_ar": null,
+      "cr_number": "2051682977",
+      "expiry_date": "2027-06-12",
+      "vat_number": "387530111862763"
+    },
+    "scan_7349.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Contracting Co.",
+      "company_name_ar": "شركة النور للمقاولات",
+      "cr_number": "2051682977",
+      "expiry_date": "2026-05-01"
+    },
+    "zakat_certificate.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Contracting Co.",
+      "company_name_ar": "شركة النور للمقاولات",
+      "cr_number": "2051682977",
+      "expiry_date": "2027-09-01"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "commercial_registration"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "commercial_registration expired on 2026-05-01.",
+  "expected_fields": {
+    "company_name": "Al Noor Contracting Co.",
+    "company_name_ar": "شركة النور للمقاولات",
+    "cr_number": "2051682977",
+    "vat_number": "387530111862763",
+    "iban": "SA4930778909397764529420",
+    "account_name": "Al Noor Contracting Co.",
+    "expiry": {
+      "commercial_registration": "2026-05-01",
+      "vat_certificate": "2027-06-12",
+      "gosi_certificate": "2027-06-03",
+      "zakat_certificate": "2027-09-01"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_ZATCA_VAT.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.65,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Manar IT Solutions Est.\",\"company_name_ar\":null,\"cr_number\":\"4030236038\",\"vat_number\":\"370556109281233\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"14/03/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":3,\"day\":14},\"expiry_date\":{\"raw\":\"14/03/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":3,\"day\":14},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3913,
+   "output_tokens": 292
+  }
+ }
+}

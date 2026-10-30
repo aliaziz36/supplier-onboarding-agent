@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050516202": {
+        "name": "مؤسسة الفارس للتجارة",
+        "name_en": "Al Faris Trading Est.",
+        "status": "active",
+        "issue_date": "2026-01-31",
+        "expiry_date": "2027-02-28",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "304450122353273": {
+        "registered": true,
+        "name": "مؤسسة الفارس للتجارة",
+        "name_en": "Al Faris Trading Est.",
+        "crNumber": "2050516202"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050516202",
+    "name": "Al Faris Trading Est.",
+    "name_ar": "مؤسسة الفارس للتجارة",
+    "cr_number": "2050516202",
+    "vat_number": "304450122353273",
+    "iban": "SA3445652492709210264830",
+    "bank_code": "45",
+    "account_name": "Al Faris Trading Est.",
+    "email": "sara@alfaris-trading.com.sa",
+    "email_domain": "alfaris-trading.com.sa",
+    "phone": "+966598886478",
+    "documents": {
+      "commercial_registration": "2027-02-28",
+      "vat_certificate": "2027-05-12",
+      "gosi_certificate": "2026-11-16"
+    }
+  }
+}

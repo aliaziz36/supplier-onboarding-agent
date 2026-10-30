@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650616894": {
+        "name": "شركة روابي لخدمات النظافة",
+        "name_en": "Rawabi Cleaning Services Co.",
+        "status": "active",
+        "issue_date": "2026-01-08",
+        "expiry_date": "2027-12-29",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "364570870649523": {
+        "registered": true,
+        "name": "شركة روابي لخدمات النظافة",
+        "name_en": "Rawabi Cleaning Services Co.",
+        "crNumber": "4650616894"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050650889": {
+        "name": "شركة الجزيرة للخدمات الكهربائية",
+        "name_en": "Al Jazeera Electrical Services LLC",
+        "status": "active",
+        "issue_date": "2025-07-02",
+        "expiry_date": "2027-06-27",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "395790328921843": {
+        "registered": true,
+        "name": "شركة الجزيرة للخدمات الكهربائية",
+        "name_en": "Al Jazeera Electrical Services LLC",
+        "crNumber": "2050650889"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

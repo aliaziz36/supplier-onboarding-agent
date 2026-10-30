@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4650226953": {
+        "name": "شركة الصفوة للخدمات اللوجستية",
+        "name_en": "Al Safwa Logistics Company",
+        "status": "active",
+        "issue_date": "2025-07-20",
+        "expiry_date": "2028-03-06",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "397203001656323": {
+        "registered": true,
+        "name": "شركة الصفوة للخدمات اللوجستية",
+        "name_en": "Al Safwa Logistics Company",
+        "crNumber": "4650226953"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4650226953",
+    "name": "Al Safwa Logistics Company",
+    "name_ar": "شركة الصفوة للخدمات اللوجستية",
+    "cr_number": "4650226953",
+    "vat_number": "397203001656323",
+    "iban": "SA6910603061558926815707",
+    "bank_code": "10",
+    "account_name": "Al Safwa Logistics Company",
+    "email": "nora@alsafwa-logistics.com.sa",
+    "email_domain": "alsafwa-logistics.com.sa",
+    "phone": "+966568169960",
+    "documents": {
+      "commercial_registration": "2028-03-06",
+      "vat_certificate": "2026-11-21",
+      "gosi_certificate": "2027-06-11"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_account_confirmation.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.43,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Manar Contracting LLC\",\"company_name_ar\":\"شركة المنار للمقاولات\",\"cr_number\":\"2050339736\",\"vat_number\":null,\"iban\":\"SA2705169899605703408148\",\"account_name\":\"Al Manar Contracting LLC\",\"account_number\":\"169899605703408148\",\"bank_name\":\"Alinma Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"27 September 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":9,\"day\":27},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.97,\"vat_number\":1,\"iban\":0.95,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Scan is slightly skewed but legible. Letter date is 27 September 2026.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 325
+  }
+ }
+}

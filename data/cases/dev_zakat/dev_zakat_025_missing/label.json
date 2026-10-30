@@ -1,0 +1,88 @@
+{
+  "case_id": "dev_zakat_025_missing",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [
+    "scanned"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star Printing Company",
+      "company_name_ar": null,
+      "cr_number": "2050012715",
+      "expiry_date": "2028-06-12",
+      "vat_number": "344842182707793"
+    },
+    "scan_1972.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star Printing Company",
+      "company_name_ar": "شركة نجمة الخليج للطباعة",
+      "cr_number": "2050012715",
+      "expiry_date": "2028-08-12"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050012715",
+      "expiry_date": null,
+      "iban": "SA6160852083491740480961",
+      "account_name": "Al Khaleej Star Printing Company"
+    },
+    "scan_1030.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star Printing Company",
+      "company_name_ar": "شركة نجمة الخليج للطباعة",
+      "cr_number": "2050012715",
+      "expiry_date": "2027-10-14"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "commercial_registration"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "commercial_registration not provided.",
+  "expected_fields": {
+    "company_name": "Al Khaleej Star Printing Company",
+    "company_name_ar": "شركة نجمة الخليج للطباعة",
+    "cr_number": "2050012715",
+    "vat_number": "344842182707793",
+    "iban": "SA6160852083491740480961",
+    "account_name": "Al Khaleej Star Printing Company",
+    "expiry": {
+      "commercial_registration": "2027-08-24",
+      "vat_certificate": "2028-06-12",
+      "gosi_certificate": "2028-08-12",
+      "zakat_certificate": "2027-10-14"
+    }
+  }
+}

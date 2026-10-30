@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_019_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.53,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01VmWnsH35LdxDWnocQdJ1yF",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_019_expired",
+     "kind": "request_fix",
+     "subject": "Updated GOSI certificate needed - Al Ofoq Printing Company",
+     "body": "Dear Sara,\n\nThank you for your registration documents. Your GOSI certificate expired on 2026-05-10. Please reply with a current, valid copy. All other documents were received and are fine.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01JuXkL7f2MBkRorsUarBxng",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_019_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4361,
+   "output_tokens": 337
+  }
+ }
+}

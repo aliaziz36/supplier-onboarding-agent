@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_zakat_025_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.59,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01LJAs6W6Es3yaAMfMD6NaPj",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_025_missing",
+     "kind": "request_fix",
+     "subject": "Missing document: Commercial Registration",
+     "body": "Dear Sara,\n\nThank you for your registration. We received your VAT, GOSI, Zakat and bank documents, but the commercial registration certificate is missing. Please reply with a copy of it so we can complete onboarding.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "commercial_registration"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_0181hSrVxX14S3WhgD6mYiD5",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_025_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4391,
+   "output_tokens": 341
+  }
+ }
+}

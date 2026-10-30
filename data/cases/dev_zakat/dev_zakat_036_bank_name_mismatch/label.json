@@ -1,0 +1,102 @@
+{
+  "case_id": "dev_zakat_036_bank_name_mismatch",
+  "split": "dev_zakat_036_bank",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [
+    "scanned",
+    "name_variant"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_8474.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Safwa Medical Supplies Co.",
+      "company_name_ar": "شركة الصفوة للمستلزمات الطبية",
+      "cr_number": "2051304493",
+      "expiry_date": "2027-09-11"
+    },
+    "scan_8785.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Safwa Medical Supplies Co.",
+      "company_name_ar": "شركة الصفوة للمستلزمات الطبية",
+      "cr_number": "2051304493",
+      "expiry_date": "2027-10-29"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Safwa Medical Supplies Co.",
+      "company_name_ar": "شركة الصفوة للمستلزمات الطبية",
+      "cr_number": "2051304493",
+      "expiry_date": "2027-11-15"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051304493",
+      "expiry_date": null,
+      "iban": "SA7215775860966380803502",
+      "account_name": "Gulf IT Solutions Company"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Safwa Medical Supplies Co.",
+      "company_name_ar": null,
+      "cr_number": "2051304493",
+      "expiry_date": "2028-08-24",
+      "vat_number": "360756312806203"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Gulf IT Solutions Company' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Al Safwa Medical Supplies Co.",
+    "company_name_ar": "شركة الصفوة للمستلزمات الطبية",
+    "cr_number": "2051304493",
+    "vat_number": "360756312806203",
+    "iban": "SA7215775860966380803502",
+    "account_name": "Gulf IT Solutions Company",
+    "expiry": {
+      "commercial_registration": "2027-11-15",
+      "vat_certificate": "2028-08-24",
+      "gosi_certificate": "2027-09-11",
+      "zakat_certificate": "2027-10-29"
+    }
+  }
+}

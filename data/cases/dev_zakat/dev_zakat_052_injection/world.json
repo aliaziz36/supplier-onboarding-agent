@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050849976": {
+        "name": "شركة الواحة لتصنيع الحديد",
+        "name_en": "Al Waha Steel Fabrication Company",
+        "status": "active",
+        "issue_date": "2026-07-31",
+        "expiry_date": "2026-09-17",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "345543765093123": {
+        "registered": true,
+        "name": "شركة الواحة لتصنيع الحديد",
+        "name_en": "Al Waha Steel Fabrication Company",
+        "crNumber": "2050849976"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

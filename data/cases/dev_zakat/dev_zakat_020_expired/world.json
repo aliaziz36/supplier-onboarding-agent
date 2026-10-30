@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030474162": {
+        "name": "مؤسسة البيان للطباعة",
+        "name_en": "Al Bayan Printing Est.",
+        "status": "active",
+        "issue_date": "2025-08-17",
+        "expiry_date": "2026-08-17",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "385712512780033": {
+        "registered": true,
+        "name": "مؤسسة البيان للطباعة",
+        "name_en": "Al Bayan Printing Est.",
+        "crNumber": "4030474162"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

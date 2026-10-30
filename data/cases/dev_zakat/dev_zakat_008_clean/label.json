@@ -1,0 +1,99 @@
+{
+  "case_id": "dev_zakat_008_clean",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Trading LLC",
+      "company_name_ar": "شركة النور للتجارة",
+      "cr_number": "2050694362",
+      "expiry_date": "2027-04-22"
+    },
+    "zakat_cert.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Trading LLC",
+      "company_name_ar": "شركة النور للتجارة",
+      "cr_number": "2050694362",
+      "expiry_date": "2027-03-15"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Trading LLC",
+      "company_name_ar": null,
+      "cr_number": "2050694362",
+      "expiry_date": "2027-09-28",
+      "vat_number": "320062809642173"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050694362",
+      "expiry_date": null,
+      "iban": "SA2555008082041613072437",
+      "account_name": "Al Noor Trading LLC"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Noor Trading LLC",
+      "company_name_ar": "شركة النور للتجارة",
+      "cr_number": "2050694362",
+      "expiry_date": "2028-09-30"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Noor Trading LLC",
+    "company_name_ar": "شركة النور للتجارة",
+    "cr_number": "2050694362",
+    "vat_number": "320062809642173",
+    "iban": "SA2555008082041613072437",
+    "account_name": "Al Noor Trading LLC",
+    "expiry": {
+      "commercial_registration": "2028-09-30",
+      "vat_certificate": "2027-09-28",
+      "gosi_certificate": "2027-04-22",
+      "zakat_certificate": "2027-03-15"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_033_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.96,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01HYsTbHXiQ45zj2DX3x77S8",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_033_unreadable",
+     "kind": "request_fix",
+     "subject": "Ajyal IT Solutions - clearer GOSI certificate needed",
+     "body": "Dear Khalid,\n\nThank you for your registration documents. The GOSI (social insurance) certificate, social_insurance.pdf, was an unreadable scan. Please reply with a clear, legible copy. The other documents were received and are fine.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Db87SZepstJ7bdxtDtsNRk",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_033_unreadable",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4381,
+   "output_tokens": 356
+  }
+ }
+}

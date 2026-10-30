@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050339736": {
+        "name": "شركة المنار للمقاولات",
+        "name_en": "Al Manar Contracting LLC",
+        "status": "active",
+        "issue_date": "2026-08-25",
+        "expiry_date": "2028-08-15",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "375837146308683": {
+        "registered": true,
+        "name": "شركة المنار للمقاولات",
+        "name_en": "Al Manar Contracting LLC",
+        "crNumber": "2050339736"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

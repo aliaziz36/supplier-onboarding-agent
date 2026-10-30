@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2051921675": {
+        "name": "شركة الهلال للطباعة",
+        "name_en": "Al Hilal Printing Company",
+        "status": "active",
+        "issue_date": "2026-09-27",
+        "expiry_date": "2026-11-10",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "309770394289713": {
+        "registered": true,
+        "name": "شركة الهلال للطباعة",
+        "name_en": "Al Hilal Printing Company",
+        "crNumber": "2051921675"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2051921675",
+    "name": "Al Hilal Printing Company",
+    "name_ar": "شركة الهلال للطباعة",
+    "cr_number": "2051921675",
+    "vat_number": "309770394289713",
+    "iban": "SA2360148428051282209800",
+    "bank_code": "60",
+    "account_name": "Al Hilal Printing Company",
+    "email": "sara@alhilal-printing.com.sa",
+    "email_domain": "alhilal-printing.com.sa",
+    "phone": "+966585708817",
+    "documents": {
+      "commercial_registration": "2026-11-10",
+      "vat_certificate": "2028-08-26",
+      "gosi_certificate": "2027-07-31"
+    }
+  }
+}

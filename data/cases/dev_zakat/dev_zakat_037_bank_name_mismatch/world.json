@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010019703": {
+        "name": "شركة الأفق للتجارة",
+        "name_en": "Al Ofoq Trading LLC",
+        "status": "active",
+        "issue_date": "2025-10-29",
+        "expiry_date": "2028-04-16",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "326963994232153": {
+        "registered": true,
+        "name": "شركة الأفق للتجارة",
+        "name_en": "Al Ofoq Trading LLC",
+        "crNumber": "1010019703"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

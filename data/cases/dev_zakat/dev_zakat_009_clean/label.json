@@ -1,0 +1,103 @@
+{
+  "case_id": "dev_zakat_009_clean",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Qimam Logistics Est.",
+      "company_name_ar": "مؤسسة قمم للخدمات اللوجستية",
+      "cr_number": "1010638835",
+      "expiry_date": "2028-07-03"
+    },
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010638835",
+      "expiry_date": null,
+      "iban": "SA0310423568516529104856",
+      "account_name": "Qimam Logistics Est."
+    },
+    "zakat_certificate.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Qimam Logistics Est.",
+      "company_name_ar": "مؤسسة قمم للخدمات اللوجستية",
+      "cr_number": "1010638835",
+      "expiry_date": "2028-08-25"
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Qimam Logistics Est.",
+      "company_name_ar": null,
+      "cr_number": "1010638835",
+      "expiry_date": "2027-05-31",
+      "vat_number": "358697127889883"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Qimam Logistics Est.",
+      "company_name_ar": "مؤسسة قمم للخدمات اللوجستية",
+      "cr_number": "1010638835",
+      "expiry_date": "2028-08-28"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Qimam Logistics Est.",
+    "company_name_ar": "مؤسسة قمم للخدمات اللوجستية",
+    "cr_number": "1010638835",
+    "vat_number": "358697127889883",
+    "iban": "SA0310423568516529104856",
+    "account_name": "Qimam Logistics Est.",
+    "expiry": {
+      "commercial_registration": "2028-08-28",
+      "vat_certificate": "2027-05-31",
+      "gosi_certificate": "2028-07-03",
+      "zakat_certificate": "2028-08-25"
+    }
+  }
+}

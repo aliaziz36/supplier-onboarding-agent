@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_zakat_cert.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.03,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"zakat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Rawabi Electrical Services LLC\",\"company_name_ar\":\"شركة روابي للخدمات الكهربائية\",\"cr_number\":\"4650530277\",\"vat_number\":\"346816788410623\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-07-24\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":7,\"day\":24},\"expiry_date\":{\"raw\":\"2028-02-21\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":2,\"day\":21},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4004,
+   "output_tokens": 312
+  }
+ }
+}

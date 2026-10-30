@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_zakat_024_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.87,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01KZjQqUUQfDnbS1denTVJJh",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_024_missing",
+     "kind": "request_fix",
+     "subject": "Missing document: Zakat certificate",
+     "body": "Dear Omar,\n\nThank you for your registration documents. Your CR, VAT certificate, bank letter and GOSI certificate were received. However, the Zakat certificate is missing. Please reply with a valid, legible copy and we will continue onboarding.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "zakat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_018vMqGYrKhBy2S6xTE6SGcs",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_024_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4376,
+   "output_tokens": 352
+  }
+ }
+}

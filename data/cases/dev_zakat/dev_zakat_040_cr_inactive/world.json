@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010001128": {
+        "name": "شركة قمم للطباعة",
+        "name_en": "Qimam Printing Co.",
+        "status": "cancelled",
+        "issue_date": "2026-01-25",
+        "expiry_date": "2026-09-21",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "340365453261513": {
+        "registered": true,
+        "name": "شركة قمم للطباعة",
+        "name_en": "Qimam Printing Co.",
+        "crNumber": "1010001128"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030123303": {
+        "name": "شركة المدى للمقاولات",
+        "name_en": "Al Mada Contracting Company",
+        "status": "active",
+        "issue_date": "2026-01-27",
+        "expiry_date": "2028-03-08",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "367979102800643": {
+        "registered": true,
+        "name": "شركة المدى للمقاولات",
+        "name_en": "Al Mada Contracting Company",
+        "crNumber": "4030123303"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

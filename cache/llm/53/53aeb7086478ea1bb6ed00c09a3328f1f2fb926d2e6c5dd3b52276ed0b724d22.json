@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:dev_zakat_048_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.0,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01McdXnmDdoeuutgk1fSDS9C",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_048_bank_change_genuine",
+     "vendor_id": "V-2050808840",
+     "new_iban": "SA3205866417724085635757",
+     "account_name": "Qimam Transport Est."
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3285,
+   "output_tokens": 163
+  }
+ }
+}

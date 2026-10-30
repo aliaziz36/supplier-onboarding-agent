@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4030568197": {
+        "name": "شركة نجمة الخليج للخدمات الكهربائية",
+        "name_en": "Al Khaleej Star Electrical Services Co.",
+        "status": "active",
+        "issue_date": "2025-09-17",
+        "expiry_date": "2028-09-11",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "345367164014393": {
+        "registered": true,
+        "name": "شركة نجمة الخليج للخدمات الكهربائية",
+        "name_en": "Al Khaleej Star Electrical Services Co.",
+        "crNumber": "4030568197"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4030568197",
+    "name": "Al Khaleej Star Electrical Services Co.",
+    "name_ar": "شركة نجمة الخليج للخدمات الكهربائية",
+    "cr_number": "4030568197",
+    "vat_number": "345367164014393",
+    "iban": "SA4580061913168784802779",
+    "bank_code": "80",
+    "account_name": "Al Khaleej Star Electrical Services Co.",
+    "email": "reem@alkhaleejstar-electrical.com.sa",
+    "email_domain": "alkhaleejstar-electrical.com.sa",
+    "phone": "+966528134807",
+    "documents": {
+      "commercial_registration": "2028-09-11",
+      "vat_certificate": "2028-02-24",
+      "gosi_certificate": "2027-02-05"
+    }
+  }
+}

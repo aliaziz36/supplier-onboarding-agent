@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:dev_zakat_031_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.7,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Se9k8ckffT1rvs5VNkiWDZ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_031_unreadable",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3460,
+   "output_tokens": 88
+  }
+ }
+}

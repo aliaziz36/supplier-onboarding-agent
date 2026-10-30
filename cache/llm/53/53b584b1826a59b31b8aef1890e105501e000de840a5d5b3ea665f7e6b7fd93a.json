@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_nitaqat_gosi.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.53,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة الأفق للتجارة\",\"cr_number\":\"١٠١٠٠١٩٧٠٣\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"٤٥٦٥٩٥٦٨٩\",\"nitaqat_band\":\"Green Medium\",\"issue_date\":{\"raw\":\"٠٧-٠٨-٢٠٢٥\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":8,\"day\":7},\"expiry_date\":{\"raw\":\"٢١-١١-٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":11,\"day\":21},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"Dates are printed in DD-MM-YYYY with Arabic-Indic digits; the years 2025 and 2027 imply Gregorian.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4004,
+   "output_tokens": 393
+  }
+ }
+}

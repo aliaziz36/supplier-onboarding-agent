@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_zakat_021_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.52,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01DatznqqoJbxYou6xnhMDaZ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_021_expired"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4733,
+   "output_tokens": 60
+  }
+ }
+}

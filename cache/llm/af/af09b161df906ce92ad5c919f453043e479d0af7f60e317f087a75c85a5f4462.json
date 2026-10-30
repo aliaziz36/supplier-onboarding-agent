@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_027_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.14,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01ECXuHhu6ymsmehcGemrsJc",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_027_missing",
+     "kind": "request_fix",
+     "subject": "Missing documents for supplier registration",
+     "body": "Dear Faisal,\n\nThank you for your registration. We received your bank letter, GOSI certificate and commercial registration. To complete onboarding, please reply with:\n\n- VAT certificate: missing, not received.\n- Zakat certificate: missing, not received.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "vat_certificate",
+      "zakat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01WCzXqeYwzAXrP7PjPXx6qQ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_027_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4200,
+   "output_tokens": 351
+  }
+ }
+}

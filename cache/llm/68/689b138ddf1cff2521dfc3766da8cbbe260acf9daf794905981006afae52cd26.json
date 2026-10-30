@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:dev_zakat_043_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.91,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_019EzwzVkWf2WgNwAAtQhnJK",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_043_bank_change_spoofed",
+     "vendor_id": "V-1010152787",
+     "new_iban": "SA7730372453390974777566",
+     "account_name": "Desert Bloom Office Supplies LLC"
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3257,
+   "output_tokens": 170
+  }
+ }
+}

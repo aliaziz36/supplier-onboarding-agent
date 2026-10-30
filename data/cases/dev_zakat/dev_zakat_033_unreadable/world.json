@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050407826": {
+        "name": "شركة درة للمستلزمات المكتبية",
+        "name_en": "Durrah Office Supplies LLC",
+        "status": "active",
+        "issue_date": "2026-02-15",
+        "expiry_date": "2028-04-05",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "371841316621783": {
+        "registered": true,
+        "name": "شركة درة للمستلزمات المكتبية",
+        "name_en": "Durrah Office Supplies LLC",
+        "crNumber": "2050407826"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

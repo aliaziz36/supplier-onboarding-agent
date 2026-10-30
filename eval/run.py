@@ -143,7 +143,7 @@ def print_report(m: dict, rows: list[dict]):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--split", default="dev", choices=["dev", "demo", "heldout"])
+    ap.add_argument("--split", default="dev", choices=["dev", "dev_zakat", "demo", "heldout"])
     ap.add_argument("--mode", default="hybrid", choices=["hybrid", "rules", "model"])
     ap.add_argument("--ablate", default="", help="comma list: crossdoc,registry")
     ap.add_argument("--workers", type=int, default=6)
@@ -166,7 +166,8 @@ def main():
     m = metrics.compute(rows)
     run_id = f"{args.split}-{args.mode}{'-no-' + '-no-'.join(ablate) if ablate else ''}-{datetime.now():%m%d-%H%M%S}"
     out = {"run_id": run_id, "split": args.split, "mode": args.mode, "ablate": ablate, "model": MODEL,
-           "replay": os.getenv("REPLAY", "0"), "policy_version": policy.get("version"), "note": args.note,
+           "replay": os.getenv("REPLAY", "0"), "policy_version": policy.get("version"),
+           "policy_path": os.getenv("POLICY_PATH", "policy.yaml"), "note": args.note,
            "wall_seconds": round(time.time() - started, 1), "metrics": m, "cases": rows}
     RESULTS_DIR.mkdir(exist_ok=True)
     if not args.only:

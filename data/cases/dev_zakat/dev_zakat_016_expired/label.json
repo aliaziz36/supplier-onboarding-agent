@@ -1,0 +1,102 @@
+{
+  "case_id": "dev_zakat_016_expired",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [
+    "arabic",
+    "name_variant"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650616894",
+      "expiry_date": null,
+      "iban": "SA8315419566809910980155",
+      "account_name": "Rawabi  Cleaning Services Co."
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة روابي لخدمات النظافة",
+      "cr_number": "4650616894",
+      "expiry_date": "2026-10-05"
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة روابي لخدمات النظافة",
+      "cr_number": "4650616894",
+      "expiry_date": "2027-12-29"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Cleaning Services Co.",
+      "company_name_ar": null,
+      "cr_number": "4650616894",
+      "expiry_date": "2028-09-28",
+      "vat_number": "364570870649523"
+    },
+    "ZATCA_zakat.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Cleaning Services Co.",
+      "company_name_ar": "شركة روابي لخدمات النظافة",
+      "cr_number": "4650616894",
+      "expiry_date": "2027-09-23"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate expired on 2026-10-05.",
+  "expected_fields": {
+    "company_name": "Rawabi Cleaning Services Co.",
+    "company_name_ar": "شركة روابي لخدمات النظافة",
+    "cr_number": "4650616894",
+    "vat_number": "364570870649523",
+    "iban": "SA8315419566809910980155",
+    "account_name": "Rawabi  Cleaning Services Co.",
+    "expiry": {
+      "commercial_registration": "2027-12-29",
+      "vat_certificate": "2028-09-28",
+      "gosi_certificate": "2026-10-05",
+      "zakat_certificate": "2027-09-23"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_ZATCA_zakat.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.92,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"zakat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Rawabi Trading Est.\",\"company_name_ar\":\"مؤسسة روابي للتجارة\",\"cr_number\":\"2051280986\",\"vat_number\":\"323319298147303\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"16/03/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":3,\"day\":16},\"expiry_date\":{\"raw\":\"19/03/2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":3,\"day\":19},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3989,
+   "output_tokens": 306
+  }
+ }
+}

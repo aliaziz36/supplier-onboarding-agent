@@ -1,0 +1,90 @@
+{
+  "case_id": "dev_zakat_029_missing",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [
+    "name_variant",
+    "hijri",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Office Supplies LLC",
+      "company_name_ar": "شركة المنار للمستلزمات المكتبية",
+      "cr_number": "4650129510",
+      "expiry_date": "2028-07-17"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650129510",
+      "expiry_date": null,
+      "iban": "SA4855989529264737608414",
+      "account_name": "Al Manar Office Supplies L.L.C."
+    },
+    "vat_registration.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Office Supplies L.L.C.",
+      "company_name_ar": "شركة المنار للمستلزمات المكتبية",
+      "cr_number": "4650129510",
+      "expiry_date": "2027-12-25",
+      "vat_number": "369707137581503"
+    },
+    "zakat_cert.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Manar Office Supplies LLC",
+      "company_name_ar": "شركة المنار للمستلزمات المكتبية",
+      "cr_number": "4650129510",
+      "expiry_date": "2027-09-14"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate not provided.",
+  "expected_fields": {
+    "company_name": "Al Manar Office Supplies LLC",
+    "company_name_ar": "شركة المنار للمستلزمات المكتبية",
+    "cr_number": "4650129510",
+    "vat_number": "369707137581503",
+    "iban": "SA4855989529264737608414",
+    "account_name": "Al Manar Office Supplies L.L.C.",
+    "expiry": {
+      "commercial_registration": "2028-07-17",
+      "vat_certificate": "2027-12-25",
+      "gosi_certificate": "2028-04-23",
+      "zakat_certificate": "2027-09-14"
+    }
+  }
+}

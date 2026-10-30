@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_9493.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.24,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"zakat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Qimam Printing Company\",\"company_name_ar\":\"شركة قمم للطباعة\",\"cr_number\":\"1010169083\",\"vat_number\":\"386501861442703\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"19 December 2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":12,\"day\":19},\"expiry_date\":{\"raw\":\"17 October 2027\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":10,\"day\":17},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.95,\"cr_number\":0.93,\"vat_number\":0.92,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"Scan is slightly blurred but key values are readable.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 326
+  }
+ }
+}

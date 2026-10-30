@@ -1,0 +1,101 @@
+{
+  "case_id": "dev_zakat_037_bank_name_mismatch",
+  "split": "dev_zakat_037_bank",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Ofoq Trading LLC",
+      "company_name_ar": "شركة الأفق للتجارة",
+      "cr_number": "1010019703",
+      "expiry_date": "2027-01-22",
+      "vat_number": "326963994232153"
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة الأفق للتجارة",
+      "cr_number": "1010019703",
+      "expiry_date": "2027-11-21"
+    },
+    "zakat_cert.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Ofoq Trading LLC",
+      "company_name_ar": "شركة الأفق للتجارة",
+      "cr_number": "1010019703",
+      "expiry_date": "2027-06-06"
+    },
+    "CR.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة الأفق للتجارة",
+      "cr_number": "1010019703",
+      "expiry_date": "2028-04-16"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010019703",
+      "expiry_date": null,
+      "iban": "SA0360118335887169522915",
+      "account_name": "Ajyal Trading Company"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Ajyal Trading Company' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Al Ofoq Trading LLC",
+    "company_name_ar": "شركة الأفق للتجارة",
+    "cr_number": "1010019703",
+    "vat_number": "326963994232153",
+    "iban": "SA0360118335887169522915",
+    "account_name": "Ajyal Trading Company",
+    "expiry": {
+      "commercial_registration": "2028-04-16",
+      "vat_certificate": "2027-01-22",
+      "gosi_certificate": "2027-11-21",
+      "zakat_certificate": "2027-06-06"
+    }
+  }
+}

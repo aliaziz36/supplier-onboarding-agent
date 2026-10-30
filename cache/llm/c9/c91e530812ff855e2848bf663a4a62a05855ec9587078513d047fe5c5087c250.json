@@ -1,0 +1,50 @@
+{
+ "purpose": "agent:dev_037_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.27,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQS0AYKEAgTGAI4AUIIdGhpbmtpbmcSDIeiVpgk+IRGMNKonhoMws72NdMt4mShixoQIjAHQyobzEazikkUhv6Ph5HuLpZV9F7JJ2S5gfLA9OR6KHs2nIQT47xuV0rgkzfOqYAq7QXs3MI2eIL7H6ajNE+56PIwG/VD6DYjDAc0ZGGM3LAwZ+0TG6abPPEz3JA1Up8hSRtylM7k7hxI5sSkw+d/JOf4ElDbO/cAQODSz6yH8eGO5EzEz272g1JXwCLLau1dsN/+5TDgyCqYGoQ7RaOiwcAoR1fLGypoQhLRPse770Ft0nDW2Zzxh2oyrBLWEHCJxFoQgZha8WcDbvUap7F71/OWk1ED9L9D7f84SlJNg4+ZbhLfmadJ1yjDvXBuENizmCKQzJcEqhpu3kDZxtSSa1g4gPo26+z97tsD7+1azLxwOcxyKVpgk0LXFh4/hGtGBm2crZDtC/YkOTgxOJuFLAWHQggby1PMzT7zIHXYc4JVZu8wVnYXc6ShbVRQFi1vmdw3o42nnAG4uubgvUkZbsZE31As/Mg0mV1t9ak7jWRmO84vGwO4iLt04KM9iPjub0zfjFv9SVmCOxZLEsPAmSl6Cbd37Tjd0Ik0aSiWsyto/vA+qrNjkHGugOSVv9xi0FCr0Lv8jGqS/3MD9ccO37315qb6RIclpGDg+ypDplgaqoYfME4qtvDNluNHm9UUCGFJXbgW4vFg1i43GbknQ56WG21dS2YZLfSH+viZsKo3NvfsAKr8XC4lJQd5UPCNEQnM23gX3ERmOFPYEWi7b423Rc0iGVavcZetihOOMH7Mq/gIS5US9QaImeLNGtiAXKpLbgWQqEyPf3cYiFoOcZeWewQTlvo4raupJBGXUwA/YZ3wyzJhQeBMk/kamlsmBbpHZnztULHxB7DQdOdY92fyYT88NDINWA24USzFqNO6gEL30MNQL972TvN8QDYDpBbf2dMix79k0JNCZSbZLIp2FNsb9as1vSvk+laq/I+5e2NSvmKUnY7thVMQqaa5ysXQIdyc5SCfsJlwiuffD0h1Vkhnr88xf6tyzX1Kko07tt8nhNr20PHyv34wAEYaPxvG4iztgBlv2osLlDUIn0bZTKx7ZKDvUzuhs7z+8BgB",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01T27Po7dW3gjA66wXYZw2C4",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_037_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registering company, even though run_checks came back clean. This could be payment diversion fraud.",
+     "evidence": [
+      "The bank letter (d2) names the account holder as 'Rawabi Trading Est.'. The CR, VAT and GOSI documents all name 'Al Riyadah Cleaning Services Company'.",
+      "The bank letter shows CR 1010833214, which is the same CR number as Al Riyadah's. A different entity's name appears under that CR.",
+      "IBAN SA9180421329636872917331 at Al Rajhi Bank.",
+      "run_checks passed 11 checks with no failures, so it does not catch this mismatch. I did not create the vendor.",
+      "I did not email the supplier about this."
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01X53Rmd3mc1Hkr7xMVZiSYd",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_037_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4407,
+   "output_tokens": 501
+  }
+ }
+}

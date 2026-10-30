@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.68,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Asir Catering LLC\",\"company_name_ar\":null,\"cr_number\":\"4650629137\",\"vat_number\":null,\"iban\":\"SA6060894301852834448527\",\"account_name\":\"Asir Catering LLC\",\"account_number\":\"894301852834448527\",\"bank_name\":\"Bank AlJazira\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"21 August 2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":8,\"day\":21},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3939,
+   "output_tokens": 275
+  }
+ }
+}

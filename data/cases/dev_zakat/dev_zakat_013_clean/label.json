@@ -1,0 +1,97 @@
+{
+  "case_id": "dev_zakat_013_clean",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Electrical Services LLC",
+      "company_name_ar": "شركة البيان للخدمات الكهربائية",
+      "cr_number": "4650701700",
+      "expiry_date": "2028-04-30",
+      "vat_number": "301928858495733"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650701700",
+      "expiry_date": null,
+      "iban": "SA2745185210565409666545",
+      "account_name": "Al Bayan Electrical Services LLC"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Electrical Services LLC",
+      "company_name_ar": "شركة البيان للخدمات الكهربائية",
+      "cr_number": "4650701700",
+      "expiry_date": "2027-12-16"
+    },
+    "GOSI_certificate.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Electrical Services LLC",
+      "company_name_ar": "شركة البيان للخدمات الكهربائية",
+      "cr_number": "4650701700",
+      "expiry_date": "2028-01-27"
+    },
+    "zakat.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Bayan Electrical Services LLC",
+      "company_name_ar": "شركة البيان للخدمات الكهربائية",
+      "cr_number": "4650701700",
+      "expiry_date": "2027-07-31"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Bayan Electrical Services LLC",
+    "company_name_ar": "شركة البيان للخدمات الكهربائية",
+    "cr_number": "4650701700",
+    "vat_number": "301928858495733",
+    "iban": "SA2745185210565409666545",
+    "account_name": "Al Bayan Electrical Services LLC",
+    "expiry": {
+      "commercial_registration": "2027-12-16",
+      "vat_certificate": "2028-04-30",
+      "gosi_certificate": "2028-01-27",
+      "zakat_certificate": "2027-07-31"
+    }
+  }
+}

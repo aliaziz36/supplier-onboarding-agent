@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_zakat_cert.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.54,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"zakat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Qimam Printing Co.\",\"company_name_ar\":\"شركة قمم للطباعة\",\"cr_number\":\"1010001128\",\"vat_number\":\"340365453261513\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"22/09/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":9,\"day\":22},\"expiry_date\":{\"raw\":\"02/08/2027\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":8,\"day\":2},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3994,
+   "output_tokens": 302
+  }
+ }
+}

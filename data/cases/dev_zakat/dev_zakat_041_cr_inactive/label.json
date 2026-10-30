@@ -1,0 +1,102 @@
+{
+  "case_id": "dev_zakat_041_cr_inactive",
+  "split": "dev_zakat_041",
+  "kind": "onboarding",
+  "scenario": "cr_inactive",
+  "perturbations": [
+    "scanned",
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_4927.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050730315",
+      "expiry_date": null,
+      "iban": "SA6710342816351033634453",
+      "account_name": "Al Mada Transport Company"
+    },
+    "ZATCA_zakat.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Mada Transport Company",
+      "company_name_ar": "شركة المدى للنقل",
+      "cr_number": "2050730315",
+      "expiry_date": "2027-11-04"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Mada Transport Company",
+      "company_name_ar": null,
+      "cr_number": "2050730315",
+      "expiry_date": "2028-07-27",
+      "vat_number": "310365677799753"
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة المدى للنقل",
+      "cr_number": "2050730315",
+      "expiry_date": "2028-08-23"
+    },
+    "scan_9055.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة المدى للنقل",
+      "cr_number": "2050730315",
+      "expiry_date": "2027-04-08"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "cr_not_active"
+  ],
+  "fraud": true,
+  "reason": "CR is expired in the registry.",
+  "expected_fields": {
+    "company_name": "Al Mada Transport Company",
+    "company_name_ar": "شركة المدى للنقل",
+    "cr_number": "2050730315",
+    "vat_number": "310365677799753",
+    "iban": "SA6710342816351033634453",
+    "account_name": "Al Mada Transport Company",
+    "expiry": {
+      "commercial_registration": "2027-04-08",
+      "vat_certificate": "2028-07-27",
+      "gosi_certificate": "2028-08-23",
+      "zakat_certificate": "2027-11-04"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "case_id": "dev_zakat_042_cr_inactive",
+  "split": "dev_zakat_042",
+  "kind": "onboarding",
+  "scenario": "cr_inactive",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "zakat_certificate.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Catering Est.",
+      "company_name_ar": "مؤسسة روابي للإعاشة",
+      "cr_number": "2050802803",
+      "expiry_date": "2027-11-11"
+    },
+    "سجل_تجاري.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Catering Est.",
+      "company_name_ar": "مؤسسة روابي للإعاشة",
+      "cr_number": "2050802803",
+      "expiry_date": "2027-09-29"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Catering Est.",
+      "company_name_ar": "مؤسسة روابي للإعاشة",
+      "cr_number": "2050802803",
+      "expiry_date": "2028-08-27",
+      "vat_number": "351246821878163"
+    },
+    "IBAN_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050802803",
+      "expiry_date": null,
+      "iban": "SA1760276954781820139957",
+      "account_name": "Rawabi Catering Est."
+    },
+    "nitaqat_gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Catering Est.",
+      "company_name_ar": "مؤسسة روابي للإعاشة",
+      "cr_number": "2050802803",
+      "expiry_date": "2028-09-24"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "cr_not_active"
+  ],
+  "fraud": true,
+  "reason": "CR is cancelled in the registry.",
+  "expected_fields": {
+    "company_name": "Rawabi Catering Est.",
+    "company_name_ar": "مؤسسة روابي للإعاشة",
+    "cr_number": "2050802803",
+    "vat_number": "351246821878163",
+    "iban": "SA1760276954781820139957",
+    "account_name": "Rawabi Catering Est.",
+    "expiry": {
+      "commercial_registration": "2027-09-29",
+      "vat_certificate": "2028-08-27",
+      "gosi_certificate": "2028-09-24",
+      "zakat_certificate": "2027-11-11"
+    }
+  }
+}

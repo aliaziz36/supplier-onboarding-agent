@@ -1,0 +1,99 @@
+{
+  "case_id": "dev_zakat_017_expired",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "expired",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2051280986",
+      "expiry_date": null,
+      "iban": "SA3360759530070248003182",
+      "account_name": "Rawabi Trading Est."
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Trading Est.",
+      "company_name_ar": "مؤسسة روابي للتجارة",
+      "cr_number": "2051280986",
+      "expiry_date": "2028-08-27"
+    },
+    "ZATCA_zakat.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Trading Est.",
+      "company_name_ar": "مؤسسة روابي للتجارة",
+      "cr_number": "2051280986",
+      "expiry_date": "2028-03-19"
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Trading Est.",
+      "company_name_ar": "مؤسسة روابي للتجارة",
+      "cr_number": "2051280986",
+      "expiry_date": "2026-06-04"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Trading Est.",
+      "company_name_ar": null,
+      "cr_number": "2051280986",
+      "expiry_date": "2028-09-01",
+      "vat_number": "323319298147303"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate expired on 2026-06-04.",
+  "expected_fields": {
+    "company_name": "Rawabi Trading Est.",
+    "company_name_ar": "مؤسسة روابي للتجارة",
+    "cr_number": "2051280986",
+    "vat_number": "323319298147303",
+    "iban": "SA3360759530070248003182",
+    "account_name": "Rawabi Trading Est.",
+    "expiry": {
+      "commercial_registration": "2028-08-27",
+      "vat_certificate": "2028-09-01",
+      "gosi_certificate": "2026-06-04",
+      "zakat_certificate": "2028-03-19"
+    }
+  }
+}

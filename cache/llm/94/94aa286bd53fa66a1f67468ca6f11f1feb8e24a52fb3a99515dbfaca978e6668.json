@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_013_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.36,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01BQ1Xk3CEMcvJrypjc1N64u",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_013_clean"
+    },
+    "name": "create_vendor",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4470,
+   "output_tokens": 57
+  }
+ }
+}

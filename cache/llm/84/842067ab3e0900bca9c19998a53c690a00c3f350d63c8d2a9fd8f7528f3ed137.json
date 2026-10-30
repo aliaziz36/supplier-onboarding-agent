@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_zakat_033_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.26,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01YBKp2CDcwFbQ5PaSvtKsw9",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_033_unreadable",
+     "kind": "request_fix",
+     "subject": "Corrected zakat certificate needed - Durrah Office Supplies LLC",
+     "body": "Dear Faisal,\n\nThank you for your registration documents. The zakat certificate (ZATCA_zakat.pdf) was an unreadable scan, so we could not accept it. Please reply with a clear, complete copy of the zakat certificate. All other documents were received.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "zakat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_013DUDfCkVrzyieaBDi1K1KJ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_033_unreadable",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4669,
+   "output_tokens": 375
+  }
+ }
+}

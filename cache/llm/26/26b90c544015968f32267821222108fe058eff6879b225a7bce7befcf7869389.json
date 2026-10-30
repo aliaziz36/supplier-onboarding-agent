@@ -1,0 +1,23 @@
+{
+ "purpose": "extract-reread:1_commercial_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 10.63,
+ "response": {
+  "content": [
+   {
+    "signature": "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",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة الهلال للمقاولات\",\"cr_number\":\"2050054588\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"٢١/٠٢/٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":2,\"day\":21},\"expiry_date\":{\"raw\":\"٢٩/٠٣/٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":3,\"day\":29},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.75,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"The scan is slightly blurred. CR number read digit by digit from Arabic-Indic digits as ٢٠٥٠٠٥٤٥٨٨ (2050054588), the same value the registry check failed to find. The document may carry a misread digit or the CR may not exist in the registry. Dates are read as Gregorian DD/MM/YYYY.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3859,
+   "output_tokens": 1404
+  }
+ }
+}

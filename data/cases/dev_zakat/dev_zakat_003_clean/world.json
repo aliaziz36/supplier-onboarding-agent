@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030969371": {
+        "name": "شركة تهامة للمقاولات",
+        "name_en": "Tihama Contracting Co.",
+        "status": "active",
+        "issue_date": "2025-09-09",
+        "expiry_date": "2027-05-11",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "364870596402353": {
+        "registered": true,
+        "name": "شركة تهامة للمقاولات",
+        "name_en": "Tihama Contracting Co.",
+        "crNumber": "4030969371"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

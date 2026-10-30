@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_036_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.99,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_0174Unj4gRML2gTrJAGcaJAv",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_036_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registered company name; possible payment fraud risk.",
+     "evidence": [
+      "Check bank_name_matches_cr failed: account holder 'Qimam Office Supplies Est.'",
+      "Applicant: Al Tamayuz Electrical Services Company, CR 4030871663",
+      "Bank letter (scan_4294.pdf) IBAN SA3355072483206809840651, Banque Saudi Fransi, names Qimam Office Supplies Est. but carries the applicant's CR number",
+      "Other 13 checks passed"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_012khVctDRfyskz6jzgceoMH",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_036_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4699,
+   "output_tokens": 360
+  }
+ }
+}

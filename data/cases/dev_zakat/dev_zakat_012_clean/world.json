@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030905111": {
+        "name": "مؤسسة زهرة الصحراء للخدمات اللوجستية",
+        "name_en": "Desert Bloom Logistics Est.",
+        "status": "active",
+        "issue_date": "2025-03-23",
+        "expiry_date": "2027-03-25",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "345348050126533": {
+        "registered": true,
+        "name": "مؤسسة زهرة الصحراء للخدمات اللوجستية",
+        "name_en": "Desert Bloom Logistics Est.",
+        "crNumber": "4030905111"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

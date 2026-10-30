@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050653099": {
+        "name": "مؤسسة الأفق للطباعة",
+        "name_en": "Al Ofoq Printing Est.",
+        "status": "active",
+        "issue_date": "2025-12-19",
+        "expiry_date": "2028-03-29",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "372260204536333": {
+        "registered": true,
+        "name": "مؤسسة الأفق للطباعة",
+        "name_en": "Al Ofoq Printing Est.",
+        "crNumber": "2050653099"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

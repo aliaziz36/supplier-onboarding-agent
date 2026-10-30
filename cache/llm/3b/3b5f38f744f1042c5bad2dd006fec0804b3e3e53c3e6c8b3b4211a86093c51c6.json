@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_company_profile.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.29,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"other\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Qimam Logistics Est.\",\"company_name_ar\":null,\"cr_number\":null,\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":null,\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Company profile/brochure only; no registration, tax or banking identifiers present.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3888,
+   "output_tokens": 230
+  }
+ }
+}

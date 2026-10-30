@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050293729": {
+        "name": "شركة نجمة الخليج للتجارة",
+        "name_en": "Al Khaleej Star Trading LLC",
+        "status": "active",
+        "issue_date": "2025-05-30",
+        "expiry_date": "2026-11-08",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "368614197296723": {
+        "registered": true,
+        "name": "شركة نجمة الخليج للتجارة",
+        "name_en": "Al Khaleej Star Trading LLC",
+        "crNumber": "2050293729"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050293729",
+    "name": "Al Khaleej Star Trading LLC",
+    "name_ar": "شركة نجمة الخليج للتجارة",
+    "cr_number": "2050293729",
+    "vat_number": "368614197296723",
+    "iban": "SA0720088799823084697495",
+    "bank_code": "20",
+    "account_name": "Al Khaleej Star Trading LLC",
+    "email": "yousef@alkhaleejstar-trading.com.sa",
+    "email_domain": "alkhaleejstar-trading.com.sa",
+    "phone": "+966558590263",
+    "documents": {
+      "commercial_registration": "2026-11-08",
+      "vat_certificate": "2028-05-21",
+      "gosi_certificate": "2027-04-18"
+    }
+  }
+}

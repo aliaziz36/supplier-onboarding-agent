@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650530277": {
+        "name": "شركة روابي للخدمات الكهربائية",
+        "name_en": "Rawabi Electrical Services LLC",
+        "status": "suspended",
+        "issue_date": "2026-07-07",
+        "expiry_date": "2026-09-21",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "346816788410623": {
+        "registered": true,
+        "name": "شركة روابي للخدمات الكهربائية",
+        "name_en": "Rawabi Electrical Services LLC",
+        "crNumber": "4650530277"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

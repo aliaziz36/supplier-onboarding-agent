@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050318822": {
+        "name": "شركة اليمامة للطباعة",
+        "name_en": "Al Yamamah Printing Company",
+        "status": "active",
+        "issue_date": "2025-10-22",
+        "expiry_date": "2028-01-18",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "369083630838983": {
+        "registered": true,
+        "name": "شركة اليمامة للطباعة",
+        "name_en": "Al Yamamah Printing Company",
+        "crNumber": "2050318822"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

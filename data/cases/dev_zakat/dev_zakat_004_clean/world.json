@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050135000": {
+        "name": "شركة عسير للنقل",
+        "name_en": "Asir Transport LLC",
+        "status": "active",
+        "issue_date": "2026-09-09",
+        "expiry_date": "2027-03-31",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "349576561159713": {
+        "registered": true,
+        "name": "شركة عسير للنقل",
+        "name_en": "Asir Transport LLC",
+        "crNumber": "2050135000"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_GOSI_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.85,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Desert Bloom Logistics Est.\",\"company_name_ar\":\"مؤسسة زهرة الصحراء للخدمات اللوجستية\",\"cr_number\":\"4030905111\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"812336480\",\"nitaqat_band\":\"High Green\",\"issue_date\":{\"raw\":\"1446/11/02 AH\",\"calendar\":\"hijri\",\"year\":1446,\"month\":11,\"day\":2},\"expiry_date\":{\"raw\":\"1450/03/13 AH\",\"calendar\":\"hijri\",\"year\":1450,\"month\":3,\"day\":13},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4044,
+   "output_tokens": 325
+  }
+ }
+}

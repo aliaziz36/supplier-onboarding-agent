@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:demo_1_al_noor_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.72,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01ErnVAqHZRwqfeockyeZ7oq",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_1_al_noor_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Noor Trading Co. onboarded",
+     "body": "Dear Faisal, thank you for your documents. All checks passed and Al Noor Trading Co. is now registered as a supplier (vendor ID V-2050260181). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Qzq8HfJJw7RnLN6G5eiBMi",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_1_al_noor_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4390,
+   "output_tokens": 316
+  }
+ }
+}

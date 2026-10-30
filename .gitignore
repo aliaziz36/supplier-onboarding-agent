@@ -8,3 +8,5 @@ __pycache__/
 scratch/
 data/store/
 .DS_Store
+*.db-shm
+*.db-wal

@@ -1,0 +1,102 @@
+{
+  "case_id": "dev_zakat_038_bank_name_mismatch",
+  "split": "dev_zakat_038_bank",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [
+    "scanned",
+    "name_variant"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "bank_letter.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010371353",
+      "expiry_date": null,
+      "iban": "SA5755973462966733704477",
+      "account_name": "Asir Office Supplies LLC"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Office Supplies Co.",
+      "company_name_ar": "شركة الخليج للمستلزمات المكتبية",
+      "cr_number": "1010371353",
+      "expiry_date": "2028-05-14",
+      "vat_number": "344778983761013"
+    },
+    "zakat_certificate.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Office Supplies Co.",
+      "company_name_ar": "شركة الخليج للمستلزمات المكتبية",
+      "cr_number": "1010371353",
+      "expiry_date": "2028-04-02"
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Office Supplies Co.",
+      "company_name_ar": "شركة الخليج للمستلزمات المكتبية",
+      "cr_number": "1010371353",
+      "expiry_date": "2027-02-04"
+    },
+    "scan_5660.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Gulf Office Supplies Co.",
+      "company_name_ar": "شركة الخليج للمستلزمات المكتبية",
+      "cr_number": "1010371353",
+      "expiry_date": "2027-11-27"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Asir Office Supplies LLC' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Gulf Office Supplies Co.",
+    "company_name_ar": "شركة الخليج للمستلزمات المكتبية",
+    "cr_number": "1010371353",
+    "vat_number": "344778983761013",
+    "iban": "SA5755973462966733704477",
+    "account_name": "Asir Office Supplies LLC",
+    "expiry": {
+      "commercial_registration": "2027-11-27",
+      "vat_certificate": "2028-05-14",
+      "gosi_certificate": "2027-02-04",
+      "zakat_certificate": "2028-04-02"
+    }
+  }
+}

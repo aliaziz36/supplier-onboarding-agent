@@ -1,0 +1,102 @@
+{
+  "case_id": "dev_zakat_039_cr_inactive",
+  "split": "dev_zakat_039",
+  "kind": "onboarding",
+  "scenario": "cr_inactive",
+  "perturbations": [
+    "arabic",
+    "hijri"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة روابي للخدمات الكهربائية",
+      "cr_number": "4650530277",
+      "expiry_date": "2028-07-28"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة روابي للخدمات الكهربائية",
+      "cr_number": "4650530277",
+      "expiry_date": "2027-06-04"
+    },
+    "zakat_cert.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Electrical Services LLC",
+      "company_name_ar": "شركة روابي للخدمات الكهربائية",
+      "cr_number": "4650530277",
+      "expiry_date": "2028-02-21"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Rawabi Electrical Services LLC",
+      "company_name_ar": "شركة روابي للخدمات الكهربائية",
+      "cr_number": "4650530277",
+      "expiry_date": "2028-05-24",
+      "vat_number": "346816788410623"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4650530277",
+      "expiry_date": null,
+      "iban": "SA8660317519951395225134",
+      "account_name": "Rawabi Electrical Services LLC"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "cr_not_active"
+  ],
+  "fraud": true,
+  "reason": "CR is suspended in the registry.",
+  "expected_fields": {
+    "company_name": "Rawabi Electrical Services LLC",
+    "company_name_ar": "شركة روابي للخدمات الكهربائية",
+    "cr_number": "4650530277",
+    "vat_number": "346816788410623",
+    "iban": "SA8660317519951395225134",
+    "account_name": "Rawabi Electrical Services LLC",
+    "expiry": {
+      "commercial_registration": "2027-06-04",
+      "vat_certificate": "2028-05-24",
+      "gosi_certificate": "2028-07-28",
+      "zakat_certificate": "2028-02-21"
+    }
+  }
+}

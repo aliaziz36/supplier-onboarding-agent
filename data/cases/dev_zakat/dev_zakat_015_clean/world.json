@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030624365": {
+        "name": "شركة الهلال لحلول تقنية المعلومات",
+        "name_en": "Al Hilal IT Solutions Co.",
+        "status": "active",
+        "issue_date": "2025-12-25",
+        "expiry_date": "2028-03-09",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "323425784184373": {
+        "registered": true,
+        "name": "شركة الهلال لحلول تقنية المعلومات",
+        "name_en": "Al Hilal IT Solutions Co.",
+        "crNumber": "4030624365"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_gosi.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.37,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة المدى للنقل\",\"cr_number\":\"2050731015\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"296771395\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"٠٤/١٠/٢٠٢٥\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":10,\"day\":4},\"expiry_date\":{\"raw\":\"٢٣/٠٨/٢٠٢٨\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":8,\"day\":23},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.95,\"cr_number\":0.6,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.85},\"notes\":\"Scan is slightly skewed. CR number printed as ٢٠٥٠.٧٣.٣١٥ with dots, which is ambiguous; read as 2050731015 but digit grouping is uncertain. Dates are Gregorian, read day first.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 404
+  }
+ }
+}

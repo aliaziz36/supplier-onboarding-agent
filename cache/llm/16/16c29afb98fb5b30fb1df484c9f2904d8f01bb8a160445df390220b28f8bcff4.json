@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_zakat_027_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.97,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01QHA163F8knaquMdVGz5mVm",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_027_missing",
+     "kind": "request_fix",
+     "subject": "Supplier registration: bank letter needed",
+     "body": "Dear Nora,\n\nThank you for registering Al Khaleej Star Steel Fabrication Est. We received your Zakat, GOSI, CR and VAT documents. One document is missing: the bank letter (bank IBAN certificate showing the account holder name and IBAN). Please reply with a copy of it and we will complete your registration.\n\nKind regards,\nProcurement Team",
+     "documents_requested": [
+      "bank_letter"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01VUh8qXqK9egHVSw4ceQevd",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_027_missing",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4476,
+   "output_tokens": 379
+  }
+ }
+}

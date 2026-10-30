@@ -1,0 +1,19 @@
+{
+  "case_id": "dev_zakat_055_expiring",
+  "split": "dev_zakat",
+  "kind": "expiry",
+  "scenario": "expiring",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {},
+  "expected_decision": "renewal_request",
+  "expected_documents_requested": [
+    "vat_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "vat_certificate expires on 2026-11-21.",
+  "expected_fields": {
+    "vendor_id": "V-4650226953"
+  }
+}

@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:dev_zakat_015_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.62,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_011AJj4D6qGH29KepZnoAau3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_015_clean",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3387,
+   "output_tokens": 86
+  }
+ }
+}

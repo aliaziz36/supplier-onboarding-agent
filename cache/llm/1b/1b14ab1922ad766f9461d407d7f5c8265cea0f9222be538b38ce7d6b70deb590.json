@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_018_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.11,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01FwdZRaDRL7rhUPaAwZGU7T",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_018_expired",
+     "kind": "request_fix",
+     "subject": "Action needed: documents for Al Yamamah IT Solutions Co. registration",
+     "body": "Dear Lama,\n\nThank you for your registration documents. To complete onboarding, we need two items:\n\n1. GOSI certificate: the copy provided expired on 2026-06-04. Please send a current copy.\n2. Zakat certificate: not received. Please send a copy.\n\nPlease reply to this email with the documents attached.\n\nKind regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate",
+      "zakat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01ADmHrZUB4wGCXnNd3X26bz",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_018_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4459,
+   "output_tokens": 388
+  }
+ }
+}

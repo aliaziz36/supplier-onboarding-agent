@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050808840": {
+        "name": "مؤسسة قمم للنقل",
+        "name_en": "Qimam Transport Est.",
+        "status": "active",
+        "issue_date": "2026-02-13",
+        "expiry_date": "2027-03-28",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "368622941617603": {
+        "registered": true,
+        "name": "مؤسسة قمم للنقل",
+        "name_en": "Qimam Transport Est.",
+        "crNumber": "2050808840"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050808840",
+    "name": "Qimam Transport Est.",
+    "name_ar": "مؤسسة قمم للنقل",
+    "cr_number": "2050808840",
+    "vat_number": "368622941617603",
+    "iban": "SA3105191356955436236903",
+    "bank_code": "05",
+    "account_name": "Qimam Transport Est.",
+    "email": "nora@qimam-transport.com.sa",
+    "email_domain": "qimam-transport.com.sa",
+    "phone": "+966592952136",
+    "documents": {
+      "commercial_registration": "2027-03-28",
+      "vat_certificate": "2028-05-07",
+      "gosi_certificate": "2028-01-14"
+    }
+  }
+}

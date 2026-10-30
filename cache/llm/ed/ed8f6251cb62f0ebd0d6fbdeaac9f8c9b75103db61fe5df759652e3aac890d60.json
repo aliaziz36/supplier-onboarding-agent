@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_zakat_031_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.45,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_0169chJupmu1xBC1C75TAzc3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_031_unreadable"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4683,
+   "output_tokens": 62
+  }
+ }
+}

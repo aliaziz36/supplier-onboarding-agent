@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:dev_zakat_024_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.28,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Jx9HjMiTQD3Y9nQjRD5ubB",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_024_missing",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3307,
+   "output_tokens": 86
+  }
+ }
+}

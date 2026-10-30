@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010638835": {
+        "name": "مؤسسة قمم للخدمات اللوجستية",
+        "name_en": "Qimam Logistics Est.",
+        "status": "active",
+        "issue_date": "2026-08-05",
+        "expiry_date": "2028-08-28",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "358697127889883": {
+        "registered": true,
+        "name": "مؤسسة قمم للخدمات اللوجستية",
+        "name_en": "Qimam Logistics Est.",
+        "crNumber": "1010638835"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

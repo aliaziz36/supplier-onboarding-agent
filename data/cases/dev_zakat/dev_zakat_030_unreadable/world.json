@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "1010762628": {
+        "name": "شركة سحاب للمقاولات",
+        "name_en": "Sahab Contracting Co.",
+        "status": "active",
+        "issue_date": "2025-08-29",
+        "expiry_date": "2028-02-09",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "388892467457683": {
+        "registered": true,
+        "name": "شركة سحاب للمقاولات",
+        "name_en": "Sahab Contracting Co.",
+        "crNumber": "1010762628"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

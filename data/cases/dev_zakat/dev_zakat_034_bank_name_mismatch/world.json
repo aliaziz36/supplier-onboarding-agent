@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030404894": {
+        "name": "مؤسسة الفارس لحلول تقنية المعلومات",
+        "name_en": "Al Faris IT Solutions Est.",
+        "status": "active",
+        "issue_date": "2026-08-11",
+        "expiry_date": "2028-04-04",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "374424452467723": {
+        "registered": true,
+        "name": "مؤسسة الفارس لحلول تقنية المعلومات",
+        "name_en": "Al Faris IT Solutions Est.",
+        "crNumber": "4030404894"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

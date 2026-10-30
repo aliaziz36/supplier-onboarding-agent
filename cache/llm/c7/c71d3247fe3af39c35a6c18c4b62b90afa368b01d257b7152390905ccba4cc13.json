@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_vat_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.83,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Safwa Medical Supplies Co.\",\"company_name_ar\":null,\"cr_number\":\"2051304493\",\"vat_number\":\"360756312806203\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-05-01\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":5,\"day\":1},\"expiry_date\":{\"raw\":\"2028-08-24\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":8,\"day\":24},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.97,\"cr_number\":0.96,\"vat_number\":0.95,\"iban\":1,\"account_name\":1,\"expiry_date\":0.96},\"notes\":\"Scan is slightly skewed but legible. Dates printed in ISO format (YYYY-MM-DD), read as Gregorian.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 346
+  }
+ }
+}

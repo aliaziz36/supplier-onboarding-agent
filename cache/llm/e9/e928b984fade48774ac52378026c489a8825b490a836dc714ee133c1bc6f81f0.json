@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:demo_4_al_noor_bank_change",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.74,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01QKNGZGiJcTDq1uBEWnDoHD",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_4_al_noor_bank_change",
+     "vendor_id": "V-2050260181",
+     "new_iban": "SA3060412524273167232686",
+     "account_name": "Al Noor Trading Co.",
+     "reason": "High risk: bank differs from file (Al Rajhi -> Bank AlJazira), sender domain alnoor-trading.co differs from alnoor-trading.com.sa on file, urgency pressure. Human to call number on file."
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01VaCN7wVstDvT3wo1KeePwZ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_4_al_noor_bank_change",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3563,
+   "output_tokens": 341
+  }
+ }
+}

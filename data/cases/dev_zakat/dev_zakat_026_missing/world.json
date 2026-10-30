@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051067802": {
+        "name": "شركة الصفوة للمستلزمات المكتبية",
+        "name_en": "Al Safwa Office Supplies Company",
+        "status": "active",
+        "issue_date": "2025-08-11",
+        "expiry_date": "2027-04-10",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "337149638513373": {
+        "registered": true,
+        "name": "شركة الصفوة للمستلزمات المكتبية",
+        "name_en": "Al Safwa Office Supplies Company",
+        "crNumber": "2051067802"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

@@ -1,0 +1,88 @@
+{
+  "case_id": "dev_zakat_024_missing",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "missing",
+  "perturbations": [
+    "scanned"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "scan_8075.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Mada Contracting Company",
+      "company_name_ar": "شركة المدى للمقاولات",
+      "cr_number": "4030123303",
+      "expiry_date": "2028-03-08"
+    },
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Mada Contracting Company",
+      "company_name_ar": "شركة المدى للمقاولات",
+      "cr_number": "4030123303",
+      "expiry_date": "2028-07-02",
+      "vat_number": "367979102800643"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030123303",
+      "expiry_date": null,
+      "iban": "SA0980235659087285905131",
+      "account_name": "Al Mada Contracting Company"
+    },
+    "scan_7517.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Mada Contracting Company",
+      "company_name_ar": "شركة المدى للمقاولات",
+      "cr_number": "4030123303",
+      "expiry_date": "2028-05-17"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "zakat_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "zakat_certificate not provided.",
+  "expected_fields": {
+    "company_name": "Al Mada Contracting Company",
+    "company_name_ar": "شركة المدى للمقاولات",
+    "cr_number": "4030123303",
+    "vat_number": "367979102800643",
+    "iban": "SA0980235659087285905131",
+    "account_name": "Al Mada Contracting Company",
+    "expiry": {
+      "commercial_registration": "2028-03-08",
+      "vat_certificate": "2028-07-02",
+      "gosi_certificate": "2028-05-17",
+      "zakat_certificate": "2028-04-06"
+    }
+  }
+}

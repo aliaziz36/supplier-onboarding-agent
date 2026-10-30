@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650843608": {
+        "name": "شركة الفارس لخدمات النظافة",
+        "name_en": "Al Faris Cleaning Services Co.",
+        "status": "active",
+        "issue_date": "2025-05-28",
+        "expiry_date": "2027-08-17",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "345486688874123": {
+        "registered": true,
+        "name": "شركة الفارس لخدمات النظافة",
+        "name_en": "Al Faris Cleaning Services Co.",
+        "crNumber": "4650843608"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

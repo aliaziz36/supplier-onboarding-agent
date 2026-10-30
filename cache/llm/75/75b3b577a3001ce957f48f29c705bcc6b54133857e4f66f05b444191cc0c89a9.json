@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_034_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.04,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01GKBNy9kGXhBnE1mCBrKRzt",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_034_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registered company name (possible payment diversion risk).",
+     "evidence": [
+      "Bank letter IBAN SA0610424641401172733031 (Saudi National Bank) is held by 'Najd Medical Supplies Co.'",
+      "CR, VAT and GOSI documents all name 'Wadi Trading LLC' with CR 4650962527",
+      "Bank letter cites the same CR number 4650962527 despite the different name",
+      "Zakat certificate also not received (fixable, not yet requested)"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01C1iyWDFrrxXHuzaAS2Lpiz",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_034_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4501,
+   "output_tokens": 349
+  }
+ }
+}

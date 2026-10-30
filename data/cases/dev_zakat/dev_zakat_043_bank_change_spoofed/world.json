@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "1010152787": {
+        "name": "شركة زهرة الصحراء للمستلزمات المكتبية",
+        "name_en": "Desert Bloom Office Supplies LLC",
+        "status": "active",
+        "issue_date": "2025-11-15",
+        "expiry_date": "2028-04-13",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "382720365474063": {
+        "registered": true,
+        "name": "شركة زهرة الصحراء للمستلزمات المكتبية",
+        "name_en": "Desert Bloom Office Supplies LLC",
+        "crNumber": "1010152787"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-1010152787",
+    "name": "Desert Bloom Office Supplies LLC",
+    "name_ar": "شركة زهرة الصحراء للمستلزمات المكتبية",
+    "cr_number": "1010152787",
+    "vat_number": "382720365474063",
+    "iban": "SA3420309564346575415043",
+    "bank_code": "20",
+    "account_name": "Desert Bloom Office Supplies LLC",
+    "email": "huda@desertbloom-office.com.sa",
+    "email_domain": "desertbloom-office.com.sa",
+    "phone": "+966519404516",
+    "documents": {
+      "commercial_registration": "2028-04-13",
+      "vat_certificate": "2027-01-21",
+      "gosi_certificate": "2027-09-11"
+    }
+  }
+}

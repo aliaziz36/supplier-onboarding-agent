@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:dev_zakat_050_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.81,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01RbDDfEb5uGw9jzR2uxa5XT",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_zakat_050_bank_change_genuine",
+     "vendor_id": "V-4030568197",
+     "new_iban": "SA3180395681103533828182",
+     "account_name": "Al Khaleej Star Electrical Services Co."
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3343,
+   "output_tokens": 171
+  }
+ }
+}

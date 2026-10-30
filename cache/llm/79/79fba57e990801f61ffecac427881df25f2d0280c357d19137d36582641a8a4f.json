@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_new_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.64,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Ajyal Steel Fabrication Company\",\"company_name_ar\":\"شركة أجيال لتصنيع الحديد\",\"cr_number\":\"4030062275\",\"vat_number\":null,\"iban\":\"SA8920599133131485119953\",\"account_name\":\"Ajyal Steel Fabrication Company\",\"account_number\":\"599133131485119953\",\"bank_name\":\"Riyad Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"28/10/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":10,\"day\":28},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4014,
+   "output_tokens": 305
+  }
+ }
+}

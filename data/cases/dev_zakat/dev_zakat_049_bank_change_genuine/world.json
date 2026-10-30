@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050392755": {
+        "name": "مؤسسة نجد للمستلزمات المكتبية",
+        "name_en": "Najd Office Supplies Est.",
+        "status": "active",
+        "issue_date": "2026-08-29",
+        "expiry_date": "2027-07-30",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "302685589648473": {
+        "registered": true,
+        "name": "مؤسسة نجد للمستلزمات المكتبية",
+        "name_en": "Najd Office Supplies Est.",
+        "crNumber": "2050392755"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050392755",
+    "name": "Najd Office Supplies Est.",
+    "name_ar": "مؤسسة نجد للمستلزمات المكتبية",
+    "cr_number": "2050392755",
+    "vat_number": "302685589648473",
+    "iban": "SA7720018443689334166844",
+    "bank_code": "20",
+    "account_name": "Najd Office Supplies Est.",
+    "email": "huda@najd-office.com.sa",
+    "email_domain": "najd-office.com.sa",
+    "phone": "+966571633718",
+    "documents": {
+      "commercial_registration": "2027-07-30",
+      "vat_certificate": "2028-04-09",
+      "gosi_certificate": "2027-04-11"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_CR.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.26,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Jazeera Electrical Services LLC\",\"company_name_ar\":\"شركة الجزيرة للخدمات الكهربائية\",\"cr_number\":\"2050650889\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-07-02\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":7,\"day\":2},\"expiry_date\":{\"raw\":\"2027-06-27\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":6,\"day\":27},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"English name printed as 'Al Jazeera' in the trade name field.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4006,
+   "output_tokens": 334
+  }
+ }
+}

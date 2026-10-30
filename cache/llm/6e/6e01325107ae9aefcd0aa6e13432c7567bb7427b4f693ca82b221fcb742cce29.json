@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_account_confirmation.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.89,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Manar IT Solutions Est.\",\"company_name_ar\":\"مؤسسة المنار لحلول تقنية المعلومات\",\"cr_number\":\"4030236038\",\"vat_number\":null,\"iban\":\"SA8045241052172304509173\",\"account_name\":\"Al Manar IT Solutions Est.\",\"account_number\":\"241052172304509173\",\"bank_name\":\"Saudi Awwal Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"19/07/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":7,\"day\":19},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4032,
+   "output_tokens": 312
+  }
+ }
+}

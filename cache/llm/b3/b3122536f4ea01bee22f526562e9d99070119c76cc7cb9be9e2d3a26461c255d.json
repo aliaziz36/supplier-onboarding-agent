@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_social_insurance.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.49,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة عسير للنقل\",\"cr_number\":\"2050135000\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"943518999\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"١٤٤٦/١١/١٦ هـ\",\"calendar\":\"hijri\",\"year\":1446,\"month\":11,\"day\":16},\"expiry_date\":{\"raw\":\"١٤٤٩/٠٨/١٩ هـ\",\"calendar\":\"hijri\",\"year\":1449,\"month\":8,\"day\":19},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.97,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.9},\"notes\":\"GOSI social insurance compliance certificate (شهادة التزام التأمينات الاجتماعية). Expiry date printed as ١٤٤٩/.٨/١٩ with a stray mark before the 8; read as month 08.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3811,
+   "output_tokens": 396
+  }
+ }
+}

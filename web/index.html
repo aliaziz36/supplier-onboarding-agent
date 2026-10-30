@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supplier Onboarding Agent</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#F4F5F7;--ink:#111827;--muted:#4B5563;--line:#E5E7EB;--teal:#0F766E;--navy:#0B1F2A;--navy2:#123441}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:18px 32px;background:var(--navy);color:#fff}
+.logo{width:36px;height:36px;border-radius:8px;background:#14B8A6;display:flex;align-items:center;justify-content:center}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--navy2);font-size:13px;color:#CCFBF1}
+.dot{width:8px;height:8px;border-radius:50%;background:#2DD4BF}
+.dot.busy{background:#FCD34D;animation:pulse 1s infinite}@keyframes pulse{50%{opacity:.3}}
+.sim{display:flex;flex-wrap:wrap;gap:8px;padding:14px 32px;background:#fff;border-bottom:1px solid var(--line);align-items:center}
+.sim span{font-size:12px;color:var(--muted);margin-right:4px}
+button{font:inherit;font-size:13px;font-weight:500;padding:8px 12px;min-height:36px;border-radius:8px;border:1px solid #D1D5DB;background:#fff;color:var(--ink);cursor:pointer}
+button.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+button.danger{color:#991B1B}
+button:disabled{opacity:.5;cursor:default}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;padding:24px 32px 8px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.card .k{font-size:13px;color:var(--muted)}.card .v{font-size:28px;font-weight:600}
+.evidence{margin:8px 32px 0;padding:10px 16px;border-radius:10px;background:#ECFDF5;border:1px solid #A7F3D0;font-size:13px;color:#065F46}
+.main{display:flex;flex-wrap:wrap;gap:20px;padding:16px 32px 32px;align-items:flex-start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.panel h2{margin:0;font-size:15px;font-weight:600}
+.phead{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
+ul.list{list-style:none;margin:0;padding:0}
+ul.list li{padding:14px 18px;border-bottom:1px solid #F3F4F6;display:flex;flex-direction:column;gap:6px;cursor:pointer}
+ul.list li.sel{background:#F0FDFA;box-shadow:inset 3px 0 0 var(--teal)}
+.name{font-size:14px;font-weight:600}
+.badge{align-self:flex-start;font-size:12px;font-weight:500;padding:3px 8px;border-radius:6px}
+.b-green{background:#DCFCE7;color:#166534}.b-amber{background:#FEF3C7;color:#92400E}.b-red{background:#FEE2E2;color:#991B1B}
+.b-blue{background:#DBEAFE;color:#1E40AF}.b-grey{background:#F3F4F6;color:#374151}
+.decision{background:#fff;border:1px solid #FCA5A5;border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.decision h2{color:#991B1B}
+.decision p{margin:0;font-size:14px;line-height:1.55;color:#374151}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;color:var(--muted);font-size:12px;font-weight:500;padding:10px 20px}
+td{padding:12px 20px;border-top:1px solid #F3F4F6;vertical-align:top}
+.ok{color:#166534;font-weight:500}.warn{color:#92400E;font-weight:600}.bad{color:#991B1B;font-weight:600}
+.next{padding:14px 20px;border-top:1px solid var(--line);background:#F9FAFB;font-size:14px;color:#374151}
+.log{background:var(--navy);color:#E5E7EB;border-radius:12px;overflow:hidden}
+.log .phead{border-color:#1F3A47}.log h2{color:#fff;margin:0;font-size:15px;font-weight:600}
+.log ol{list-style:none;margin:0;padding:16px 18px;display:flex;flex-direction:column;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.5;max-height:640px;overflow-y:auto}
+.log li{display:flex;gap:10px}.t{color:#7C8E99;flex-shrink:0}
+.think{padding:10px 12px;border-radius:8px;background:var(--navy2)}.think .t{color:#5EEAD4}
+.g{color:#86EFAC}.y{color:#FCD34D}.r{color:#FCA5A5}.dim{color:#A7B4BE}
+pre.mail{white-space:pre-wrap;font-family:inherit;font-size:13px;background:#F9FAFB;border:1px solid var(--line);border-radius:8px;padding:12px;margin:0}
+.empty{padding:24px;color:var(--muted);font-size:14px}
+</style></head><body>
+<header>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div class="logo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B1F2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/><path d="M16 15l2 2 4-4"/></svg></div>
+    <div style="display:flex;flex-direction:column"><span style="font-size:17px;font-weight:600">Supplier Onboarding Agent</span>
+    <span style="font-size:12px;color:#A7B4BE">Procurement · Demo data</span></div>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap">
+    <span class="pill" id="today">Today: …</span>
+    <span class="pill"><span class="dot" id="busy"></span>Agent running · watching onboarding@buyer-company.sa</span>
+  </div>
+</header>
+
+<div class="sim" aria-label="Simulator">
+  <span>Simulator</span>
+  <button onclick="post('/api/simulate/1')">1 · Al Noor applies</button>
+  <button onclick="post('/api/simulate/2')">2 · Rawabi applies</button>
+  <button onclick="post('/api/simulate/2/reply')">2b · Rawabi replies</button>
+  <button onclick="post('/api/simulate/3')">3 · Gulf Steel applies</button>
+  <button onclick="post('/api/simulate/4')">4 · “Al Noor” bank change</button>
+  <button onclick="post('/api/clock',{date:'2027-09-30'})">5 · Fast-forward 11 months</button>
+  <button class="danger" onclick="if(confirm('Clear all demo data?'))post('/api/reset').then(()=>{selected=null;events=[];refresh()})">Reset</button>
+</div>
+
+<section class="cards" aria-label="Summary">
+  <div class="card"><span class="k">Suppliers this week</span><span class="v" id="c-all">0</span></div>
+  <div class="card"><span class="k">Onboarded by agent alone</span><span class="v" style="color:#166534" id="c-onb">0</span></div>
+  <div class="card"><span class="k">Waiting on supplier</span><span class="v" style="color:#92400E" id="c-wait">0</span></div>
+  <div class="card" style="border-color:#FCA5A5"><span class="k">Needs your decision</span><span class="v" style="color:#991B1B" id="c-dec">0</span></div>
+</section>
+<div class="evidence" id="evidence" hidden></div>
+
+<div class="main">
+  <section class="panel" aria-label="Suppliers" style="flex:1 1 280px;max-width:340px;min-width:0">
+    <div class="phead"><h2>Suppliers</h2><span style="font-size:12px;color:var(--muted)" id="n-active"></span></div>
+    <ul class="list" id="suppliers"></ul>
+    <div class="phead" style="border-top:1px solid var(--line)"><h2>Vendors on file</h2></div>
+    <ul class="list" id="vendors"></ul>
+  </section>
+
+  <div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:20px" id="center"></div>
+
+  <section class="log" aria-label="Agent activity" style="flex:1 1 320px;max-width:420px;min-width:0">
+    <div class="phead"><h2>What the agent is doing</h2><span style="font-size:12px;color:#A7B4BE" id="log-title">All activity</span></div>
+    <ol id="log"></ol>
+  </section>
+</div>
+
+<script>
+let S = null, events = [], selected = null, refreshTimer = null;
+const DOC = {commercial_registration:'Commercial registration', vat_certificate:'VAT certificate', bank_letter:'Bank letter',
+  gosi_certificate:'GOSI / Nitaqat certificate', zakat_certificate:'Zakat certificate', other:'Other attachment'};
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const J = s => { try { return typeof s === 'string' ? JSON.parse(s) : s } catch { return null } };
+const fmtDate = d => d ? new Date(d + 'T00:00:00').toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'}) : '—';
+const maskIban = i => i ? `${i.slice(0,4)} •••• ${i.slice(-4)}` : '—';
+
+async function post(url, body) {
+  const r = await fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body || {})});
+  if (!r.ok) alert((await r.json()).detail || r.statusText);
+  scheduleRefresh();
+  return r;
+}
+
+function companyName(c) {
+  if (c.vendor) return c.vendor.name;
+  const cr = (c.documents || []).find(d => d.extraction && d.extraction.doc_type === 'commercial_registration');
+  if (cr && cr.extraction.company_name) return cr.extraction.company_name;
+  const subj = (c.emails.find(e => e.direction === 'in') || {}).subject || '';
+  return subj.includes(' - ') ? subj.split(' - ').pop() : (c.supplier_name || c.id);
+}
+
+function caseBadge(c) {
+  const o = c.outcome, st = c.status;
+  if (st === 'reading' || st === 'received' || st === 'checking') return ['b-blue', 'Agent checking documents'];
+  if (o.decision === 'onboard' && !c.card) return ['b-green', 'Onboarded · no human needed'];
+  if (o.decision === 'onboard') return ['b-green', 'Onboarded'];
+  if (o.decision === 'freeze') return st === 'frozen' ? ['b-red', 'Bank change frozen · call needed'] : ['b-grey', `Bank change ${st}`];
+  if (o.decision === 'escalate') return st === 'escalated' ? ['b-red', 'Escalated · ' + (c.card ? short(c.card.reason) : '')] : ['b-grey', `Decided: ${st}`];
+  if (o.decision === 'request_fix') return ['b-amber', 'Waiting on supplier · ' + o.documents_requested.map(d => DOC[d] || d).join(', ')];
+  return ['b-grey', st];
+}
+const short = s => { const t = (s || '').split(/[.;,(]/)[0]; return t.length <= 44 ? t : t.slice(0, 44).replace(/\s+\S*$/, '') + '…'; };
+const human = s => (s || '').replace(/_/g, ' ');
+
+function render() {
+  if (!S) return;
+  document.getElementById('today').textContent = 'Today: ' + fmtDate(S.today);
+  const cs = S.cases;
+  document.getElementById('c-all').textContent = cs.length;
+  document.getElementById('c-onb').textContent = cs.filter(c => c.outcome.decision === 'onboard' && !c.card).length;
+  document.getElementById('c-wait').textContent = cs.filter(c => c.status === 'waiting_on_supplier').length;
+  document.getElementById('c-dec').textContent = S.open_cards.length;
+  document.getElementById('n-active').textContent = `${cs.length} cases`;
+  const r = S.results, ev = document.getElementById('evidence');
+  if (r) {
+    ev.hidden = false;
+    ev.innerHTML = `<strong>Measured on ${r.cases} ${r.split === 'heldout' ? 'held-out' : 'dev'} cases</strong> (${esc(r.run_id)}): `
+      + `${(r.decision_accuracy*100).toFixed(1)}% correct decisions · ${(r.fraud_recall*100).toFixed(0)}% of fraud stopped · `
+      + `${(r.false_escalation_rate*100).toFixed(1)}% false escalations · ${r.human_touches_per_case} human touches per case`;
+  }
+  if (!selected && cs.length) selected = (S.open_cards.length ? S.open_cards[S.open_cards.length-1].case_id : cs[cs.length-1].id);
+
+  document.getElementById('suppliers').innerHTML = cs.length ? cs.slice().reverse().map(c => {
+    const [cls, txt] = caseBadge(c);
+    return `<li class="${c.id === selected ? 'sel' : ''}" onclick="selected='${c.id}';render()">
+      <span class="name">${esc(companyName(c))}</span><span class="badge ${cls}">${esc(txt)}</span></li>`;
+  }).join('') : '<li class="empty">No cases yet. Use the simulator above.</li>';
+
+  document.getElementById('vendors').innerHTML = S.vendors.length ? S.vendors.map(v => {
+    const cls = v.status === 'active' ? 'b-green' : v.status === 'at_risk' ? 'b-amber' : 'b-red';
+    const txt = v.status === 'active' ? 'Active' : v.status === 'at_risk'
+      ? 'At risk · renewal requested' : 'Payments on hold · ' + human(v.hold_reason);
+    return `<li style="cursor:default"><span class="name">${esc(v.name)}</span><span class="badge ${cls}">${esc(txt)}</span>
+      <span style="font-size:12px;color:var(--muted)">${v.documents.map(d => `${(DOC[d.doc_type]||d.doc_type).split(' ')[0]} to ${fmtDate(d.expiry_date)}`).join(' · ')}</span></li>`;
+  }).join('') : '<li class="empty" style="cursor:default">None yet.</li>';
+
+  renderCenter();
+  renderLog();
+}
+
+function lastChecks(caseId) {
+  const e = [...events].reverse().find(e => e.case_id === caseId && e.name === 'run_checks' && e.output);
+  return e ? J(e.output) : null;
+}
+
+function renderCenter() {
+  const c = S.cases.find(c => c.id === selected), el = document.getElementById('center');
+  let html = '';
+  const card = c && c.card && c.card.status === 'open' ? c.card : null;
+  if (card) {
+    const bc = S.bank_changes.find(b => b.case_id === c.id);
+    const ev = J(card.evidence) || {};
+    let body = esc(card.reason);
+    if (bc) {
+      const flags = J(bc.flags) || [];
+      body = `An email from <strong>${esc(bc.sender)}</strong> asks to send ${esc(companyName(c))}'s payments to a new account `
+        + `(${esc(maskIban(bc.new_iban))}${ev.new_bank ? ', ' + esc(ev.new_bank) : ''}). I froze the change and put payments on hold. `
+        + (flags.length ? `Red flags: <strong>${flags.map(f => f.replace(/_/g,' ')).join(', ')}</strong>. ` : 'No red flags found, but bank changes always need a call. ')
+        + `Please call <strong>${esc(ev.callback_phone || '')}</strong>, the number on file, before approving.`;
+    }
+    html += `<section class="decision" aria-label="Needs your decision">
+      <div style="display:flex;align-items:center;gap:10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>
+      <h2>Needs your decision: ${esc(companyName(c))}</h2></div><p>${body}</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        ${bc ? `<button class="primary" onclick="decide(${card.id},'approve')">Called, details confirmed: approve</button>`
+             : `<button class="primary" onclick="decide(${card.id},'ask_supplier')">Ask supplier to explain</button>
+                <button onclick="decide(${card.id},'approve')">Approve anyway</button>`}
+        <button class="danger" onclick="decide(${card.id},'reject')">${bc ? 'Reject change' : 'Reject supplier'}</button>
+      </div></section>`;
+  }
+  if (!c) { el.innerHTML = html || '<section class="panel"><div class="empty">Pick a supplier, or run a scene from the simulator.</div></section>'; return; }
+
+  const chk = lastChecks(c.id), fails = chk ? [...(chk.risk_failures||[]), ...(chk.fixable_failures||[])] : [];
+  const docs = c.documents.filter(d => d.extraction);
+  const rows = docs.map(d => {
+    const x = d.extraction, t = x.doc_type;
+    const f = fails.filter(f => f.doc_type === t);
+    const read = [];
+    if (!x.legible) read.push('could not read this scan');
+    if (x.company_name || x.company_name_ar) read.push(esc(x.company_name || x.company_name_ar));
+    if (x.cr_number && t === 'commercial_registration') read.push('CR ' + esc(x.cr_number));
+    if (x.vat_number) read.push('VAT ' + esc(x.vat_number));
+    if (x.iban) read.push('IBAN ' + esc(maskIban(x.iban)));
+    if (x.account_name) read.push('holder ' + esc(x.account_name));
+    const checkedOn = (c.updated_at || S.today).slice(0, 10);   // the date the agent checked it, not the demo clock
+    if (x.expiry_date_iso) read.push((x.expiry_date_iso < checkedOn ? 'expired ' : 'valid to ') + fmtDate(x.expiry_date_iso));
+    if (x.contains_instructions) read.push('<span class="bad">contains instructions to the reviewer</span>');
+    const verdict = t === 'other' ? '<span class="dim" style="color:#6B7280">Not required</span>'
+      : f.length ? `<span class="${f.some(z => z.category === 'risk') ? 'bad' : 'warn'}">${esc(f.map(z => z.check.replace(/_/g,' ')).join(', '))}</span>`
+      : chk ? '<span class="ok">Valid</span>' : '<span class="dim">…</span>';
+    return `<tr${f.length ? ' style="background:#FFFBEB"' : ''}><td style="font-weight:500">${esc(DOC[t] || t)}<div style="font-size:12px;color:var(--muted)">${esc(d.filename)}</div></td>
+      <td style="color:#374151">${read.join(' · ')}</td><td>${verdict}</td></tr>`;
+  }).join('');
+  const missing = fails.filter(f => f.check === 'present').map(f => `<tr style="background:#FFFBEB"><td style="font-weight:500">${esc(DOC[f.doc_type])}</td><td>not received</td><td class="warn">Missing</td></tr>`).join('');
+  const [cls, txt] = caseBadge(c);
+  const sent = c.emails.filter(e => e.direction === 'out').slice(-1)[0];
+  const next = {onboard: 'Vendor record created and welcome email sent. The agent now watches this vendor\'s document expiry dates.',
+    request_fix: 'Emailed the supplier for the documents above. When the reply arrives, the agent re-checks only what changed.',
+    escalate: 'Stopped and asked a human. The supplier was not contacted about the problem.',
+    freeze: 'Change frozen and payments held until someone calls the number on file.'}[c.outcome.decision] || 'Working…';
+  html += `<section class="panel" aria-label="Documents">
+    <div class="phead"><div style="display:flex;flex-direction:column;gap:2px"><h2 style="font-size:17px">${esc(companyName(c))}</h2>
+    <span style="font-size:13px;color:var(--muted)">${esc(c.sender_email)} · ${c.documents.length} document(s) received</span></div>
+    <span class="badge ${cls}">${esc(txt)}</span></div>
+    ${docs.length || missing ? `<div style="overflow-x:auto"><table style="min-width:520px"><thead><tr><th>Document</th><th>What the agent read</th><th>Check</th></tr></thead><tbody>${rows}${missing}</tbody></table></div>` : ''}
+    <div class="next"><strong style="color:#111827">Next step:</strong> ${next}</div>
+    ${sent ? `<div style="padding:14px 20px;border-top:1px solid var(--line)"><div style="font-size:12px;color:var(--muted);margin-bottom:6px">Email the agent wrote · ${esc(sent.subject)}</div><pre class="mail">${esc(sent.body)}</pre></div>` : ''}
+  </section>`;
+  el.innerHTML = html;
+}
+
+function describe(e) {
+  const out = J(e.output) || {}, inp = J(e.input) || {}, s = e.summary || '';
+  if (s.startsWith('REFUSED')) return `<span class="r">${esc(e.name)} refused: ${esc(out.refused || '')}</span>`;
+  switch (e.kind + ':' + (e.name || '')) {
+    case 'system:email_received': return esc(s);
+    case 'llm:extract': return esc(s.replace('read ', 'Read ').replace(' -> ', ' → ').replace(/_/g, ' '));
+    case 'llm:reread': return `<span class="y">${esc(s)}</span>`;
+    case 'llm:agent': return null;
+    case 'reasoning:': return {think: esc(s)};
+    case 'tool:get_case': return 'Opened the case';
+    case 'tool:extract_documents': return null;
+    case 'tool:run_checks': {
+      const f = [...(out.risk_failures||[]), ...(out.fixable_failures||[])];
+      const rec = {onboard:'<span class="g">all clear</span>', request_fix:'<span class="y">supplier can fix</span>', escalate:'<span class="r">risk, needs a human</span>'}[out.recommended] || '';
+      return `Ran ${out.checks_passed + f.length} checks → ${rec}` + (f.length ? `<br><span class="dim">${f.map(x => esc(x.check.replace(/_/g,' ') + ': ' + x.detail)).join('<br>')}</span>` : '');
+    }
+    case 'tool:check_registry': return `Wathq registry → <span class="${out.status === 'active' ? 'g' : 'r'}">${esc(out.status || 'not found')}</span>`;
+    case 'tool:check_vat': return `ZATCA VAT → ${out.registered ? '<span class="g">registered</span>' : '<span class="r">not registered</span>'}`;
+    case 'tool:create_vendor': return `<span class="g">Created vendor ${esc(out.vendor_id)}</span>`;
+    case 'tool:send_email': return `Sent email: “${esc(inp.subject || inp.kind)}”` + (inp.documents_requested && inp.documents_requested.length ? ` <span class="dim">(${inp.documents_requested.map(d => DOC[d] || d).join(', ')})</span>` : '');
+    case 'tool:escalate': return {think: 'Escalating: ' + esc(inp.reason)};
+    case 'tool:check_bank_change': return `Bank change check → ${(out.flags||[]).length ? '<span class="r">' + out.flags.map(f => f.replace(/_/g,' ')).join(', ') + '</span>' : '<span class="g">no red flags</span>'}`;
+    case 'tool:freeze_bank_change': return `<span class="y">Froze the change, held payments; callback ${esc(out.callback_phone)}</span>`;
+    case 'tool:set_status': return `<span class="dim">Case → ${esc(inp.status.replace(/_/g, ' '))}</span>`;
+    case 'human:decision': return `<span class="g">${esc(s)}</span>`;
+    case 'system:error': return `<span class="r">${esc(s)}</span>`;
+    default: return esc(s);
+  }
+}
+
+function renderLog() {
+  const c = S && S.cases.find(c => c.id === selected);
+  document.getElementById('log-title').textContent = c ? companyName(c) : 'All activity';
+  const mine = events.filter(e => !c || e.case_id === c.id || (!e.case_id && (e.vendor_id || e.kind === 'system')));
+  const items = mine.map(e => {
+    const d = describe(e); if (d == null) return '';
+    const t = (e.ts || '').slice(11, 16);
+    return d.think ? `<li class="think"><span class="t">think</span><span>${d.think}</span></li>`
+      : `<li><span class="t">${t}</span><span>${d}</span></li>`;
+  }).join('');
+  const log = document.getElementById('log');
+  log.innerHTML = items || '<li class="dim">Waiting for an email…</li>';
+  log.scrollTop = log.scrollHeight;
+}
+
+async function decide(id, action) { await post(`/api/decisions/${id}`, {action}); }
+
+async function refresh() { S = await (await fetch('/api/state')).json(); render(); }
+function scheduleRefresh() { clearTimeout(refreshTimer); refreshTimer = setTimeout(refresh, 250); }
+
+async function boot() {
+  events = await (await fetch('/api/events')).json();
+  await refresh();
+  const es = new EventSource('/api/stream');
+  let idle;
+  es.onmessage = m => {
+    const e = JSON.parse(m.data);
+    if (events.length && e.id <= events[events.length-1].id) return;
+    events.push(e);
+    const busy = document.getElementById('busy'); busy.classList.add('busy');
+    clearTimeout(idle); idle = setTimeout(() => busy.classList.remove('busy'), 2500);
+    if (e.case_id && e.name === 'email_received') selected = e.case_id;
+    scheduleRefresh();
+  };
+}
+boot();
+</script>
+</body></html>

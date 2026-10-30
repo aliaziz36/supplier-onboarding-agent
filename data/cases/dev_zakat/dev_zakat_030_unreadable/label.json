@@ -1,0 +1,102 @@
+{
+  "case_id": "dev_zakat_030_unreadable",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "unreadable",
+  "perturbations": [
+    "name_variant",
+    "date_format"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Sahab Contracting Co.",
+      "company_name_ar": "شركة سحاب للمقاولات",
+      "cr_number": "1010762628",
+      "expiry_date": "2028-02-09"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "1010762628",
+      "expiry_date": null,
+      "iban": "SA6680435888340146249470",
+      "account_name": "SAHAB CONTRACTING CO."
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Sahab Contracting Co.",
+      "company_name_ar": null,
+      "cr_number": "1010762628",
+      "expiry_date": "2027-11-07",
+      "vat_number": "388892467457683"
+    },
+    "zakat.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Sahab Contracting Co.",
+      "company_name_ar": "شركة سحاب للمقاولات",
+      "cr_number": "1010762628",
+      "expiry_date": "2028-08-10"
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "long",
+      "scanned": false,
+      "legible": false,
+      "contains_instructions": false,
+      "company_name": "Sahab Contracting Co.",
+      "company_name_ar": "شركة سحاب للمقاولات",
+      "cr_number": "1010762628",
+      "expiry_date": "2027-09-05"
+    }
+  },
+  "expected_decision": "request_fix",
+  "expected_documents_requested": [
+    "gosi_certificate"
+  ],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "gosi_certificate is an unreadable scan.",
+  "expected_fields": {
+    "company_name": "Sahab Contracting Co.",
+    "company_name_ar": "شركة سحاب للمقاولات",
+    "cr_number": "1010762628",
+    "vat_number": "388892467457683",
+    "iban": "SA6680435888340146249470",
+    "account_name": "SAHAB CONTRACTING CO.",
+    "expiry": {
+      "commercial_registration": "2028-02-09",
+      "vat_certificate": "2027-11-07",
+      "gosi_certificate": "2027-09-05",
+      "zakat_certificate": "2028-08-10"
+    }
+  }
+}

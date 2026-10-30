@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_019_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.24,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01W1FF7mYnh6GKbusHm5MaF8",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_019_expired",
+     "kind": "request_fix",
+     "subject": "Action needed: documents for Al Ofoq Printing registration",
+     "body": "Dear Sara,\n\nThank you for your documents. To complete registration we need two items:\n\n- GOSI certificate: the copy provided expired on 2026-05-10. Please send a current certificate.\n- Zakat certificate: not received. Please send a valid copy.\n\nPlease reply to this email with the documents attached.\n\nKind regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate",
+      "zakat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01EEj869ojqubvmrELZYxXWz",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_019_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4424,
+   "output_tokens": 378
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050804605": {
+        "name": "شركة نجد للمقاولات",
+        "name_en": "Najd Contracting Co.",
+        "status": "active",
+        "issue_date": "2025-03-18",
+        "expiry_date": "2026-03-18",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "354903151124693": {
+        "registered": true,
+        "name": "شركة نجد للمقاولات",
+        "name_en": "Najd Contracting Co.",
+        "crNumber": "2050804605"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

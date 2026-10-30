@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_041_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.41,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01CtzAF6db9JhtkbcXKjfw9X",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_041_cr_inactive",
+     "reason": "Commercial registration shows as cancelled in the registry; possible fraud/ineligible supplier. The zakat certificate is also missing.",
+     "evidence": [
+      "cr_active check failed: registry status cancelled (CR 2051483853)",
+      "zakat_certificate not received",
+      "Other 16 checks passed; names and numbers consistent across CR, bank letter, VAT and GOSI",
+      "Sender: sara@gulf-logistics.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01MohSH5ncCx8bz9ApgcGcbB",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_041_cr_inactive",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4424,
+   "output_tokens": 321
+  }
+ }
+}

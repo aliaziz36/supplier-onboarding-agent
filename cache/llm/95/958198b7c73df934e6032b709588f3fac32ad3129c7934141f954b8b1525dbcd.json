@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:dev_025_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.68,
+ "response": {
+  "content": [
+   {
+    "text": "GOSI is missing. I'll still run the registry checks quickly.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01MnnmZEtRxyf9AMa9oLEc7u",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "2050884332"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01LaLqge4p8CEop2ty7QmqHq",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "328221798262593"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3758,
+   "output_tokens": 129
+  }
+ }
+}

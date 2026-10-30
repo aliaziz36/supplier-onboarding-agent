@@ -1,0 +1,99 @@
+{
+  "case_id": "dev_zakat_006_clean",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "arabic"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة نجمة الخليج للإعاشة",
+      "cr_number": "4030857613",
+      "expiry_date": "2027-11-07"
+    },
+    "zakat_cert.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star Catering LLC",
+      "company_name_ar": "شركة نجمة الخليج للإعاشة",
+      "cr_number": "4030857613",
+      "expiry_date": "2028-03-05"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "4030857613",
+      "expiry_date": null,
+      "iban": "SA5915594685850177548659",
+      "account_name": "Al Khaleej Star Catering LLC"
+    },
+    "ZATCA_VAT.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Al Khaleej Star Catering LLC",
+      "company_name_ar": null,
+      "cr_number": "4030857613",
+      "expiry_date": "2028-06-01",
+      "vat_number": "396341019084213"
+    },
+    "CR_certificate.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة نجمة الخليج للإعاشة",
+      "cr_number": "4030857613",
+      "expiry_date": "2027-12-24"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Al Khaleej Star Catering LLC",
+    "company_name_ar": "شركة نجمة الخليج للإعاشة",
+    "cr_number": "4030857613",
+    "vat_number": "396341019084213",
+    "iban": "SA5915594685850177548659",
+    "account_name": "Al Khaleej Star Catering LLC",
+    "expiry": {
+      "commercial_registration": "2027-12-24",
+      "vat_certificate": "2028-06-01",
+      "gosi_certificate": "2027-11-07",
+      "zakat_certificate": "2028-03-05"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050012715": {
+        "name": "شركة نجمة الخليج للطباعة",
+        "name_en": "Al Khaleej Star Printing Company",
+        "status": "active",
+        "issue_date": "2026-07-02",
+        "expiry_date": "2027-08-24",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "344842182707793": {
+        "registered": true,
+        "name": "شركة نجمة الخليج للطباعة",
+        "name_en": "Al Khaleej Star Printing Company",
+        "crNumber": "2050012715"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

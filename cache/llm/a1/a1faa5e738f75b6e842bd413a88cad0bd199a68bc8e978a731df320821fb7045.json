@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_IBAN_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.54,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Wadi Logistics Est.\",\"company_name_ar\":null,\"cr_number\":\"4030404894\",\"vat_number\":null,\"iban\":\"SA0680019350840619520539\",\"account_name\":\"Wadi Logistics Est.\",\"account_number\":\"019350840619520539\",\"bank_name\":\"Al Rajhi Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-04-26\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":4,\"day\":26},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 284
+  }
+ }
+}

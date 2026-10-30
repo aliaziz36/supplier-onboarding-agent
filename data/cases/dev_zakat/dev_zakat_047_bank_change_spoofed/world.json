@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "4030161629": {
+        "name": "شركة تهامة للمستلزمات الطبية",
+        "name_en": "Tihama Medical Supplies Company",
+        "status": "active",
+        "issue_date": "2026-05-30",
+        "expiry_date": "2027-08-03",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "334498976115773": {
+        "registered": true,
+        "name": "شركة تهامة للمستلزمات الطبية",
+        "name_en": "Tihama Medical Supplies Company",
+        "crNumber": "4030161629"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-4030161629",
+    "name": "Tihama Medical Supplies Company",
+    "name_ar": "شركة تهامة للمستلزمات الطبية",
+    "cr_number": "4030161629",
+    "vat_number": "334498976115773",
+    "iban": "SA2080395245390645123575",
+    "bank_code": "80",
+    "account_name": "Tihama Medical Supplies Company",
+    "email": "huda@tihama-medical.com.sa",
+    "email_domain": "tihama-medical.com.sa",
+    "phone": "+966500727783",
+    "documents": {
+      "commercial_registration": "2027-08-03",
+      "vat_certificate": "2028-03-14",
+      "gosi_certificate": "2028-03-19"
+    }
+  }
+}

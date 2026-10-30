@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050479295": {
+        "name": "مؤسسة أجيال للمستلزمات المكتبية",
+        "name_en": "Ajyal Office Supplies Est.",
+        "status": "active",
+        "issue_date": "2026-08-24",
+        "expiry_date": "2027-07-21",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "326014173740453": {
+        "registered": true,
+        "name": "مؤسسة أجيال للمستلزمات المكتبية",
+        "name_en": "Ajyal Office Supplies Est.",
+        "crNumber": "2050479295"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

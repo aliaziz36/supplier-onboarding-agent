@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2050420775": {
+        "name": "شركة اليمامة للمستلزمات الطبية",
+        "name_en": "Al Yamamah Medical Supplies Company",
+        "status": "active",
+        "issue_date": "2026-01-26",
+        "expiry_date": "2028-03-28",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "355988382361343": {
+        "registered": true,
+        "name": "شركة اليمامة للمستلزمات الطبية",
+        "name_en": "Al Yamamah Medical Supplies Company",
+        "crNumber": "2050420775"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

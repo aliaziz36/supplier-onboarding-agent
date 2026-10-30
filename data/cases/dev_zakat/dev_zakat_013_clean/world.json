@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4650701700": {
+        "name": "شركة البيان للخدمات الكهربائية",
+        "name_en": "Al Bayan Electrical Services LLC",
+        "status": "active",
+        "issue_date": "2026-01-23",
+        "expiry_date": "2027-12-16",
+        "city": "Madinah"
+      }
+    },
+    "vat": {
+      "301928858495733": {
+        "registered": true,
+        "name": "شركة البيان للخدمات الكهربائية",
+        "name_en": "Al Bayan Electrical Services LLC",
+        "crNumber": "4650701700"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

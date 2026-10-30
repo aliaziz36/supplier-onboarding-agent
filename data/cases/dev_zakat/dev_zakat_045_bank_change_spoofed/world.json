@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "1010238765": {
+        "name": "شركة الوادي للخدمات الكهربائية",
+        "name_en": "Wadi Electrical Services Co.",
+        "status": "active",
+        "issue_date": "2025-07-09",
+        "expiry_date": "2028-06-15",
+        "city": "Riyadh"
+      }
+    },
+    "vat": {
+      "324929928229333": {
+        "registered": true,
+        "name": "شركة الوادي للخدمات الكهربائية",
+        "name_en": "Wadi Electrical Services Co.",
+        "crNumber": "1010238765"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-1010238765",
+    "name": "Wadi Electrical Services Co.",
+    "name_ar": "شركة الوادي للخدمات الكهربائية",
+    "cr_number": "1010238765",
+    "vat_number": "324929928229333",
+    "iban": "SA1310378757680636490851",
+    "bank_code": "10",
+    "account_name": "Wadi Electrical Services Co.",
+    "email": "yousef@wadi-electrical.com.sa",
+    "email_domain": "wadi-electrical.com.sa",
+    "phone": "+966536428798",
+    "documents": {
+      "commercial_registration": "2028-06-15",
+      "vat_certificate": "2028-06-08",
+      "gosi_certificate": "2028-07-16"
+    }
+  }
+}

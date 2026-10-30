@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_9055.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.69,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة المدى للنقل\",\"cr_number\":\"2050730315\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"٢٤-٠٨-٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":8,\"day\":24},\"expiry_date\":{\"raw\":\"٠٨-٠٤-٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":4,\"day\":8},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.9,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.9},\"notes\":\"Arabic-only CR certificate from Ministry of Commerce; city Dammam, activity Transport. Digits read as Arabic-Indic; CR number printed as ٢٠٥٠٧٣٠٣١٥ with dot-like separators.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 396
+  }
+ }
+}

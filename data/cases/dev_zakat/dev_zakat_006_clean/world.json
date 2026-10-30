@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "4030857613": {
+        "name": "شركة نجمة الخليج للإعاشة",
+        "name_en": "Al Khaleej Star Catering LLC",
+        "status": "active",
+        "issue_date": "2026-07-24",
+        "expiry_date": "2027-12-24",
+        "city": "Jeddah"
+      }
+    },
+    "vat": {
+      "396341019084213": {
+        "registered": true,
+        "name": "شركة نجمة الخليج للإعاشة",
+        "name_en": "Al Khaleej Star Catering LLC",
+        "crNumber": "4030857613"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

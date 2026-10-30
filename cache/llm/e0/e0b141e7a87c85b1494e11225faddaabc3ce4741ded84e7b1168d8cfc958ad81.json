@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:demo_2_rawabi_expired_vat",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.7,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01YaXgEVp8cdUx5SAcLojx81",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "demo_2_rawabi_expired_vat"
+    },
+    "name": "create_vendor",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4058,
+   "output_tokens": 65
+  }
+ }
+}

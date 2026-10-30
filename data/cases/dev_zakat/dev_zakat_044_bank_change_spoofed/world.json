@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2050168752": {
+        "name": "شركة الواحة للمقاولات",
+        "name_en": "Al Waha Contracting Co.",
+        "status": "active",
+        "issue_date": "2025-05-30",
+        "expiry_date": "2028-09-23",
+        "city": "Dammam"
+      }
+    },
+    "vat": {
+      "331477757817943": {
+        "registered": true,
+        "name": "شركة الواحة للمقاولات",
+        "name_en": "Al Waha Contracting Co.",
+        "crNumber": "2050168752"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2050168752",
+    "name": "Al Waha Contracting Co.",
+    "name_ar": "شركة الواحة للمقاولات",
+    "cr_number": "2050168752",
+    "vat_number": "331477757817943",
+    "iban": "SA2915192612616832089111",
+    "bank_code": "15",
+    "account_name": "Al Waha Contracting Co.",
+    "email": "reem@alwaha-contracting.com.sa",
+    "email_domain": "alwaha-contracting.com.sa",
+    "phone": "+966519856616",
+    "documents": {
+      "commercial_registration": "2028-09-23",
+      "vat_certificate": "2028-02-14",
+      "gosi_certificate": "2027-12-20"
+    }
+  }
+}

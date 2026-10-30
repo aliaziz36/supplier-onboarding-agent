@@ -1,0 +1,99 @@
+{
+  "case_id": "dev_zakat_035_bank_name_mismatch",
+  "split": "dev_zakat_035_bank",
+  "kind": "onboarding",
+  "scenario": "bank_name_mismatch",
+  "perturbations": [],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "zakat_certificate.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal Office Supplies Est.",
+      "company_name_ar": "مؤسسة أجيال للمستلزمات المكتبية",
+      "cr_number": "2050479295",
+      "expiry_date": "2027-05-16"
+    },
+    "commercial_registration.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal Office Supplies Est.",
+      "company_name_ar": "مؤسسة أجيال للمستلزمات المكتبية",
+      "cr_number": "2050479295",
+      "expiry_date": "2027-07-21"
+    },
+    "bank.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "dmy",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050479295",
+      "expiry_date": null,
+      "iban": "SA5310976665973664112559",
+      "account_name": "Al Noor Contracting Est."
+    },
+    "gosi.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal Office Supplies Est.",
+      "company_name_ar": "مؤسسة أجيال للمستلزمات المكتبية",
+      "cr_number": "2050479295",
+      "expiry_date": "2027-09-26"
+    },
+    "tax_cert.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Ajyal Office Supplies Est.",
+      "company_name_ar": "مؤسسة أجيال للمستلزمات المكتبية",
+      "cr_number": "2050479295",
+      "expiry_date": "2028-06-12",
+      "vat_number": "326014173740453"
+    }
+  },
+  "expected_decision": "escalate",
+  "expected_documents_requested": [],
+  "expected_flags": [
+    "account_name_mismatch"
+  ],
+  "fraud": true,
+  "reason": "Bank account holder 'Al Noor Contracting Est.' differs from CR name.",
+  "expected_fields": {
+    "company_name": "Ajyal Office Supplies Est.",
+    "company_name_ar": "مؤسسة أجيال للمستلزمات المكتبية",
+    "cr_number": "2050479295",
+    "vat_number": "326014173740453",
+    "iban": "SA5310976665973664112559",
+    "account_name": "Al Noor Contracting Est.",
+    "expiry": {
+      "commercial_registration": "2027-07-21",
+      "vat_certificate": "2028-06-12",
+      "gosi_certificate": "2027-09-26",
+      "zakat_certificate": "2027-05-16"
+    }
+  }
+}

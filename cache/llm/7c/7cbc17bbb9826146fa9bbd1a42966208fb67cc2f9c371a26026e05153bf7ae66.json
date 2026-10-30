@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_zakat_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.02,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"zakat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Gulf Office Supplies Co.\",\"company_name_ar\":\"شركة الخليج للمستلزمات المكتبية\",\"cr_number\":\"1010371353\",\"vat_number\":\"344778983761013\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-10-13\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":10,\"day\":13},\"expiry_date\":{\"raw\":\"2028-04-02\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":4,\"day\":2},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 4005,
+   "output_tokens": 313
+  }
+ }
+}

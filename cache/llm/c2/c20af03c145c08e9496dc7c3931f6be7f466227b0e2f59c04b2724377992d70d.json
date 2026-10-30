@@ -1,0 +1,23 @@
+{
+ "purpose": "extract-reread:1_gosi.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 8.19,
+ "response": {
+  "content": [
+   {
+    "signature": "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",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة المدى للنقل\",\"cr_number\":\"2050730315\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"296771395\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"٠٤/١٠/٢٠٢٥\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":10,\"day\":4},\"expiry_date\":{\"raw\":\"٢٣/٠٨/٢٠٢٨\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":8,\"day\":23},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.95,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"Re-read digit by digit: CR number printed as ٢٠٥٠٧٣٠٣١٥ = 2050730315, which matches the CR reference and not 2050731015. GOSI subscription number ٢٩٦٧٧١٣٩٥ = 296771395. Scan is slightly skewed but readable. The CERTIFIED stamp is not an instruction.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3876,
+   "output_tokens": 1023
+  }
+ }
+}

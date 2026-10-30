@@ -1,0 +1,23 @@
+{
+  "registry": {
+    "cr": {
+      "2051280986": {
+        "name": "مؤسسة روابي للتجارة",
+        "name_en": "Rawabi Trading Est.",
+        "status": "active",
+        "issue_date": "2025-07-16",
+        "expiry_date": "2028-08-27",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "323319298147303": {
+        "registered": true,
+        "name": "مؤسسة روابي للتجارة",
+        "name_en": "Rawabi Trading Est.",
+        "crNumber": "2051280986"
+      }
+    }
+  },
+  "vendor_on_file": null
+}

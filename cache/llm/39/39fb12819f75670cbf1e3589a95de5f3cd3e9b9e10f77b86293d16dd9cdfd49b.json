@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.1,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Khaleej Star Printing Company\",\"company_name_ar\":null,\"cr_number\":\"2050012715\",\"vat_number\":null,\"iban\":\"SA6160852083491740480961\",\"account_name\":\"Al Khaleej Star Printing Company\",\"account_number\":\"852083491740480961\",\"bank_name\":\"Bank AlJazira\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2026-01-20\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":1,\"day\":20},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":0.95,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Scan is slightly blurred but values are readable. Letter carries a CERTIFIED stamp.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3798,
+   "output_tokens": 320
+  }
+ }
+}

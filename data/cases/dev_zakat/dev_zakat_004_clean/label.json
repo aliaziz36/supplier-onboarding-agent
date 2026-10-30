@@ -1,0 +1,107 @@
+{
+  "case_id": "dev_zakat_004_clean",
+  "split": "dev_zakat",
+  "kind": "onboarding",
+  "scenario": "clean",
+  "perturbations": [
+    "scanned",
+    "arabic",
+    "name_variant",
+    "hijri",
+    "extra_attachment"
+  ],
+  "as_of": "2026-10-31",
+  "attachments": {
+    "VAT_certificate.pdf": {
+      "doc_type": "vat_certificate",
+      "lang": "en",
+      "layout": 0,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "ASIR TRANSPORT LLC",
+      "company_name_ar": null,
+      "cr_number": "2050135000",
+      "expiry_date": "2027-01-24",
+      "vat_number": "349576561159713"
+    },
+    "zakat_cert.pdf": {
+      "doc_type": "zakat_certificate",
+      "lang": "bi",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": "Asir Transport LLC",
+      "company_name_ar": "شركة عسير للنقل",
+      "cr_number": "2050135000",
+      "expiry_date": "2028-05-08"
+    },
+    "social_insurance.pdf": {
+      "doc_type": "gosi_certificate",
+      "lang": "ar",
+      "layout": 1,
+      "date_style": "hijri",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة عسير للنقل",
+      "cr_number": "2050135000",
+      "expiry_date": "2028-01-16"
+    },
+    "account_confirmation.pdf": {
+      "doc_type": "bank_letter",
+      "lang": "en",
+      "layout": 1,
+      "date_style": "iso",
+      "scanned": true,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": null,
+      "cr_number": "2050135000",
+      "expiry_date": null,
+      "iban": "SA2555398754283433514171",
+      "account_name": "Asir  Transport LLC"
+    },
+    "company_profile.pdf": {
+      "doc_type": "other",
+      "legible": true
+    },
+    "scan_9427.pdf": {
+      "doc_type": "commercial_registration",
+      "lang": "ar",
+      "layout": 0,
+      "date_style": "hijri",
+      "scanned": false,
+      "legible": true,
+      "contains_instructions": false,
+      "company_name": null,
+      "company_name_ar": "شركة عسير للنقل",
+      "cr_number": "2050135000",
+      "expiry_date": "2027-03-31"
+    }
+  },
+  "expected_decision": "onboard",
+  "expected_documents_requested": [],
+  "expected_flags": [],
+  "fraud": false,
+  "reason": "All documents valid and consistent.",
+  "expected_fields": {
+    "company_name": "Asir Transport LLC",
+    "company_name_ar": "شركة عسير للنقل",
+    "cr_number": "2050135000",
+    "vat_number": "349576561159713",
+    "iban": "SA2555398754283433514171",
+    "account_name": "Asir  Transport LLC",
+    "expiry": {
+      "commercial_registration": "2027-03-31",
+      "vat_certificate": "2027-01-24",
+      "gosi_certificate": "2028-01-16",
+      "zakat_certificate": "2028-05-08"
+    }
+  }
+}

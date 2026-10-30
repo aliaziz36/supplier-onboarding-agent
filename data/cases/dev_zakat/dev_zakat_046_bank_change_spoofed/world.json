@@ -1,0 +1,40 @@
+{
+  "registry": {
+    "cr": {
+      "2051227507": {
+        "name": "شركة تهامة لتصنيع الحديد",
+        "name_en": "Tihama Steel Fabrication Co.",
+        "status": "active",
+        "issue_date": "2026-03-17",
+        "expiry_date": "2028-01-17",
+        "city": "Khobar"
+      }
+    },
+    "vat": {
+      "398549289803173": {
+        "registered": true,
+        "name": "شركة تهامة لتصنيع الحديد",
+        "name_en": "Tihama Steel Fabrication Co.",
+        "crNumber": "2051227507"
+      }
+    }
+  },
+  "vendor_on_file": {
+    "vendor_id": "V-2051227507",
+    "name": "Tihama Steel Fabrication Co.",
+    "name_ar": "شركة تهامة لتصنيع الحديد",
+    "cr_number": "2051227507",
+    "vat_number": "398549289803173",
+    "iban": "SA2405385142464100582052",
+    "bank_code": "05",
+    "account_name": "Tihama Steel Fabrication Co.",
+    "email": "ahmed@tihama-steel.com.sa",
+    "email_domain": "tihama-steel.com.sa",
+    "phone": "+966500430479",
+    "documents": {
+      "commercial_registration": "2028-01-17",
+      "vat_certificate": "2028-04-30",
+      "gosi_certificate": "2028-04-16"
+    }
+  }
+}
