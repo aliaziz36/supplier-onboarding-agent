@@ -182,6 +182,7 @@ def reset():
     with lock:
         for t in ("cases", "documents", "emails", "events", "vendors", "vendor_documents", "bank_changes", "decision_cards"):
             conn.execute(f"DELETE FROM {t}")
+        conn.execute("DELETE FROM sqlite_sequence")   # restart ids so a replayed demo sees identical tool output
         conn.commit()
         clock.set_now(START_DATE)
     return {"ok": True}
