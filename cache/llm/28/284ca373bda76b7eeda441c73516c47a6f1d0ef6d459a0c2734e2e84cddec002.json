@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_5954.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.09,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة درة للنقل\",\"cr_number\":\"1010000855\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"72304591\",\"nitaqat_band\":\"High Green\",\"issue_date\":{\"raw\":\"١٤٤٧/٠٢/٠١ هـ\",\"calendar\":\"hijri\",\"year\":1447,\"month\":2,\"day\":1},\"expiry_date\":{\"raw\":\"١٤٥٠/٠٢/١٣ هـ\",\"calendar\":\"hijri\",\"year\":1450,\"month\":2,\"day\":13},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.95,\"cr_number\":0.8,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.85},\"notes\":\"Issued by the General Organization for Social Insurance. The CR number is printed with dots in the middle (١٠١٠٠٠٠٨٥٥), read as 1010000855. The subscription number is printed as ٧٢٣٠٤٥٠٩١ and read as 72304591; the print is slightly degraded and the digits were not guessed.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3749,
+   "output_tokens": 435
+  }
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_030_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.99,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01UTpRxSoqMwB6mJA9dCt5uV",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_030_unreadable",
+     "kind": "request_fix",
+     "subject": "Please resend your GOSI certificate - Al Manar Logistics Est.",
+     "body": "Dear Faisal,\n\nThank you for your registration documents. The GOSI certificate (nitaqat_gosi.pdf) was an unreadable scan. Please reply with a clear, complete copy. The other documents were received and are fine.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_019UN7nxFX528ykGvxLREKVG",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_030_unreadable",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4365,
+   "output_tokens": 355
+  }
+ }
+}

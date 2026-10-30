@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_gosi.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.94,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة روابي لحلول تقنية المعلومات\",\"cr_number\":\"٤٠٣٠٧٣٢٣٣٨\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"١٧٦٤٢٤٣٥٥\",\"nitaqat_band\":\"Platinum\",\"issue_date\":{\"raw\":\"٢٦-٠٧-٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":7,\"day\":26},\"expiry_date\":{\"raw\":\"١٩-١٠-٢٠٢٧\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":10,\"day\":19},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"Dates are printed in DD-MM-YYYY order with Arabic-Indic digits and no Hijri marker, so they are read as Gregorian. The Nitaqat band is printed in English (Platinum).\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3964,
+   "output_tokens": 423
+  }
+ }
+}

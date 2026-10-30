@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_IBAN_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.17,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Ofoq Printing Company\",\"company_name_ar\":\"شركة الأفق للطباعة\",\"cr_number\":\"2051601504\",\"vat_number\":null,\"iban\":\"SA7420124695302895446687\",\"account_name\":\"Al Ofoq Printing Company\",\"account_number\":\"124695302895446687\",\"bank_name\":\"Riyad Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"06 December 2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":12,\"day\":6},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3957,
+   "output_tokens": 294
+  }
+ }
+}

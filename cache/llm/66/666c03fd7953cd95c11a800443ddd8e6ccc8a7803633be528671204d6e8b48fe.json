@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_042_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.55,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_017daonrWoYf6CtumL9jAhag",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_042_cr_inactive"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4249,
+   "output_tokens": 60
+  }
+ }
+}

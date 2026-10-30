@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_CR_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.87,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة البيان للطباعة\",\"cr_number\":\"4650461998\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"٠٦-٠٥-٢٠٢٦\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":5,\"day\":6},\"expiry_date\":{\"raw\":\"٢٠-٠٩-٢٠٢٨\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":9,\"day\":20},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"Dates are printed as DD-MM-YYYY in Arabic-Indic digits; interpreted as Gregorian given the 2026/2028 years.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3899,
+   "output_tokens": 362
+  }
+ }
+}

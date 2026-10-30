@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:dev_047_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.58,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01R7RRzxvc7LZEcZdSwu3R8P",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_047_bank_change_spoofed",
+     "vendor_id": "V-1010674845",
+     "new_iban": "SA1145612616832089111519",
+     "account_name": "Al Noor Catering Est.",
+     "reason": "Sender domain alnoor-catering-sa.com does not match domain on file alnoor-catering.com.sa; urgency pressure. Call the phone number on file (+966550516875) to verify."
+    },
+    "name": "freeze_bank_change",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01L4B9G6vyQFsXiN1Nqtx6MV",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_047_bank_change_spoofed",
+     "status": "frozen"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3576,
+   "output_tokens": 329
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_CR.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.8,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Gulf Medical Supplies Est.\",\"company_name_ar\":\"مؤسسة الخليج للمستلزمات الطبية\",\"cr_number\":\"2051141502\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"03/05/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":5,\"day\":3},\"expiry_date\":{\"raw\":\"03/05/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":5,\"day\":3},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.8},\"notes\":\"Dates printed as 03/05/2025 and 03/05/2026 with no calendar label; interpreted as Gregorian DD/MM/YYYY (day/month order is ambiguous).\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3946,
+   "output_tokens": 376
+  }
+ }
+}

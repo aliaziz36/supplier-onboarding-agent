@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_030_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.43,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01DLAmrQe69XsRM7Jxtm76G7",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_030_unreadable"
+    },
+    "name": "run_checks",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4166,
+   "output_tokens": 58
+  }
+ }
+}

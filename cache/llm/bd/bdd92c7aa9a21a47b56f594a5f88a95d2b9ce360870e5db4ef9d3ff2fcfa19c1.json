@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_vat_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.05,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Durrah Steel Fabrication Company\",\"company_name_ar\":\"شركة درة لتصنيع الحديد\",\"cr_number\":\"2051222194\",\"vat_number\":\"335524741628573\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"28 March 2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":3,\"day\":28},\"expiry_date\":{\"raw\":\"18 June 2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":6,\"day\":18},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3762,
+   "output_tokens": 309
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.82,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Hilal Catering Est.\",\"company_name_ar\":null,\"cr_number\":\"2051393185\",\"vat_number\":null,\"iban\":\"SA1355573982051828751907\",\"account_name\":\"Al Hilal Catering Est.\",\"account_number\":\"573982051828751907\",\"bank_name\":\"Banque Saudi Fransi\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"25 April 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":4,\"day\":25},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":0.95,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Account number printed in italics, slightly skewed scan; digits readable. IBAN has 24 characters.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3762,
+   "output_tokens": 320
+  }
+ }
+}

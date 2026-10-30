@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_3347.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.88,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Faris Medical Supplies Co.\",\"company_name_ar\":null,\"cr_number\":\"1010540874\",\"vat_number\":\"313844362243683\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"12/02/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":2,\"day\":12},\"expiry_date\":{\"raw\":\"12/05/2027\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":5,\"day\":12},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.95,\"cr_number\":0.95,\"vat_number\":0.95,\"iban\":1,\"account_name\":1,\"expiry_date\":0.9},\"notes\":\"Dates printed as DD/MM/YYYY (assumed day-first; 12/02/2026 read as 12 February 2026, 12/05/2027 as 12 May 2027). Scan is slightly skewed but legible.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3762,
+   "output_tokens": 374
+  }
+ }
+}

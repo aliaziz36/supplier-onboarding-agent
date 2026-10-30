@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_VAT_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.27,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Gulf Medical Supplies Est.\",\"company_name_ar\":\"مؤسسة الخليج للمستلزمات الطبية\",\"cr_number\":\"2051141502\",\"vat_number\":\"353544476042403\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-09-14\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":9,\"day\":14},\"expiry_date\":{\"raw\":\"2027-07-02\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":7,\"day\":2},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3966,
+   "output_tokens": 315
+  }
+ }
+}

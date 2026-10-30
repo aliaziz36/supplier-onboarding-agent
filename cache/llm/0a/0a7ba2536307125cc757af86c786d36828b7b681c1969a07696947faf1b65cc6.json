@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:dev_041_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.11,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_012HTZpvpKB3ecDc84umw7Yk",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_041_cr_inactive",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3309,
+   "output_tokens": 86
+  }
+ }
+}

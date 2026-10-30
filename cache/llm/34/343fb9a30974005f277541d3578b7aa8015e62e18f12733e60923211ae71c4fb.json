@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.01,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Yamamah IT Solutions Co.\",\"company_name_ar\":\"شركة اليمامة لحلول تقنية المعلومات\",\"cr_number\":\"4650862331\",\"vat_number\":null,\"iban\":\"SA9060300702480031820833\",\"account_name\":\"Al Yamamah IT Solutions Co.\",\"account_number\":\"300702480031820833\",\"bank_name\":\"Bank AlJazira\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"13/05/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":5,\"day\":13},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3976,
+   "output_tokens": 312
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_CR_certificate.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.33,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"ar\",\"company_name\":null,\"company_name_ar\":\"شركة الفارس للمستلزمات الطبية\",\"cr_number\":\"١٠١٠٥٤٠٨٧٤\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"١٤٤٧/١٠/٢٠ هـ\",\"calendar\":\"hijri\",\"year\":1447,\"month\":10,\"day\":20},\"expiry_date\":{\"raw\":\"١٤٥٠/٠٣/٢١ هـ\",\"calendar\":\"hijri\",\"year\":1450,\"month\":3,\"day\":21},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":0.95,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.95},\"notes\":\"Company name printed in Arabic only. Activity listed as Medical Supplies. Document carries a CERTIFIED stamp.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3716,
+   "output_tokens": 379
+  }
+ }
+}

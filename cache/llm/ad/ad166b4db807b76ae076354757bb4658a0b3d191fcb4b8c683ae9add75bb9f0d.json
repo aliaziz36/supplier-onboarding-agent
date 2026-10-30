@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:dev_046_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.61,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_0132agTUkcdj7NZypzVZjS3x",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_046_bank_change_spoofed",
+     "vendor_id": "V-2050875727",
+     "new_iban": "SA6960956434657541504391",
+     "account_name": "Huda Al-Anazi"
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3239,
+   "output_tokens": 160
+  }
+ }
+}

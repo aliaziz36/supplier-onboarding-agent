@@ -1,0 +1,28 @@
+{
+ "purpose": "agent:dev_050_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.92,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01FP82pEEwKmohcswzHxqdiC",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_050_bank_change_genuine",
+     "vendor_id": "V-4030062275",
+     "new_iban": "SA8920599133131485119953",
+     "account_name": "Ajyal Steel Fabrication Company"
+    },
+    "name": "check_bank_change",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3298,
+   "output_tokens": 164
+  }
+ }
+}

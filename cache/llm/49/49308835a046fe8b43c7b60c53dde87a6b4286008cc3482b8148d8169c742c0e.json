@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:dev_015_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.52,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01RffctSQc4yNQmgkxLEhoPM",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_015_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Najd Printing LLC onboarded",
+     "body": "Dear Reem, thank you for your documents. All checks passed and Najd Printing LLC is now registered as a supplier (vendor ID V-1010830047). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_0183My35hpoVRvVpNu2DonBh",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_015_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4366,
+   "output_tokens": 301
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.59,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Sahab Logistics Est.\",\"company_name_ar\":null,\"cr_number\":\"2050225229\",\"vat_number\":null,\"iban\":\"SA9715493420516682977875\",\"account_name\":\"Sahab Logistics Est.\",\"account_number\":\"493420516682977875\",\"bank_name\":\"Bank AlBilad\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"02 July 2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":7,\"day\":2},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3892,
+   "output_tokens": 279
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_tax_cert.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.16,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Waha Electrical Services LLC\",\"company_name_ar\":null,\"cr_number\":\"2051257297\",\"vat_number\":\"331698614436803\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"01/10/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":10,\"day\":1},\"expiry_date\":{\"raw\":\"12/06/2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":6,\"day\":12},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":0.7},\"notes\":\"Dates are printed in ambiguous numeric format; interpreted as DD/MM/YYYY.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3855,
+   "output_tokens": 327
+  }
+ }
+}

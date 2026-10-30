@@ -24,7 +24,7 @@ def parse_eml(path: Path) -> dict:
             "body": body.get_content() if body else "", "attachments": attachments}
 
 
-def ingest_email(conn, eml_path: Path, case_id: str, store_dir: Path = STORE_DIR) -> int:
+def ingest_email(conn, eml_path: Path, case_id: str, store_dir: Path | None = None) -> int:
     """Store an inbound email and its PDF attachments. Creates the case if new."""
     e = parse_eml(eml_path)
     if not db.row(conn, "SELECT id FROM cases WHERE id=?", case_id):
@@ -39,7 +39,7 @@ def ingest_email(conn, eml_path: Path, case_id: str, store_dir: Path = STORE_DIR
                        (case_id, "in", e["sender"], "onboarding@buyer-company.sa", e["subject"], e["body"],
                         "inbound", clock.now_iso()))
     email_id = cur.lastrowid
-    folder = Path(store_dir) / case_id
+    folder = Path(store_dir or STORE_DIR) / case_id
     folder.mkdir(parents=True, exist_ok=True)
     n = db.row(conn, "SELECT COUNT(*) AS n FROM documents WHERE case_id=?", case_id)["n"]
     for fname, data in e["attachments"]:

@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:dev_004_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.49,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Tmi1RRdyTgHJcvnZjD1uJG",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_004_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Noor Logistics LLC is registered",
+     "body": "Dear Sara, thank you for your documents. All checks passed and Al Noor Logistics LLC is now registered as a supplier (vendor ID V-1010033962). We look forward to working with you.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01DupjeRwiDZ27md5BeBMHJ8",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_004_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4580,
+   "output_tokens": 306
+  }
+ }
+}

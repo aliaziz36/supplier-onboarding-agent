@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_nitaqat_gosi.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.19,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"gosi_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Waha Electrical Services LLC\",\"company_name_ar\":\"شركة الواحة للخدمات الكهربائية\",\"cr_number\":\"2051257297\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":\"634101908\",\"nitaqat_band\":\"High Green\",\"issue_date\":{\"raw\":\"1447/05/13 AH\",\"calendar\":\"hijri\",\"year\":1447,\"month\":5,\"day\":13},\"expiry_date\":{\"raw\":\"1450/02/15 AH\",\"calendar\":\"hijri\",\"year\":1450,\"month\":2,\"day\":15},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3992,
+   "output_tokens": 317
+  }
+ }
+}

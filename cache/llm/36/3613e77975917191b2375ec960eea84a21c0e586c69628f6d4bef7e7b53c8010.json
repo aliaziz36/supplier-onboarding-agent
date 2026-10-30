@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_tax_cert.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.31,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Najd Printing LLC\",\"company_name_ar\":\"شركة نجد للطباعة\",\"cr_number\":\"1010830047\",\"vat_number\":\"346292858786823\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"01 September 2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":9,\"day\":1},\"expiry_date\":{\"raw\":\"13 March 2027\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":3,\"day\":13},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3951,
+   "output_tokens": 300
+  }
+ }
+}

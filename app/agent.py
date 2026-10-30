@@ -386,7 +386,7 @@ def run_case(conn, case_dir: Path, policy: dict, mode="hybrid", ablate=(), verbo
     case_dir = Path(case_dir)
     label = json.loads((case_dir / "label.json").read_text())
     world = load_world(case_dir)
-    clock.set_now(label["as_of"])
+    clock.set_thread_now(label["as_of"])
     registry = Registry()
     registry.add_world(world)
     cases.seed_vendor(conn, world.get("vendor_on_file"))

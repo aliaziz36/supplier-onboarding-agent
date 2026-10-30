@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_5412.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 4.68,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Faris Medical Supplies Co.\",\"company_name_ar\":null,\"cr_number\":\"1010540874\",\"vat_number\":null,\"iban\":\"SA6410898264474473759735\",\"account_name\":\"Al Faris Medical Supplies Co.\",\"account_number\":\"898264474473759735\",\"bank_name\":\"Saudi National Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"20/11/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":11,\"day\":20},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3883,
+   "output_tokens": 287
+  }
+ }
+}

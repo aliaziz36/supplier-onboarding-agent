@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_038_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.78,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01GiFWUUeMwPQ8vDgELABvfn",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_038_bank_name_mismatch"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2776,
+   "output_tokens": 62
+  }
+ }
+}

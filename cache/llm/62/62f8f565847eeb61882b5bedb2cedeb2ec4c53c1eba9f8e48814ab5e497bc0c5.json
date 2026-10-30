@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_CR.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.38,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"commercial_registration\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Al Safwa Electrical Services Company\",\"company_name_ar\":\"شركة الصفوة للخدمات الكهربائية\",\"cr_number\":\"1010341768\",\"vat_number\":null,\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2025-11-29\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":11,\"day\":29},\"expiry_date\":{\"raw\":\"2027-11-15\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":11,\"day\":15},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3955,
+   "output_tokens": 309
+  }
+ }
+}

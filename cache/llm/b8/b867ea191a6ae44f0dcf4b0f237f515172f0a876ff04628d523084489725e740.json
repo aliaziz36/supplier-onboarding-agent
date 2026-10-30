@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_vat_registration.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.25,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Safwa Logistics LLC\",\"company_name_ar\":null,\"cr_number\":\"4650552583\",\"vat_number\":\"359333448549073\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"04 December 2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":12,\"day\":4},\"expiry_date\":{\"raw\":\"26 September 2028\",\"calendar\":\"gregorian\",\"year\":2028,\"month\":9,\"day\":26},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":0.97,\"cr_number\":0.98,\"vat_number\":0.98,\"iban\":1,\"account_name\":1,\"expiry_date\":0.98},\"notes\":\"Slightly skewed scan but all key values clearly legible.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3762,
+   "output_tokens": 318
+  }
+ }
+}

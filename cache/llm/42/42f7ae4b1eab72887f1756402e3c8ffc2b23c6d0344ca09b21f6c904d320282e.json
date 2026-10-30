@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_ZATCA_VAT.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.86,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"vat_certificate\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Ajyal IT Solutions Company\",\"company_name_ar\":\"شركة أجيال لحلول تقنية المعلومات\",\"cr_number\":\"4030422667\",\"vat_number\":\"350810532367893\",\"iban\":null,\"account_name\":null,\"account_number\":null,\"bank_name\":null,\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2026-09-21\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":9,\"day\":21},\"expiry_date\":{\"raw\":\"2027-12-04\",\"calendar\":\"gregorian\",\"year\":2027,\"month\":12,\"day\":4},\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3973,
+   "output_tokens": 313
+  }
+ }
+}

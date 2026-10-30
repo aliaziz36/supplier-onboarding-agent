@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_scan_8511.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.45,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Al Hilal Contracting LLC\",\"company_name_ar\":null,\"cr_number\":\"2050554588\",\"vat_number\":null,\"iban\":\"SA2060619020879439555647\",\"account_name\":\"Al Hilal Contracting LLC\",\"account_number\":\"619020879439555647\",\"bank_name\":\"Bank AlJazira\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"20/09/2025\",\"calendar\":\"gregorian\",\"year\":2025,\"month\":9,\"day\":20},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3749,
+   "output_tokens": 283
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_bank.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.67,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"en\",\"company_name\":\"Ajyal Logistics Company\",\"company_name_ar\":null,\"cr_number\":\"4650510697\",\"vat_number\":null,\"iban\":\"SA9860292647376084144091\",\"account_name\":\"Ajyal Logistics Company\",\"account_number\":\"292647376084144091\",\"bank_name\":\"Bank AlJazira\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"08/09/2026\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":9,\"day\":8},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":\"Date 08/09/2026 interpreted as DD/MM/YYYY (8 September 2026); format ambiguous.\"}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3879,
+   "output_tokens": 319
+  }
+ }
+}
