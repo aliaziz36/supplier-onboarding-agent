@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:dev_009_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.17,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_012PMCyVyQAAowwQ9mE6pMZw",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_009_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Sahab Electrical Services Est. onboarded",
+     "body": "Dear Sara, your documents have been verified and Sahab Electrical Services Est. is now registered as a vendor. Welcome aboard.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Hkt69t3y2TPwtC5wzLCiT8",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_009_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4367,
+   "output_tokens": 290
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:dev_030_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.4,
+ "response": {
+  "content": [
+   {
+    "text": "GOSI is unreadable. I'll check the registry and VAT too.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01EPxyzt56TyPegU2ktrV1tx",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "4030608454"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_017aSGgffWzM6JPg5ESS7Ven",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "386688874127963"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3954,
+   "output_tokens": 130
+  }
+ }
+}

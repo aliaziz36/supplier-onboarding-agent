@@ -1,0 +1,49 @@
+{
+ "purpose": "agent:dev_025_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.36,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQS0QUKEAgTGAI4AUIIdGhpbmtpbmcSDLeDxOx6LWgdMeVWqBoMmc2Fth6OhDqnyo7uIjBz4+TMFYDtVb84MIE1H0ixkcK4aBgOHGqzZMNyCg8UD4l7328t172VSnrEzYnDqRkq7gTAv8zHFXfGTTdxOkNnYXXhAeIXHb9ZTy3oqIFtdsMBTB27V6LSfQDHyrkD9WobQM+gXD4jLqStMEmbs4uRmgXFt+lNtq9AVRuyiSJXbEDsKrAoP8bFPcnlBnvslPIXI/UMn9lEJpWubT20ie+6T685J/9yWFFgqFl4OgSXud3VCPAu53aJn0MD6Oz2NWVN9RV9DwYqXwaP+SFmBbpP3szJU3CuVwRhjPuqosVa1eCvaCBlaZPUSfc7IA889lozkoE2IWsAOB510yOgMyWaX+xSVksiJZLPhsNUOY2+KtUw8ANVDnF4hnkaVu3gY0fuBgB5BN/JKD78c2/avHGEho/rzdCvxb0cMEraXua4IUTcbaPU/++sFepwbrL8SErwxHlXGse5+OBTH4JKETG+vhOCettCtxSFyYWtinTj1XtWv3gHUFXxtUmkChBNG7+J8xvaqSiRY71xFUKrTQxoSAJU/pjxluPYDprzJk+gEQlvf4duaXMkX/ZXxyWJi6Sx51i2fTmjqcgXDPzjOQiS3B9gLsL89C7KDCyeGNFUAdoyZd5DY6K+0vQGy3X85bEgroz0knJJQrLmC58+KnEFNk/ED7LWmzMAeUQZLzaTj34/nfxVszZLaxXhm7b8ZP6amyyqYr8EjpxalZ5JctJ5S0bFE+C8ELc7ODmy769i/CKyNnznRfWf1tYbm+p9XqnivKrwLcBDQrT2mH6JX8gBzeJdMAxxKfmIYBbSKzTQtGpfnFRBAc6PuByYzm/xDjPCSaDuWIxakuI5tjhug/cUbWfrtjHrPrEPlA36a6NpcYLROITj1hO8DreuYS746c8RGAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_013pHZZxRmtCrDKMZeWAhr8m",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_025_missing",
+     "reason": "Commercial registration has no readable expiry date; GOSI certificate also not received. run_checks recommends escalation.",
+     "evidence": [
+      "expiry_known failed for commercial_registration (scan_4949.pdf): no readable expiry date",
+      "gosi_certificate not received",
+      "Other 6 checks passed; CR 2050884332 matches across bank letter, VAT cert and CR",
+      "Sender: reem@desertbloom-electrical.com.sa"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Y3ftqtFvjPnc7WzTuwj9kM",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_025_missing",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4190,
+   "output_tokens": 353
+  }
+ }
+}

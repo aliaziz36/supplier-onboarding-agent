@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_020_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.74,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01UyMgV8521TLovDinNt62xu",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_020_expired",
+     "kind": "request_fix",
+     "subject": "Durrah Transport Co. onboarding: updated VAT certificate needed",
+     "body": "Dear Nora,\n\nThank you for your documents. Your VAT certificate (tax_cert.pdf) expired on 2026-07-29. Please reply with a current, valid copy and we will continue your onboarding.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "vat_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01CynYkn84P46gAyTfn3rrNy",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_020_expired",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4277,
+   "output_tokens": 343
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:dev_025_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.58,
+ "response": {
+  "content": [
+   {
+    "text": "GOSI is missing. I'll still check the registry and VAT first.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01SaPn5qYFb5H6iFB74xqgcD",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "2050884332"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01PYGFhZ48SDwkwM5oDDJKi3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "328221798262593"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3746,
+   "output_tokens": 129
+  }
+ }
+}

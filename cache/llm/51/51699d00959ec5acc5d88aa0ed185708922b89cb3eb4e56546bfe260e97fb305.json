@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_038_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.41,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_015RcFkeVqLB1SqV1MC9ix3f",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_038_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match CR company name",
+     "evidence": [
+      "Bank letter account holder/company: Al Mada Contracting Est. (IBAN SA5760182781628025573671, Bank AlJazira)",
+      "CR, GOSI, VAT and Wathq/ZATCA: Rawabi IT Solutions LLC (CR 4030732338), active",
+      "Bank letter bears the same CR number but a different company name",
+      "Other documents valid and unexpired"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01Ui8ZgmAV9XSRXkKyzzK3uq",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_038_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4361,
+   "output_tokens": 334
+  }
+ }
+}

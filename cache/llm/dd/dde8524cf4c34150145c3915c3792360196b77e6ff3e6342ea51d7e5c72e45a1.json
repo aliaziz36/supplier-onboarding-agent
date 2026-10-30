@@ -1,0 +1,49 @@
+{
+ "purpose": "agent:dev_036_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.94,
+ "response": {
+  "content": [
+   {
+    "text": "Bank holder mismatch → escalate.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01DsFyENpupicTM5ZKpauLyr",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_036_bank_name_mismatch",
+     "reason": "Bank letter account holder (Qimam Office Supplies Est.) does not match the CR company name (Al Tamayuz Electrical Services Company). Possible fraud or wrong document.",
+     "evidence": [
+      "Bank letter scan_4294.pdf: account name and company name 'Qimam Office Supplies Est.', IBAN SA3355072483206809840651, Banque Saudi Fransi",
+      "CR 4030871663 active in Wathq as Al Tamayuz Electrical Services Company",
+      "VAT 340404129476413 registered with ZATCA, name matches the CR",
+      "CR, VAT and GOSI documents consistent and unexpired",
+      "The bank letter bears the same CR number 4030871663 but a different company name"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01DRKN6hvCLV1agsM8Tx9Xe2",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_036_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4646,
+   "output_tokens": 436
+  }
+ }
+}

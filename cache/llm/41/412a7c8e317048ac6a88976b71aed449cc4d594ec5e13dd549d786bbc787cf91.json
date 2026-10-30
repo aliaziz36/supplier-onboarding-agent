@@ -1,0 +1,43 @@
+{
+ "purpose": "agent:dev_030_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.07,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01AWph2QEk4LVu2GAddz552m",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_030_unreadable",
+     "kind": "request_fix",
+     "subject": "Please resend your GOSI certificate",
+     "body": "Dear Faisal,\n\nThank you for your submission. The GOSI certificate (nitaqat_gosi.pdf) could not be read. Please resend a clear, legible copy of a valid GOSI certificate. All other documents are received.\n\nBest regards,\nProcurement Team",
+     "documents_requested": [
+      "gosi_certificate"
+     ]
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_016GzsKxSJTaXrfYGwewH9gy",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_030_unreadable",
+     "status": "waiting_on_supplier"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4328,
+   "output_tokens": 342
+  }
+ }
+}

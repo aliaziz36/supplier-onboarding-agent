@@ -1,0 +1,29 @@
+{
+ "purpose": "agent:dev_041_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 0.94,
+ "response": {
+  "content": [
+   {
+    "text": "Checks are clean, so I'll proceed.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01XDWKsZYtfcCJ1SfgcYDrAa",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_041_cr_inactive"
+    },
+    "name": "create_vendor",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4449,
+   "output_tokens": 77
+  }
+ }
+}

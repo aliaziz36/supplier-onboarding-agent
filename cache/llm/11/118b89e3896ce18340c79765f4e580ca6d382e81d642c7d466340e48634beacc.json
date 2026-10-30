@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:dev_021_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.59,
+ "response": {
+  "content": [
+   {
+    "text": "GOSI expired. Verify registry and VAT anyway.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01Qfv9Ppju78cF83nSAQfQ9a",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "2051222194"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01HnzpFbHmyZMaKM9ogsh11s",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "335524741628573"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3937,
+   "output_tokens": 127
+  }
+ }
+}

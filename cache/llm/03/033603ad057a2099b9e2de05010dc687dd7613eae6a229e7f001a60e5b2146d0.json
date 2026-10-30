@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:dev_029_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.43,
+ "response": {
+  "content": [
+   {
+    "text": "Bank letter missing. I'll still check the registry and VAT quickly.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01FuMFjfji6nkJmsYG48VCTA",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "4650552583"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_015AVsLRnLFS9yiTg1zekoXZ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "359333448549073"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3690,
+   "output_tokens": 131
+  }
+ }
+}

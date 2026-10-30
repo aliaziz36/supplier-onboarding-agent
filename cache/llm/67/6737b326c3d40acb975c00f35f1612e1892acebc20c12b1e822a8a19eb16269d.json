@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:dev_020_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.32,
+ "response": {
+  "content": [
+   {
+    "text": "VAT certificate expired 2026-07-29. Check registry and VAT anyway.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01Pp6vEMqh2KtauBmF4bx9Zx",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "1010000855"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_018ph5GczyrnSNgECtaGi11H",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "309083734498843"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3883,
+   "output_tokens": 135
+  }
+ }
+}

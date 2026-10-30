@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:dev_034_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.33,
+ "response": {
+  "content": [
+   {
+    "text": "Bank holder mismatch. Check registry and VAT too.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_014tYbX1XP5zLtfdGVqVPGJo",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "4650962527"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01K76sKhEE7Ld4MQnos8GYRE",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "369828199964673"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4032,
+   "output_tokens": 127
+  }
+ }
+}

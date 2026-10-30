@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:dev_023_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.45,
+ "response": {
+  "content": [
+   {
+    "text": "VAT cert expired. Still check registry/VAT to be sure nothing suspicious.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01WJmYqtsQ6qWq5FWTh41Mh5",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "2050225229"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01NVV92h1arCqo8DTVHVVJwV",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "384386778842893"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3933,
+   "output_tokens": 136
+  }
+ }
+}

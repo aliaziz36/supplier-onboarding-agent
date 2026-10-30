@@ -1,0 +1,29 @@
+{
+ "purpose": "agent:dev_027_missing",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.08,
+ "response": {
+  "content": [
+   {
+    "text": "VAT certificate is missing. Quickly verify registry too.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_011JXio3kNfVssBJRNZMm3dw",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "4650520834"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3748,
+   "output_tokens": 75
+  }
+ }
+}

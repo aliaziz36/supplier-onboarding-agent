@@ -1,0 +1,40 @@
+{
+ "purpose": "agent:dev_033_unreadable",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.54,
+ "response": {
+  "content": [
+   {
+    "text": "GOSI is unreadable. I'll still run the registry checks, since they're independent.",
+    "type": "text"
+   },
+   {
+    "id": "toolu_01SVGKGnyi1uGFwm7FPYv7Ez",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "cr_number": "4030422667"
+    },
+    "name": "check_registry",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01JksWuzJ4XHxQDWAnnYDvRy",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "vat_number": "350810532367893"
+    },
+    "name": "check_vat",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3974,
+   "output_tokens": 134
+  }
+ }
+}

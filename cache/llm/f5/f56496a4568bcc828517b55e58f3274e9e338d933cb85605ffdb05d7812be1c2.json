@@ -1,0 +1,37 @@
+{
+ "purpose": "agent:dev_041_cr_inactive",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.04,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01CRedjC9t3RaRZKNVQpacp4",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_041_cr_inactive"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01FxEvvRU82pRZ5jy2DHtPca",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_041_cr_inactive",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2561,
+   "output_tokens": 142
+  }
+ }
+}

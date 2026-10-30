@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:dev_014_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.36,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01NmfcFvTBNLZCERhXFWyq3J",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_014_clean",
+     "kind": "welcome",
+     "subject": "Welcome - Al Hilal Catering Est. onboarded",
+     "body": "Dear Nora, your documents were verified and Al Hilal Catering Est. is now registered as a supplier (vendor ID V-2051393185). Welcome aboard.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01N8QAcLoiWYvM59DYdFxpXT",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_014_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4376,
+   "output_tokens": 299
+  }
+ }
+}

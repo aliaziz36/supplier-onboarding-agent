@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_047_bank_change_spoofed",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.33,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01WDtjtJjQJdcPBPGFhZLVDG",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_047_bank_change_spoofed"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2564,
+   "output_tokens": 62
+  }
+ }
+}

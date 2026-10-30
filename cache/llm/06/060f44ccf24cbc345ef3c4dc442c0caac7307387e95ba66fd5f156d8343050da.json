@@ -1,0 +1,18 @@
+{
+ "purpose": "extract:1_new_bank_letter.pdf",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.7,
+ "response": {
+  "content": [
+   {
+    "text": "{\"doc_type\":\"bank_letter\",\"legible\":true,\"language\":\"bilingual\",\"company_name\":\"Najd Transport Co.\",\"company_name_ar\":\"شركة نجد للنقل\",\"cr_number\":\"2050675687\",\"vat_number\":null,\"iban\":\"SA3805792462554023430007\",\"account_name\":\"Najd Transport Co.\",\"account_number\":\"792462554023430007\",\"bank_name\":\"Alinma Bank\",\"gosi_number\":null,\"nitaqat_band\":null,\"issue_date\":{\"raw\":\"2026-10-28\",\"calendar\":\"gregorian\",\"year\":2026,\"month\":10,\"day\":28},\"expiry_date\":null,\"contains_instructions\":false,\"instructions_text\":null,\"confidence\":{\"company_name\":1,\"cr_number\":1,\"vat_number\":1,\"iban\":1,\"account_name\":1,\"expiry_date\":1},\"notes\":null}",
+    "type": "text"
+   }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+   "input_tokens": 3956,
+   "output_tokens": 286
+  }
+ }
+}

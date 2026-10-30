@@ -1,0 +1,41 @@
+{
+ "purpose": "agent:dev_005_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.17,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_011nWD1YtmRpc8cw219w6h22",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_005_clean",
+     "kind": "welcome",
+     "subject": "Welcome - vendor registration complete",
+     "body": "Dear Faisal, your documents were verified and Al Safwa Electrical Services Company is now registered as a vendor (ID V-1010341768). Welcome aboard.",
+     "documents_requested": []
+    },
+    "name": "send_email",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01So7Df6MFLNSRgYXcpFKZLk",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_005_clean",
+     "status": "onboarded"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4430,
+   "output_tokens": 290
+  }
+ }
+}

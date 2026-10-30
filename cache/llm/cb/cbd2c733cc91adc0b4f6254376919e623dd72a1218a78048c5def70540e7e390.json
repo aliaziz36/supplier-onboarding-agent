@@ -1,0 +1,48 @@
+{
+ "purpose": "agent:dev_006_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.71,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSmAUKEAgTGAI4AUIIdGhpbmtpbmcSDFhXiJhw/4olRJIT9RoMAMRJuFGibwvdCdPKIjCojRe4sYZ2RkGDFbSssIz5bcJLaz1XM0SV0IqvXMAxpSWmQ3zClBk+6b+GFNPlrowqtQQAiH1Q2YXjSsl5ei4zUdBIasi3LptMfR6eiKX8+fn/Lxsk1S+xjfCSJeW699zguV7fcBT5UwbeIXvy5yt6fi3+psHbu9locUCXj6U9IxUz7rO4eljNUiAeHC83+awWyUp83qp0W3OSwQgXIYRC3hoACsnjDX+5j1grx+cSGyoIHUrqSd2ATJ6vMfK3rHotqd8ZJ59eJsCbzfxafIyPPSHbHHk1yqpGrJQmbHTiiIHW3/4MTuipFJfp+vr6ejGTLTltpQY19Xp7L8CVcl5yX2FHk0uSDAmRIeZePdiP1nkF3pDljlC6SBnCTloMCQolzujv3hL9TpVGdaQNQHDKUu2Rt20SELLh1asazAI636+B0SR/DYHgn2HFYcP7kkK4rHriTzW1gTaHcP2h9FouQywha419pdgoSIffPzdFHXjc1CpW8llzbuccbseFfWsKB52jdtc5S2ndg18mKW9zWE1kGiPJrShysES274kf16h/VfKydPz0WUXct2K54WBXEnTIjx7A+AGMZ6ybkRCMIWnsoAQpOJNKyhjbW4gCJWtS7d0dngzsqv4eyNqpjHG0CXRsVU46MhD2o7KPl5km3LEVub1LhyG9tRF9X3eM4RpFBgbaknwtJWok2AQB7d4CLosJkQYKwZP62JVOw0iFhZ72vyfPnNPwG5n2cvRCbnzz5AYiWTr6e/tqfSGxv4exCSpCuocNkslOjO9LsJl/Tlz7HNNNY2VBqtrloa++z3wsuYPta59JGAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01KPNw2LLVqLRZyRczDq7V4B",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_006_clean",
+     "reason": "Automated checks recommend escalation: low extraction confidence on the VAT certificate expiry date. All other checks passed.",
+     "evidence": [
+      "run_checks: confidence fail, vat_certificate expiry_date confidence 0.70",
+      "13 other checks passed",
+      "Extracted VAT cert expiry: 2028-06-12 (needs manual verification)"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01KeX52hoCVi8vSeidkQPTwQ",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_006_clean",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4381,
+   "output_tokens": 300
+  }
+ }
+}

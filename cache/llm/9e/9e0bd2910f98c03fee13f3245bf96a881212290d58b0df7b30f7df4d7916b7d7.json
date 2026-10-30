@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:dev_019_expired",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.3,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01Vvs8PQPmLAAV2kWerQyYC5",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_019_expired",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3076,
+   "output_tokens": 82
+  }
+ }
+}

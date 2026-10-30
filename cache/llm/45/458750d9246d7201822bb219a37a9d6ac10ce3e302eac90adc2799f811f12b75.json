@@ -1,0 +1,26 @@
+{
+ "purpose": "agent:dev_007_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.37,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_01AJq4rV8vxx9zmsbTXpszgK",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_007_clean",
+     "document_ids": []
+    },
+    "name": "extract_documents",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 3128,
+   "output_tokens": 82
+  }
+ }
+}

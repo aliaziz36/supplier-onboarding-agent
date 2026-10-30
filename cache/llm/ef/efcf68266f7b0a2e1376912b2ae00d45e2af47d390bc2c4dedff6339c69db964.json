@@ -1,0 +1,44 @@
+{
+ "purpose": "agent:dev_037_bank_name_mismatch",
+ "model": "claude-sonnet-5-5",
+ "seconds": 2.95,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_018whL4BwVZG1eg3rMAh43EU",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_037_bank_name_mismatch",
+     "reason": "Bank letter account holder does not match the registering company; possible payment fraud risk.",
+     "evidence": [
+      "Failed check: bank_name_matches_cr",
+      "Bank letter account holder: 'Rawabi Trading Est.' (IBAN SA9180421329636872917331, Al Rajhi Bank)",
+      "Registering company per CR 1010833214: Al Riyadah Cleaning Services Company",
+      "All other 12 checks passed"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01LnDypXSFMYgjdhMDd8N7zh",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_037_bank_name_mismatch",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4463,
+   "output_tokens": 325
+  }
+ }
+}

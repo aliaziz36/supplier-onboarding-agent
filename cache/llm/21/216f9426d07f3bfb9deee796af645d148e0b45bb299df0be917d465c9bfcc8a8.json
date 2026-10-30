@@ -1,0 +1,25 @@
+{
+ "purpose": "agent:dev_050_bank_change_genuine",
+ "model": "claude-sonnet-5-5",
+ "seconds": 1.65,
+ "response": {
+  "content": [
+   {
+    "id": "toolu_018vaKPcTMVDsQYu2n1hP7K3",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_050_bank_change_genuine"
+    },
+    "name": "get_case",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 2563,
+   "output_tokens": 61
+  }
+ }
+}

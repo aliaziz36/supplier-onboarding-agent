@@ -1,0 +1,48 @@
+{
+ "purpose": "agent:dev_006_clean",
+ "model": "claude-sonnet-5-5",
+ "seconds": 3.99,
+ "response": {
+  "content": [
+   {
+    "signature": "CAQSmAUKEAgTGAI4AUIIdGhpbmtpbmcSDFOAW8b+0L/edCHfHxoMC+gFLG5oDQlubeiDIjDWLximcAkd8BvjlP+Vff4ahNOenb9uZc0KN3xcOw+xvm2BOxQpXXlgspRMNpm2zKYqtQS5QxSmfbEr4+71nELngxVyqdZNHhGXvs6tCuzIJJHbCdMjzyMQiUySvE9o2iPVMWYvkQiVuxcFkFKdw8DKYyy4Btq8Ik9Ox13jWjdV+9rtIBD/b8xOsOUaQcEhmC7GhcBendbLQ6isCQZ5FJKlQ61UlYxJbR7fSYFe7+1lWvJzjIunJoPbDf42qwZy0Ss5/E6N04IS6mbfR/bVpFIzr2ZKoe6f/CtjpoQRZlLxP2BkRLBuXUULkyd0a0nXy6LwB/QGCqphxj0HqLolsWcoMas7xEy3jcGtluECHS5c8fq8eppADWeu/sWVksGYZqm+Srj+w6ToLofzPlUe8MEMTnrPsfaFOab+GlB5LkfSUxObUizcm9mLWj+4uKOfotGfRnw62KdPd/0CpbISdYAQM6u06Cr28cHWfeMqRZ2cWqoSA0ZN1r/o661IyovyZrfKfI/OOjVS0rlN1QuTFJBwyN6AprAftVVDwTb/0LSJkBED8KXWa71ch4MEEBnSLZffM/IITfkKlz/F/WcnQ3GUVQE/x4fXnqENQDA6WljG9QH4OZCiugVi9DaWXJtKiX+zq5VItEZS+pw2XK+mK2J7UCZ+g8ppHNpRZV/JcqIMgRNff+ZldjtrVoa8Ld8//0xc0hJiQz0GAvf5pT2TzKZ/YPPYwft+aoKreHsSTkXR26Gg8OzGgFAlKtJvfCRSO8GSBNcdaSmIpXu8LQJCI0fPtEkqnRCtiA/el76EUVK/CNHcw3A9yVHaGAE=",
+    "thinking": "",
+    "type": "thinking"
+   },
+   {
+    "id": "toolu_01KJPG9rcwSnHD72g8E3EquV",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_006_clean",
+     "reason": "Automated checks recommend escalation: low extraction confidence on VAT certificate expiry date. All other checks passed (10).",
+     "evidence": [
+      "run_checks: confidence fail - vat_certificate expiry_date low confidence (0.70)",
+      "Extracted VAT cert expiry 2028-06-12 needs human verification",
+      "Other checks passed: CR 2051257297 consistent across docs, names match, no embedded instructions"
+     ]
+    },
+    "name": "escalate",
+    "type": "tool_use"
+   },
+   {
+    "id": "toolu_01PwoJrUfWDkxUA2ouGFkyiT",
+    "caller": {
+     "type": "direct"
+    },
+    "input": {
+     "case_id": "dev_006_clean",
+     "status": "escalated"
+    },
+    "name": "set_status",
+    "type": "tool_use"
+   }
+  ],
+  "stop_reason": "tool_use",
+  "usage": {
+   "input_tokens": 4381,
+   "output_tokens": 324
+  }
+ }
+}
