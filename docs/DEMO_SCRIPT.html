@@ -1,0 +1,172 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Recording Script</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Layout: a presenter's run sheet. One card per scene with three fixed lanes: Click, Point at, Say. Timing runs down the left. */
+:root{
+  --bg:#F5F6F7; --paper:#FFFFFF; --ink:#132029; --muted:#55636C; --line:#E2E6E9;
+  --teal:#0F766E; --teal-soft:#E6F4F1; --navy:#0B1F2A;
+  --click:#0F766E; --click-bg:#E6F4F1; --look:#92400E; --look-bg:#FEF3C7; --say:#1E40AF; --say-bg:#E3EBFD;
+  --bad:#991B1B; --bad-bg:#FEE2E2;
+  --display:'IBM Plex Serif', Georgia, serif; --body:'IBM Plex Sans', system-ui, sans-serif; --mono:'IBM Plex Mono', ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E171D; --paper:#15222A; --ink:#E6ECEF; --muted:#9AAAB3; --line:#26353E;
+  --teal:#2DD4BF; --teal-soft:#123A38; --navy:#081720;
+  --click:#2DD4BF; --click-bg:#123A38; --look:#FCD34D; --look-bg:#3A2D0E; --say:#93C5FD; --say-bg:#172A4A;
+  --bad:#FCA5A5; --bad-bg:#3B1717; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E171D; --paper:#15222A; --ink:#E6ECEF; --muted:#9AAAB3; --line:#26353E;
+  --teal:#2DD4BF; --teal-soft:#123A38; --navy:#081720;
+  --click:#2DD4BF; --click-bg:#123A38; --look:#FCD34D; --look-bg:#3A2D0E; --say:#93C5FD; --say-bg:#172A4A;
+  --bad:#FCA5A5; --bad-bg:#3B1717; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:860px;margin:0 auto;padding-block:36px 72px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(28px,4.4vw,38px);line-height:1.15;margin:8px 0 10px;text-wrap:balance}
+.lede{font-size:17px;color:var(--muted);margin:0 0 18px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+.fact{font-size:13.5px;padding:5px 11px;border-radius:999px;background:var(--paper);border:1px solid var(--line)}
+.fact b{font-variant-numeric:tabular-nums}
+h2{font-family:var(--display);font-weight:600;font-size:23px;margin:40px 0 12px;text-wrap:balance}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13.5px;color:var(--muted);margin:0 0 14px}
+.lane{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.l-click{background:var(--click-bg);color:var(--click)}.l-look{background:var(--look-bg);color:var(--look)}.l-say{background:var(--say-bg);color:var(--say)}
+ol.prep{margin:0;padding-left:22px}ol.prep li{margin-bottom:8px}
+pre{font-family:var(--mono);font-size:13px;background:var(--navy);color:#E6ECEF;padding:10px 12px;border-radius:8px;overflow-x:auto;margin:8px 0}
+code{font-family:var(--mono);font-size:.9em}
+.scenes{display:flex;flex-direction:column;gap:12px}
+.scene{display:grid;grid-template-columns:96px minmax(0,1fr);background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;break-inside:avoid}
+.side{background:var(--bg);border-right:1px solid var(--line);padding:14px 12px;display:flex;flex-direction:column;gap:4px}
+.side .n{font-family:var(--mono);font-size:22px;font-weight:500;color:var(--teal);line-height:1}
+.side .t{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.side .clock{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.body{padding:14px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.body h3{margin:0;font-size:17px}
+.row{display:grid;grid-template-columns:86px minmax(0,1fr);gap:10px;align-items:baseline}
+.row p{margin:0}
+.btn{display:inline-block;font-weight:600;font-size:14px;padding:2px 10px;border-radius:6px;background:var(--teal);color:#fff}
+.say{font-size:15.5px;color:var(--ink);font-style:italic}
+.dont{font-size:13.5px;color:var(--bad);background:var(--bad-bg);padding:6px 10px;border-radius:6px}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:10px}
+.tip{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14.5px}
+.tip b{display:block;margin-bottom:2px}
+.fix{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.fix th,.fix td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.fix th{font-size:12px;color:var(--muted);font-weight:500;background:var(--bg)}
+.tablewrap{overflow-x:auto}
+@media (max-width:600px){.scene{grid-template-columns:1fr}.side{flex-direction:row;gap:12px;align-items:baseline;border-right:0;border-bottom:1px solid var(--line)}.row{grid-template-columns:1fr;gap:2px}}
+@media print{body{background:#fff;padding:0;font-size:13.5px}.scene,.tip,tr{break-inside:avoid}h2{break-after:avoid}}
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Supplier Onboarding Agent · presenter guide</div>
+  <h1>Demo recording script</h1>
+  <p class="lede">Everything you need to record the 3-minute demo video: what to set up, then for every scene what to click, what to point at, and what to say.</p>
+  <div class="facts">
+    <span class="fact">Length: <b>about 3:00</b></span>
+    <span class="fact">Scenes: <b>8 clicks</b></span>
+    <span class="fact">Cost per run: <b>$0</b> (saved answers)</span>
+    <span class="fact">Rehearse: <b>as many times as you like</b></span>
+  </div>
+
+  <h2>Before you record</h2>
+  <ol class="prep">
+    <li>Open <b>http://localhost:8000</b> in your browser. If the page doesn't load, open Terminal in the project folder and run:
+      <pre>.venv/bin/uvicorn app.main:app --port 8000</pre></li>
+    <li>Make the browser full screen. If the page doesn't fit, zoom out to 90% with <b>Cmd + −</b>.</li>
+    <li>Do one full practice run, then click <b>Start over</b>.</li>
+    <li>Start the screen recorder. QuickTime: <b>File → New Screen Recording</b>, then choose to record the browser window.</li>
+  </ol>
+
+  <h2>The run</h2>
+  <div class="legend"><span><span class="lane l-click">Click</span> what to press</span><span><span class="lane l-look">Point at</span> where to move the mouse</span><span><span class="lane l-say">Say</span> your voice-over</span></div>
+
+  <div class="scenes">
+    <div class="scene"><div class="side"><span class="n">0</span><span class="t">~15 s</span><span class="clock">0:00</span></div><div class="body">
+      <h3>Start page</h3>
+      <div class="row"><span class="lane l-look">Point at</span><p>The headline and the example email on the right.</p></div>
+      <div class="row"><span class="lane l-say">Say</span><p class="say">“Onboarding a supplier takes weeks of emails, and fake bank details are one of the biggest fraud routes. This agent onboards Saudi suppliers from a plain email, and then keeps guarding them.”</p></div>
+      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Start the guided demo</span>. If it isn't on the welcome step, click <b>Start over</b> once.</p></div>
+    </div></div>
+
+    <div class="scene"><div class="side"><span class="n">1</span><span class="t">~25 s</span><span class="clock">0:15</span></div><div class="body">
+      <h3>Al Noor applies, and the agent finishes alone</h3>
+      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Start: send the first email</span>. Wait until the button stops saying “Please wait…”.</p></div>
+      <div class="row"><span class="lane l-look">Point at</span><p>The right panel, which reads each PDF and then says “Checked 17 things: all good”. Then the table, where two documents are in Arabic.</p></div>
+      <div class="row"><span class="lane l-say">Say</span><p class="say">“Four documents, two of them in Arabic. It read them, checked the government registries, matched the names and numbers, and approved Al Noor. No person needed.”</p></div>
+    </div></div>
+
+    <div class="scene"><div class="side"><span class="n">2</span><span class="t">~20 s</span><span class="clock">0:40</span></div><div class="body">
+      <h3>Rawabi: an expired certificate</h3>
+      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Next supplier</span></p></div>
+      <div class="row"><span class="lane l-look">Point at</span><p>The yellow “Expired on…” row, then the email the agent wrote underneath.</p></div>
+      <div class="row"><span class="lane l-say">Say</span><p class="say">“A routine problem, so it doesn't bother anyone. It emails the supplier asking for exactly that document.”</p></div>
+    </div></div>
+
+    <div class="scene"><div class="side"><span class="n">3</span><span class="t">~10 s</span><span class="clock">1:00</span></div><div class="body">
+      <h3>Rawabi replies</h3>
+      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Rawabi replies</span></p></div>
+      <div class="row"><span class="lane l-look">Point at</span><p>Rawabi turning green: “Onboarded · no person needed”.</p></div>
+      <div class="row"><span class="lane l-say">Say</span><p class="say">“The reply comes in. It checks only the new document and approves them.”</p></div>
+    </div></div>
+
+    <div class="scene"><div class="side"><span class="n">4</span><span class="t">~25 s</span><span class="clock">1:10</span></div><div class="body">
+      <h3>Gulf Steel: the bank account belongs to someone else</h3>
+      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Next email</span></p></div>
+      <div class="row"><span class="lane l-look">Point at</span><p>The red card, with the two company names side by side.</p></div>
+      <div class="row"><span class="lane l-say">Say</span><p class="say">“The bank account belongs to a different company, a classic fraud pattern. The agent stops, doesn't contact the supplier, and asks me.”</p></div>
+      <p class="dont">Don't press the buttons on this red card. Leave it open.</p>
+    </div></div>
+
+    <div class="scene"><div class="side"><span class="n">5</span><span class="t">~30 s</span><span class="clock">1:35</span></div><div class="body">
+      <h3>A fake email asks to change Al Noor's bank</h3>
+      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Next email</span></p></div>
+      <div class="row"><span class="lane l-look">Point at</span><p>The sender address (<code>.co</code> instead of <code>.com.sa</code>), the different bank, the red flags, then the phone number.</p></div>
+      <div class="row"><span class="lane l-say">Say</span><p class="say">“Someone pretending to be Al Noor asks to redirect their payments. The agent can't change bank details at all. It freezes the request, holds payments, and tells me to call the number already on file.”</p></div>
+    </div></div>
+
+    <div class="scene"><div class="side"><span class="n">6</span><span class="t">~10 s</span><span class="clock">2:05</span></div><div class="body">
+      <h3>You call Al Noor and reject it</h3>
+      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Call Al Noor and reject</span></p></div>
+      <div class="row"><span class="lane l-say">Say</span><p class="say">“I called Al Noor. They never asked for this, so I reject it and nothing changes.”</p></div>
+    </div></div>
+
+    <div class="scene"><div class="side"><span class="n">7</span><span class="t">~20 s</span><span class="clock">2:15</span></div><div class="body">
+      <h3>Eleven months later</h3>
+      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Jump 11 months ahead</span></p></div>
+      <div class="row"><span class="lane l-look">Point at</span><p>“Approved vendors” on the left.</p></div>
+      <div class="row"><span class="lane l-say">Say</span><p class="say">“The job never ends. Al Noor's registration expires in 20 days, so it asks for the renewal now. Rawabi's certificate has lapsed, so their payments are on hold.”</p></div>
+    </div></div>
+
+    <div class="scene"><div class="side"><span class="n">8</span><span class="t">~25 s</span><span class="clock">2:35</span></div><div class="body">
+      <h3>The results</h3>
+      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Finish</span>, then scroll up a little.</p></div>
+      <div class="row"><span class="lane l-look">Point at</span><p>The green “How well it works” strip.</p></div>
+      <div class="row"><span class="lane l-say">Say</span><p class="say">“We tested it on 57 cases it had never seen: 100% right decisions, every fraud attempt stopped, no honest supplier wrongly flagged, about 7 cents per supplier.”</p></div>
+    </div></div>
+  </div>
+
+  <h2>Tips</h2>
+  <div class="tips">
+    <div class="tip"><b>Wait for the green button</b>While it says “Please wait…”, the agent is still working. Each scene takes a few seconds.</div>
+    <div class="tip"><b>Rehearse freely</b>Click <b>Start over</b> any time. Every run uses saved answers and costs nothing.</div>
+    <div class="tip"><b>Keep the order</b>Use only the green button during the recording, not the “Manual controls”. The saved answers rely on the scenes running in order.</div>
+    <div class="tip"><b>Recording in parts?</b>Don't click Start over between parts. Just continue with the next green button.</div>
+    <div class="tip"><b>Speed it up later</b>In editing, speed up the waits between clicks 2–4× so the whole video stays under 3:00.</div>
+  </div>
+
+  <h2>If something goes wrong</h2>
+  <div class="tablewrap"><table class="fix">
+    <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+    <tbody>
+      <tr><td>The page doesn't load</td><td>The app isn't running. Start it with the Terminal command in “Before you record”.</td></tr>
+      <tr><td>The button stays on “Please wait…” for more than 20 seconds</td><td>Refresh the page (Cmd + R), click <b>Start over</b>, and run the scenes again from the start.</td></tr>
+      <tr><td>“Something went wrong” appears under the button</td><td>A scene was run out of order. Click <b>Start over</b> and use only the green button.</td></tr>
+      <tr><td>Terminal says “address already in use”</td><td>The app is already running. Just open http://localhost:8000.</td></tr>
+    </tbody>
+  </table></div>
+</div>

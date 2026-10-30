@@ -502,7 +502,7 @@ const STEPS = [
    body: 'Suppliers who want to sell to the company email their documents here. The agent reads every email and decides what to do. Press the green button and the first supplier email arrives.',
    next: 'Send the first email', run: () => post('/api/reset')},
   {title: 'Al Noor Trading applies, and the agent finishes the job alone',
-   body: 'Al Noor emailed 4 documents, one of them in Arabic. The agent read each one, checked the company with the Wathq and ZATCA registries, made sure the names and numbers match across documents, then approved Al Noor and sent a welcome email.',
+   body: 'Al Noor emailed 4 documents, two of them in Arabic. The agent read each one, checked the company with the Wathq and ZATCA registries, made sure the names and numbers match across documents, then approved Al Noor and sent a welcome email.',
    watch: 'Look at the right-hand panel: every step the agent took, in order.',
    next: 'Next supplier', run: () => post('/api/simulate/1'), select: 'demo_1_al_noor_clean', focus: 'p-log'},
   {title: 'Rawabi Logistics: one document has expired',
