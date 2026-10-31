@@ -13,6 +13,18 @@ An agent that onboards Saudi suppliers from a plain email, then keeps guarding t
 
 "Ariba onboards suppliers. We onboard them, then guard them."
 
+**Try it in two minutes, free, no API key** (needs [uv](https://docs.astral.sh/uv/) or Python 3.11):
+
+```bash
+git clone https://github.com/aliaziz36/supplier-onboarding-agent.git && cd supplier-onboarding-agent
+uv venv --python 3.11 .venv && uv pip install --python .venv/bin/python -r requirements.txt
+REPLAY=1 ANTHROPIC_API_KEY= .venv/bin/uvicorn app.main:app --port 8000
+```
+
+Open http://localhost:8000, click **Open The Seal**, then press `N` to bring in each supplier email (`H` shows the
+narration). To check the published numbers: `REPLAY=1 .venv/bin/python -m eval.run --split heldout --frozen --no-log`.
+To run the real agent on new suppliers with your own key, see [Run it yourself](#run-it-yourself).
+
 ## How it works
 
 The model reads; code checks; the agent decides and acts.
@@ -30,8 +42,25 @@ Document and email text is data, never instruction. Policy lives in `policy.yaml
 
 ## Results
 
-All numbers come from files in `results/`. Dev set: 57 generated cases (10 scenarios, 6 perturbations).
-The dev set was used for tuning; **held-out results are added after the freeze** (`results/heldout_summary.md`).
+All numbers come from files in `results/`.
+
+**Held-out exam** (`results/heldout_summary.md`): 57 cases generated with a different seed, two document layouts
+and one name style that never appear in dev. Run once after freezing the system (commit `f738fee`); never used for tuning.
+
+| Variant | Run id | Decision acc | Fraud recall | False escalation | Field acc | Digital | Scanned | Arabic | $/case |
+|---|---|---|---|---|---|---|---|---|---|
+| **hybrid** | heldout-hybrid-1030-101142 | **100.0%** | **100.0%** | **0.0%** | 100.0% | 100.0% | 100.0% | 100.0% | 0.0689 |
+| rules | heldout-rules-1030-101143 | 52.6% | 100.0% | 48.5% | 71.2% | 66.7% | 0.0% | 44.4% | 0.0 |
+| model | heldout-model-1030-101257 | 98.2% | 100.0% | 0.0% | 100.0% | 97.4% | 100.0% | 100.0% | 0.0669 |
+| hybrid − crossdoc | heldout-hybrid-no-crossdoc-1030-101326 | 100.0% | 100.0% | 0.0% | 100.0% | 100.0% | 100.0% | 100.0% | 0.069 |
+| hybrid − registry | heldout-hybrid-no-registry-1030-101357 | 93.0% | 76.5% | 0.0% | 100.0% | 92.3% | 90.9% | 88.9% | 0.0703 |
+
+Rules only catches every fraud but by flagging almost half of the honest suppliers (48.5%) and reads no scans.
+Without the registry check, all 4 inactive-CR frauds are onboarded. Without the cross-document check the hybrid
+still scores 100% on the exam: the model's own judgment caught the bank-name frauds (98.2% on dev, where it
+wrongly flagged one honest supplier). The code check makes that guarantee explicit instead of relying on the model.
+
+**Dev set** (57 generated cases, 10 scenarios, 6 perturbations; used for tuning):
 
 | Variant | Run id | Decision acc | Fraud recall | False escalation | Field acc | Digital | Scanned | Arabic | $/case |
 |---|---|---|---|---|---|---|---|---|---|
