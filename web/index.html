@@ -216,7 +216,7 @@ pre.policy{margin:0;padding:16px 18px;font:12.5px/1.6 'IBM Plex Mono',monospace;
 </section>
 
 <script>
-let S = null, events = [], view = 'inbox', openCase = null, openEmail = null, drawer = null;
+let S = null, events = [], view = 'inbox', openCase = null, openEmail = null, drawer = null, emailPinned = false, wantedCase = null;
 let checksCache = {}, busy = false, idleTimer = null, seenEmails = new Set(), seenDocs = new Set(), seenEvents = new Set(), firstLoad = true;
 const DOC = {commercial_registration:'Commercial registration', vat_certificate:'VAT certificate', bank_letter:'Bank letter',
   gosi_certificate:'GOSI certificate', zakat_certificate:'Zakat certificate', other:'Other document'};
@@ -358,7 +358,7 @@ function rulesHtml(data) {
 
 // ------------------------------------------------------------------ views
 function go(v) { view = v; drawer = null; render(); document.getElementById('main').scrollTop = 0; }
-function openEmailRow(caseId, emailId) { openCase = caseId; openEmail = emailId; view = 'inbox'; drawer = null; render(); }
+function openEmailRow(caseId, emailId) { openCase = caseId; openEmail = emailId; emailPinned = true; wantedCase = null; view = 'inbox'; drawer = null; render(); }
 function openFirstDecision() { const c = S && S.open_cards[0]; if (c) { const cs = S.cases.find(x => x.id === c.case_id); openEmailRow(c.case_id, lastInboundId(cs)); } else go('inbox'); }
 const lastInboundId = c => { const e = (c ? c.emails : []).filter(e => e.direction === 'in').slice(-1)[0]; return e && e.id; };
 
@@ -396,8 +396,9 @@ function viewInbox() {
     <div class="stat"><div class="k">Waiting on supplier</div><div class="v" style="color:var(--warn)">${S.cases.filter(c => c.status === 'waiting_on_supplier').length}</div></div>
     <div class="stat"><div class="k">Need your decision</div><div class="v" style="color:${decide ? 'var(--bad)' : 'inherit'}">${decide}</div></div></div>`;
   if (!emails.length) return `<div class="view">${stats}<div class="panel"><div class="empty">No emails yet. New supplier emails appear here and The Seal starts on them right away.</div></div></div>`;
-  if (!openCase || !S.cases.find(c => c.id === openCase)) { openCase = emails[0].case.id; openEmail = emails[0].id; }
-  if (!openEmail || !emails.some(e => e.id === openEmail && e.case.id === openCase)) openEmail = lastInboundId(S.cases.find(c => c.id === openCase));
+  const waiting = openCase && openCase === wantedCase && !S.cases.find(c => c.id === openCase);   // its email is about to arrive
+  if (!waiting && (!openCase || !S.cases.find(c => c.id === openCase))) { openCase = emails[0].case.id; openEmail = emails[0].id; emailPinned = false; }
+  if (!waiting && (!emailPinned || !emails.some(e => e.id === openEmail && e.case.id === openCase))) openEmail = lastInboundId(S.cases.find(c => c.id === openCase));
   const list = emails.map(e => {
     const c = e.case, latest = lastInboundId(c) === e.id;
     const [cls, txt] = latest ? caseTag(c) : ['t-grey', 'Replied'];
@@ -409,7 +410,7 @@ function viewInbox() {
       ${atts.length ? `<div class="chips">${atts.map(d => `<span class="chip">${esc(d.filename)}</span>`).join('')}</div>` : ''}
       <div><span class="tag ${cls}">${esc(txt)}</span>${isLive(c.id) ? ' <span class="tag t-live">Live</span>' : ''}</div></div>`;
   }).join('');
-  return `<div class="view">${stats}<div class="inbox"><section class="panel"><div class="ph"><h2>Inbox</h2><span class="sub">onboarding@buyer-company.sa</span></div><div class="mlist">${list}</div></section>${caseDetail()}</div></div>`;
+  return `<div class="view">${stats}<div class="inbox"><section class="panel"><div class="ph"><h2>Inbox</h2><span class="sub">onboarding@buyer-company.sa</span></div><div class="mlist">${list}</div></section>${waiting ? '' : caseDetail()}</div></div>`;
 }
 
 function caseDetail() {
@@ -722,7 +723,7 @@ function renderPresenter() {
   document.getElementById('p-body').textContent = s.body;
   const b = document.getElementById('p-next'); b.disabled = presBusy || step >= STEPS.length - 1; b.textContent = presBusy ? 'Working...' : 'Next';
 }
-function applyView(s) { if (s.open) { openCase = s.open; openEmail = null; view = 'inbox'; drawer = null; } else if (s.view) { view = s.view; drawer = null; } }
+function applyView(s) { if (s.open) { openCase = s.open; wantedCase = s.open; openEmail = null; emailPinned = false; view = 'inbox'; drawer = null; } else if (s.view) { view = s.view; drawer = null; } }
 async function presNext() {
   if (presBusy || step >= STEPS.length - 1) return;
   const s = STEPS[step + 1];
