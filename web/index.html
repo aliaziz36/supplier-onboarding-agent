@@ -35,7 +35,7 @@ button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .side{background:var(--side);color:var(--side-ink);display:flex;flex-direction:column;padding:14px 10px;gap:2px;overflow:auto}
 .side a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border-radius:7px;color:var(--side-ink);text-decoration:none;font-size:13.5px;cursor:pointer}
 .side a:hover{background:var(--side2)}.side a.on{background:#1F3640;color:#fff;font-weight:500}
-.side .cnt{font-size:11.5px;background:#24404B;color:#E2E8F0;border-radius:9px;padding:1px 7px;font-variant-numeric:tabular-nums}
+.side .cnt[hidden]{display:none}.side .cnt{font-size:11.5px;background:#24404B;color:#E2E8F0;border-radius:9px;padding:1px 7px;font-variant-numeric:tabular-nums}
 .side .cnt.red{background:#B91C1C;color:#fff}
 .side .sec{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#7D8E97;padding:14px 10px 6px}
 .side .sp{flex:1}
@@ -119,6 +119,7 @@ details.chk[open] summary .m::after{content:"  Hide checklist"}
 .res{font-weight:500}.res.ok{color:var(--good)}.res.warn{color:var(--warn)}.res.bad{color:var(--bad)}.res.na{color:var(--soft);font-weight:400}
 .grid tr.reading td{color:var(--soft)}
 .grid tr.newrow td{animation:arrive 1.2s ease-out}
+.grid tr.flipgood td{animation:flipgood 2.4s ease-out;animation-delay:var(--d,0ms)}@keyframes flipgood{0%{background:#FEE2E2}35%{background:#BBF7D0}100%{background:transparent}}
 
 /* decision */
 .decision{margin:12px 16px;border:1px solid #FCA5A5;border-radius:10px;padding:14px 16px;background:#FFFBFB;display:flex;flex-direction:column;gap:10px}
@@ -143,6 +144,9 @@ details.chk[open] summary .m::after{content:"  Hide checklist"}
 .page img{display:block;width:100%}
 .hl{position:absolute;border:2px solid #F59E0B;background:rgba(251,191,36,.18);border-radius:3px;pointer-events:none}
 .hl.type{border-color:#2563EB;background:rgba(37,99,235,.12)}.hl.on{border-width:3px;background:rgba(251,191,36,.38)}
+.hl.bad{border-color:#DC2626;background:rgba(220,38,38,.16)}.hl.bad.on{background:rgba(220,38,38,.32)}
+.fields .f.bad b{color:var(--bad)}.fields .f .why-bad{display:block;font-size:12px;color:var(--bad);font-weight:500}
+.problem{font-size:13px;color:var(--bad);background:var(--bad-bg);border-radius:7px;padding:8px 10px;font-weight:500}
 .why{padding:18px;display:flex;flex-direction:column;gap:14px}
 .why h3{margin:0;font-size:17px}.why .conf{color:var(--soft);font-weight:400}
 .ev{display:flex;flex-wrap:wrap;gap:6px}.evq{font-size:13px;padding:3px 8px;border-radius:5px;background:#EFF6FF;border:1px solid #BFDBFE;color:#1E3A8A}
@@ -264,11 +268,12 @@ function caseTag(c) {
 const runChecksEvents = c => events.filter(e => e.case_id === c.id && e.name === 'run_checks');
 async function checksFor(c) {
   const n = runChecksEvents(c).length; if (!n) return null;
-  const key = c.id + ':' + n + ':' + c.documents.filter(d => d.extraction).length;
+  const key = c.id + ':' + n;
   if (checksCache[c.id] && checksCache[c.id].key === key) return checksCache[c.id].data;
   if (checksCache[c.id] && checksCache[c.id].loading === key) return checksCache[c.id].data;
   checksCache[c.id] = {...(checksCache[c.id] || {}), loading: key};
-  try { const data = await api(`/api/cases/${encodeURIComponent(c.id)}/checks`); checksCache[c.id] = {key, data}; render(); }
+  const docs = c.documents.filter(d => d.extraction).length, at = runChecksEvents(c).slice(-1)[0].ts;
+  try { const data = await api(`/api/cases/${encodeURIComponent(c.id)}/checks`); checksCache[c.id] = {key, data, docs, at}; render(); }
   catch { delete checksCache[c.id]; }
   return null;
 }
@@ -366,7 +371,7 @@ function render() {
   document.getElementById('n-suppliers').textContent = suppliers.length;
   document.getElementById('n-vendors').textContent = S.vendors.length;
   const nb = document.getElementById('n-bank'), frozen = S.bank_changes.filter(b => b.status === 'frozen').length;
-  nb.textContent = S.bank_changes.length; nb.classList.toggle('red', frozen > 0);
+  nb.textContent = frozen; nb.hidden = !frozen; nb.classList.add('red');
   const bn = document.getElementById('bell-n'); bn.hidden = !S.open_cards.length; bn.textContent = S.open_cards.length;
   const a = S.agent || {};
   document.getElementById('status').innerHTML = `<span class="live-dot ${busy ? 'busy' : ''}"></span><b>${busy ? 'Agent working' : 'Agent idle'}</b><br>
@@ -461,35 +466,42 @@ function docRows(c) {
   const reading = c.documents.find(d => !d.extraction && caseActive(c) && events.some(e => e.case_id === c.id && e.name === 'get_case'));
   return {read, reading};
 }
+let rowState = {}, rowFlip = {};
 function docsTable(c) {
   const {read, reading} = docRows(c);
   if (!read.length && !reading) return '';
-  const chk = checksCache[c.id] && checksCache[c.id].data;
-  const rows = read.map(d => {
-    const x = d.x, t = x.doc_type, bits = [];
+  const entry = checksCache[c.id], chk = entry && entry.data;
+  // One row per document type: the latest copy. An earlier copy it replaced is linked underneath.
+  const types = [...new Set(read.map(d => d.x.doc_type))];
+  const rows = types.map(t => {
+    const copies = read.filter(d => d.x.doc_type === t), d = copies[copies.length - 1], x = d.x, bits = [];
     if (x.language === 'ar') bits.push('Arabic');
     if (t === 'commercial_registration' && x.cr_number) bits.push('CR ' + x.cr_number);
     if (t === 'vat_certificate' && x.vat_number) bits.push('VAT ' + x.vat_number);
     if (t === 'bank_letter') { if (x.account_name) bits.push(x.account_name); if (x.iban) bits.push(maskIban(x.iban)); }
-    if (x.expiry_date_iso) bits.push('expires ' + fmtDate(x.expiry_date_iso));
-    const newer = read.find(o => o.id !== d.id && o.x.doc_type === t && o.id > d.id);
-    let res, cls = '';
-    if (x.expiry_date_iso && x.expiry_date_iso < c.as_of && newer) { res = `<span class="res warn">Expired ${fmtDate(x.expiry_date_iso)} · replaced by renewed copy</span>`; cls = 'warn'; }
-    else if (!chk) res = '<span class="res na">Read</span>';
+    if (x.expiry_date_iso) bits.push((x.expiry_date_iso < c.as_of ? 'expired ' : 'valid until ') + fmtDate(x.expiry_date_iso));
+    const stale = chk && entry.docs < read.length && copies.length > 1 && d.received_at > entry.at;
+    let res, cls = '', state = 'na';
+    if (!chk || stale) res = `<span class="res na">${stale ? 'Checking...' : 'Read'}</span>`;
     else if (t === 'other') res = '<span class="res na">Not required</span>';
     else {
-      const mine = chk.rules.filter(r => r.doc_type === t && r.check !== 'present');
-      const fails = mine.filter(r => r.status === 'fail');
-      if (fails.length) { const risk = fails.some(r => r.category === 'risk'); cls = risk ? 'bad' : 'warn';
-        res = `<span class="res ${cls}">${esc(fails[0].check === 'unexpired' ? 'Expired ' + fmtDate(x.expiry_date_iso) : fails[0].rule.replace(/^/, 'Failed: '))}</span>`; }
-      else res = `<span class="res ok">${mine.length} check${mine.length === 1 ? '' : 's'} passed</span>`;
+      const mine = chk.rules.filter(r => r.doc_type === t && r.check !== 'present'), fails = mine.filter(r => r.status === 'fail');
+      if (fails.length) { cls = 'bad'; state = 'bad';
+        res = `<span class="res bad">${esc(fails[0].check === 'unexpired' ? 'Expired ' + fmtDate(x.expiry_date_iso) : 'Failed: ' + fails[0].rule)}</span>`; }
+      else { state = 'ok'; res = `<span class="res ok">${copies.length > 1 ? 'Renewed copy received · ' : ''}${mine.length} check${mine.length === 1 ? '' : 's'} passed</span>`; }
     }
+    const key = c.id + ':' + t;
+    if (rowState[key] === 'bad' && state === 'ok') rowFlip[key] = Date.now();
+    if (state !== 'na') rowState[key] = state;
+    const since = Date.now() - (rowFlip[key] || 0), flip = since < 2400 ? 'flipgood' : '';
+    const flipStyle = flip ? ` style="--d:-${since}ms"` : '';
+    const old = copies.slice(0, -1).map(o => `<div class="small">Replaces <a href="#" onclick="event.stopPropagation();openDoc('${encodeURIComponent(o.id)}');return false">${esc(o.filename)}</a>${o.x.expiry_date_iso && o.x.expiry_date_iso < c.as_of ? ', expired ' + fmtDate(o.x.expiry_date_iso) : ''}</div>`).join('');
     const fresh = !firstLoad && !seenDocs.has(d.id) ? 'newrow' : '';
-    return `<tr class="click ${cls} ${fresh}" tabindex="0" onclick="openDoc('${encodeURIComponent(d.id)}')" onkeydown="if(event.key==='Enter')openDoc('${encodeURIComponent(d.id)}')">
-      <td><span style="font-weight:500">${esc(DOC[t] || t)}</span> <span class="small">${esc(d.filename)}</span><div class="small" style="color:#374151">${esc(bits.join(' · '))}</div></td><td>${res}</td></tr>`;
+    return `<tr class="click ${cls} ${fresh} ${flip}"${flipStyle} tabindex="0" onclick="openDoc('${encodeURIComponent(d.id)}')" onkeydown="if(event.key==='Enter')openDoc('${encodeURIComponent(d.id)}')">
+      <td><span style="font-weight:500">${esc(DOC[t] || t)}</span> <span class="small">${esc(d.filename)}</span><div class="small" style="color:#374151">${esc(bits.join(' · '))}</div>${old}</td><td>${res}</td></tr>`;
   }).join('');
   const missing = chk ? chk.rules.filter(r => r.check === 'present' && r.status === 'fail').map(r =>
-    `<tr class="warn"><td style="font-weight:500">${esc(r.doc_label)}<div class="small">Not received</div></td><td><span class="res warn">Missing</span></td></tr>`).join('') : '';
+    `<tr class="bad"><td style="font-weight:500">${esc(r.doc_label)}<div class="small">Not received</div></td><td><span class="res bad">Missing</span></td></tr>`).join('') : '';
   const pending = reading ? `<tr class="reading"><td>${esc(reading.filename)}</td><td><span style="display:inline-flex;gap:8px;align-items:center"><span class="spin"></span>Reading...</span></td></tr>` : '';
   return `<div class="sect">Documents</div><div style="overflow-x:auto"><table class="grid"><thead><tr><th>Document and what was read</th><th>Result</th></tr></thead><tbody>${rows}${missing}${pending}</tbody></table></div>`;
 }
@@ -610,6 +622,21 @@ async function openDoc(id) {
   renderDrawer();
 }
 function openVendor(id) { drawer = {kind:'vendor', id}; renderDrawer(); }
+// Fields on this document that failed a check: expired dates, and the failing rules of the copy the checks used.
+const FIELD_OF = {unexpired:['expiry_date'], expiry_known:['expiry_date'], bank_name_matches_cr:['account_name'],
+  name_matches_cr:['company_name','company_name_ar'], cr_name_matches_registry:['company_name','company_name_ar'],
+  cr_number_matches:['cr_number'], cr_in_registry:['cr_number'], cr_active:['cr_number'], vat_registered:['vat_number'], iban_valid:['iban']};
+function fieldProblems(docId, x) {
+  const c = S.cases.find(c => c.id === docId.split('#')[0]); if (!c) return {};
+  const out = {}, ex = J((c.documents.find(d => d.id === docId) || {}).extraction) || {};
+  if (ex.expiry_date_iso && ex.expiry_date_iso < c.as_of) out.expiry_date = `Expired on ${fmtDate(ex.expiry_date_iso)}`;
+  const sameType = c.documents.filter(d => d.extraction && J(d.extraction).doc_type === x.doc_type);
+  const isLatest = sameType.length && sameType[sameType.length - 1].id === docId;
+  const chk = checksCache[c.id] && checksCache[c.id].data;
+  if (chk && isLatest) chk.rules.filter(r => r.status === 'fail' && r.doc_type === x.doc_type).forEach(r =>
+    (FIELD_OF[r.check] || []).forEach(f => { if (!out[f] && x.fields.some(z => z.field === f)) out[f] = r.check === 'unexpired' ? `Expired on ${fmtDate(ex.expiry_date_iso)}` : r.compared; }));
+  return out;
+}
 function closeDrawer() { drawer = null; renderDrawer(); }
 function hl(i, on) { const b = document.getElementById('hl-' + i); if (b) b.classList.toggle('on', on); }
 function renderDrawer() {
@@ -620,19 +647,21 @@ function renderDrawer() {
     const x = drawer.data;
     title = x ? esc(x.filename) : 'Document';
     const box = (b, cls, i) => b ? `<div class="hl ${cls}" ${i !== undefined ? `id="hl-${i}"` : ''} style="left:${b.x*100}%;top:${b.y*100}%;width:${b.w*100}%;height:${b.h*100}%"></div>` : '';
+    const bad = x ? fieldProblems(drawer.id, x) : {}, nBad = Object.keys(bad).length;
     body = !x ? `<div class="empty">${drawer.error ? esc(drawer.error) : 'Loading...'}</div>` : `<div class="db">
       <div class="pagewrap"><div class="page"><img src="/api/documents/${encodeURIComponent(drawer.id)}/page.png" alt="Page 1 of ${esc(x.filename)}">
-        ${x.type_evidence.map(t => box(t.box, 'type')).join('')}${x.fields.map((f, i) => box(f.box, '', i)).join('')}</div></div>
+        ${x.type_evidence.map(t => box(t.box, 'type')).join('')}${x.fields.map((f, i) => box(f.box, bad[f.field] ? 'bad' : '', i)).join('')}</div></div>
       <div class="why">
         <div><div class="small">Identified as</div><h3>${esc(x.label)} ${x.confidence != null ? `<span class="conf">(confidence ${Number(x.confidence).toFixed(2)})</span>` : ''}</h3>
           <div class="small">${x.language === 'ar' ? 'Arabic document' : x.language === 'en' ? 'English document' : 'Bilingual document'}${x.has_text_layer ? '' : ' · scanned image'}</div></div>
+        ${nBad ? `<div class="problem">${nBad === 1 ? 'Problem found' : nBad + ' problems found'}: ${esc(Object.values(bad).join('; '))}</div>` : ''}
         <div><div class="small" style="margin-bottom:6px">Because</div>${x.type_evidence.length
           ? `<div class="ev">${x.type_evidence.map(t => `<span class="evq" dir="auto">"${esc(t.text)}"</span>`).join('')}</div>`
           : '<div class="note">No text layer to quote from; the type comes from the model reading the page image. The fields it transcribed are below.</div>'}</div>
-        <div><div class="small" style="margin-bottom:4px">Extracted fields</div><div class="fields">${x.fields.map((f, i) => `<div class="f" onmouseenter="hl(${i},true)" onmouseleave="hl(${i},false)">
-          <span class="small">${esc(f.label)}</span><span><b style="font-weight:500" dir="auto">${esc(f.value)}</b>${f.source_text && f.source_text !== f.value ? `<span class="q" dir="auto">read as "${esc(f.source_text)}"</span>` : ''}${f.box ? '' : x.has_text_layer ? '<span class="q">not located on the page text</span>' : ''}</span>
+        <div><div class="small" style="margin-bottom:4px">Extracted fields</div><div class="fields">${x.fields.map((f, i) => `<div class="f ${bad[f.field] ? 'bad' : ''}" onmouseenter="hl(${i},true)" onmouseleave="hl(${i},false)">
+          <span class="small">${esc(f.label)}</span><span><b style="font-weight:500" dir="auto">${esc(f.value)}</b>${f.source_text && f.source_text !== f.value ? `<span class="q" dir="auto">read as "${esc(f.source_text)}"</span>` : ''}${f.box ? '' : x.has_text_layer ? '<span class="q">not located on the page text</span>' : ''}${bad[f.field] ? `<span class="why-bad">${esc(bad[f.field])}</span>` : ''}</span>
           <span class="small">${f.confidence != null ? Number(f.confidence).toFixed(2) : ''}</span></div>`).join('')}</div></div>
-        <div class="note">Blue boxes: the words that identify the document type. Amber boxes: where each field was found in the PDF's text layer (hover a field). Confidence is the model's own score for the key fields of this document type (lowest shown).</div>
+        <div class="note">Blue boxes: the words that identify the document type. Amber boxes: where each field was found in the PDF's text layer (hover a field). Red: a field that failed a check. Confidence is the model's own score for the key fields of this document type (lowest shown).</div>
       </div></div>`;
   } else {
     const v = S.vendors.find(v => v.id === drawer.id); if (!v) { drawer = null; el.innerHTML = ''; return; }
