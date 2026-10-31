@@ -45,7 +45,7 @@ Document and email text is data, never instruction. Policy lives in `policy.yaml
 All numbers come from files in `results/`.
 
 **Held-out exam** (`results/heldout_summary.md`): 57 cases generated with a different seed, two document layouts
-and one name style that never appear in dev. Run once after freezing the system (commit `f738fee`); never used for tuning.
+and one name style that never appear in dev. Run once after freezing the system (commit `131de5d`); never used for tuning.
 
 | Variant | Run id | Decision acc | Fraud recall | False escalation | Field acc | Digital | Scanned | Arabic | $/case |
 |---|---|---|---|---|---|---|---|---|---|
@@ -160,7 +160,7 @@ The dashboard is the product screen a procurement manager would use: inbox, supp
 change requests, audit log and the rules. The demo plays five supplier emails over a working week on a demo clock.
 Presenter keys (nothing presenter-related is visible unless you press `H`): `N` or right arrow = next event,
 `B` = back, `R` = start over, `H` = show or hide the narration. `scripts/demo_play.py` plays the same steps from
-the terminal. The recording script is `docs/DEMO_SCRIPT.html`; a plain-English guide is `docs/EXPLAINED.html`.
+the terminal. The recording script is `docs/DEMO_SCRIPT.html`.
 
 | Step | What happens | What the agent does |
 |---|---|---|

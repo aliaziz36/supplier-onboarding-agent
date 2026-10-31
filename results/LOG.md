@@ -29,9 +29,9 @@ One row per change. Dev set unless noted. Numbers come from `results/<run-id>.js
 | 2026-10-30 10:05 | dev-hybrid-no-crossdoc-1030-100537 | ablation: no cross-document check (final code) | dev | hybrid | crossdoc | 98.2% | 100.0% | 3.0% | 99.4% | 100.0% | 0.3684 | 0.0691 |
 | 2026-10-30 10:06 | dev-hybrid-no-registry-1030-100605 | ablation: no registry check (final code) | dev | hybrid | registry | 93.0% | 76.5% | 0.0% | 99.6% | 100.0% | 0.2807 | 0.0713 |
 | 2026-10-30 10:06 | dev-model-1030-100615 | model-only baseline rerun on final extractor | dev | model | - | 94.7% | 100.0% | 3.0% | 99.3% | 100.0% | 0.3684 | 0.0667 |
-| 2026-10-30 10:11 | heldout-hybrid-1030-101142 | held-out, frozen at f738fee | heldout | hybrid | - | 100.0% | 100.0% | 0.0% | 100.0% | 100.0% | 0.3509 | 0.0689 |
-| 2026-10-30 10:11 | heldout-rules-1030-101143 | held-out, frozen at f738fee | heldout | rules | - | 52.6% | 100.0% | 48.5% | 71.2% | 75.0% | 0.5439 | 0.0 |
-| 2026-10-30 10:12 | heldout-model-1030-101257 | held-out, frozen at f738fee | heldout | model | - | 98.2% | 100.0% | 0.0% | 100.0% | 100.0% | 0.3509 | 0.0669 |
-| 2026-10-30 10:13 | heldout-hybrid-no-crossdoc-1030-101326 | held-out, frozen at f738fee | heldout | hybrid | crossdoc | 100.0% | 100.0% | 0.0% | 100.0% | 100.0% | 0.3509 | 0.069 |
-| 2026-10-30 10:13 | heldout-hybrid-no-registry-1030-101357 | held-out, frozen at f738fee | heldout | hybrid | registry | 93.0% | 76.5% | 0.0% | 100.0% | 100.0% | 0.2807 | 0.0703 |
+| 2026-10-30 10:11 | heldout-hybrid-1030-101142 | held-out, frozen at 131de5d | heldout | hybrid | - | 100.0% | 100.0% | 0.0% | 100.0% | 100.0% | 0.3509 | 0.0689 |
+| 2026-10-30 10:11 | heldout-rules-1030-101143 | held-out, frozen at 131de5d | heldout | rules | - | 52.6% | 100.0% | 48.5% | 71.2% | 75.0% | 0.5439 | 0.0 |
+| 2026-10-30 10:12 | heldout-model-1030-101257 | held-out, frozen at 131de5d | heldout | model | - | 98.2% | 100.0% | 0.0% | 100.0% | 100.0% | 0.3509 | 0.0669 |
+| 2026-10-30 10:13 | heldout-hybrid-no-crossdoc-1030-101326 | held-out, frozen at 131de5d | heldout | hybrid | crossdoc | 100.0% | 100.0% | 0.0% | 100.0% | 100.0% | 0.3509 | 0.069 |
+| 2026-10-30 10:13 | heldout-hybrid-no-registry-1030-101357 | held-out, frozen at 131de5d | heldout | hybrid | registry | 93.0% | 76.5% | 0.0% | 100.0% | 100.0% | 0.2807 | 0.0703 |
 | 2026-10-30 20:42 | heldout-hybrid-1030-204220 | demo-v2: dashboard rebuild, replay regression check | heldout | hybrid | - | 100.0% | 100.0% | 0.0% | 100.0% | 100.0% | 0.3509 | 0.0689 |

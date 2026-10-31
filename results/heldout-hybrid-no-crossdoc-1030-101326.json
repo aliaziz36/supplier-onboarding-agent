@@ -9,7 +9,7 @@
  "replay": "0",
  "policy_version": 1,
  "policy_path": "policy.yaml",
- "note": "held-out, frozen at f738fee",
+ "note": "held-out, frozen at 131de5d",
  "wall_seconds": 28.6,
  "metrics": {
   "cases": 57,
