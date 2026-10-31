@@ -10,3 +10,4 @@ data/store/
 .DS_Store
 *.db-shm
 *.db-wal
+data/fresh/

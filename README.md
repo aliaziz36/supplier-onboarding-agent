@@ -57,20 +57,55 @@ What the variants show (dev):
 Iteration log (one row per change): `results/LOG.md`. Robustness (scans, Arabic, policy change, injection,
 stability): `results/robustness.md`.
 
-## Install
+## Run it yourself
 
 Python 3.11.
 
 ```bash
 uv venv --python 3.11 .venv          # or: python3.11 -m venv .venv
 uv pip install --python .venv/bin/python -r requirements.txt
-cp .env.example .env                 # add ANTHROPIC_API_KEY only if you want live model calls
+cp .env.example .env                 # put your ANTHROPIC_API_KEY here for live runs
 ```
 
-## Reproduce every result without an API key
+There are two ways to run it. **Replay** is free and needs no key: every model response behind the published
+results is committed in `cache/llm/`, so you can check every number and click through the demo exactly as recorded.
+**Live** calls the Anthropic API with your key, on the same code: about $0.07 per supplier email.
 
-Every model response used in the results is cached in `cache/llm/`, keyed by a hash of the full request.
-`REPLAY=1` serves only from that cache and fails loudly on a miss.
+### Live: run the real agent with your own key
+
+Run one case from the terminal. `NO_CACHE=1` forces real API calls instead of the recorded ones; `-v` prints every
+tool call, check and decision:
+
+```bash
+NO_CACHE=1 .venv/bin/python -m app.agent data/cases/heldout/heldout_001_clean -v
+```
+
+Generate brand-new suppliers that nobody has run before (new seed, new companies, new documents, so nothing can
+come from the cache), then run the full evaluation on them:
+
+```bash
+CASES_DIR=data/fresh .venv/bin/python -m scripts.generate --split dev --seed 7
+CASES_DIR=data/fresh .venv/bin/python -m eval.run --split dev --no-log              # 57 cases, about $4
+CASES_DIR=data/fresh .venv/bin/python -m eval.run --split dev --only clean --no-log # a handful, cents
+```
+
+Process an email live in the app: start the server without `REPLAY`, open the dashboard, press `H`, pick a case
+and click **Process a new email**. It runs through the API step by step, marked **Live**. `LIVE_CASES=<folder>`
+offers your own case folders instead of the held-out set.
+
+```bash
+.venv/bin/uvicorn app.main:app --port 8000        # key read from .env
+```
+
+Change the rules: edit `policy.yaml` (or use `POLICY_PATH=policies/policy_zakat.yaml`) and rerun. No code or
+prompt changes needed.
+
+A case is a folder (`email.eml`, the PDFs, `world.json` with the registry records for the mocked Wathq and ZATCA,
+`label.json` with the expected outcome); see **Data** below to make your own.
+
+### Replay: reproduce every result without a key
+
+`REPLAY=1` serves only from the cache and fails loudly on a miss.
 
 ```bash
 REPLAY=1 .venv/bin/python -m eval.run --split dev --mode hybrid --no-log
@@ -79,31 +114,37 @@ REPLAY=1 .venv/bin/python -m eval.run --split dev --mode model --no-log
 REPLAY=1 .venv/bin/python -m eval.run --split dev --ablate crossdoc --no-log
 REPLAY=1 .venv/bin/python -m eval.run --split dev --ablate registry --no-log
 REPLAY=1 POLICY_PATH=policies/policy_zakat.yaml .venv/bin/python -m eval.run --split dev_zakat --no-log
+REPLAY=1 .venv/bin/python -m eval.run --split heldout --frozen --no-log
 .venv/bin/python -m eval.compare --split dev
 .venv/bin/python -m pytest -q
 ```
 
 Stability runs (`NO_CACHE=1`) deliberately bypass the cache, so they need a key.
 
-## Run the demo
+### The demo
 
 ```bash
-.venv/bin/uvicorn app.main:app --port 8000        # open http://localhost:8000
+REPLAY=1 ANTHROPIC_API_KEY= .venv/bin/uvicorn app.main:app --port 8000   # free; open http://localhost:8000/dashboard
 ```
 
-The start page explains the project; **Start the guided demo** opens the dashboard with a step-by-step panel
-that plays each scene and explains it. `scripts/demo_play.py` plays the same scenes without clicking.
-A plain-English guide to the whole project is in `docs/EXPLAINED.html`.
+The dashboard is the product screen a procurement manager would use: inbox, suppliers, approved vendors, bank
+change requests, audit log and the rules. The demo plays five supplier emails over a working week on a demo clock.
+Presenter keys (nothing presenter-related is visible unless you press `H`): `N` or right arrow = next event,
+`B` = back, `R` = start over, `H` = show or hide the narration. `scripts/demo_play.py` plays the same steps from
+the terminal. The recording script is `docs/DEMO_SCRIPT.html`; a plain-English guide is `docs/EXPLAINED.html`.
 
-The simulator buttons post a demo case's `.eml` to the same handler a real inbox would use.
-
-| Scene | What happens | What the agent does |
+| Step | What happens | What the agent does |
 |---|---|---|
-| 1 | Al Noor Trading sends clean documents (CR in Arabic only) | Reads 4 documents, checks registry, creates the vendor, sends a welcome email |
-| 2 | Rawabi Logistics' VAT certificate has expired | Emails for a renewal; when the reply arrives, re-checks only the new document and onboards |
-| 3 | Gulf Steel's bank letter is in another company's name | Stops, does not email the supplier, raises a decision card with the evidence |
-| 4 | A look-alike domain asks to move Al Noor's payments to a new bank | Freezes the change, holds payments, flags the domain and bank mismatch, asks the manager to call the number on file |
-| 5 | Fast-forward 11 months | Al Noor's CR expires in 20 days: renewal email sent, vendor marked at risk; a lapsed GOSI certificate puts Rawabi on payment hold |
+| Sun 09:12 | Al Noor Trading sends clean documents (CR in Arabic only) | Reads 4 documents, checks registry, creates the vendor, sends a welcome email |
+| Sun 10:40 | Rawabi Logistics' VAT certificate has expired | Emails the supplier for exactly that document |
+| Tue 14:05 | Rawabi replies with a renewed certificate | Reads only the new document, re-runs every check, onboards |
+| Tue 15:30 | Gulf Steel's bank letter is in another company's name | Stops, does not email the supplier, raises a decision card; the manager rejects |
+| Wed 08:47 | A look-alike domain asks to move Al Noor's payments to a new bank | Freezes the change, holds payments, flags domain and bank, asks the manager to call the number on file; the manager rejects |
+| 11 months later | Daily expiry scan | Renewal requests to Al Noor and Rawabi; Rawabi's lapsed GOSI certificate puts it on payment hold |
+
+Clicking a document shows the page, why it was identified as that type, and where each field was found. Each
+"Ran 17 checks" line opens the full checklist with the values compared and their source (Wathq, ZATCA,
+cross-document, policy.yaml).
 
 ## Data
 
@@ -132,7 +173,7 @@ data/cases/{dev,demo,...}     generated cases
 cache/llm/                    committed model responses for replay
 results/                      results files, LOG.md, comparison and robustness reports
 tests/                        rules oracle, watcher, regression replay
-web/index.html                dashboard
+web/                          dashboard (index.html), start page, logo
 ```
 
 ## Limits

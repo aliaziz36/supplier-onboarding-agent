@@ -21,7 +21,7 @@ from app.agent import Ctx, run_turn
 from app.config import CASES_DIR, DB_PATH, MODEL, RESULTS_DIR, ROOT, env_flag, load_policy
 from app.registry import Registry, load_world
 
-DEMO_DIR = CASES_DIR / "demo"
+DEMO_DIR = ROOT / "data" / "cases" / "demo"
 START_DATE = "2026-10-31"
 SCENES = {
     "1": "demo_1_al_noor_clean",
@@ -30,7 +30,7 @@ SCENES = {
     "4": "demo_4_al_noor_bank_change",
 }
 
-HELDOUT_DIR = CASES_DIR / "heldout"
+HELDOUT_DIR = Path(os.getenv("LIVE_CASES", CASES_DIR / "heldout"))   # cases offered by "Process a new email"
 DEMO_START = "2026-11-01T08:55:00"       # Sunday morning, before the first email
 PACE = 1.2                               # seconds between visible steps when a scene plays
 # The guided demo, in order: (action, argument, demo clock when it happens).

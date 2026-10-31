@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
 
-CASES_DIR = ROOT / "data" / "cases"
+CASES_DIR = Path(os.getenv("CASES_DIR", ROOT / "data" / "cases"))   # point elsewhere to generate and run fresh cases
 CACHE_DIR = ROOT / "cache" / "llm"
 RESULTS_DIR = ROOT / "results"
 DB_PATH = Path(os.getenv("DB_PATH", ROOT / "data" / "app.db"))
