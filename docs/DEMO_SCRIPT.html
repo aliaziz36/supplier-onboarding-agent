@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Demo Recording Script</title>
+<title>The Seal Demo Script</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap">
 <style>
@@ -48,6 +48,7 @@ code{font-family:var(--mono);font-size:.9em}
 .body h3{margin:0;font-size:17px}
 .row{display:grid;grid-template-columns:86px minmax(0,1fr);gap:10px;align-items:baseline}
 .row p{margin:0}
+kbd{font-family:var(--mono);font-size:13px;font-weight:600;padding:1px 7px;border-radius:5px;border:1px solid var(--line);border-bottom-width:2px;background:var(--paper)}
 .btn{display:inline-block;font-weight:600;font-size:14px;padding:2px 10px;border-radius:6px;background:var(--teal);color:#fff}
 .say{font-size:15.5px;color:var(--ink);font-style:italic}
 .dont{font-size:13.5px;color:var(--bad);background:var(--bad-bg);padding:6px 10px;border-radius:6px}
@@ -60,133 +61,70 @@ code{font-family:var(--mono);font-size:.9em}
 .tablewrap{overflow-x:auto}
 @media (max-width:600px){.scene{grid-template-columns:1fr}.side{flex-direction:row;gap:12px;align-items:baseline;border-right:0;border-bottom:1px solid var(--line)}.row{grid-template-columns:1fr;gap:2px}}
 @media print{body{background:#fff;padding:0;font-size:13.5px}.scene,.tip,tr{break-inside:avoid}h2{break-after:avoid}}
-</style>
+</style></head><body>
 
 <div class="wrap">
-  <div class="eyebrow">Supplier Onboarding Agent · presenter guide</div>
-  <h1>Demo recording script</h1>
-  <p class="lede">Everything you need to record the 3-minute demo video: what to set up, then for every scene what to click, what to point at, and what to say.</p>
-  <div class="facts">
-    <span class="fact">Length: <b>about 3:00</b></span>
-    <span class="fact">Opening: <b>45 s story</b></span><span class="fact">Scenes: <b>8 clicks</b></span>
-    <span class="fact">Cost per run: <b>$0</b> (saved answers)</span>
-    <span class="fact">Rehearse: <b>as many times as you like</b></span>
-  </div>
-
-  <h2>Before you record</h2>
-  <ol class="prep">
-    <li>Open <b>http://localhost:8000</b> in your browser. If the page doesn't load, open Terminal in the project folder and run:
-      <pre>.venv/bin/uvicorn app.main:app --port 8000</pre></li>
-    <li>Make the browser full screen. If the page doesn't fit, zoom out to 90% with <b>Cmd + −</b>.</li>
-    <li>Do one full practice run, then click <b>Start over</b>.</li>
-    <li>Start the screen recorder. QuickTime: <b>File → New Screen Recording</b>, then choose to record the browser window.</li>
-  </ol>
-
-  <h2>The run</h2>
-  <p style="margin:0 0 12px;color:var(--muted);font-size:15px">The story follows Sara, a procurement officer. She is an illustrative character, not a real person; the numbers she hears about are real and sourced on the start page.</p>
-  <div class="legend"><span><span class="lane l-click">Click</span> what to press</span><span><span class="lane l-look">Point at</span> where to move the mouse</span><span><span class="lane l-say">Say</span> your voice-over</span></div>
-
-  <div class="scenes">
-    <div class="scene"><div class="side"><span class="n">0a</span><span class="t">~12 s</span><span class="clock">0:00</span></div><div class="body">
-      <h3>Meet Sara</h3>
-      <div class="row"><span class="lane l-look">Point at</span><p>The start page, top. Let the headline sit on screen.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“Nowadays, every company runs on suppliers. Meet Sara. She works in procurement at a company in Riyadh. Every week, new suppliers email her their papers: the commercial registration, the VAT certificate, the bank letter, the GOSI certificate. Some scanned, some in Arabic, named things like ‘document1.pdf’.”</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">0b</span><span class="t">~13 s</span><span class="clock">0:12</span></div><div class="body">
-      <h3>Sara's week</h3>
-      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Why this matters ↓</span></p></div>
-      <div class="row"><span class="lane l-look">Point at</span><p>The five manual steps on the left, then “18.8 days”.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“Sara opens every file, checks every number on the government websites, and chases suppliers about expired certificates. At big companies, this takes almost three weeks for a single supplier.”</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">0c</span><span class="t">~15 s</span><span class="clock">0:25</span></div><div class="body">
-      <h3>The email that costs money</h3>
-      <div class="row"><span class="lane l-look">Point at</span><p>The red “74%” card.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“Then one morning, a supplier she knows writes: ‘We've changed banks. Please send our next payment to this new account.’ Same name, same signature. Only the email address is one letter off. That's how payment fraud works. In one 2025 survey, three out of four US companies were hit by emails just like it.”</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">0d</span><span class="t">~8 s</span><span class="clock">0:40</span></div><div class="body">
-      <h3>The turn</h3>
-      <div class="row"><span class="lane l-look">Point at</span><p>The grey box under the numbers.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“Sara doesn't need another portal. She needs a colleague inside her inbox who checks everything, never gets tired, and never changes bank details without a phone call. So we built one.”</p></div>
-      <div class="row"><span class="lane l-click">Click</span><p>Scroll back up, then <span class="btn">Start the guided demo</span>. If it isn't on the first step, click <b>Start over</b> once.</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">1</span><span class="t">~18 s</span><span class="clock">0:48</span></div><div class="body">
-      <h3>Al Noor applies, and the agent finishes alone</h3>
-      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Start: send the first email</span>. Wait until the button stops saying “Please wait…”.</p></div>
-      <div class="row"><span class="lane l-look">Point at</span><p>The right panel, which reads each PDF and then says “Checked 17 things: all good”. Then the table, where two documents are in Arabic.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“Here's Sara's inbox. Al Noor sends four documents, two of them in Arabic. The agent reads them, checks the government registries, matches the names and numbers, and approves Al Noor. Sara didn't lift a finger.”</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">2</span><span class="t">~15 s</span><span class="clock">1:06</span></div><div class="body">
-      <h3>Rawabi: an expired certificate</h3>
-      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Next supplier</span></p></div>
-      <div class="row"><span class="lane l-look">Point at</span><p>The yellow “Expired on…” row, then the email the agent wrote underneath.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“A routine problem, so it doesn't bother anyone. It emails the supplier asking for exactly that document.”</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">3</span><span class="t">~8 s</span><span class="clock">1:21</span></div><div class="body">
-      <h3>Rawabi replies</h3>
-      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Rawabi replies</span></p></div>
-      <div class="row"><span class="lane l-look">Point at</span><p>Rawabi turning green: “Onboarded · no person needed”.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“The reply comes in. It checks only the new document and approves them.”</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">4</span><span class="t">~18 s</span><span class="clock">1:29</span></div><div class="body">
-      <h3>Gulf Steel: the bank account belongs to someone else</h3>
-      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Next email</span></p></div>
-      <div class="row"><span class="lane l-look">Point at</span><p>The red card, with the two company names side by side.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“Here the bank account belongs to a different company, a classic fraud pattern. The agent stops, doesn't contact the supplier, and puts it in front of Sara.”</p></div>
-      <p class="dont">Don't press the buttons on this red card. Leave it open.</p>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">5</span><span class="t">~22 s</span><span class="clock">1:47</span></div><div class="body">
-      <h3>A fake email asks to change Al Noor's bank</h3>
-      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Next email</span></p></div>
-      <div class="row"><span class="lane l-look">Point at</span><p>The sender address (<code>.co</code> instead of <code>.com.sa</code>), the different bank, the red flags, then the phone number.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“And here's that email from Sara's story: someone pretending to be Al Noor, one letter off. The agent can't change bank details at all. It freezes the request, holds payments, and tells Sara to call the number already on file.”</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">6</span><span class="t">~8 s</span><span class="clock">2:09</span></div><div class="body">
-      <h3>You call Al Noor and reject it</h3>
-      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Call Al Noor and reject</span></p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“Sara calls Al Noor. They never asked. She rejects it, and not one riyal moves.”</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">7</span><span class="t">~15 s</span><span class="clock">2:17</span></div><div class="body">
-      <h3>Eleven months later</h3>
-      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Jump 11 months ahead</span></p></div>
-      <div class="row"><span class="lane l-look">Point at</span><p>“Approved vendors” on the left.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“The job never ends. Al Noor's registration expires in 20 days, so it asks for the renewal now. Rawabi's certificate has lapsed, so their payments are on hold.”</p></div>
-    </div></div>
-
-    <div class="scene"><div class="side"><span class="n">8</span><span class="t">~28 s</span><span class="clock">2:32</span></div><div class="body">
-      <h3>The results</h3>
-      <div class="row"><span class="lane l-click">Click</span><p><span class="btn">Finish</span>, then scroll up a little.</p></div>
-      <div class="row"><span class="lane l-look">Point at</span><p>The green “How well it works” strip.</p></div>
-      <div class="row"><span class="lane l-say">Say</span><p class="say">“We tested it on 57 cases it had never seen: 100% right decisions, every fraud attempt stopped, no honest supplier wrongly flagged, about 7 cents per supplier. So, back to Sara. This morning: five emails. Three handled without her. She stepped in twice, both times to stop possible fraud. Our agent onboards suppliers, then guards them.”</p></div>
-    </div></div>
-  </div>
-
-  <h2>Tips</h2>
-  <div class="tips">
-    <div class="tip"><b>Wait for the green button</b>While it says “Please wait…”, the agent is still working. Each scene takes a few seconds.</div>
-    <div class="tip"><b>Rehearse freely</b>Click <b>Start over</b> any time. Every run uses saved answers and costs nothing.</div>
-    <div class="tip"><b>Keep the order</b>Use only the green button during the recording, not the “Manual controls”. The saved answers rely on the scenes running in order.</div>
-    <div class="tip"><b>Recording in parts?</b>Don't click Start over between parts. Just continue with the next green button.</div>
-    <div class="tip"><b>Speed it up later</b>In editing, speed up the waits between clicks 2–4× so the whole video stays under 3:00.</div>
-  </div>
-
-  <h2>If something goes wrong</h2>
-  <div class="tablewrap"><table class="fix">
-    <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
-    <tbody>
-      <tr><td>The page doesn't load</td><td>The app isn't running. Start it with the Terminal command in “Before you record”.</td></tr>
-      <tr><td>The button stays on “Please wait…” for more than 20 seconds</td><td>Refresh the page (Cmd + R), click <b>Start over</b>, and run the scenes again from the start.</td></tr>
-      <tr><td>“Something went wrong” appears under the button</td><td>A scene was run out of order. Click <b>Start over</b> and use only the green button.</td></tr>
-      <tr><td>Terminal says “address already in use”</td><td>The app is already running. Just open http://localhost:8000.</td></tr>
-    </tbody>
-  </table></div>
+<div class="eyebrow">The Seal · presenter guide</div>
+<h1>Demo recording script</h1>
+<p class="lede">Everything you need to record the 3-minute video: setup, the keys, and for every step what to press, what to point at, and what to say.</p>
+<div class="facts">
+<span class="fact">Length: <b>about 3:00</b></span>
+<span class="fact">Opening: <b>45 s story</b></span><span class="fact">Steps: <b>9</b></span>
+<span class="fact">Cost per run: <b>$0</b> (replay of recorded runs)</span>
+<span class="fact">Rehearse: <b>as many times as you like</b></span>
 </div>
+<h2>Before you record</h2>
+<ol class="prep">
+<li>Make sure The Seal is running in replay mode. If <b>http://localhost:8000</b> doesn't load, open Terminal in the project folder and run:
+<pre>REPLAY=1 ANTHROPIC_API_KEY= .venv/bin/uvicorn app.main:app --port 8000</pre></li>
+<li>Open <b>http://localhost:8000/dashboard</b>, make the browser full screen, and press <kbd>R</kbd> to start over. The inbox should be empty.</li>
+<li>Rehearse once with the narration showing: press <kbd>H</kbd> to show it, read along, press <kbd>R</kbd> at the end. Press <kbd>H</kbd> again to hide it. While it's hidden, nothing presenter-related is on screen.</li>
+<li>Go to <b>http://localhost:8000</b> (the start page) for the opening, and start the screen recorder. QuickTime: <b>File → New Screen Recording</b>.</li>
+</ol>
+<h2>The keys</h2>
+<div class="tips">
+<div class="tip"><b><kbd>N</kbd> or <kbd>→</kbd></b>Next event: the next email arrives, or the next step happens.</div>
+<div class="tip"><b><kbd>B</kbd></b>Back one step (replays everything up to the step before).</div>
+<div class="tip"><b><kbd>R</kbd></b>Start over with an empty inbox.</div>
+<div class="tip"><b><kbd>H</kbd></b>Show or hide the narration panel. Keep it hidden while recording.</div>
+</div>
+<h2>The run</h2>
+<p style="margin:0 0 12px;color:var(--muted);font-size:15px">The story follows Sara, a procurement officer. She is an illustrative character, not a real person; the numbers she hears about are real and sourced on the start page. Times in the headings are the demo clock shown in the app.</p>
+<div class="legend"><span><span class="lane l-click">Click</span> what to press</span><span><span class="lane l-look">Point at</span> where to move the mouse</span><span><span class="lane l-say">Say</span> your voice-over</span></div>
+<div class="scenes">
+<div class="scene"><div class="side"><span class="n">0a</span><span class="t">~12 s</span><span class="clock">0:00</span></div><div class="body"><h3>Meet Sara</h3><div class="row"><span class="lane l-look">Point at</span><p>The start page, top. Let the headline sit on screen.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“Nowadays, every company runs on suppliers. Meet Sara. She works in procurement at a company in Riyadh. Every week, new suppliers email her their papers: the commercial registration, the VAT certificate, the bank letter, the GOSI certificate. Some scanned, some in Arabic, named things like ‘document1.pdf’.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">0b</span><span class="t">~13 s</span><span class="clock">0:12</span></div><div class="body"><h3>Sara's week</h3><div class="row"><span class="lane l-click">Click</span><p><span class="btn">Why this matters ↓</span></p></div><div class="row"><span class="lane l-look">Point at</span><p>The five manual steps, then “18.8 days”.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“Sara opens every file, checks every number on the government websites, and chases suppliers about expired certificates. At big companies, this takes almost three weeks for a single supplier.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">0c</span><span class="t">~15 s</span><span class="clock">0:25</span></div><div class="body"><h3>The email that costs money</h3><div class="row"><span class="lane l-look">Point at</span><p>The red “74%” card.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“Then one morning, a supplier she knows writes: ‘We've changed banks. Please send our next payment to this new account.’ Same name, same signature. Only the email address is one letter off. In one 2025 survey, three out of four US companies were hit by emails just like it.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">0d</span><span class="t">~8 s</span><span class="clock">0:40</span></div><div class="body"><h3>The turn</h3><div class="row"><span class="lane l-say">Say</span><p class="say">“Sara doesn't need another portal. She needs a colleague inside her inbox that checks everything and never changes bank details without a phone call. So we built one. It's called The Seal.”</p></div><div class="row"><span class="lane l-click">Click</span><p>Scroll up, then <span class="btn">Open The Seal →</span>. The inbox is empty and the clock reads Sunday 1 November, 08:55.</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">1</span><span class="t">~22 s</span><span class="clock">0:48</span></div><div class="body"><h3>Sunday 09:12 · Al Noor applies</h3><div class="row"><span class="lane l-click">Click</span><p>Press <kbd>N</kbd>. The email lands in the inbox and The Seal works through it step by step.</p></div><div class="row"><span class="lane l-look">Point at</span><p>The documents filling in one row at a time on the right, then “Ran 17 checks: 17 passed”. Then click the Arabic <b>Commercial registration</b> row: the viewer shows the page, “Identified as Commercial registration” and the highlighted Arabic title it used. Press <kbd>Esc</kbd>.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“Here's Sara's inbox. Al Noor sends four documents, two of them in Arabic. The Seal reads each one and shows exactly why: this is a commercial registration because of this title, and this is the number it read. It checks Wathq and ZATCA, matches names and numbers across documents, and approves Al Noor. Sara didn't lift a finger.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">2</span><span class="t">~12 s</span><span class="clock">1:10</span></div><div class="body"><h3>Sunday 10:40 · Rawabi applies</h3><div class="row"><span class="lane l-click">Click</span><p>Press <kbd>N</kbd>.</p></div><div class="row"><span class="lane l-look">Point at</span><p>The amber “Expired 10 Oct 2026” row, then “Sent by The Seal” under the email on the left.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“Rawabi's VAT certificate has expired. That's routine, so The Seal doesn't bother anyone. It emails Rawabi asking for exactly that document.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">3</span><span class="t">~10 s</span><span class="clock">1:22</span></div><div class="body"><h3>Tuesday 14:05 · Rawabi replies</h3><div class="row"><span class="lane l-click">Click</span><p>Press <kbd>N</kbd>. The clock moves forward two days.</p></div><div class="row"><span class="lane l-look">Point at</span><p>The “2 days later” divider in the activity, and the old VAT row: “replaced by renewed copy”.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“Two days later Rawabi replies. The Seal reads only the new certificate, re-runs every check, and approves them.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">4</span><span class="t">~14 s</span><span class="clock">1:32</span></div><div class="body"><h3>Tuesday 15:30 · Gulf Steel applies</h3><div class="row"><span class="lane l-click">Click</span><p>Press <kbd>N</kbd>.</p></div><div class="row"><span class="lane l-look">Point at</span><p>The red card with the two company names side by side, and the bell in the top bar showing 1.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“Here the bank account belongs to a different company, a classic fraud pattern. The Seal stops, doesn't contact the supplier, and asks Sara.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">5</span><span class="t">~6 s</span><span class="clock">1:46</span></div><div class="body"><h3>Sara rejects Gulf Steel</h3><div class="row"><span class="lane l-click">Click</span><p><span class="btn">Reject supplier</span> on the red card, then press <kbd>N</kbd> to move on.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“Sara agrees. Rejected.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">6</span><span class="t">~22 s</span><span class="clock">1:52</span></div><div class="body"><h3>Wednesday 08:47 · the fake bank-change email</h3><div class="row"><span class="lane l-click">Click</span><p>Press <kbd>N</kbd>.</p></div><div class="row"><span class="lane l-look">Point at</span><p>The sender (<code>alnoor-trading.co</code>, not <code>.com.sa</code>), the two red flags, then the phone number on file.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“And here's that email from Sara's story: someone pretending to be Al Noor, one letter off. The Seal can't change bank details at all. It freezes the request, holds payments, and tells Sara to call the number already on file.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">7</span><span class="t">~8 s</span><span class="clock">2:14</span></div><div class="body"><h3>Sara calls Al Noor</h3><div class="row"><span class="lane l-click">Click</span><p><span class="btn">They didn't ask: reject</span>, then press <kbd>N</kbd>.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“Sara calls Al Noor. They never asked. She rejects it, and not one riyal moves.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">8</span><span class="t">~15 s</span><span class="clock">2:22</span></div><div class="body"><h3>Eleven months later · the expiry scan</h3><div class="row"><span class="lane l-click">Click</span><p>Press <kbd>N</kbd>. The clock runs forward to 30 September 2027 and the Approved vendors page opens.</p></div><div class="row"><span class="lane l-look">Point at</span><p>The expiry scan table: vendor, document, expiry date, action taken.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“The job never ends. Al Noor's registration and Rawabi's VAT certificate expire within a month, so The Seal asks both to renew. Rawabi's GOSI certificate has lapsed, so their payments are on hold.”</p></div></div></div>
+<div class="scene"><div class="side"><span class="n">9</span><span class="t">~23 s</span><span class="clock">2:37</span></div><div class="body"><h3>The results, and back to Sara</h3><div class="row"><span class="lane l-click">Click</span><p><b>About</b> at the bottom of the sidebar.</p></div><div class="row"><span class="lane l-look">Point at</span><p>The test results line.</p></div><div class="row"><span class="lane l-say">Say</span><p class="say">“We tested it on 57 cases it had never seen: 100% right decisions, every fraud attempt stopped, no honest supplier wrongly flagged, about 7 cents per supplier. So, back to Sara. This week: five emails. Three handled without her. She stepped in twice, both times to stop possible fraud. The Seal onboards suppliers, then guards them.”</p></div></div></div>
+</div>
+<h2>Tips</h2>
+<div class="tips">
+<div class="tip"><b>Wait for “Agent idle”</b>Each email takes 5 to 15 seconds to play out. The sidebar shows “Agent working” until it's done; then press <kbd>N</kbd>.</div>
+<div class="tip"><b>Rehearse freely</b>Press <kbd>R</kbd> any time. Every run replays recorded answers and costs nothing.</div>
+<div class="tip"><b>Keep the order</b>Use <kbd>N</kbd> to move forward. The recorded answers rely on the emails arriving in this order.</div>
+<div class="tip"><b>Recording in parts?</b>Don't press <kbd>R</kbd> between parts. Continue with <kbd>N</kbd>; <kbd>B</kbd> goes back one step for a retake.</div>
+<div class="tip"><b>Speed it up later</b>In editing, speed up the waits 2–4× so the video stays under 3:00.</div>
+<div class="tip"><b>Don't press “Process a new email”</b>It calls the paid API. While the app runs without a key it only shows a message.</div>
+</div>
+<h2>If something goes wrong</h2>
+<div class="tablewrap"><table class="fix">
+<thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+<tbody>
+<tr><td>The page doesn't load</td><td>The app isn't running. Start it with the Terminal command in “Before you record”.</td></tr>
+<tr><td>“Agent working” for more than 20 seconds</td><td>Refresh the page (Cmd + R). If it still looks stuck, press <kbd>R</kbd> and run from the start.</td></tr>
+<tr><td>“Something went wrong” in the activity</td><td>A step ran out of order. Press <kbd>R</kbd> and use only <kbd>N</kbd>.</td></tr>
+<tr><td>Pressing <kbd>N</kbd> does nothing</td><td>Click once on an empty part of the page so it has keyboard focus, then press <kbd>N</kbd> again.</td></tr>
+<tr><td>Terminal says “address already in use”</td><td>The app is already running. Just open http://localhost:8000/dashboard.</td></tr>
+</tbody>
+</table></div>
+</div>
+</body></html>
