@@ -37,7 +37,9 @@ def run_scan(conn, policy: dict, today: date | None = None) -> list[dict]:
     findings = scan_expiries(conn, policy, today)
     db.log_event(conn, kind="tool", name="scan_expiries", input={"date": str(today)},
                  output=[{k: f[k] for k in ("vendor_id", "doc_type", "expiry_date", "days_left", "state")} for f in findings],
-                 summary=f"Expiry scan for {today}: {len(findings)} document(s) need attention")
+                 summary=f"Expiry scan for {today}: {len(findings)} document(s) need attention"
+                         + "".join(f"; {f['name']}: {DOC_LABELS.get(f['doc_type'], f['doc_type'])} "
+                                   f"{'expired' if f['state'] == 'expired' else 'expires'} {f['expiry_date']}" for f in findings))
     for vendor_id in sorted({f["vendor_id"] for f in findings}):
         mine = [f for f in findings if f["vendor_id"] == vendor_id]
         expired = [f for f in mine if f["state"] == "expired"]
@@ -59,7 +61,8 @@ def run_scan(conn, policy: dict, today: date | None = None) -> list[dict]:
             conn.commit()
             db.log_event(conn, kind="tool", name="send_email", vendor_id=vendor_id,
                          input={"to": v["email"], "kind": "renewal", "documents_requested": docs},
-                         summary=f"Renewal request sent to {v['name']} for {', '.join(docs)}; vendor marked at risk")
+                         summary=f"Asked {v['name']} to renew its " + " and ".join(DOC_LABELS.get(d, d) for d in docs)
+                                 + ("" if expired else "; vendor marked at risk"))
         if expired and policy["expiry_watch"].get("hold_payments_on_expiry", True):
             docs = [f["doc_type"] for f in expired]
             set_vendor_hold(conn, vendor_id, True, f"expired: {', '.join(docs)}")
@@ -72,5 +75,16 @@ def set_vendor_hold(conn, vendor_id: str, on: bool, reason: str) -> dict:
     conn.commit()
     db.log_event(conn, kind="tool", name="set_vendor_hold", vendor_id=vendor_id,
                  input={"on": on, "reason": reason},
-                 summary=f"Payment hold {'ON' if on else 'OFF'} for {vendor_id}: {reason}")
+                 summary=f"Payment hold {'ON' if on else 'OFF'} for {_vendor_name(conn, vendor_id)}: {_reason(reason)}")
     return {"vendor_id": vendor_id, "status": "on_hold" if on else "active"}
+
+
+def _vendor_name(conn, vendor_id: str) -> str:
+    v = db.row(conn, "SELECT name FROM vendors WHERE id=?", vendor_id)
+    return v["name"] if v else vendor_id
+
+
+def _reason(reason: str) -> str:
+    if reason.startswith("expired: "):
+        return "expired " + " and ".join(DOC_LABELS.get(d, d) for d in reason[9:].split(", "))
+    return reason

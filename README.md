@@ -1,4 +1,4 @@
-# Supplier Onboarding Agent
+# The Seal: supplier onboarding agent
 
 HUMAIN hackathon, Challenge 3 (Autonomous Enterprise).
 

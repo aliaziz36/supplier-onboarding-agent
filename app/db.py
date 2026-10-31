@@ -5,6 +5,8 @@ The events table is the audit log; the dashboard and the metrics read only it
 """
 import json
 import sqlite3
+import threading
+import time
 from pathlib import Path
 
 from app import clock
@@ -89,6 +91,14 @@ CREATE TABLE IF NOT EXISTS decision_cards (
 """
 
 
+_pace = threading.local()   # dashboard playback: pause after each visible event so a viewer can follow
+QUIET = {("llm", "agent"), ("tool", "get_case"), ("tool", "set_status")}
+
+
+def set_pace(seconds: float) -> None:
+    _pace.seconds = seconds
+
+
 def connect(path: Path | str | None = None) -> sqlite3.Connection:
     path = str(path or DB_PATH)
     if path != ":memory:":
@@ -124,6 +134,8 @@ def log_event(conn, *, kind, name=None, case_id=None, vendor_id=None, input=None
          summary, tokens_in, tokens_out, int(cached), seconds),
     )
     conn.commit()
+    if getattr(_pace, "seconds", 0) and (kind, name) not in QUIET:
+        time.sleep(_pace.seconds)
     return cur.lastrowid
 
 

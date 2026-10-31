@@ -15,6 +15,7 @@ reruns comes from this cache instead.
 import hashlib
 import json
 import os
+import threading
 import time
 from dataclasses import dataclass, field
 
@@ -62,6 +63,14 @@ def _cache_path(key: str):
     return CACHE_DIR / key[:2] / f"{key}.json"
 
 
+_live = threading.local()
+
+
+def set_live(on: bool) -> None:
+    """Dashboard 'process a new email': this thread calls the API for real (no cache read, no replay)."""
+    _live.on = on
+
+
 def call(*, messages: list[dict], system: str | None = None, tools: list[dict] | None = None,
          output_format: dict | None = None, effort: str = "low", thinking: str = "between_tools",
          max_tokens: int = 8000, purpose: str = "", model: str | None = None) -> LLMResult:
@@ -85,14 +94,15 @@ def call(*, messages: list[dict], system: str | None = None, tools: list[dict] |
 
     key = cache_key(request)
     path = _cache_path(key)
-    use_cache = not env_flag("NO_CACHE")
+    live = getattr(_live, "on", False)
+    use_cache = not env_flag("NO_CACHE") and not live
 
     if use_cache and path.exists():
         saved = json.loads(path.read_text())
         r = saved["response"]
         return LLMResult(content=r["content"], stop_reason=r["stop_reason"], usage=r.get("usage", {}),
                          cached=True, seconds=0.0, key=key)
-    if env_flag("REPLAY"):
+    if env_flag("REPLAY") and not live:
         raise CacheMiss(f"REPLAY=1 and no cached response for {purpose or 'call'} ({key[:12]})")
 
     started = time.time()

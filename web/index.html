@@ -1,613 +1,765 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Supplier Onboarding Agent</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<title>The Seal</title>
+<link rel="icon" type="image/svg+xml" href="/khatm.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500&display=swap">
 <style>
-:root{--bg:#F4F5F7;--ink:#111827;--muted:#4B5563;--soft:#6B7280;--line:#E5E7EB;--teal:#0F766E;--teal-l:#14B8A6;--navy:#0B1F2A;--navy2:#123441;
+:root{--bg:#F5F6F8;--panel:#fff;--ink:#111827;--muted:#4B5563;--soft:#6B7280;--line:#E5E7EB;--line2:#F1F2F4;
+  --brand:#0F5C55;--brand-d:#0B4A44;--brand-l:#E7F3F1;--side:#0E1B22;--side2:#16262F;--side-ink:#C9D4DA;
   --good:#166534;--good-bg:#DCFCE7;--warn:#92400E;--warn-bg:#FEF3C7;--bad:#991B1B;--bad-bg:#FEE2E2;--info:#1E40AF;--info-bg:#DBEAFE}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif}
-header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:16px 32px;background:var(--navy);color:#fff}
-.logo{width:36px;height:36px;border-radius:8px;background:var(--teal-l);display:flex;align-items:center;justify-content:center}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--navy2);font-size:13px;color:#CCFBF1;text-decoration:none}
-a.pill:hover{background:#1A4757}
-.dot{width:8px;height:8px;border-radius:50%;background:#2DD4BF;flex-shrink:0}
-.dot.busy{background:#FCD34D;animation:pulse 1s infinite}@keyframes pulse{50%{opacity:.3}}
-button{font:inherit;font-size:13px;font-weight:500;padding:8px 12px;min-height:36px;border-radius:8px;border:1px solid #D1D5DB;background:#fff;color:var(--ink);cursor:pointer}
-button:hover{background:#F9FAFB}
-button.primary{background:var(--teal);border-color:var(--teal);color:#fff}
-button.primary:hover{background:#0B5F58}
-button.danger{color:var(--bad)}
-button:disabled{opacity:.55;cursor:default}
-button.big{font-size:15px;padding:12px 22px;min-height:48px}
-button:focus-visible,a:focus-visible{outline:3px solid #FCD34D;outline-offset:2px}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 'IBM Plex Sans','IBM Plex Sans Arabic',system-ui,sans-serif}
+button{font:inherit;font-size:13px;font-weight:500;padding:7px 12px;border-radius:7px;border:1px solid #D1D5DB;background:#fff;color:var(--ink);cursor:pointer}
+button:hover{background:#F9FAFB}button:disabled{opacity:.5;cursor:default}
+button.primary{background:var(--brand);border-color:var(--brand);color:#fff}button.primary:hover{background:var(--brand-d)}
+button.danger{background:#fff;border-color:#FCA5A5;color:var(--bad)}button.danger:hover{background:#FEF2F2}
+button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:2px solid #F59E0B;outline-offset:2px}
+.mono{font-family:'IBM Plex Mono',monospace}
 
-/* guided demo */
-.guide{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;margin:20px 32px 0;padding:20px 24px;border-radius:12px;background:#fff;border:1px solid #99F6E4;box-shadow:inset 4px 0 0 var(--teal)}
-.guide-text{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:6px}
-.guide-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.guide-step{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
-.dots{display:flex;gap:5px}.dots i{width:22px;height:5px;border-radius:3px;background:#D1D5DB}.dots i.on{background:var(--teal)}.dots i.now{background:var(--teal-l)}
-.guide h2{margin:0;font-size:21px;font-weight:600}
-.guide p{margin:0;font-size:15px;line-height:1.55;color:#374151;max-width:64em}
-.guide-watch{display:flex;gap:8px;align-items:flex-start;font-size:14px!important;color:var(--teal)!important;font-weight:500}
-.guide-actions{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
-.guide-actions .row{display:flex;gap:10px;flex-wrap:wrap}
-.working{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;min-height:18px}
-.manual{margin:10px 32px 0}
-.manual summary{cursor:pointer;font-size:13px;color:var(--soft);padding:4px 0;width:max-content}
-.sim{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;background:#fff;border:1px solid var(--line);border-radius:10px;margin-top:8px;align-items:center}
-.sim span{font-size:12px;color:var(--muted);margin-right:4px}
+/* shell */
+.app{display:grid;grid-template-columns:232px 1fr;grid-template-rows:56px 1fr;height:100vh}
+.top{grid-column:1/3;display:flex;align-items:center;gap:18px;padding:0 18px;background:#fff;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;width:196px;font-weight:600;font-size:16px}
+.brand img{width:30px;height:30px}
+.org{color:var(--muted);font-size:13.5px}
+.top .sp{flex:1}
+.clock{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2}
+.clock b{font-weight:600;font-variant-numeric:tabular-nums}.clock small{color:var(--soft);font-size:11.5px}
+.clock.jump b{color:var(--brand)}
+.bell{position:relative;width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);background:#fff;cursor:pointer;padding:0}
+.bell .n[hidden]{display:none}.bell .n{position:absolute;top:-6px;right:-6px;min-width:18px;height:18px;border-radius:9px;background:#DC2626;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;padding:0 5px}
+.user{display:flex;align-items:center;gap:9px;font-size:13px}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--brand-l);color:var(--brand);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:12px}
+.user small{display:block;color:var(--soft);font-size:11.5px}
+.side{background:var(--side);color:var(--side-ink);display:flex;flex-direction:column;padding:14px 10px;gap:2px;overflow:auto}
+.side a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border-radius:7px;color:var(--side-ink);text-decoration:none;font-size:13.5px;cursor:pointer}
+.side a:hover{background:var(--side2)}.side a.on{background:#1F3640;color:#fff;font-weight:500}
+.side .cnt{font-size:11.5px;background:#24404B;color:#E2E8F0;border-radius:9px;padding:1px 7px;font-variant-numeric:tabular-nums}
+.side .cnt.red{background:#B91C1C;color:#fff}
+.side .sec{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#7D8E97;padding:14px 10px 6px}
+.side .sp{flex:1}
+.status{font-size:11.5px;line-height:1.5;color:#93A3AB;padding:10px;border-top:1px solid #22343D;margin-top:8px}
+.status b{color:#E2E8F0;font-weight:500}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#34D399;margin-right:6px;vertical-align:middle}
+.live-dot.busy{background:#FBBF24;animation:pulse 1s infinite}@keyframes pulse{50%{opacity:.3}}
+main{overflow:auto;min-width:0}
+.view{padding:18px 22px 40px}
+.vh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.vh h1{margin:0;font-size:19px;font-weight:600}.vh .sub{color:var(--soft);font-size:13px}
 
-/* summary */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;padding:20px 32px 8px}
-.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px;display:flex;flex-direction:column;gap:2px}
-.card .k{font-size:13px;color:var(--muted)}.card .v{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums}.card .h{font-size:12px;color:var(--soft)}
-.evidence{margin:8px 32px 0;padding:10px 16px;border-radius:10px;background:#ECFDF5;border:1px solid #A7F3D0;font-size:14px;color:#065F46;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.evidence b{font-weight:600}
+/* common */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;min-width:0}
+.ph{padding:11px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ph h2{margin:0;font-size:14px;font-weight:600}.ph .sub{font-size:12px;color:var(--soft)}
+.tag{display:inline-block;font-size:11.5px;font-weight:500;padding:2px 8px;border-radius:5px;white-space:nowrap}
+.t-green{background:var(--good-bg);color:var(--good)}.t-amber{background:var(--warn-bg);color:var(--warn)}.t-red{background:var(--bad-bg);color:var(--bad)}
+.t-blue{background:var(--info-bg);color:var(--info)}.t-grey{background:#F3F4F6;color:#374151}.t-live{background:#111827;color:#34D399}
+table.grid{width:100%;border-collapse:collapse;font-size:13.5px}
+.grid th{text-align:left;font-size:12px;font-weight:500;color:var(--soft);padding:9px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+.grid td{padding:10px 14px;border-bottom:1px solid var(--line2);vertical-align:top}
+.grid tr.click{cursor:pointer}.grid tr.click:hover td{background:#F9FAFB}
+.grid tr.warn td{background:#FFFBEB}.grid tr.bad td{background:#FEF2F2}
+.small{font-size:12px;color:var(--soft)}
+.empty{padding:28px 18px;color:var(--soft);text-align:center}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.stat .k{font-size:12px;color:var(--soft)}.stat .v{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums}
 
-/* layout */
-.main{display:flex;flex-wrap:wrap;gap:20px;padding:16px 32px 40px;align-items:flex-start}
-.panel{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.panel h2{margin:0;font-size:15px;font-weight:600}
-.phead{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
-.phead .sub{font-size:12px;color:var(--soft)}
-ul.list{list-style:none;margin:0;padding:0}
-ul.list li{padding:12px 18px;border-bottom:1px solid #F3F4F6;display:flex;flex-direction:column;gap:5px}
-ul.list li.click{cursor:pointer}ul.list li.click:hover{background:#F9FAFB}
-ul.list li.sel{background:#F0FDFA;box-shadow:inset 3px 0 0 var(--teal)}
-.name{font-size:14px;font-weight:600}
-.line2{font-size:12.5px;color:var(--soft)}
-.badge{align-self:flex-start;font-size:12px;font-weight:500;padding:3px 8px;border-radius:6px}
-.b-green{background:var(--good-bg);color:var(--good)}.b-amber{background:var(--warn-bg);color:var(--warn)}.b-red{background:var(--bad-bg);color:var(--bad)}
-.b-blue{background:var(--info-bg);color:var(--info)}.b-grey{background:#F3F4F6;color:#374151}
-.empty{padding:22px 18px;color:var(--muted);font-size:14px;line-height:1.5}
+/* inbox */
+.inbox{display:grid;grid-template-columns:340px minmax(0,1fr);gap:14px;align-items:start}
+.mlist{max-height:calc(100vh - 210px);overflow:auto}
+.mi{padding:11px 14px;border-bottom:1px solid var(--line2);cursor:pointer;display:flex;flex-direction:column;gap:4px}
+.mi:hover{background:#F9FAFB}.mi.on{background:var(--brand-l);box-shadow:inset 3px 0 0 var(--brand)}
+.mi .r1{display:flex;justify-content:space-between;gap:8px}.mi .from{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mi .when{font-size:12px;color:var(--soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+.mi .subj{font-size:13px;color:#374151;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:11px;padding:1px 7px;border-radius:4px;background:#F3F4F6;color:#374151;border:1px solid var(--line);max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mi.new{animation:arrive 1.2s ease-out}@keyframes arrive{from{background:#FEF9C3}to{background:transparent}}
+.detail{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:14px;align-items:start}
+.mail .mh{padding:14px 16px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:62px 1fr;gap:3px 10px;font-size:13px}
+.mail .mh span{color:var(--soft)}.mail h3{margin:0 0 4px;font-size:16px;grid-column:1/3}
+.mail .mb{padding:14px 16px;white-space:pre-wrap;font-size:13.5px;line-height:1.6}
+.mail .att{padding:0 16px 14px}
+.sent{border-top:1px solid var(--line)}
+.sent .s{padding:12px 16px;border-bottom:1px solid var(--line2)}
+.sent .s .meta{font-size:12px;color:var(--soft);margin-bottom:4px}
+.sent .s .body{white-space:pre-wrap;font-size:13px;line-height:1.55;color:#374151}
+.handled .story{padding:12px 16px;font-size:13.5px;line-height:1.55;border-bottom:1px solid var(--line)}
+.sect{padding:12px 16px 4px;font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--soft);font-weight:500}
 
-/* decision card */
-.decision{background:#fff;border:1px solid #FCA5A5;border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:12px}
-.decision .tag{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--bad)}
-.decision h2{margin:0;color:var(--bad);font-size:19px}
-.decision p{margin:0;font-size:14.5px;line-height:1.55;color:#374151}
-.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-.compare div{border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:14px}
-.compare small{display:block;font-size:12px;color:var(--soft);margin-bottom:2px}
-.compare .x{border-color:#FCA5A5;background:#FEF2F2}
-.flags{display:flex;flex-wrap:wrap;gap:6px}
-.flag{font-size:12.5px;font-weight:500;padding:3px 9px;border-radius:999px;background:var(--bad-bg);color:var(--bad)}
-.call{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:8px;background:#FFF7ED;border:1px solid #FED7AA;font-size:14.5px}
-.call b{font-variant-numeric:tabular-nums}
-.choices{display:flex;flex-wrap:wrap;gap:10px}
-.helper{font-size:12.5px;color:var(--soft)}
+/* activity */
+ol.act{list-style:none;margin:0;padding:4px 16px 12px;display:flex;flex-direction:column;gap:0}
+.act li{display:grid;grid-template-columns:46px 14px 1fr;gap:8px;padding:6px 0;align-items:start;font-size:13px}
+.act .tm{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--soft);padding-top:1px}
+.act .dt{width:9px;height:9px;border-radius:50%;background:#9CA3AF;margin-top:5px}
+.dt.g{background:#16A34A}.dt.y{background:#D97706}.dt.r{background:#DC2626}.dt.b{background:#2563EB}
+.act .d{display:block;font-size:12.5px;color:var(--soft)}
+.act li.stop .m{color:var(--bad);font-weight:500}
+.act li.divider{display:block;text-align:center;font-size:11.5px;color:var(--brand);font-weight:500;padding:8px 0;position:relative}
+.act li.divider::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px dashed #9FC9C3}
+.act li.divider span{position:relative;background:#fff;padding:0 10px}
+.act li.working .m{color:var(--brand)}
+.spin{width:12px;height:12px;border:2px solid #A7D3CD;border-top-color:var(--brand);border-radius:50%;animation:spin .8s linear infinite;margin-top:3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.act li.newline{animation:fadein .5s ease-out}@keyframes fadein{from{opacity:0;transform:translateY(4px)}}
+details.chk summary{cursor:pointer;list-style:none}details.chk summary::-webkit-details-marker{display:none}
+details.chk summary .m::after{content:"  Show checklist";color:var(--brand);font-size:12px;font-weight:500}
+details.chk[open] summary .m::after{content:"  Hide checklist"}
+.rules{margin:8px 0 2px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.rule{display:grid;grid-template-columns:44px 1fr auto;gap:8px;padding:7px 10px;border-bottom:1px solid var(--line2);font-size:12.5px;align-items:start}
+.rule:last-child{border-bottom:0}
+.rule .ok{color:var(--good);font-weight:600;font-size:11px}.rule .no{color:var(--bad);font-weight:600;font-size:11px}
+.rule .c{color:var(--soft);font-size:12px;word-break:break-word}
+.src{font-size:10.5px;padding:1px 6px;border-radius:4px;background:#F3F4F6;color:#374151;white-space:nowrap}
+.src.Wathq,.src.ZATCA{background:#EEF2FF;color:#3730A3}.src.cross-document{background:#ECFEFF;color:#155E75}.src.policy\.yaml{background:#F5F3FF;color:#5B21B6}
 
-/* case */
-.casehead{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center}
-.casehead h2{font-size:18px}
-.story{padding:14px 20px;font-size:14.5px;line-height:1.55;color:#374151;border-bottom:1px solid var(--line)}
-.story b{color:var(--ink)}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{text-align:left;color:var(--muted);font-size:12px;font-weight:500;padding:10px 20px}
-td{padding:11px 20px;border-top:1px solid #F3F4F6;vertical-align:top}
-td .file{font-size:12px;color:var(--soft);margin-top:2px}
-.res{font-weight:600;white-space:nowrap}.res.ok{color:var(--good)}.res.warn{color:var(--warn)}.res.bad{color:var(--bad)}.res.na{color:var(--soft);font-weight:400}
-tr.rowwarn td{background:#FFFBEB}tr.rowbad td{background:#FEF2F2}
-.mailcard{margin:16px 20px 18px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.mailcard .mh{padding:10px 14px;background:#F9FAFB;border-bottom:1px solid var(--line);font-size:13px;display:grid;grid-template-columns:60px 1fr;gap:2px 8px}
-.mailcard .mh span{color:var(--soft)}
-.mailcard .mb{padding:12px 14px;font-size:14px;line-height:1.6;white-space:pre-wrap}
-.mailtitle{padding:14px 20px 0;font-size:12px;color:var(--soft);text-transform:uppercase;letter-spacing:.06em;font-family:'IBM Plex Mono',monospace}
+/* documents */
+.res{font-weight:500}.res.ok{color:var(--good)}.res.warn{color:var(--warn)}.res.bad{color:var(--bad)}.res.na{color:var(--soft);font-weight:400}
+.grid tr.reading td{color:var(--soft)}
+.grid tr.newrow td{animation:arrive 1.2s ease-out}
 
-/* activity feed */
-.log{background:var(--navy);color:#E5E7EB;border-radius:12px;overflow:hidden}
-.log .phead{border-color:#1F3A47;flex-wrap:wrap}.log h2{color:#fff;margin:0;font-size:15px;font-weight:600;white-space:nowrap}
-.seg{display:flex;background:var(--navy2);border-radius:8px;padding:2px}
-.seg button{white-space:nowrap;background:transparent;border:0;color:#A7B4BE;font-size:12px;padding:4px 10px;min-height:28px;border-radius:6px}
-.seg button.on{background:#1F4C5C;color:#fff}
-.log ol{list-style:none;margin:0;padding:14px 16px;display:flex;flex-direction:column;gap:10px;font-size:13.5px;line-height:1.5;max-height:660px;overflow-y:auto}
-.log li{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start}
-.ic{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;background:#1F3A47;color:#CFE3EA}
-.ic.g{background:#14532D;color:#BBF7D0}.ic.y{background:#5B4310;color:#FDE68A}.ic.r{background:#5F1D1D;color:#FECACA}.ic.b{background:#1E3A5F;color:#BFDBFE}
-.log .when{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7C8E99}
-.log .detail{display:block;color:#A7B4BE;font-size:12.5px}
-.log li.stop{background:var(--navy2);border-radius:8px;padding:8px}
-.log li.stop .msg{color:#FECACA}
+/* decision */
+.decision{margin:12px 16px;border:1px solid #FCA5A5;border-radius:10px;padding:14px 16px;background:#FFFBFB;display:flex;flex-direction:column;gap:10px}
+.decision .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--bad);font-weight:600}
+.decision h3{margin:0;font-size:16px;color:var(--bad)}
+.decision p{margin:0;font-size:13.5px;color:#374151}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.compare div{border:1px solid var(--line);border-radius:7px;padding:8px 10px;font-size:13px;background:#fff}
+.compare small{display:block;font-size:11.5px;color:var(--soft)}.compare .x{border-color:#FCA5A5;background:#FEF2F2}
+.flags{display:flex;flex-wrap:wrap;gap:6px}.flag{font-size:12px;padding:2px 9px;border-radius:999px;background:var(--bad-bg);color:var(--bad);font-weight:500}
+.call{padding:8px 10px;border-radius:7px;background:#FFF7ED;border:1px solid #FED7AA;font-size:13.5px}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
 
-/* spotlight on the part of the screen the current step is about */
-.spot{animation:spot 1.6s ease-out 3}
-@keyframes spot{0%{box-shadow:0 0 0 0 rgba(20,184,166,.75)}100%{box-shadow:0 0 0 14px rgba(20,184,166,0)}}
-@media (prefers-reduced-motion:reduce){.spot{animation:none;outline:3px solid var(--teal-l)}.dot.busy{animation:none}}
+/* drawer (document viewer, vendor record) */
+.scrim{position:fixed;inset:0;background:rgba(15,23,42,.35);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(1060px,96vw);background:#fff;z-index:41;display:flex;flex-direction:column;box-shadow:-10px 0 30px rgba(0,0,0,.15)}
+.drawer .dh{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line)}
+.drawer .dh h2{margin:0;font-size:16px}
+.drawer .db{flex:1;overflow:auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+.pagewrap{background:#E5E7EB;padding:18px;overflow:auto}
+.page{position:relative;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.page img{display:block;width:100%}
+.hl{position:absolute;border:2px solid #F59E0B;background:rgba(251,191,36,.18);border-radius:3px;pointer-events:none}
+.hl.type{border-color:#2563EB;background:rgba(37,99,235,.12)}.hl.on{border-width:3px;background:rgba(251,191,36,.38)}
+.why{padding:18px;display:flex;flex-direction:column;gap:14px}
+.why h3{margin:0;font-size:17px}.why .conf{color:var(--soft);font-weight:400}
+.ev{display:flex;flex-wrap:wrap;gap:6px}.evq{font-size:13px;padding:3px 8px;border-radius:5px;background:#EFF6FF;border:1px solid #BFDBFE;color:#1E3A8A}
+.fields .f{display:grid;grid-template-columns:120px 1fr 44px;gap:8px;padding:7px 0;border-bottom:1px solid var(--line2);font-size:13px;cursor:default}
+.fields .f:hover{background:#FFFBEB}.fields .f .q{display:block;font-size:12px;color:var(--soft)}
+.note{font-size:12px;color:var(--soft);background:#F9FAFB;border:1px solid var(--line);border-radius:7px;padding:8px 10px}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:6px 12px;padding:14px 18px;font-size:13.5px}.kv span{color:var(--soft)}
+
+/* rules & about */
+pre.policy{margin:0;padding:16px 18px;font:12.5px/1.6 'IBM Plex Mono',monospace;white-space:pre-wrap;color:#1F2937}
+.about p{max-width:760px;line-height:1.6}
+
+/* presenter overlay (hidden by default; H toggles) */
+.presenter{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);width:min(820px,94vw);background:#0B1720;color:#E5E7EB;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.35);z-index:60;padding:14px 18px;display:flex;flex-direction:column;gap:8px}
+.presenter[hidden]{display:none}
+.presenter .pt{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:#8FA3AD;text-transform:uppercase;letter-spacing:.08em}
+.presenter h3{margin:0;font-size:16px;color:#fff}
+.presenter p{margin:0;font-size:14px;line-height:1.55;color:#CBD5DB}
+.presenter .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.presenter button{background:#16262F;border-color:#2A404B;color:#E5E7EB}
+.presenter button.primary{background:#14B8A6;border-color:#14B8A6;color:#06201D}
+.presenter select{font:inherit;font-size:13px;background:#16262F;color:#E5E7EB;border:1px solid #2A404B;border-radius:7px;padding:6px 8px;max-width:300px}
+.presenter .keys{font-size:11.5px;color:#7D8E97}
+.presenter .msg{font-size:12.5px;color:#FCD34D}
+@media (max-width:1100px){.detail{grid-template-columns:1fr}.inbox{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style></head><body>
-<header>
-  <div style="display:flex;align-items:center;gap:12px">
-    <div class="logo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B1F2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/><path d="M16 15l2 2 4-4"/></svg></div>
-    <div style="display:flex;flex-direction:column"><span style="font-size:17px;font-weight:600">Supplier Onboarding Agent</span>
-    <span style="font-size:12px;color:#A7B4BE">Procurement team inbox · demo data</span></div>
-  </div>
-  <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-    <a class="pill" href="/">← About this demo</a>
-    <span class="pill" id="today" title="The demo has its own clock so it can jump ahead in time">Demo date: …</span>
-    <span class="pill"><span class="dot" id="busy"></span><span id="status">Agent is ready</span></span>
-  </div>
-</header>
-
-<section class="guide" id="guide" aria-label="Guided demo">
-  <div class="guide-text">
-    <div class="guide-top"><span class="guide-step" id="g-step">Guided demo</span><span class="dots" id="g-dots" aria-hidden="true"></span></div>
-    <h2 id="g-title">Loading…</h2>
-    <p id="g-body"></p>
-    <p class="guide-watch" id="g-watch" hidden></p>
-  </div>
-  <div class="guide-actions">
-    <div class="row">
-      <button id="g-restart" onclick="guideRestart()">Start over</button>
-      <button class="primary big" id="g-next" onclick="guideNext()">Next</button>
-    </div>
-    <div class="working" id="g-working"></div>
-  </div>
-</section>
-
-<details class="manual"><summary>Manual controls (for presenters)</summary>
-<div class="sim" aria-label="Manual controls">
-  <span>Run a scene yourself, in this order:</span>
-  <button onclick="post('/api/simulate/1')">1 · Al Noor applies</button>
-  <button onclick="post('/api/simulate/2')">2 · Rawabi applies</button>
-  <button onclick="post('/api/simulate/2/reply')">2b · Rawabi replies</button>
-  <button onclick="post('/api/simulate/3')">3 · Gulf Steel applies</button>
-  <button onclick="post('/api/simulate/4')">4 · “Al Noor” bank change</button>
-  <button onclick="post('/api/clock',{date:'2027-09-30'})">5 · Jump 11 months</button>
-  <button class="danger" onclick="guideRestart()">Clear everything</button>
+<div class="app">
+  <header class="top">
+    <div class="brand"><img src="/khatm.svg" alt=""><span>The Seal</span></div>
+    <span class="org">Demo Company · Procurement</span>
+    <span class="sp"></span>
+    <div class="clock" id="clock" aria-live="off"><b id="clock-t">--</b><small id="clock-d">--</small></div>
+    <button class="bell" id="bell" aria-label="Notifications" onclick="openFirstDecision()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+      <span class="n" id="bell-n" hidden>0</span></button>
+    <div class="user"><div class="avatar">PM</div><div>Procurement manager<small>Demo Company</small></div></div>
+  </header>
+  <nav class="side" aria-label="Main">
+    <a data-v="inbox" onclick="go('inbox')">Inbox <span class="cnt" id="n-inbox">0</span></a>
+    <a data-v="suppliers" onclick="go('suppliers')">Suppliers <span class="cnt" id="n-suppliers">0</span></a>
+    <a data-v="vendors" onclick="go('vendors')">Approved vendors <span class="cnt" id="n-vendors">0</span></a>
+    <a data-v="bank" onclick="go('bank')">Bank change requests <span class="cnt" id="n-bank">0</span></a>
+    <a data-v="audit" onclick="go('audit')">Audit log</a>
+    <a data-v="rules" onclick="go('rules')">Rules</a>
+    <span class="sp"></span>
+    <a data-v="about" onclick="go('about')">About</a>
+    <div class="status" id="status"></div>
+  </nav>
+  <main id="main"></main>
 </div>
-</details>
+<div id="drawer"></div>
 
-<section class="cards" aria-label="Summary">
-  <div class="card"><span class="k">Suppliers</span><span class="v" id="c-all">0</span><span class="h">emails received</span></div>
-  <div class="card"><span class="k">Onboarded automatically</span><span class="v" style="color:var(--good)" id="c-onb">0</span><span class="h">no person needed</span></div>
-  <div class="card"><span class="k">Waiting on the supplier</span><span class="v" style="color:var(--warn)" id="c-wait">0</span><span class="h">asked to fix a document</span></div>
-  <div class="card" style="border-color:#FCA5A5"><span class="k">Need your decision</span><span class="v" style="color:var(--bad)" id="c-dec">0</span><span class="h">possible fraud only</span></div>
+<section class="presenter" id="presenter" hidden aria-label="Presenter controls">
+  <div class="pt"><span id="p-step">Presenter</span><span class="keys">Right arrow / N next · B back · R start over · H hide</span></div>
+  <h3 id="p-title"></h3>
+  <p id="p-body"></p>
+  <div class="row">
+    <button onclick="presBack()">Back</button>
+    <button class="primary" id="p-next" onclick="presNext()">Next</button>
+    <button onclick="presRestart()">Start over</button>
+    <span style="flex:1"></span>
+    <select id="p-live" aria-label="Held-out case to process live"></select>
+    <button onclick="processLive()">Process a new email</button>
+  </div>
+  <div class="msg" id="p-msg"></div>
 </section>
-<div class="evidence" id="evidence" hidden></div>
-
-<div class="main">
-  <section class="panel" id="p-suppliers" aria-label="Suppliers" style="flex:1 1 270px;max-width:330px;min-width:0">
-    <div class="phead"><h2>Suppliers</h2><span class="sub">click one to see details</span></div>
-    <ul class="list" id="suppliers"></ul>
-    <div class="phead" id="p-vendors" style="border-top:1px solid var(--line)"><h2>Approved vendors</h2><span class="sub">checked daily</span></div>
-    <ul class="list" id="vendors"></ul>
-  </section>
-
-  <div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:20px" id="center"></div>
-
-  <section class="log" id="p-log" aria-label="What the agent did" style="flex:1 1 320px;max-width:420px;min-width:0">
-    <div class="phead"><h2>What the agent did</h2>
-      <div class="seg" role="group" aria-label="Show activity for"><button id="f-one" class="on" onclick="setFilter('one')">This supplier</button><button id="f-all" onclick="setFilter('all')">Everything</button></div></div>
-    <ol id="log"></ol>
-  </section>
-</div>
 
 <script>
-let S = null, events = [], selected = null, refreshTimer = null, filter = 'one';
+let S = null, events = [], view = 'inbox', openCase = null, openEmail = null, drawer = null;
+let checksCache = {}, busy = false, idleTimer = null, seenEmails = new Set(), seenDocs = new Set(), seenEvents = new Set(), firstLoad = true;
 const DOC = {commercial_registration:'Commercial registration', vat_certificate:'VAT certificate', bank_letter:'Bank letter',
-  gosi_certificate:'GOSI certificate', zakat_certificate:'Zakat certificate', other:'Extra attachment'};
-const DOC_A = {commercial_registration:'the commercial registration', vat_certificate:'the VAT certificate', bank_letter:'the bank letter',
-  gosi_certificate:'the GOSI certificate', zakat_certificate:'the Zakat certificate', other:'an extra attachment (not needed)'};
+  gosi_certificate:'GOSI certificate', zakat_certificate:'Zakat certificate', other:'Other document'};
+const DOC_LC = {commercial_registration:'commercial registration', vat_certificate:'VAT certificate', bank_letter:'bank letter',
+  gosi_certificate:'GOSI certificate', zakat_certificate:'Zakat certificate', other:'other document'};
 const FLAG = {sender_domain_mismatch:'Sent from a different email domain', bank_differs_from_file:'Different bank than on file',
-  account_name_mismatch:'Account holder is someone else', iban_invalid:'IBAN number is invalid'};
+  account_name_mismatch:'Account holder is someone else', iban_invalid:'IBAN is invalid'};
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const J = s => { try { return typeof s === 'string' ? JSON.parse(s) : s } catch { return null } };
-const fmtDate = d => d ? new Date(d.slice(0,10) + 'T00:00:00').toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'}) : '—';
-const maskIban = i => i ? `${i.slice(0,4)} •••• ${i.slice(-4)}` : '—';
-const docList = ds => ds.map(d => DOC[d] || d).join(', ');
-const firstName = email => { const n = (email || '').split('@')[0]; return n.charAt(0).toUpperCase() + n.slice(1); };
+const D = s => new Date((s || '').length <= 10 ? s + 'T00:00:00' : s);
+const fmtDate = s => s ? D(s).toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'}) : '';
+const fmtDay = s => D(s).toLocaleDateString('en-GB', {weekday:'short', day:'numeric', month:'short'});
+const fmtTime = s => (s || '').slice(11, 16);
+const maskIban = i => i ? `${i.slice(0,4)} •••• ${i.slice(-4)}` : '';
+const docList = ds => (ds || []).map(d => DOC_LC[d] || d).join(' and ');
+const isLive = id => (id || '').startsWith('live-');
 
-async function post(url, body) {
-  const r = await fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body || {})});
-  if (!r.ok) { const m = (await r.json().catch(() => ({}))).detail || r.statusText; document.getElementById('g-working').textContent = 'Something went wrong: ' + m; }
-  scheduleRefresh();
-  return r;
+async function api(url, body) {
+  const r = await fetch(url, body === undefined ? {} : {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+  if (!r.ok) throw new Error((await r.json().catch(() => ({}))).detail || r.statusText);
+  return r.json();
 }
 
-// ---------------------------------------------------------------- plain-language helpers
+// ------------------------------------------------------------------ data helpers
+const bankCase = c => S.bank_changes.find(b => b.case_id === c.id);
+const inbound = () => S.cases.flatMap(c => c.emails.filter(e => e.direction === 'in').map(e => ({...e, case: c})))
+  .sort((a, b) => b.ts.localeCompare(a.ts) || b.id - a.id);
 function companyName(c) {
   if (c.vendor) return c.vendor.name;
-  const cr = (c.documents || []).find(d => d.extraction && d.extraction.doc_type === 'commercial_registration');
-  if (cr && cr.extraction.company_name) return cr.extraction.company_name;
+  const bc = bankCase(c); if (bc) { const v = S.vendors.find(v => v.id === bc.vendor_id); if (v) return v.name; }
+  const cr = (c.documents || []).find(d => d.extraction && J(d.extraction).doc_type === 'commercial_registration');
+  if (cr && J(cr.extraction).company_name) return J(cr.extraction).company_name;
   const subj = (c.emails.find(e => e.direction === 'in') || {}).subject || '';
   return subj.includes(' - ') ? subj.split(' - ').pop() : (c.supplier_name || c.id);
 }
-const isBankChange = c => S.bank_changes.some(b => b.case_id === c.id);
-
-function caseBadge(c) {
-  const o = c.outcome, st = c.status;
-  if (['reading','received','checking'].includes(st)) return ['b-blue', 'Agent is checking…'];
-  if (isBankChange(c)) {
-    if (st === 'rejected') return ['b-grey', 'Bank change rejected by you'];
-    if (st === 'approved') return ['b-green', 'Bank change approved by you'];
-    return ['b-red', 'Bank change frozen · call needed'];
-  }
-  if (o.decision === 'onboard') return ['b-green', 'Onboarded · no person needed'];
-  if (o.decision === 'escalate') {
-    if (st === 'rejected') return ['b-grey', 'Rejected by you'];
-    if (st === 'approved') return ['b-green', 'Approved by you'];
-    if (st === 'waiting_on_supplier') return ['b-amber', 'Asked to explain'];
-    return ['b-red', 'Needs your decision'];
-  }
-  if (o.decision === 'request_fix') return ['b-amber', 'Waiting for ' + docList(o.documents_requested)];
-  return ['b-grey', st.replace(/_/g, ' ')];
+const caseEvents = c => events.filter(e => e.case_id === c.id);
+const caseActive = c => busy && events.length && events[events.length - 1].case_id === c.id;
+function caseTag(c) {
+  const st = c.status, o = c.outcome || {};
+  if (['reading','received','checking'].includes(st) || caseActive(c)) return ['t-blue', 'Processing'];
+  if (bankCase(c)) return st === 'rejected' ? ['t-grey', 'Bank change rejected'] : st === 'approved' ? ['t-green', 'Bank change approved'] : ['t-red', 'Frozen · call needed'];
+  if (st === 'rejected') return ['t-grey', 'Rejected'];
+  if (st === 'approved') return ['t-green', 'Approved by manager'];
+  if (o.decision === 'onboard') return ['t-green', 'Approved'];
+  if (o.decision === 'escalate') return st === 'waiting_on_supplier' ? ['t-amber', 'Asked to explain'] : ['t-red', 'Needs decision'];
+  if (o.decision === 'request_fix') return ['t-amber', 'Waiting on supplier'];
+  return ['t-grey', st.replace(/_/g, ' ')];
+}
+const runChecksEvents = c => events.filter(e => e.case_id === c.id && e.name === 'run_checks');
+async function checksFor(c) {
+  const n = runChecksEvents(c).length; if (!n) return null;
+  const key = c.id + ':' + n + ':' + c.documents.filter(d => d.extraction).length;
+  if (checksCache[c.id] && checksCache[c.id].key === key) return checksCache[c.id].data;
+  if (checksCache[c.id] && checksCache[c.id].loading === key) return checksCache[c.id].data;
+  checksCache[c.id] = {...(checksCache[c.id] || {}), loading: key};
+  try { const data = await api(`/api/cases/${encodeURIComponent(c.id)}/checks`); checksCache[c.id] = {key, data}; render(); }
+  catch { delete checksCache[c.id]; }
+  return null;
 }
 
-function checkResult(f) {
-  const d = f.detail || '';
-  const date = (d.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
-  switch (f.check) {
-    case 'present': return 'Not received';
-    case 'legible': return 'Too blurry to read';
-    case 'unexpired': return date ? `Expired on ${fmtDate(date)}` : 'Expired';
-    case 'expiry_known': return 'Expiry date unreadable';
-    case 'iban_valid': return 'IBAN doesn’t add up';
-    case 'cr_in_registry': return 'Not found in Wathq';
-    case 'cr_active': return `Registration is ${(d.split(': ')[1] || 'not active')} in Wathq`;
-    case 'cr_name_matches_registry': return 'Name differs from Wathq';
-    case 'vat_registered': return 'Not registered with ZATCA';
-    case 'bank_name_matches_cr': return 'Account holder is another company';
-    case 'name_matches_cr': return 'Company name doesn’t match';
-    case 'cr_number_matches': return 'CR number doesn’t match';
-    case 'no_embedded_instructions': return 'Hidden instructions to the AI';
-    case 'confidence': return 'Hard to read for sure';
-    default: return f.check.replace(/_/g, ' ');
+// ------------------------------------------------------------------ activity lines (every line names who and what)
+function describe(e) {
+  const out = J(e.output) || {}, inp = J(e.input) || {}, s = e.summary || '';
+  if (s.startsWith('REFUSED')) return {c:'y', m:'A safety lock blocked an action', d: out.refused};
+  switch (e.kind + ':' + (e.name || '')) {
+    case 'system:email_received': {
+      const m = s.match(/^Email from (\S+): (.*) \((\d+) attachments\)$/);
+      return {c:'b', m: m ? `Email received from ${m[1]}` : s, d: m ? `"${m[2]}" · ${m[3]} attachment${m[3] === '1' ? '' : 's'}` : ''};
+    }
+    case 'llm:extract': { const m = s.match(/^read (.*) -> (\w+)$/); return m ? {m:`Read ${m[1]}`, d:`Identified as ${DOC_LC[m[2]] || m[2]}`} : {m:s}; }
+    case 'llm:reread': return {c:'y', m:'Re-read a document carefully', d:'A number disagreed with another source, so it read it again before deciding'};
+    case 'tool:run_checks': {
+      const f = [...(out.risk_failures||[]), ...(out.fixable_failures||[])], n = (out.checks_passed || 0) + f.length;
+      if (out.recommended === 'onboard') return {c:'g', m:`Ran ${n} checks: ${n} passed`, checks:true};
+      if (out.recommended === 'request_fix') return {c:'y', m:`Ran ${n} checks: ${f.length} failed, fixable by the supplier`, checks:true};
+      return {c:'r', m:`Ran ${n} checks: ${(out.risk_failures||[]).length} possible fraud risk`, checks:true};
+    }
+    case 'tool:check_registry': return {m:`Wathq: CR ${out.crNumber || ''} ${out.found === false ? 'not found' : 'is ' + (out.status || '')}`};
+    case 'tool:check_vat': return {m:`ZATCA: VAT ${out.vatNumber || ''} ${out.registered ? 'registered' : 'not registered'}`};
+    case 'tool:create_vendor': return {c:'g', m:`Added ${out.name} as an approved vendor`, d: out.vendor_id};
+    case 'tool:send_email':
+      if (inp.kind === 'welcome') return {c:'g', m:`Sent a welcome email to ${inp.to || out.to || 'the supplier'}`};
+      if (inp.kind === 'request_fix') return {c:'y', m:`Emailed ${out.to || 'the supplier'} asking for a new ${docList(inp.documents_requested)}`};
+      if (inp.kind === 'renewal') return {c:'y', m: s};
+      return {m:`Sent an email to ${out.to || inp.to || ''}`};
+    case 'tool:escalate': return {stop:true, c:'r', m:'Stopped and asked the procurement manager to decide', d: inp.reason};
+    case 'tool:check_bank_change': {
+      const fl = out.flags || [];
+      return fl.length ? {c:'r', m:`Bank change request: ${fl.length} red flag${fl.length > 1 ? 's' : ''}`, d: fl.map(f => FLAG[f] || f).join(' · ')}
+                       : {m:'Bank change request: no red flags', d:'Still needs a phone call'};
+    }
+    case 'tool:freeze_bank_change': return {stop:true, c:'r', m:'Froze the bank change and held payments', d:`Call ${out.callback_phone}, the number on file`};
+    case 'tool:scan_expiries': {
+      const parts = s.split('; '), n = (out || []).length;
+      return {c: n ? 'y' : 'g', m: n ? `Daily expiry scan: ${n} document${n > 1 ? 's' : ''} need attention` : 'Daily expiry scan: everything in date', d: parts.slice(1).join(' · ')};
+    }
+    case 'tool:set_vendor_hold': return {c:'r', m: s};
+    case 'human:decision': {
+      const c = S && S.cases.find(c => c.id === e.case_id), who = c ? companyName(c) : '';
+      const what = c && bankCase(c) ? `${who}'s bank change` : who;
+      return {c:'g', m:`Procurement manager ${inp.action === 'reject' ? 'rejected' : inp.action === 'approve' ? 'approved' : 'asked about'} ${what}`, d: inp.note};
+    }
+    case 'system:error': return {c:'r', m:'Something went wrong', d: s};
+    default: return null;
   }
 }
-
-function lastChecks(caseId) {
-  const e = [...events].reverse().find(e => e.case_id === caseId && e.name === 'run_checks' && e.output);
-  return e ? J(e.output) : null;
+function gapLabel(a, b) {
+  const days = Math.round((D(b.slice(0,10)) - D(a.slice(0,10))) / 864e5);
+  if (days <= 0) return null;
+  const when = fmtDay(b) + (D(b).getFullYear() !== D(a).getFullYear() ? ' ' + D(b).getFullYear() : '');
+  if (days >= 45) return `${Math.round(days / 30.4)} months later · ${when}`;
+  return `${days === 1 ? 'Next day' : days + ' days later'} · ${when}`;
+}
+function activity(list, opts = {}) {
+  let html = '', prev = null;
+  for (const e of list) {
+    const d = describe(e); if (!d) continue;
+    if (prev) { const g = gapLabel(prev.ts, e.ts); if (g) html += `<li class="divider"><span>${esc(g)}</span></li>`; }
+    prev = e;
+    const fresh = !seenEvents.has(e.id + e.ts) && !firstLoad ? 'newline' : '';
+    const body = `<span class="m">${esc(d.m)}</span>${d.d ? `<span class="d">${esc(d.d)}</span>` : ''}`;
+    let inner = body;
+    if (d.checks && opts.caseObj) {
+      const data = checksCache[opts.caseObj.id] && checksCache[opts.caseObj.id].data;
+      inner = `<details class="chk" ${opts.openChecks ? 'open' : ''} ontoggle="openChecks['${opts.caseObj.id}']=this.open"><summary>${body}</summary>${data ? rulesHtml(data) : '<span class="d">Loading checklist...</span>'}</details>`;
+    }
+    html += `<li class="${d.stop ? 'stop' : ''} ${fresh}"><span class="tm">${fmtTime(e.ts)}</span><span class="dt ${d.c || ''}"></span><span>${inner}</span></li>`;
+  }
+  if (opts.working) html += `<li class="working"><span class="tm"></span><span class="spin"></span><span class="m">Working...</span></li>`;
+  return html || '<li class="small" style="display:block;padding:10px 0">Nothing yet.</li>';
+}
+let openChecks = {};
+function rulesHtml(data) {
+  return `<div class="rules">${data.rules.map(r => `<div class="rule"><span class="${r.status === 'pass' ? 'ok' : 'no'}">${r.status === 'pass' ? 'PASS' : 'FAIL'}</span>
+    <span><b style="font-weight:500">${esc(r.rule)}</b>${r.doc_label && !['bank_name_matches_cr','cr_name_matches_registry','cr_active','vat_registered','iban_valid'].includes(r.check) ? ' · ' + esc(r.doc_label) : ''}<span class="c" style="display:block">${esc(r.compared)}</span></span>
+    <span class="src ${esc(r.source)}">${esc(r.source)}</span></div>`).join('')}</div>`;
 }
 
-// ---------------------------------------------------------------- render
+// ------------------------------------------------------------------ views
+function go(v) { view = v; drawer = null; render(); document.getElementById('main').scrollTop = 0; }
+function openEmailRow(caseId, emailId) { openCase = caseId; openEmail = emailId; view = 'inbox'; drawer = null; render(); }
+function openFirstDecision() { const c = S && S.open_cards[0]; if (c) { const cs = S.cases.find(x => x.id === c.case_id); openEmailRow(c.case_id, lastInboundId(cs)); } else go('inbox'); }
+const lastInboundId = c => { const e = (c ? c.emails : []).filter(e => e.direction === 'in').slice(-1)[0]; return e && e.id; };
+
 function render() {
   if (!S) return;
-  document.getElementById('today').textContent = 'Demo date: ' + fmtDate(S.today);
-  const cs = S.cases;
-  document.getElementById('c-all').textContent = cs.length;
-  document.getElementById('c-onb').textContent = cs.filter(c => c.outcome.decision === 'onboard' && !c.card).length;
-  document.getElementById('c-wait').textContent = cs.filter(c => c.status === 'waiting_on_supplier').length;
-  document.getElementById('c-dec').textContent = S.open_cards.length;
-  const r = S.results, ev = document.getElementById('evidence');
-  if (r) {
-    ev.hidden = false;
-    const unseen = r.split === 'heldout';
-    ev.title = `From results file ${r.run_id}`;
-    ev.innerHTML = `<b>How well it works:</b> tested on ${r.cases} ${unseen ? 'cases it had never seen' : 'test cases'} · `
-      + `<b>${(r.decision_accuracy*100).toFixed(0)}%</b> right decisions · <b>${(r.fraud_recall*100).toFixed(0)}%</b> of fraud attempts stopped · `
-      + `<b>${(r.false_escalation_rate*100).toFixed(0)}%</b> honest suppliers wrongly flagged`;
+  document.querySelectorAll('.side a').forEach(a => a.classList.toggle('on', a.dataset.v === view));
+  const emailsIn = inbound();
+  const suppliers = S.cases.filter(c => !bankCase(c));
+  document.getElementById('n-inbox').textContent = emailsIn.length;
+  document.getElementById('n-suppliers').textContent = suppliers.length;
+  document.getElementById('n-vendors').textContent = S.vendors.length;
+  const nb = document.getElementById('n-bank'), frozen = S.bank_changes.filter(b => b.status === 'frozen').length;
+  nb.textContent = S.bank_changes.length; nb.classList.toggle('red', frozen > 0);
+  const bn = document.getElementById('bell-n'); bn.hidden = !S.open_cards.length; bn.textContent = S.open_cards.length;
+  const a = S.agent || {};
+  document.getElementById('status').innerHTML = `<span class="live-dot ${busy ? 'busy' : ''}"></span><b>${busy ? 'Agent working' : 'Agent idle'}</b><br>
+    Agent: <b>${esc(a.model || '')}</b> via Anthropic API<br>Mode: <b>${a.mode === 'replay' ? 'Replay (recorded real runs)' : 'Live'}</b>`;
+  const el = document.getElementById('main');
+  const keep = el.querySelector('.mlist') ? el.querySelector('.mlist').scrollTop : 0;
+  el.innerHTML = ({inbox: viewInbox, suppliers: viewSuppliers, vendors: viewVendors, bank: viewBank, audit: viewAudit, rules: viewRules, about: viewAbout}[view] || viewInbox)();
+  if (el.querySelector('.mlist')) el.querySelector('.mlist').scrollTop = keep;
+  renderDrawer();
+  events.forEach(e => seenEvents.add(e.id + e.ts));
+  emailsIn.forEach(e => seenEmails.add(e.case.id + ':' + e.id));
+  S.cases.forEach(c => c.documents.forEach(d => d.extraction && seenDocs.add(d.id)));
+  firstLoad = false;
+}
+
+function viewInbox() {
+  const emails = inbound();
+  const decide = S.open_cards.length;
+  const stats = `<div class="stats">
+    <div class="stat"><div class="k">Emails received</div><div class="v">${emails.length}</div></div>
+    <div class="stat"><div class="k">Approved vendors</div><div class="v" style="color:var(--good)">${S.vendors.length}</div></div>
+    <div class="stat"><div class="k">Waiting on supplier</div><div class="v" style="color:var(--warn)">${S.cases.filter(c => c.status === 'waiting_on_supplier').length}</div></div>
+    <div class="stat"><div class="k">Need your decision</div><div class="v" style="color:${decide ? 'var(--bad)' : 'inherit'}">${decide}</div></div></div>`;
+  if (!emails.length) return `<div class="view">${stats}<div class="panel"><div class="empty">No emails yet. New supplier emails appear here and The Seal starts on them right away.</div></div></div>`;
+  if (!openCase || !S.cases.find(c => c.id === openCase)) { openCase = emails[0].case.id; openEmail = emails[0].id; }
+  if (!openEmail || !emails.some(e => e.id === openEmail && e.case.id === openCase)) openEmail = lastInboundId(S.cases.find(c => c.id === openCase));
+  const list = emails.map(e => {
+    const c = e.case, latest = lastInboundId(c) === e.id;
+    const [cls, txt] = latest ? caseTag(c) : ['t-grey', 'Replied'];
+    const atts = c.documents.filter(d => d.email_id === e.id);
+    const fresh = !firstLoad && !seenEmails.has(c.id + ':' + e.id) ? 'new' : '';
+    return `<div class="mi ${c.id === openCase && e.id === openEmail ? 'on' : ''} ${fresh}" tabindex="0" onclick="openEmailRow('${c.id}', ${e.id})" onkeydown="if(event.key==='Enter')openEmailRow('${c.id}', ${e.id})">
+      <div class="r1"><span class="from">${esc(c.supplier_name || e.sender)}</span><span class="when">${fmtDay(e.ts)} ${fmtTime(e.ts)}</span></div>
+      <div class="subj">${esc(e.subject)}</div>
+      ${atts.length ? `<div class="chips">${atts.map(d => `<span class="chip">${esc(d.filename)}</span>`).join('')}</div>` : ''}
+      <div><span class="tag ${cls}">${esc(txt)}</span>${isLive(c.id) ? ' <span class="tag t-live">Live</span>' : ''}</div></div>`;
+  }).join('');
+  return `<div class="view">${stats}<div class="inbox"><section class="panel"><div class="ph"><h2>Inbox</h2><span class="sub">onboarding@buyer-company.sa</span></div><div class="mlist">${list}</div></section>${caseDetail()}</div></div>`;
+}
+
+function caseDetail() {
+  const c = S.cases.find(c => c.id === openCase); if (!c) return '';
+  const em = c.emails.find(e => e.id === openEmail) || c.emails.find(e => e.direction === 'in');
+  const atts = c.documents.filter(d => d.email_id === em.id);
+  const sent = c.emails.filter(e => e.direction === 'out');
+  const mail = `<section class="panel mail"><div class="mh"><h3>${esc(em.subject)}</h3>
+      <span>From</span><b>${esc(c.supplier_name || '')} &lt;${esc(em.sender)}&gt;</b><span>To</span><span>${esc(em.to_addr || 'onboarding@buyer-company.sa')}</span>
+      <span>Date</span><span>${fmtDay(em.ts)} ${D(em.ts).getFullYear()}, ${fmtTime(em.ts)}</span></div>
+      <div class="mb">${esc(em.body)}</div>
+      ${atts.length ? `<div class="att chips">${atts.map(d => `<span class="chip">${esc(d.filename)}</span>`).join('')}</div>` : ''}
+      ${sent.length ? `<div class="sent"><div class="sect">Sent by The Seal</div>${sent.map(s => `<div class="s"><div class="meta">${fmtDay(s.ts)} ${fmtTime(s.ts)} · to ${esc(s.to_addr || c.sender_email)} · <b style="color:var(--ink);font-weight:500">${esc(s.subject)}</b></div><div class="body">${esc(s.body)}</div></div>`).join('')}</div>` : ''}
+    </section>`;
+  checksFor(c);
+  const [cls, txt] = caseTag(c);
+  const evs = caseEvents(c);
+  const handled = `<section class="panel handled">
+      <div class="ph"><h2>How The Seal handled it</h2><span><span class="tag ${cls}">${esc(txt)}</span>${isLive(c.id) ? ' <span class="tag t-live">Live</span>' : ''}</span></div>
+      <div class="story">${story(c)}</div>
+      ${c.card && c.card.status === 'open' ? decisionCard(c, c.card) : ''}
+      ${bankCase(c) ? '' : docsTable(c)}
+      <div class="sect">Activity</div><ol class="act">${activity(evs, {caseObj: c, working: caseActive(c), openChecks: openChecks[c.id]})}</ol>
+    </section>`;
+  return `<div class="detail">${mail}${handled}</div>`;
+}
+
+function story(c) {
+  const o = c.outcome || {}, name = esc(companyName(c)), st = c.status;
+  if (caseActive(c) || ['reading','received','checking'].includes(st)) return `Reading ${name}'s email and documents.`;
+  const bc = bankCase(c);
+  if (bc) {
+    const v = S.vendors.find(v => v.id === bc.vendor_id);
+    const link = v ? ` <a href="#" onclick="openVendor('${v.id}');return false">Open ${esc(v.name)}'s record</a>` : '';
+    if (st === 'rejected') return `You called the number on file about the bank change request for ${name} and rejected it. <b>Bank details unchanged</b>; payments continue to the account on file.${link}`;
+    if (st === 'approved') return `You confirmed by phone and approved the new bank account.${link}`;
+    return `Someone asked to change where ${name} gets paid. <b>The Seal froze it</b> and held payments until you call the supplier.${link}`;
   }
-  if (!selected && cs.length) selected = (S.open_cards.length ? S.open_cards[S.open_cards.length-1].case_id : cs[cs.length-1].id);
+  if (o.decision === 'onboard') return c.emails.filter(e => e.direction === 'in').length > 1
+      ? `${name} sent the renewed document. Every check passed, so <b>${name} is now an approved vendor</b>. No person was needed.`
+      : `Every check passed, so The Seal <b>added ${name} as an approved vendor</b> and sent a welcome email. No person was needed.`;
+  if (o.decision === 'request_fix') return `A problem the supplier can fix, so The Seal <b>emailed ${esc(c.sender_email)}</b> asking for a new ${esc(docList(o.documents_requested))}. It re-checks when they reply.`;
+  if (o.decision === 'escalate') {
+    if (st === 'rejected') return `Possible fraud. <b>You rejected ${name}.</b> The supplier was not added.`;
+    if (st === 'approved') return `You approved ${name} after review.`;
+    if (st === 'waiting_on_supplier') return `You asked ${name} to explain. The case waits for their reply.`;
+    return `Possible fraud, so The Seal <b>stopped and asked you to decide</b>. It did not contact the supplier about it.`;
+  }
+  return '';
+}
 
-  document.getElementById('suppliers').innerHTML = cs.length ? cs.slice().reverse().map(c => {
-    const [cls, txt] = caseBadge(c);
-    const what = isBankChange(c) ? 'Bank-change request' : 'New supplier application';
-    return `<li class="click ${c.id === selected ? 'sel' : ''}" onclick="selected='${c.id}';render()" tabindex="0" onkeydown="if(event.key==='Enter'){selected='${c.id}';render()}">
-      <span class="name">${esc(companyName(c))}</span><span class="line2">${what}</span><span class="badge ${cls}">${esc(txt)}</span></li>`;
-  }).join('') : '<li class="empty">No emails yet. Press the green button above to send the first one.</li>';
-
-  document.getElementById('vendors').innerHTML = S.vendors.length ? S.vendors.map(v => {
-    const exp = v.documents.slice().sort((a, b) => (a.expiry_date || '').localeCompare(b.expiry_date || ''))[0];
-    let cls = 'b-green', txt = 'Active · payments allowed';
-    if (v.status === 'at_risk') { cls = 'b-amber'; txt = 'Renewal requested · document expiring'; }
-    if (v.status === 'on_hold') {
-      cls = 'b-red';
-      const hr = v.hold_reason || '';
-      txt = hr.startsWith('bank change') ? 'Payments on hold · bank change being checked'
-          : hr.startsWith('expired') ? 'Payments on hold · ' + docList(hr.replace('expired: ', '').split(', ')) + ' expired'
-          : 'Payments on hold';
+function docRows(c) {
+  const read = c.documents.filter(d => d.extraction).map(d => ({...d, x: J(d.extraction)}));
+  const reading = c.documents.find(d => !d.extraction && caseActive(c) && events.some(e => e.case_id === c.id && e.name === 'get_case'));
+  return {read, reading};
+}
+function docsTable(c) {
+  const {read, reading} = docRows(c);
+  if (!read.length && !reading) return '';
+  const chk = checksCache[c.id] && checksCache[c.id].data;
+  const rows = read.map(d => {
+    const x = d.x, t = x.doc_type, bits = [];
+    if (x.language === 'ar') bits.push('Arabic');
+    if (t === 'commercial_registration' && x.cr_number) bits.push('CR ' + x.cr_number);
+    if (t === 'vat_certificate' && x.vat_number) bits.push('VAT ' + x.vat_number);
+    if (t === 'bank_letter') { if (x.account_name) bits.push(x.account_name); if (x.iban) bits.push(maskIban(x.iban)); }
+    if (x.expiry_date_iso) bits.push('expires ' + fmtDate(x.expiry_date_iso));
+    const newer = read.find(o => o.id !== d.id && o.x.doc_type === t && o.id > d.id);
+    let res, cls = '';
+    if (x.expiry_date_iso && x.expiry_date_iso < c.as_of && newer) { res = `<span class="res warn">Expired ${fmtDate(x.expiry_date_iso)} · replaced by renewed copy</span>`; cls = 'warn'; }
+    else if (!chk) res = '<span class="res na">Read</span>';
+    else if (t === 'other') res = '<span class="res na">Not required</span>';
+    else {
+      const mine = chk.rules.filter(r => r.doc_type === t && r.check !== 'present');
+      const fails = mine.filter(r => r.status === 'fail');
+      if (fails.length) { const risk = fails.some(r => r.category === 'risk'); cls = risk ? 'bad' : 'warn';
+        res = `<span class="res ${cls}">${esc(fails[0].check === 'unexpired' ? 'Expired ' + fmtDate(x.expiry_date_iso) : fails[0].rule.replace(/^/, 'Failed: '))}</span>`; }
+      else res = `<span class="res ok">${mine.length} check${mine.length === 1 ? '' : 's'} passed</span>`;
     }
-    return `<li><span class="name">${esc(v.name)}</span><span class="badge ${cls}">${esc(txt)}</span>
-      ${exp ? `<span class="line2">Next expiry: ${esc(DOC[exp.doc_type] || exp.doc_type)}, ${fmtDate(exp.expiry_date)}</span>` : ''}</li>`;
-  }).join('') : '<li class="empty">None yet. Suppliers appear here once approved.</li>';
-
-  renderCenter();
-  renderLog();
+    const fresh = !firstLoad && !seenDocs.has(d.id) ? 'newrow' : '';
+    return `<tr class="click ${cls} ${fresh}" tabindex="0" onclick="openDoc('${encodeURIComponent(d.id)}')" onkeydown="if(event.key==='Enter')openDoc('${encodeURIComponent(d.id)}')">
+      <td><span style="font-weight:500">${esc(DOC[t] || t)}</span> <span class="small">${esc(d.filename)}</span><div class="small" style="color:#374151">${esc(bits.join(' · '))}</div></td><td>${res}</td></tr>`;
+  }).join('');
+  const missing = chk ? chk.rules.filter(r => r.check === 'present' && r.status === 'fail').map(r =>
+    `<tr class="warn"><td style="font-weight:500">${esc(r.doc_label)}<div class="small">Not received</div></td><td><span class="res warn">Missing</span></td></tr>`).join('') : '';
+  const pending = reading ? `<tr class="reading"><td>${esc(reading.filename)}</td><td><span style="display:inline-flex;gap:8px;align-items:center"><span class="spin"></span>Reading...</span></td></tr>` : '';
+  return `<div class="sect">Documents</div><div style="overflow-x:auto"><table class="grid"><thead><tr><th>Document and what was read</th><th>Result</th></tr></thead><tbody>${rows}${missing}${pending}</tbody></table></div>`;
 }
 
 function decisionCard(c, card) {
   const bc = S.bank_changes.find(b => b.case_id === c.id && b.status === 'frozen');
   const ev = J(card.evidence) || {};
   if (bc) {
-    const flags = J(bc.flags) || [];
-    const vendor = S.vendors.find(v => v.id === bc.vendor_id) || {};
-    return `<section class="decision" id="p-decision" aria-label="Needs your decision">
-      <span class="tag">Needs your decision · bank change</span>
-      <h2>Someone asked to send ${esc(vendor.name || companyName(c))}'s payments to a new bank account</h2>
-      <p>The agent froze the request and put payments on hold. It never changes bank details itself.</p>
+    const flags = J(bc.flags) || [], v = S.vendors.find(v => v.id === bc.vendor_id) || {};
+    return `<div class="decision"><span class="k">Needs your decision · bank change</span>
+      <h3>Request to send ${esc(v.name || companyName(c))}'s payments to a new account</h3>
       <div class="compare">
-        <div class="${flags.includes('sender_domain_mismatch') ? 'x' : ''}"><small>Email came from</small>${esc(bc.sender)}<br><small>On file: …@${esc(vendor.email_domain || ev.domain_on_file || '')}</small></div>
-        <div class="${flags.includes('bank_differs_from_file') ? 'x' : ''}"><small>New bank</small>${esc(ev.new_bank || '')} · ${esc(maskIban(bc.new_iban))}<br><small>On file: ${esc(ev.bank_on_file || '')}</small></div>
+        <div class="${flags.includes('sender_domain_mismatch') ? 'x' : ''}"><small>Email came from</small>${esc(bc.sender)}<small>On file: ...@${esc(v.email_domain || ev.domain_on_file || '')}</small></div>
+        <div class="${flags.includes('bank_differs_from_file') ? 'x' : ''}"><small>New account</small>${esc(ev.new_bank || '')} ${esc(maskIban(bc.new_iban))}<small>On file: ${esc(ev.bank_on_file || '')} ${esc(maskIban(v.iban))}</small></div>
       </div>
-      ${flags.length ? `<div class="flags">${flags.map(f => `<span class="flag">${esc(FLAG[f] || f)}</span>`).join('')}</div>`
-                     : '<p>No red flags found, but every bank change still needs a phone call.</p>'}
-      <div class="call">☎ <span>Call <b>${esc(ev.callback_phone || vendor.phone || '')}</b>, the number already on file (not one from the email), and ask if they really requested this.</span></div>
-      <div class="choices">
-        <button class="danger big" onclick="decide(${card.id},'reject')">They didn’t ask: reject</button>
-        <button class="big" onclick="decide(${card.id},'approve')">They confirmed: approve</button>
-      </div></section>`;
+      ${flags.length ? `<div class="flags">${flags.map(f => `<span class="flag">${esc(FLAG[f] || f)}</span>`).join('')}</div>` : ''}
+      <div class="call">Call <b>${esc(ev.callback_phone || v.phone || '')}</b>, the number already on file (not one from the email), and ask whether they requested this.</div>
+      <div class="choices"><button class="danger" onclick="decide(${card.id},'reject','Called the number on file; supplier did not request this')">They didn't ask: reject</button>
+        <button onclick="decide(${card.id},'approve','Confirmed by phone on the number on file')">They confirmed: approve</button></div></div>`;
   }
-  const chk = lastChecks(c.id) || {};
-  const risks = chk.risk_failures || [];
-  const docs = {}; (c.documents || []).forEach(d => { if (d.extraction) docs[d.extraction.doc_type] = d.extraction; });
-  let headline = 'This supplier needs your decision', compare = '';
+  const chk = checksCache[c.id] && checksCache[c.id].data;
+  const risks = chk ? chk.rules.filter(r => r.status === 'fail' && r.category === 'risk') : [];
+  const docs = {}; c.documents.forEach(d => { if (d.extraction) docs[J(d.extraction).doc_type] = J(d.extraction); });
+  let head = 'This supplier needs your decision', cmp = '';
   if (risks.some(r => r.check === 'bank_name_matches_cr')) {
-    headline = 'The bank account belongs to a different company';
+    head = 'The bank account belongs to a different company';
     const cr = docs.commercial_registration || {}, bank = docs.bank_letter || {};
-    compare = `<div class="compare"><div><small>Company on the registration</small>${esc(cr.company_name || cr.company_name_ar || companyName(c))}</div>
-      <div class="x"><small>Bank account holder</small>${esc(bank.account_name || '?')}</div></div>
-      <p>Paying a company other than the one you signed up is a common fraud pattern.</p>`;
-  } else if (risks.some(r => r.check === 'cr_active')) {
-    headline = 'The company’s registration is not active';
-  } else if (risks.some(r => r.check === 'no_embedded_instructions')) {
-    headline = 'A document contains hidden instructions to the AI';
+    cmp = `<div class="compare"><div><small>Company on the commercial registration</small>${esc(cr.company_name || cr.company_name_ar || companyName(c))}</div>
+      <div class="x"><small>Bank account holder</small>${esc(bank.account_name || '?')}</div></div>`;
   }
-  const reasons = risks.length ? `<div class="flags">${risks.map(r => `<span class="flag">${esc(checkResult(r))}${r.doc_type ? ' · ' + esc(DOC[r.doc_type] || '') : ''}</span>`).join('')}</div>`
-                               : `<p>${esc(card.reason)}</p>`;
-  return `<section class="decision" id="p-decision" aria-label="Needs your decision">
-    <span class="tag">Needs your decision · possible fraud</span>
-    <h2>${esc(headline)}</h2>${compare}${reasons}
-    <p class="helper">The agent stopped here and did not contact the supplier about this. Nothing happens until you choose.</p>
-    <div class="choices">
-      <button class="primary big" onclick="decide(${card.id},'ask_supplier')">Ask the supplier to explain</button>
-      <button class="big" onclick="decide(${card.id},'approve')">Approve anyway</button>
-      <button class="danger big" onclick="decide(${card.id},'reject')">Reject supplier</button>
-    </div></section>`;
+  return `<div class="decision"><span class="k">Needs your decision · possible fraud</span><h3>${esc(head)}</h3>${cmp}
+    ${risks.length ? `<div class="flags">${risks.map(r => `<span class="flag">${esc(r.compared)}</span>`).join('')}</div>` : `<p>${esc(card.reason || '')}</p>`}
+    <p class="small">The Seal did not contact the supplier about this. Nothing happens until you choose.</p>
+    <div class="choices"><button onclick="decide(${card.id},'ask_supplier')">Ask the supplier to explain</button>
+      <button onclick="decide(${card.id},'approve')">Approve anyway</button>
+      <button class="danger" onclick="decide(${card.id},'reject','Bank account belongs to another company')">Reject supplier</button></div></div>`;
+}
+async function decide(id, action, note) { await api(`/api/decisions/${id}`, {action, note: note || ''}); refresh(); }
+
+function viewSuppliers() {
+  const list = S.cases.filter(c => !bankCase(c)).slice().reverse();
+  return `<div class="view"><div class="vh"><h1>Suppliers</h1><span class="sub">Onboarding applications received by email</span></div>
+    <section class="panel">${list.length ? `<table class="grid"><thead><tr><th>Company</th><th>Contact</th><th>Received</th><th>Documents</th><th>Status</th></tr></thead><tbody>${list.map(c => {
+      const [cls, txt] = caseTag(c), first = c.emails.find(e => e.direction === 'in');
+      return `<tr class="click" onclick="openEmailRow('${c.id}', ${lastInboundId(c)})"><td style="font-weight:500">${esc(companyName(c))}${isLive(c.id) ? ' <span class="tag t-live">Live</span>' : ''}</td><td>${esc(c.sender_email)}</td>
+        <td>${first ? fmtDay(first.ts) + ' ' + fmtTime(first.ts) : ''}</td><td>${c.documents.length}</td><td><span class="tag ${cls}">${esc(txt)}</span></td></tr>`;
+    }).join('')}</tbody></table>` : '<div class="empty">No applications yet.</div>'}</section></div>`;
 }
 
-function storyText(c) {
-  const o = c.outcome, name = esc(companyName(c)), st = c.status;
-  if (['reading','received','checking'].includes(st)) return `The agent is reading ${name}'s documents and checking them…`;
-  if (isBankChange(c)) {
-    if (st === 'rejected') return `You called the number on file and rejected the change. <b>Nothing was changed</b>; payments continue to the original account.`;
-    if (st === 'approved') return `You confirmed by phone and approved the change. The new account was set by a person, not by the agent.`;
-    return `An email asked to change where ${name} gets paid. <b>The agent froze it</b> and is waiting for you to call the supplier.`;
+function vendorTag(v) {
+  if (v.status === 'on_hold') return ['t-red', (v.hold_reason || '').startsWith('bank change') ? 'Payments held · bank change' : 'Payments held · document expired'];
+  if (v.status === 'at_risk') return ['t-amber', 'Renewal requested'];
+  return ['t-green', 'Active'];
+}
+function lastScan() { return [...events].reverse().find(e => e.name === 'scan_expiries'); }
+function viewVendors() {
+  const scan = lastScan();
+  let scanHtml = '';
+  if (scan) {
+    const rows = J(scan.output) || [], acts = events.filter(e => e.id > scan.id && !e.case_id && ['send_email','set_vendor_hold'].includes(e.name));
+    const action = r => {
+      const v = S.vendors.find(v => v.id === r.vendor_id) || {};
+      const label = {commercial_registration:'Commercial Registration', vat_certificate:'VAT registration', gosi_certificate:'GOSI'}[r.doc_type] || r.doc_type;
+      if (r.state === 'expired') return acts.some(e => e.name === 'set_vendor_hold' && e.vendor_id === r.vendor_id) ? 'Payments put on hold; manager notified' : 'Expired';
+      return acts.some(e => e.name === 'send_email' && e.vendor_id === r.vendor_id && (e.summary || '').includes(label)) ? `Renewal request emailed to ${v.email || 'supplier'}` : 'Renewal due';
+    };
+    scanHtml = `<section class="panel" style="margin-bottom:14px"><div class="ph"><h2>Expiry scan · ${fmtDay(scan.ts)} ${D(scan.ts).getFullYear()}, ${fmtTime(scan.ts)}</h2><span class="sub">${rows.length} document${rows.length === 1 ? '' : 's'} need attention</span></div>
+      ${rows.length ? `<table class="grid"><thead><tr><th>Vendor</th><th>Document</th><th>Expiry date</th><th>Days left</th><th>Action taken</th></tr></thead><tbody>${rows.map(r => {
+        const v = S.vendors.find(v => v.id === r.vendor_id) || {};
+        return `<tr class="${r.state === 'expired' ? 'bad' : 'warn'}"><td style="font-weight:500">${esc(v.name || r.vendor_id)}</td><td>${esc(DOC[r.doc_type] || r.doc_type)}</td>
+          <td>${fmtDate(r.expiry_date)}</td><td>${r.days_left < 0 ? 'Expired ' + (-r.days_left) + ' days ago' : r.days_left + ' days'}</td><td>${esc(action(r))}</td></tr>`;
+      }).join('')}</tbody></table>` : '<div class="empty">Every document is in date.</div>'}</section>`;
   }
-  if (o.decision === 'onboard') {
-    const replied = c.emails.filter(e => e.direction === 'in').length > 1;
-    return replied ? `${name} sent the missing document. The agent checked it, everything passed, and <b>${name} is now an approved vendor</b>. No person was needed.`
-                   : `Every check passed, so the agent <b>added ${name} as a vendor</b> and sent a welcome email. No person was needed.`;
+  return `<div class="view"><div class="vh"><h1>Approved vendors</h1><span class="sub">Documents are checked for expiry every day</span></div>${scanHtml}
+    <section class="panel">${S.vendors.length ? `<table class="grid"><thead><tr><th>Vendor</th><th>CR</th><th>VAT</th><th>Bank account</th><th>Next expiry</th><th>Status</th></tr></thead><tbody>${S.vendors.map(v => {
+      const [cls, txt] = vendorTag(v), nx = v.documents.slice().sort((a, b) => (a.expiry_date || '').localeCompare(b.expiry_date || ''))[0];
+      return `<tr class="click" onclick="openVendor('${v.id}')"><td style="font-weight:500">${esc(v.name)}<div class="small">${esc(v.id)}</div></td><td class="mono">${esc(v.cr_number)}</td><td class="mono">${esc(v.vat_number || '')}</td>
+        <td class="mono">${esc(maskIban(v.iban))}</td><td>${nx ? esc(DOC[nx.doc_type] || nx.doc_type) + ', ' + fmtDate(nx.expiry_date) : ''}</td><td><span class="tag ${cls}">${esc(txt)}</span></td></tr>`;
+    }).join('')}</tbody></table>` : '<div class="empty">No approved vendors yet.</div>'}</section></div>`;
+}
+
+function viewBank() {
+  const list = S.bank_changes.slice().reverse();
+  return `<div class="view"><div class="vh"><h1>Bank change requests</h1><span class="sub">Never applied automatically. Every request is frozen until a call to the number on file.</span></div>
+    <section class="panel">${list.length ? `<table class="grid"><thead><tr><th>Received</th><th>Vendor</th><th>Requested by</th><th>New account</th><th>Red flags</th><th>Status</th></tr></thead><tbody>${list.map(b => {
+      const v = S.vendors.find(v => v.id === b.vendor_id) || {}, flags = J(b.flags) || [];
+      const tag = b.status === 'frozen' ? ['t-red', 'Frozen · call needed'] : b.status === 'rejected' ? ['t-grey', 'Rejected'] : ['t-green', 'Approved'];
+      const c = S.cases.find(c => c.id === b.case_id);
+      return `<tr class="click" onclick="openEmailRow('${b.case_id}', ${lastInboundId(c)})"><td>${fmtDay(b.created_at)} ${fmtTime(b.created_at)}</td><td style="font-weight:500">${esc(v.name || b.vendor_id)}</td><td>${esc(b.sender)}</td>
+        <td class="mono">${esc(maskIban(b.new_iban))}</td><td>${flags.map(f => `<span class="flag">${esc(FLAG[f] || f)}</span>`).join(' ') || 'None'}</td><td><span class="tag ${tag[0]}">${tag[1]}</span></td></tr>`;
+    }).join('')}</tbody></table>` : '<div class="empty">No bank change requests.</div>'}</section></div>`;
+}
+
+function viewAudit() {
+  return `<div class="view"><div class="vh"><h1>Audit log</h1><span class="sub">Every tool call The Seal makes is recorded here</span></div>
+    <section class="panel"><ol class="act" style="padding-top:10px">${activity(events)}</ol></section></div>`;
+}
+let policyText = null;
+function viewRules() {
+  if (policyText === null) { policyText = ''; fetch('/api/policy').then(r => r.text()).then(t => { policyText = t; render(); }); }
+  return `<div class="view"><div class="vh"><h1>Rules</h1><span class="sub">policy.yaml · read-only. Exact checks run in code from this file, not in the prompt.</span></div>
+    <section class="panel"><pre class="policy">${esc(policyText)}</pre></section></div>`;
+}
+function viewAbout() {
+  const r = S.results;
+  return `<div class="view about"><div class="vh"><h1>About The Seal</h1></div><section class="panel" style="padding:4px 20px 14px">
+    <p>The Seal onboards suppliers from a plain email and then keeps guarding them. A Claude model reads the documents; deterministic code checks them against the rules in policy.yaml and the registries; action tools refuse anything the checks do not allow. A person is asked only when there is a fraud risk.</p>
+    ${r ? `<p><b>Test results</b> (results file <span class="mono">${esc(r.run_id)}</span>): ${r.cases} ${r.split === 'heldout' ? 'held-out cases never used for tuning' : 'test cases'}.
+      Decision accuracy <b>${(r.decision_accuracy*100).toFixed(1)}%</b> · fraud attempts stopped <b>${(r.fraud_recall*100).toFixed(1)}%</b> · honest suppliers wrongly flagged <b>${(r.false_escalation_rate*100).toFixed(1)}%</b>.</p>` : ''}
+    <p><b>Replay mode</b> plays back real model responses recorded earlier, so the demo runs without API calls. In live mode the same code calls the Anthropic API.</p>
+    <p><a href="/">Project overview</a></p></section></div>`;
+}
+
+// ------------------------------------------------------------------ drawers: document viewer and vendor record
+async function openDoc(id) {
+  drawer = {kind:'doc', id: decodeURIComponent(id), data: null}; renderDrawer();
+  try { drawer.data = await api(`/api/documents/${id}/evidence`); } catch (e) { drawer.error = e.message; }
+  renderDrawer();
+}
+function openVendor(id) { drawer = {kind:'vendor', id}; renderDrawer(); }
+function closeDrawer() { drawer = null; renderDrawer(); }
+function hl(i, on) { const b = document.getElementById('hl-' + i); if (b) b.classList.toggle('on', on); }
+function renderDrawer() {
+  const el = document.getElementById('drawer');
+  if (!drawer) { el.innerHTML = ''; return; }
+  let title = '', body = '';
+  if (drawer.kind === 'doc') {
+    const x = drawer.data;
+    title = x ? esc(x.filename) : 'Document';
+    const box = (b, cls, i) => b ? `<div class="hl ${cls}" ${i !== undefined ? `id="hl-${i}"` : ''} style="left:${b.x*100}%;top:${b.y*100}%;width:${b.w*100}%;height:${b.h*100}%"></div>` : '';
+    body = !x ? `<div class="empty">${drawer.error ? esc(drawer.error) : 'Loading...'}</div>` : `<div class="db">
+      <div class="pagewrap"><div class="page"><img src="/api/documents/${encodeURIComponent(drawer.id)}/page.png" alt="Page 1 of ${esc(x.filename)}">
+        ${x.type_evidence.map(t => box(t.box, 'type')).join('')}${x.fields.map((f, i) => box(f.box, '', i)).join('')}</div></div>
+      <div class="why">
+        <div><div class="small">Identified as</div><h3>${esc(x.label)} ${x.confidence != null ? `<span class="conf">(confidence ${Number(x.confidence).toFixed(2)})</span>` : ''}</h3>
+          <div class="small">${x.language === 'ar' ? 'Arabic document' : x.language === 'en' ? 'English document' : 'Bilingual document'}${x.has_text_layer ? '' : ' · scanned image'}</div></div>
+        <div><div class="small" style="margin-bottom:6px">Because</div>${x.type_evidence.length
+          ? `<div class="ev">${x.type_evidence.map(t => `<span class="evq" dir="auto">"${esc(t.text)}"</span>`).join('')}</div>`
+          : '<div class="note">No text layer to quote from; the type comes from the model reading the page image. The fields it transcribed are below.</div>'}</div>
+        <div><div class="small" style="margin-bottom:4px">Extracted fields</div><div class="fields">${x.fields.map((f, i) => `<div class="f" onmouseenter="hl(${i},true)" onmouseleave="hl(${i},false)">
+          <span class="small">${esc(f.label)}</span><span><b style="font-weight:500" dir="auto">${esc(f.value)}</b>${f.source_text && f.source_text !== f.value ? `<span class="q" dir="auto">read as "${esc(f.source_text)}"</span>` : ''}${f.box ? '' : x.has_text_layer ? '<span class="q">not located on the page text</span>' : ''}</span>
+          <span class="small">${f.confidence != null ? Number(f.confidence).toFixed(2) : ''}</span></div>`).join('')}</div></div>
+        <div class="note">Blue boxes: the words that identify the document type. Amber boxes: where each field was found in the PDF's text layer (hover a field). Confidence is the model's own score for the key fields of this document type (lowest shown).</div>
+      </div></div>`;
+  } else {
+    const v = S.vendors.find(v => v.id === drawer.id); if (!v) { drawer = null; el.innerHTML = ''; return; }
+    title = esc(v.name);
+    const bcs = S.bank_changes.filter(b => b.vendor_id === v.id).map(b => b.case_id);
+    const evs = events.filter(e => e.vendor_id === v.id || e.case_id === v.case_id || bcs.includes(e.case_id));
+    const [cls, txt] = vendorTag(v);
+    body = `<div style="overflow:auto"><div class="kv"><span>Status</span><span><span class="tag ${cls}">${esc(txt)}</span></span>
+      <span>Vendor ID</span><span class="mono">${esc(v.id)}</span><span>CR</span><span class="mono">${esc(v.cr_number)}</span><span>VAT</span><span class="mono">${esc(v.vat_number || '')}</span>
+      <span>Bank account</span><span class="mono">${esc(v.iban)} · ${esc(v.account_name)}</span><span>Contact</span><span>${esc(v.email)} · ${esc(v.phone)}</span>
+      <span>Documents</span><span>${v.documents.map(d => `${esc(DOC[d.doc_type] || d.doc_type)}: ${fmtDate(d.expiry_date)}`).join('<br>')}</span></div>
+      ${bcs.length ? `<div class="sect">Bank change requests</div><table class="grid"><tbody>${S.bank_changes.filter(b => b.vendor_id === v.id).map(b => `<tr><td>${fmtDay(b.created_at)}</td><td>${esc(b.sender)}</td><td class="mono">${esc(maskIban(b.new_iban))}</td><td>${esc(b.status)}</td></tr>`).join('')}</tbody></table>` : ''}
+      <div class="sect">History</div><ol class="act">${activity(evs)}</ol></div>`;
   }
-  if (o.decision === 'request_fix') return `A routine problem the supplier can fix, so the agent <b>emailed ${firstName(c.sender_email)}</b> asking for: ${esc(docList(o.documents_requested))}. It will re-check when they reply.`;
-  if (o.decision === 'escalate') {
-    if (st === 'rejected') return `You rejected this supplier.`;
-    if (st === 'approved') return `You approved this supplier anyway.`;
-    if (st === 'waiting_on_supplier') return `You asked the supplier to explain. The case waits for their reply.`;
-    return `Something looks like possible fraud, so the agent <b>stopped and asked you</b>. It did not contact the supplier about it.`;
+  el.innerHTML = `<div class="scrim" onclick="closeDrawer()"></div><aside class="drawer" role="dialog" aria-label="${title}"><div class="dh"><h2>${title}</h2><button onclick="closeDrawer()">Close</button></div>${body}</aside>`;
+}
+
+// ------------------------------------------------------------------ clock (demo time only; never the real wall clock)
+let shownClock = null, clockAnim = null;
+function setClock(iso) {
+  if (!iso) return;
+  const target = D(iso).getTime();
+  if (shownClock !== null && target - shownClock > 3600e3) {
+    const from = shownClock, t0 = performance.now(), dur = 1600; cancelAnimationFrame(clockAnim);
+    document.getElementById('clock').classList.add('jump');
+    const tick = now => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3); paintClock(from + (target - from) * e);
+      if (k < 1) clockAnim = requestAnimationFrame(tick); else { shownClock = target; document.getElementById('clock').classList.remove('jump'); } };
+    clockAnim = requestAnimationFrame(tick); shownClock = target; return;
   }
-  return '';
+  shownClock = target; paintClock(target);
+}
+function paintClock(ms) {
+  const d = new Date(ms);
+  document.getElementById('clock-t').textContent = d.toLocaleTimeString('en-GB', {hour:'2-digit', minute:'2-digit'});
+  document.getElementById('clock-d').textContent = d.toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
 }
 
-function renderCenter() {
-  const c = S.cases.find(c => c.id === selected), el = document.getElementById('center');
-  let html = '';
-  if (c && c.card && c.card.status === 'open') html += decisionCard(c, c.card);
-  if (!c) { el.innerHTML = '<section class="panel"><div class="empty">Nothing to show yet. Press the green button above to start the demo.</div></section>'; return; }
-
-  const chk = lastChecks(c.id), fails = chk ? [...(chk.risk_failures||[]), ...(chk.fixable_failures||[])] : [];
-  const checkedOn = (c.updated_at || S.today).slice(0, 10);
-  const docs = c.documents.filter(d => d.extraction);
-  const rows = docs.map(d => {
-    const x = d.extraction, t = x.doc_type;
-    const f = fails.filter(f => f.doc_type === t && f.check !== 'present');
-    const read = [];
-    if (!x.legible) read.push('could not read this scan');
-    if (x.language === 'ar') read.push('in Arabic');
-    if (t === 'commercial_registration' && x.cr_number) read.push('CR ' + esc(x.cr_number));
-    if (t === 'vat_certificate' && x.vat_number) read.push('VAT ' + esc(x.vat_number));
-    if (t === 'bank_letter') { if (x.account_name) read.push('holder: ' + esc(x.account_name)); if (x.iban) read.push('IBAN ' + esc(maskIban(x.iban))); }
-    if (x.expiry_date_iso) read.push((x.expiry_date_iso < checkedOn ? 'expired ' : 'valid until ') + fmtDate(x.expiry_date_iso));
-    const isRisk = f.some(z => z.category === 'risk');
-    const result = t === 'other' ? '<span class="res na">Not needed</span>'
-      : f.length ? `<span class="res ${isRisk ? 'bad' : 'warn'}">${isRisk ? '✕' : '!'} ${esc(checkResult(f[0]))}</span>`
-      : chk ? '<span class="res ok">✓ Looks good</span>' : '<span class="res na">checking…</span>';
-    return `<tr class="${f.length ? (isRisk ? 'rowbad' : 'rowwarn') : ''}"><td style="font-weight:500">${esc(DOC[t] || t)}<div class="file">${esc(d.filename)}</div></td>
-      <td style="color:#374151">${read.join(' · ') || '—'}</td><td>${result}</td></tr>`;
-  }).join('');
-  const missing = fails.filter(f => f.check === 'present').map(f =>
-    `<tr class="rowwarn"><td style="font-weight:500">${esc(DOC[f.doc_type] || f.doc_type)}</td><td>—</td><td><span class="res warn">! Not received</span></td></tr>`).join('');
-  const [cls, txt] = caseBadge(c);
-  const sent = c.emails.filter(e => e.direction === 'out').slice(-1)[0];
-  html += `<section class="panel" id="p-case" aria-label="Supplier details">
-    <div class="casehead"><div><h2>${esc(companyName(c))}</h2><div class="line2">${esc(c.sender_email)} · ${c.documents.length ? c.documents.length + ' document(s) attached' : 'no attachments'}</div></div>
-    <span class="badge ${cls}">${esc(txt)}</span></div>
-    <div class="story">${storyText(c)}</div>
-    ${docs.length || missing ? `<div style="overflow-x:auto" id="p-docs"><table style="min-width:520px"><thead><tr><th>Document</th><th>What the agent read</th><th>Result</th></tr></thead><tbody>${rows}${missing}</tbody></table></div>` : ''}
-    ${sent ? `<div class="mailtitle">Email the agent wrote</div><div class="mailcard" id="p-email"><div class="mh"><span>To</span><b>${esc(c.sender_email)}</b><span>Subject</span><span style="color:var(--ink)">${esc(sent.subject)}</span></div><div class="mb">${esc(sent.body)}</div></div>` : ''}
-  </section>`;
-  el.innerHTML = html;
-}
-
-// ---------------------------------------------------------------- activity feed
-function describe(e) {
-  const out = J(e.output) || {}, inp = J(e.input) || {}, s = e.summary || '';
-  if (s.startsWith('REFUSED')) return {ic:'!', c:'y', msg:'A safety lock stopped an action', detail: out.refused};
-  switch (e.kind + ':' + (e.name || '')) {
-    case 'system:email_received': {
-      const m = s.match(/^Email from (\S+): (.*) \((\d+) attachments\)$/);
-      return {ic:'✉', c:'b', msg: m ? `New email from ${m[1]}` : s, detail: m ? `“${m[2]}” · ${m[3]} attachment(s)` : ''};
-    }
-    case 'llm:extract': {
-      const m = s.match(/^read (.*) -> (\w+)$/);
-      return m ? {ic:'📄', msg:`Read ${m[1]}`, detail:`It's ${DOC_A[m[2]] || m[2]}`} : {ic:'📄', msg:s};
-    }
-    case 'llm:reread': return {ic:'🔍', c:'y', msg:'Took a second, careful look at a document', detail:'A number didn’t match, so it re-read before deciding'};
-    case 'tool:run_checks': {
-      const f = [...(out.risk_failures||[]), ...(out.fixable_failures||[])];
-      const n = (out.checks_passed || 0) + f.length;
-      if (out.recommended === 'onboard') return {ic:'✓', c:'g', msg:`Checked ${n} things: all good`, detail:'Registries, expiry dates, names and numbers all match'};
-      if (out.recommended === 'request_fix') return {ic:'!', c:'y', msg:'Found something the supplier can fix', detail: f.map(x => `${DOC[x.doc_type] || ''}: ${checkResult(x)}`).join(' · ')};
-      return {ic:'✕', c:'r', msg:'Found a possible fraud risk', detail: (out.risk_failures||[]).map(x => checkResult(x)).join(' · ')};
-    }
-    case 'tool:check_registry': return {ic:'🏛', msg:`Wathq registry: ${out.status === 'active' ? 'registration is active' : (out.status || 'not found')}`};
-    case 'tool:check_vat': return {ic:'🏛', msg:`ZATCA: ${out.registered ? 'VAT registered' : 'not registered'}`};
-    case 'tool:create_vendor': return {ic:'✓', c:'g', msg:`Added ${out.name} as an approved vendor`};
-    case 'tool:send_email':
-      if (inp.kind === 'welcome') return {ic:'✉', c:'g', msg:'Sent a welcome email'};
-      if (inp.kind === 'request_fix') return {ic:'✉', c:'y', msg:'Emailed the supplier asking for a document', detail: docList(inp.documents_requested || [])};
-      if (inp.kind === 'renewal') return {ic:'✉', c:'y', msg:'Asked a vendor to renew a document before it expires', detail: docList(inp.documents_requested || [])};
-      return {ic:'✉', msg:'Sent an email'};
-    case 'tool:escalate': return {stop:true, ic:'✋', c:'r', msg:'Stopped and asked you to decide', detail: inp.reason};
-    case 'tool:check_bank_change': {
-      const fl = out.flags || [];
-      return fl.length ? {ic:'✕', c:'r', msg:`Bank change has ${fl.length} red flag${fl.length > 1 ? 's' : ''}`, detail: fl.map(f => FLAG[f] || f).join(' · ')}
-                       : {ic:'✓', msg:'Bank change has no red flags', detail:'Still needs a phone call'};
-    }
-    case 'tool:freeze_bank_change': return {stop:true, ic:'❄', c:'r', msg:'Froze the bank change and held payments', detail:`Asked you to call ${out.callback_phone}, the number on file`};
-    case 'tool:scan_expiries': {
-      const n = (out || []).length;
-      return {ic:'📅', msg:`Daily document check`, detail: n ? `${n} document(s) need attention` : 'Everything is in date'};
-    }
-    case 'tool:set_vendor_hold': return {ic:'⏸', c:'r', msg: inp.on ? 'Put a vendor’s payments on hold' : 'Released a payment hold', detail: (inp.reason || '').replace('expired: ', 'Expired: ').replace(/_/g, ' ')};
-    case 'human:decision': return {ic:'👤', c:'g', msg:`You decided: ${(inp.action || '').replace('_', ' ')}`, detail: inp.note};
-    case 'system:clock': return {ic:'⏩', c:'b', msg: s.replace('Demo clock moved to', 'Jumped ahead to')};
-    case 'system:error': return {ic:'!', c:'r', msg:'Something went wrong', detail: s};
-    default: return null;   // internal steps (opening the case, saving status, model calls) are hidden
-  }
-}
-
-function setFilter(f) { filter = f; document.getElementById('f-one').classList.toggle('on', f === 'one'); document.getElementById('f-all').classList.toggle('on', f === 'all'); renderLog(); }
-
-function renderLog() {
-  const c = S && S.cases.find(c => c.id === selected);
-  const vid = c && (c.vendor ? c.vendor.id : (S.bank_changes.find(b => b.case_id === c.id) || {}).vendor_id);
-  const mine = events.filter(e => filter === 'all' || !c || e.case_id === c.id || (!e.case_id && (e.kind === 'system' || (vid && e.vendor_id === vid))));
-  const items = mine.map(e => {
-    const d = describe(e); if (!d) return '';
-    return `<li class="${d.stop ? 'stop' : ''}"><span class="ic ${d.c || ''}" aria-hidden="true">${d.ic}</span>
-      <span><span class="when">${(e.ts || '').slice(11, 16)}</span><span class="msg">${esc(d.msg)}</span>${d.detail ? `<span class="detail">${esc(d.detail)}</span>` : ''}</span></li>`;
-  }).join('');
-  const log = document.getElementById('log');
-  log.innerHTML = items || '<li style="display:block;color:#A7B4BE">Nothing yet. The agent writes every step here as it works.</li>';
-  log.scrollTop = log.scrollHeight;
-}
-
-function workingText() {
-  const e = events[events.length - 1]; if (!e) return 'The agent is working…';
-  if (e.name === 'email_received') return 'An email just arrived…';
-  if (e.name === 'extract' || e.name === 'get_case') return 'The agent is reading the documents…';
-  if (e.name === 'reread') return 'The agent is double-checking a document…';
-  if (e.name === 'run_checks' || e.name === 'check_bank_change') return 'The agent is deciding what to do…';
-  if (e.name === 'scan_expiries' || e.name === 'clock') return 'Running the daily document check…';
-  return 'The agent is working…';
-}
-
-async function decide(id, action) { await post(`/api/decisions/${id}`, {action}); }
-
-// ---------------------------------------------------------------- guided demo
+// ------------------------------------------------------------------ presenter overlay (hidden by default)
 const STEPS = [
-  {title: 'This is a procurement team’s inbox, run by the agent',
-   body: 'Normally a person opens every supplier’s PDFs, checks each company on the Wathq and ZATCA websites, and emails back and forth about expired documents: 18.8 days per supplier on average. And one fake email asking to change a supplier’s bank account can send payments to a fraudster. Here, the agent does that work and only calls you for possible fraud.',
-   watch: 'Press the green button and the first supplier email arrives.',
-   next: 'Send the first email', run: () => post('/api/reset')},
-  {title: 'Al Noor Trading applies, and the agent finishes the job alone',
-   body: 'Al Noor emailed 4 documents, two of them in Arabic. The agent read each one, checked the company with the Wathq and ZATCA registries, made sure the names and numbers match across documents, then approved Al Noor and sent a welcome email.',
-   watch: 'Look at the right-hand panel: every step the agent took, in order.',
-   next: 'Next supplier', run: () => post('/api/simulate/1'), select: 'demo_1_al_noor_clean', focus: 'p-log'},
-  {title: 'Rawabi Logistics: one document has expired',
-   body: 'Rawabi’s VAT certificate expired a few weeks ago. That is a routine problem the supplier can fix, so the agent doesn’t bother anyone. It emails Rawabi asking for exactly that document.',
-   watch: 'Look at the yellow row in the table, and the email the agent wrote below it.',
-   next: 'Rawabi replies', run: () => post('/api/simulate/2'), select: 'demo_2_rawabi_expired_vat', focus: 'p-case'},
-  {title: 'Rawabi replies with a renewed certificate',
-   body: 'Two days later the reply arrives. The agent reads only the new document, checks everything again, and approves Rawabi. Still no person involved.',
-   watch: 'Rawabi is now green: “Onboarded · no person needed”.',
-   next: 'Next supplier', run: () => post('/api/simulate/2/reply'), select: 'demo_2_rawabi_expired_vat', focus: 'p-case'},
-  {title: 'Gulf Steel: the bank account belongs to another company',
-   body: 'Gulf Steel’s bank letter is in the name of a different company. Paying someone other than the supplier is a classic fraud pattern, so the agent stops, does not email the supplier, and asks you to decide.',
-   watch: 'Look at the red card: it shows the two names side by side.',
-   next: 'Next email', run: () => post('/api/simulate/3'), select: 'demo_3_gulf_steel_bank_mismatch', focus: 'p-decision'},
-  {title: 'A fake email asks to move Al Noor’s payments',
-   body: 'Someone writing from alnoor-trading.co (Al Noor’s real address ends in .com.sa) asks to send Al Noor’s payments to a new bank. The agent cannot change bank details. It freezes the request, holds payments, and asks you to phone Al Noor on the number already on file.',
-   watch: 'Look at the red card: the email address and the bank don’t match what’s on file.',
-   next: 'Call Al Noor and reject', run: () => post('/api/simulate/4'), select: 'demo_4_al_noor_bank_change', focus: 'p-decision'},
-  {title: 'You called Al Noor. They never asked for this.',
-   body: 'You rejected the change. Al Noor’s bank details stay as they were and payments continue. Only a person can approve a bank change, and only after a phone call.',
-   next: 'Jump 11 months ahead',
-   run: async () => { const c = S.open_cards.find(c => c.case_id === 'demo_4_al_noor_bank_change'); if (c) await post(`/api/decisions/${c.id}`, {action: 'reject', note: 'called the number on file; Al Noor did not request this'}); },
-   select: 'demo_4_al_noor_bank_change', focus: 'p-case'},
-  {title: 'Eleven months later: the agent is still watching',
-   body: 'The demo clock jumps to 30 Sep 2027. Al Noor’s registration expires in 20 days, so the agent asks them for the renewal now. Rawabi’s GOSI certificate has already expired, so their payments are on hold until they send a new one.',
-   watch: 'Look at “Approved vendors” on the left.',
-   next: 'Finish', run: () => post('/api/clock', {date: '2027-09-30'}), focus: 'p-vendors', filter: 'all'},
-  {title: 'That’s the whole story.',
-   body: 'Five emails. The agent handled three on its own, and asked a person twice, both times for possible fraud. Click any supplier on the left to see what the agent read and why it decided what it did.',
-   next: null},
+  {title:'The procurement inbox', body:'This is the procurement team\'s inbox. Suppliers email their papers here: commercial registration, VAT certificate, bank letter, GOSI certificate. The Seal reads every email as it arrives, checks every document, and only asks a person when there is a fraud risk.'},
+  {title:'Sunday 09:12 · Al Noor Trading applies', srv:0, open:'demo_1_al_noor_clean', body:'Al Noor sends four documents, two in Arabic. The Seal reads each one, checks the company with Wathq and ZATCA, compares names and numbers across documents, then approves Al Noor and sends a welcome email. Click a document to see how it knew what it was.'},
+  {title:'Sunday 10:40 · Rawabi Logistics applies', srv:1, open:'demo_2_rawabi_expired_vat', body:'Rawabi\'s VAT certificate expired on 10 October. That is something the supplier can fix, so The Seal emails Rawabi asking for exactly that document. Nobody else is involved.'},
+  {title:'Tuesday 14:05 · Rawabi replies', srv:2, open:'demo_2_rawabi_expired_vat', body:'Two days later Rawabi replies with a renewed certificate. The Seal reads only the new document, runs every check again, and approves Rawabi. The old certificate stays on file, marked as replaced.'},
+  {title:'Tuesday 15:30 · Gulf Steel applies', srv:3, open:'demo_3_gulf_steel_bank_mismatch', body:'Gulf Steel\'s bank letter is in the name of a different company. Paying someone other than the supplier is a classic fraud pattern, so The Seal stops, does not email the supplier, and asks the manager.'},
+  {title:'The manager rejects Gulf Steel', srv:4, open:'demo_3_gulf_steel_bank_mismatch', body:'The manager reviews the two names side by side and rejects the supplier. Nothing is left waiting for a decision.'},
+  {title:'Wednesday 08:47 · "Al Noor" asks to change bank account', srv:5, open:'demo_4_al_noor_bank_change', body:'An email from alnoor-trading.co (Al Noor\'s real domain is .com.sa) asks to move Al Noor\'s payments to a new bank. The Seal cannot change bank details. It freezes the request, holds payments, and asks the manager to call the number on file.'},
+  {title:'The manager calls Al Noor', srv:6, open:'demo_4_al_noor_bank_change', body:'Al Noor never sent that email. The manager rejects the change. Bank details stay as they were, and the request is recorded on Al Noor\'s vendor record.'},
+  {title:'Eleven months later · the daily expiry scan', srv:7, view:'vendors', body:'It is now 30 September 2027. Al Noor\'s commercial registration expires in 20 days, and so does Rawabi\'s VAT certificate, so The Seal asks both to renew. Rawabi\'s GOSI certificate has already expired, so its payments are on hold until a new one arrives.'},
+  {title:'Summary', view:'inbox', body:'Five emails received. Three handled with no person involved. The manager stepped in twice, both times to stop possible fraud. Then The Seal kept guarding: two renewal requests and one payment hold, with nothing left waiting for a decision.'},
 ];
-let step = 0, guideBusy = false;
-try { step = Math.min(parseInt(sessionStorage.getItem('guideStep') || '0', 10) || 0, STEPS.length - 1); } catch {}
+let step = 0, presBusy = false;
+try { step = Math.min(parseInt(sessionStorage.getItem('sealStep') || '0', 10) || 0, STEPS.length - 1); } catch {}
+function setStep(n) { step = n; try { sessionStorage.setItem('sealStep', String(n)); } catch {} renderPresenter(); }
+function renderPresenter() {
+  const s = STEPS[step];
+  document.getElementById('p-step').textContent = `Step ${step} of ${STEPS.length - 1}`;
+  document.getElementById('p-title').textContent = s.title;
+  document.getElementById('p-body').textContent = s.body;
+  const b = document.getElementById('p-next'); b.disabled = presBusy || step >= STEPS.length - 1; b.textContent = presBusy ? 'Working...' : 'Next';
+}
+function applyView(s) { if (s.open) { openCase = s.open; openEmail = null; view = 'inbox'; drawer = null; } else if (s.view) { view = s.view; drawer = null; } }
+async function presNext() {
+  if (presBusy || step >= STEPS.length - 1) return;
+  const s = STEPS[step + 1];
+  presBusy = true; setStep(step + 1); applyView(s); render();
+  try { if (s.srv !== undefined) { await api(`/api/demo/step/${s.srv}`, {}); await waitQuiet(); } }
+  catch (e) { document.getElementById('p-msg').textContent = e.message; }
+  presBusy = false; await refresh(); applyView(s); render(); renderPresenter();
+}
+async function presBack() { if (presBusy || step === 0) return; await jumpTo(step - 1); }
+async function presRestart() { if (presBusy) return; await jumpTo(0); }
+async function jumpTo(n) {
+  presBusy = true; renderPresenter();
+  const runs = STEPS.slice(1, n + 1).filter(s => s.srv !== undefined).length;
+  events = []; checksCache = {}; openChecks = {}; drawer = null; firstLoad = true; seenEvents.clear(); seenEmails.clear(); seenDocs.clear();
+  await api(`/api/demo/goto/${runs}`, {});
+  await waitQuiet(1200);
+  setStep(n); applyView(STEPS[n]); if (n === 0) { openCase = null; view = 'inbox'; }
+  presBusy = false; firstLoad = true; await refresh(); renderPresenter();
+}
+function waitQuiet(ms = 2600) {
+  return new Promise(res => { let last = -1, quiet = 0; const t = setInterval(async () => {
+    const top = events.length ? events[events.length - 1].id : 0;
+    if (top !== last) { last = top; quiet = 0; } else if ((quiet += 400) >= ms) { clearInterval(t); res(); } }, 400); });
+}
+async function loadLiveCases() {
+  try { const list = await api('/api/live/cases'); document.getElementById('p-live').innerHTML = list.map(n => `<option>${esc(n)}</option>`).join(''); } catch {}
+}
+async function processLive() {
+  const name = document.getElementById('p-live').value, msg = document.getElementById('p-msg');
+  msg.textContent = '';
+  try { await api('/api/live', {case: name}); msg.textContent = `Processing ${name} live through the Anthropic API...`; pendingLive = 'live-'; view = 'inbox'; }
+  catch (e) { msg.textContent = e.message; }
+}
+let pendingLive = null;
+document.addEventListener('keydown', e => {
+  if (['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = e.key.toLowerCase();
+  if (k === 'escape' && drawer) { closeDrawer(); return; }
+  if (k === 'arrowright' || k === 'n') { e.preventDefault(); presNext(); }
+  else if (k === 'b') presBack();
+  else if (k === 'r') presRestart();
+  else if (k === 'h') { const p = document.getElementById('presenter'); p.hidden = !p.hidden; }
+});
 
-function setStep(n) { step = n; try { sessionStorage.setItem('guideStep', String(n)); } catch {} renderGuide(); }
-function renderGuide() {
-  const shown = STEPS[step], total = STEPS.length - 1;
-  document.getElementById('g-step').textContent = step === 0 ? 'Guided demo' : `Step ${step} of ${total}`;
-  document.getElementById('g-dots').innerHTML = Array.from({length: total}, (_, i) => `<i class="${i + 1 < step ? 'on' : i + 1 === step ? 'now' : ''}"></i>`).join('');
-  document.getElementById('g-title').textContent = shown.title;
-  document.getElementById('g-body').textContent = shown.body;
-  const w = document.getElementById('g-watch'); w.hidden = !shown.watch; w.textContent = shown.watch ? '👀 ' + shown.watch : '';
-  const btn = document.getElementById('g-next');
-  btn.hidden = !shown.next;
-  btn.textContent = guideBusy ? 'Please wait…' : (step === 0 ? 'Start: send the first email' : (shown.next || '')) + ' →';
-  btn.disabled = guideBusy;
-  document.getElementById('g-working').innerHTML = guideBusy ? `<span class="dot busy"></span>${esc(workingText())}` : '';
+// ------------------------------------------------------------------ data loop (the dashboard reads only the store)
+let refreshing = false, again = false;
+async function refresh() {
+  if (refreshing) { again = true; return; }
+  refreshing = true;
+  try {
+    const [st, ev] = await Promise.all([api('/api/state'), api('/api/events')]);
+    S = st; events = ev; setClock(S.now);
+    if (pendingLive) { const lc = S.cases.filter(c => isLive(c.id)).slice(-1)[0]; if (lc) { openCase = lc.id; openEmail = null; pendingLive = null; } }
+    render();
+  } finally { refreshing = false; if (again) { again = false; refresh(); } }
 }
-function spotlight(id) {
-  if (!id) return;
-  const el = document.getElementById(id); if (!el) return;
-  el.classList.remove('spot'); void el.offsetWidth; el.classList.add('spot');
-  el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest'});
+function markBusy() {
+  busy = true; clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => { busy = false; render(); }, 2200);
 }
-async function guideNext() {
-  if (guideBusy) return;
-  const nextIdx = step + 1;
-  const toRun = step === 0 ? [STEPS[0], STEPS[1]] : [STEPS[nextIdx]];
-  guideBusy = true; renderGuide();
-  for (const st of toRun) { if (st && st.run) await st.run(); }
-  const target = STEPS[nextIdx];
-  if (target && target.select) selected = target.select;
-  if (target && target.filter) setFilter(target.filter); else setFilter('one');
-  setStep(nextIdx);
-  await waitQuiet();
-  guideBusy = false; renderGuide(); await refresh();
-  spotlight(target && target.focus);
-}
-async function guideRestart() {
-  guideBusy = false; selected = null; events = [];
-  await post('/api/reset'); setFilter('one'); setStep(0); await refresh();
-}
-function waitQuiet() {
-  // The agent is done when no new events have arrived for 2.5 s.
-  return new Promise(res => {
-    let last = events.length, quiet = 0;
-    const t = setInterval(() => {
-      document.getElementById('g-working').innerHTML = `<span class="dot busy"></span>${esc(workingText())}`;
-      if (events.length !== last) { last = events.length; quiet = 0; } else if ((quiet += 500) >= 2500) { clearInterval(t); res(); }
-    }, 500);
-  });
-}
-
-// ---------------------------------------------------------------- data
-async function refresh() { S = await (await fetch('/api/state')).json(); render(); }
-function scheduleRefresh() { clearTimeout(refreshTimer); refreshTimer = setTimeout(refresh, 250); }
-
 async function boot() {
-  events = await (await fetch('/api/events')).json();
-  await refresh();
+  await refresh(); renderPresenter(); loadLiveCases();
   const es = new EventSource('/api/stream');
-  let idle;
-  es.onmessage = m => {
-    const e = JSON.parse(m.data);
-    if (events.some(x => x.id === e.id && x.ts === e.ts)) return;
-    events.push(e);
-    document.getElementById('busy').classList.add('busy');
-    document.getElementById('status').textContent = 'Agent is working';
-    clearTimeout(idle); idle = setTimeout(() => { document.getElementById('busy').classList.remove('busy'); document.getElementById('status').textContent = 'Agent is ready'; }, 2500);
-    if (e.case_id && e.name === 'email_received') selected = e.case_id;
-    scheduleRefresh();
-  };
+  let t = null;
+  es.onmessage = () => { markBusy(); clearTimeout(t); t = setTimeout(refresh, 80); };
 }
-renderGuide();
 boot();
 </script>
 </body></html>

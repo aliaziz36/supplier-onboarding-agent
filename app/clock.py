@@ -5,10 +5,12 @@ with the calendar; the dashboard's fast-forward button calls set_now().
 """
 import os
 import threading
-from datetime import date, datetime
+import time
+from datetime import date, datetime, timedelta
 
 _override: date | None = None       # process-wide (dashboard fast-forward)
 _local = threading.local()          # per-thread (parallel eval cases)
+_display: tuple[datetime, float] | None = None   # dashboard demo clock: (start time, monotonic origin)
 
 
 def _parse(value: str) -> date:
@@ -25,8 +27,29 @@ def today() -> date:
 
 
 def now_iso() -> str:
-    """Timestamp for event rows: the (possibly fake) date plus real wall time."""
+    """Timestamp for event rows: the demo clock when set, else the (possibly fake) date plus real wall time."""
+    if _display is not None:
+        return display_now().isoformat(timespec="seconds")
     return f"{today().isoformat()}T{datetime.now().strftime('%H:%M:%S.%f')}"
+
+
+def set_display(value: datetime | str | None) -> None:
+    """Start the dashboard's demo clock at `value`; it then runs forward in real seconds.
+
+    Only timestamps use it. The agent's 'today' stays the case's as_of date, so replayed
+    model calls see exactly the input they were recorded with."""
+    global _display
+    if value is None:
+        _display = None
+    else:
+        _display = (datetime.fromisoformat(value) if isinstance(value, str) else value, time.monotonic())
+
+
+def display_now() -> datetime | None:
+    if _display is None:
+        return None
+    start, origin = _display
+    return start + timedelta(seconds=time.monotonic() - origin)
 
 
 def set_now(value: date | str | None) -> None:
