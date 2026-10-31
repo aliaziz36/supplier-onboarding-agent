@@ -10,7 +10,8 @@
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.55}
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
-.hero{background:var(--navy);color:#fff}
+.hero{background:var(--navy);color:#fff;min-height:100vh;min-height:100svh;display:flex;align-items:center}
+.hero > .wrap{width:100%}
 .hero .wrap{padding-block:56px 64px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:center}
 .brand{display:flex;align-items:center;gap:10px;font-size:14px;color:#A7B4BE;margin-bottom:28px}
 .logo{width:32px;height:32px;border-radius:8px;background:var(--teal-l);display:flex;align-items:center;justify-content:center}
